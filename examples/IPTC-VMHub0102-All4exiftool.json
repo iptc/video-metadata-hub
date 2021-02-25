@@ -1,0 +1,476 @@
+﻿[
+    {
+        "SourceFile":  "*",
+        "XMP-xmpDM:Markers":  [
+            {
+                "comment":  "VMHub comment: the start marker for a *duration by start and end markers* design.",
+                "startTime":  "258f25",
+                "type":  "http://cv.iptc.org/newscodes/videoqualifier/editorialDurationStart"
+            },
+            {
+                "comment":  "VMHub comment: the end marker for a *duration by start and end markers* design.",
+                "startTime":  "2589f25",
+                "type":  "http://cv.iptc.org/newscodes/videoqualifier/editorialDurationEnd"
+            },
+            {
+                "duration":  "2331f25",
+                "comment":  "VMHub comment: the start + duration marker for a *duration by a single start + duration marker* design.",
+                "startTime":  "258f25",
+                "type":  "http://cv.iptc.org/newscodes/videoqualifier/editorialDuration"
+            }
+        ],
+        "XMP-iptcExt:AudioBitRate":  "2018000",
+        "XMP-iptcExt:AudioBitsPerSample":  "16",
+        "XMP-iptcExt:AudioBitRateMode#":  "variable",
+        "XMP-xmpDM:AudioChannelType#":  "5.1",
+        "XMP-iptcExt:AudioChannelCount":  "2",
+        "XMP-xmpDM:AudioCompressor":  "MP3",
+        "XMP-xmpDM:AudioSampleRate":  "48016",
+        "XMP-iptcExt:CircaDateCreated":  "Circa Date Created (rec0102)",
+        "XMP-iptcExt:Contributor":  [
+            {
+                "Name":  "Contributor Name 1 (rec0102)",
+                "Identifier":  "Contributor Id 1 (rec0102)",
+                "Role":  "http://example.org/cv/vmh/role-contrib/code0101"
+            },
+            {
+                "Name":  "Contributor Name 2 (rec0102)",
+                "Identifier":  "Contributor Id 2 (rec0102)",
+                "Role":  "http://example.org/cv/vmh/role-contrib/code0101"
+            }
+        ],
+        "XMP-dc:Rights":  "Copyright (Notice) 2016 IPTC - www.iptc.org  (rec0102)",
+        "XMP-iptcExt:CopyrightYear":  "2016",
+        "XMP-iptcExt:Creator":  [
+            {
+                "Name":  "Creator Name 1 (rec0102)",
+                "Identifier":  "Creator Id 1 (rec0102)",
+                "Role":  "http://example.org/cv/vmh/role-creator/code0101"
+            },
+            {
+                "Name":  "Creator Name 2 (rec0102)",
+                "Identifier":  "Creator Id 2 (rec0102)",
+                "Role":  "http://example.org/cv/vmh/role-creator/code0101"
+            }
+        ],
+        "XMP-photoshop:Credit":  "Credit Line (rec0102)",
+        "XMP-iptcExt:AboutCvTerm":  [
+            {
+                "CvTermName":  "CV-Term Name 1 (rec0102)",
+                "CvTermRefinedAbout":  "http://example.com/cv/refinements2/rec0102/codeX145",
+                "CvTermId":  "http://example.com/cv/about/rec0102/code987",
+                "CvId":  "http://example.com/cv/about/rec0102"
+            }
+        ],
+        "XMP-iptcExt:DataOnScreen":  [
+            {
+                "Region":  {
+                    "y":  "500",
+                    "w":  "1000",
+                    "h":  "200",
+                    "unit":  "pixel",
+                    "x":  "30"
+                },
+                "RegionText":  "Data on Screen 1 (rec0102)"
+            }
+        ],
+        "XMP-photoshop:DateCreated":  "2018:04:25 18:01:02+00:00",
+        "XMP-xmp:ModifyDate":  "2018:06:12 18:01:02+00:00",
+        "XMP-xmpDM:ReleaseDate":  "2016:11:22 12:00:00+00:00",
+        "XMP-dc:Description":  "The description(rec0102)",
+        "XMP-iptcExt:VideoDisplayAspectRatio":  "16/10",
+        "XMP-iptcExt:Dopesheet":  "This is the Dopesheet (rec0102)",
+        "XMP-iptcExt:DopesheetLink":  [
+            {
+                "Link":  "http://example.com/dopesheets/rec0102",
+                "LinkQualifier":  "http://example.com/linkqualifier/rec0102"
+            }
+        ],
+        "XMP-iptcExt:Episode":  [
+            {
+                "Number":  "EpR0101",
+                "Name":  "Episode Name 1 (rec0102)",
+                "Identifier":  "http://example.com/series/season/episode/rec0102"
+            }
+        ],
+        "XMP-iptcExt:ExternalMetadataLink":  "http://example.com/externalmetadata/rec0102)",
+        "XMP-iptcExt:OrganisationInImageName":  [
+            "Organisation Name 1 (rec0102)",
+            "Organisation Name 2 (rec0102)",
+            "Organisation Name 3 (rec0102)"
+        ],
+        "XMP-iptcExt:OrganisationInImageCode":  [
+            "Organisation Code 1 (rec0102)",
+            "Organisation Code 2 (rec0102)",
+            "Organisation Code 3 (rec0102)"
+        ],
+        "XMP-iptcExt:FeedIdentifier":  "Feed Identifier (rec0102)",
+        "XMP-xmpDM:FileDataRate":  "10000000",
+        "XMP-xmpDM:Duration":  [
+            {
+                "value":  "25000",
+                "scale":  "1/25"
+            }
+        ],
+        "XMP-iptcExt:ContainerFormat":  [
+            {
+                "Identifier":  "ContainerFormat Id 1 (rec0102)",
+                "Name":  "ContainerFormat Name 1 (rec0102)"
+            }
+        ],
+        "XMP-xmpDM:VideoFrameSize":  [
+            {
+                "w":  "1920",
+                "unit":  "pixel",
+                "h":  "1080"
+            }
+        ],
+        "XMP-iptcExt:Genre":  [
+            {
+                "CvTermName":  "Genre CV-Term Name 1 (rec0102)",
+                "CvTermRefinedAbout":  "http://example.com/cv/genrerefinements2/rec0102/codeY864",
+                "CvTermId":  "http://example.com/cv/genre/rec0102/code1369",
+                "CvId":  "http://example.com/cv/genre/rec0102"
+            }
+        ],
+        "XMP-photoshop:Headline":  "The Headline (rec0102)",
+        "XMP-dc:Subject":  [
+             "Keyword1rec0102",
+             "Keyword2rec0102",
+             "Keyword3rec0102"
+        ],
+        "XMP-dc:Language":  "en-GB (rec0102)",
+        "XMP-plus:Licensor":  [
+            {
+                "LicensorPostalCode":  "Licensor Postcode 1 (rec0102)",
+                "LicensorCity":  "Licensor City 1 (rec0102)",
+                "LicensorRegion":  "Licensor Region 1 (rec0102)",
+                "LicensorCountry":  "Licensor Country 1 (rec0102)",
+                "LicensorStreetAddress":  "Licensor Street Addr 1 (rec0102)",
+                "LicensorURL":  "Licensor URL 1 (rec0102)",
+                "LicensorTelephone1":  "Licensor Phone1 1 (rec0102)",
+                "LicensorTelephone2":  "Licensor Phone2 1 (rec0102)",
+                "LicensorExtendedAddress":  "Licensor Ext Addr 1 (rec0102)",
+                "LicensorID":  "Licensor ID 1 (rec0102)",
+                "LicensorName":  "Licensor Name 1 (rec0102)",
+                "LicensorEmail":  "Licensor Email 1 (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:LocationCreated":  [
+            {
+                "LocationName":  "Name of Location Created 1 (rec0102)",
+                "CountryCode":  "R16",
+                "WorldRegion":  "Worldregion (Location created1) (rec0102)",
+                "GPSAltitude":  "180",
+                "CountryName":  "CountryName (Location created1) (rec0102)",
+                "City":  "City (Location created1) (rec0102)",
+                "ProvinceState":  "Province/State (Location created1) (rec0102)",
+                "GPSLongitude":  "48,14.03E",
+                "Sublocation":  "Sublocation (Location created1) (rec0102)",
+                "LocationId":  "Location Id (Location created1) (rec0102)",
+                "GPSLatitude":  "16,20.02N"
+            }
+        ],
+        "XMP-iptcExt:LocationShown":  [
+            {
+                "LocationName":  "Name of Location Shown 1 (rec0102)",
+                "CountryCode":  "R16",
+                "WorldRegion":  "Worldregion (Location shown1) (rec0102)",
+                "GPSAltitude":  "180",
+                "CountryName":  "CountryName (Location shown1) (rec0102)",
+                "City":  "City (Location shown1) (rec0102)",
+                "ProvinceState":  "Province/State (Location shown1) (rec0102)",
+                "GPSLongitude":  "48,15.03E",
+                "Sublocation":  "Sublocation (Location shown1) (rec0102)",
+                "LocationId":  [
+                    "Location Id 1a(Location shown1) (rec0102)",
+                    "Location Id 1b(Location shown1) (rec0102)"
+                ],
+                "GPSLatitude":  "16,21.02N"
+            },
+            {
+                "LocationName":  "Name of Location Shown 2 (rec0102)",
+                "CountryCode":  "R16",
+                "WorldRegion":  "Worldregion (Location shown2) (rec0102)",
+                "GPSAltitude":  "180",
+                "CountryName":  "CountryName (Location shown2) (rec0102)",
+                "City":  "City (Location shown2) (rec0102)",
+                "ProvinceState":  "Province/State (Location shown2) (rec0102)",
+                "GPSLongitude":  "48,16.03E",
+                "Sublocation":  "Sublocation (Location shown2) (rec0102)",
+                "LocationId":  [
+                    "Location Id 2a(Location shown2) (rec0102)",
+                    "Location Id 2b(Location shown2) (rec0102)"
+                ],
+                "GPSLatitude":  "16,22.02N"
+            }
+        ],
+        "XMP-dc:Format":  "video/H264 (rec0102)",
+        "XMP-plus:ModelReleaseID":  [
+            "Model Release ID 1 (rec0102)",
+            "Model Release ID 2 (rec0102)"
+        ],
+        "XMP-plus:ModelReleaseStatus":  "Not Applicable",
+        "XMP-iptcExt:ArtworkOrObject":  [
+            {
+                "AOContributionDescription":  "AO Contribution Description 1 (rec0102)",
+                "AOCurrentLicensorId":  "AO Current Licensor ID 1 (rec0102)",
+                "AOSourceInvNo":  "AO Source Inventory No 1 (rec0102)",
+                "AOCircaDateCreated":  "AO Circa Date: between 1550 and 1600 (rec0102)",
+                "AOSourceInvURL":  "AO Source Inventory URL (rec0102)",
+                "AOCurrentLicensorName":  "AO Current Licensor Name 1 (rec0102)",
+                "AOPhysicalDescription":  "AO Physical Description 1 (rec0102)",
+                "AOStylePeriod":  [
+                    "AO Style Baroque (rec0102)",
+                    "AO Style Italian Baroque (rec0102)"
+                ],
+                "AOCreatorId":  [
+                    "AO Creator Id 1a (rec0102)",
+                    "AO Creator Id 1b (rec0102)"
+                ],
+                "AODateCreated":  "1916:10:26 12:13:14+00:00",
+                "AOSource":  "AO Source 1 (rec0102)",
+                "AOCopyrightNotice":  "AO Copyright Notice 1 (rec0102)",
+                "AOContentDescription":  "AO Content Description 1 (rec0102)",
+                "AOCurrentCopyrightOwnerId":  "AO Current Copyright Owner ID 1 (rec0102)",
+                "AOTitle":  "AO Title 1 (rec0102)",
+                "AOCurrentCopyrightOwnerName":  "AO Current Copyright Owner Name 1 (rec0102)",
+                "AOCreator":  [
+                    "AO Creator Name 1a (rec0102)",
+                    "AO Creator Name 1b (rec0102)"
+                ]
+            }
+        ],
+        "XMP-tiff:Orientation#":  "1",
+        "XMP-iptcExt:PersonHeard":  [
+            {
+                "Identifier":  "PersonHeard Id 1 (rec0102)",
+                "Name":  "PersonHeard Name 1 (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:PersonInImageWDetails":  [
+            {
+                "PersonName":  "Person Name 1 (rec0102)",
+                "PersonDescription":  "Person Description 1 (rec0102)",
+                "PersonId":  [
+                    "http://wikidata.org/item/Q123456789/rec0102",
+                    "http://freebase.com/m/987654321/rec0102"
+                ],
+                "PersonCharacteristic":  [
+                    {
+                        "CvTermName":  "Person Characteristic Name 1 (rec0102)",
+                        "CvTermRefinedAbout":  "http://example.com/cv/refinements987/codeY765/rec0102",
+                        "CvTermId":  "http://example.com/cv/test99/code987/rec0102",
+                        "CvId":  "http://example.com/cv/test99/rec0102"
+                    }
+                ]
+            }
+        ],
+        "XMP-iptcExt:PlanningRef":  [
+            {
+                "Name":  "Planning Ref Name 1 (rec0102)",
+                "Identifier":  "Planning Ref Id 1 (rec0102)",
+                "Role":  "http://example.org/cv/vmh/role-contrib/codeA-rec0102"
+            },
+            {
+                "Name":  "Planning Ref Name 2 (rec0102)",
+                "Identifier":  "Planning Ref Id 2 (rec0102)",
+                "Role":  "http://example.org/cv/vmh/role-contrib/codeB-rec0102"
+            }
+        ],
+        "XMP-plus:PropertyReleaseID":  [
+            "Property Release ID 1 (rec0102)",
+            "Property Release ID 2 (rec0102)"
+        ],
+        "XMP-plus:PropertyReleaseStatus":  "Not Applicable",
+        "XMP-iptcExt:PublicationEvent":  [
+            {
+                "Date":  "2018-06-12T20:00:00+00:00",
+                "Name":  "PublicationEvent Name 1 (rec0102)",
+                "Identifier":  "PublicationEvent Id 1 (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:Rating":  [
+            {
+                "RatingValue": "RatingValue Id 1 (rec0102)",
+                "RatingScaleMaxValue": "9",
+                "RatingScaleMinValue": "1",
+                "RatingSourceLink": "http://example.com/ratings/rec0102",
+                "RatingRegion": {
+                    "LocationName": "Name of Rating Location 1 (rec0102)",
+                    "CountryCode": "R16",
+                    "WorldRegion": "Worldregion (Rating Location 1) (rec0102)",
+                    "GPSAltitude": "230",
+                    "CountryName": "CountryName (Rating Location 1) (rec0102)",
+                    "City": "City (Rating Location 1) (rec0102)",
+                    "ProvinceState": "Province/State (Rating Location 1) (rec0102)",
+                    "GPSLongitude": "47,16.03E",
+                    "Sublocation": "Sublocation (Rating Location 1) (rec0102)",
+                    "LocationId": [
+                        "Location Id 2a(Rating Location 1) (rec0102)",
+                        "Location Id 2b(Rating Location 1) (rec0102)"
+                    ],
+                    "GPSLatitude": "16,01.02N"
+                },
+                "RatingValueLogoLink": "http://example.com/ratingsystem-logo/rec0102.jpg"
+            }
+        ],
+        "XMP-iptcExt:RecDevice":  {
+            "SerialNumber": "Rec Device Serial No 123 (rec0102)",
+            "ModelName": "Rec Device Model Name (rec0102)",
+            "Manufacturer": "Rec Device Manufacturer (rec0102)",
+            "AttLensDescription": "Rec Device Att Lens Description (rec0102)",
+            "OwnersDeviceId": "Rec Device Owner Device ID (rec0102)"
+        },
+        "XMP-iptcExt:ReleaseReady": "True",
+        "XMP-iptcExt:RegistryID": [
+            {
+                "RegItemId":  "Registry Image ID 1 (rec0102)",
+                "RegOrgId":  "Registry Organisation ID 1 (rec0102)",
+                "RegEntryRole":  "Registry Entry Role ID 1 (rec0102)"
+            },
+            {
+                "RegItemId":  "Registry Image ID 2 (rec0102)",
+                "RegOrgId":  "Registry Organisation ID 2 (rec0102)",
+                "RegEntryRole":  "Registry Entry Role ID 2 (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:EmbdEncRightsExpr":  [
+            {
+                "RightsExprLangId":  "http://example.org/RELids/id4711/rec0102",
+                "RightsExprEncType":  "IANA Media Type of ERE (rec0102)",
+                "EncRightsExpr":  "The Encoded Rights Expression (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:LinkedEncRightsExpr":  [
+            {
+                "LinkedRightsExpr":  "http://example.org/linkedrightsexpression/id986/rec0102",
+                "RightsExprLangId":  "http://example.org/RELids/id4712/rec0102",
+                "RightsExprEncType":  "IANA Media Type of ERE (rec0102)"
+            }
+        ],
+        "XMP-plus:CopyrightOwner":  [
+            {
+                "CopyrightOwnerID":  "Copyright Owner Id 1 (rec0102)",
+                "CopyrightOwnerName":  "Copyright Owner Name 1 (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:Season":  [
+            {
+                "Number":  "SeR0101",
+                "Name":  "Season Name 1 (rec0102)",
+                "Identifier":  "http://example.com/series/season/rec0102"
+            }
+        ],
+        "XMP-iptcExt:Series":  [
+            {
+                "Identifier":  "http://example.com/series/rec0102",
+                "Name":  "Series Name 1 (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:Snapshot":  [
+            {
+                "Link":  "http://example.com/snapshots/vmhubrec0102.jpg",
+                "LinkQualifier":  [
+                    "http://www.example.org/videosnapshotqual/frame1",
+                    "http://www.example.org/videosnapshotqual/q3131"
+                ],
+                "UsedVideoFrame":  {
+                    "TimeValue":  "00:03:25:03",
+                    "TimeFormat#":  "25Timecode"
+                },
+                "Format":  "image/jpeg",
+                "HeightPixels":  "2160",
+                "WidthPixels":  "4096",
+                "ImageRole":  "Snapshot Link Promotion"
+            }
+        ],
+        "XMP-iptcExt:VideoShotType":  [
+            {
+                "Identifier": "VideoShotType Id 1 (rec0102)",
+                "Name": "VideoShotType Name 1 (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:ShownEvent":  [
+            {
+                "Identifier": "EventExt Id 1 (rec0102)",
+                "Name": "EventExt Name 1 (rec0102)"
+            }
+        ],
+        "XMP-xmpDM:videoPixelAspectRatio":  "16/9",
+        "XMP-xmpDM:videoFieldOrder#":  "progressive",
+        "XMP-iptcExt:StorylineIdentifier":  [
+            "Storyline Id 1",
+            "Storyline Id 2"
+        ],
+        "XMP-iptcExt:StreamReady#":  "unknown",
+        "XMP-iptcExt:StylePeriod":  "Style Period (rec0102)",
+        "XMP-plus:ImageSupplier":  [
+            {
+                "ImageSupplierName":  "Image Supplier Name (rec0102)",
+                "ImageSupplierID":  "Image Supplier Id (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:SupplyChainSource":  [
+            {
+                "Identifier":  "SupplyChainSource Id 1 (rec0102)",
+                "Name":  "SupplyChainSource Name 1 (rec0102)"
+            }
+        ],
+        "XMP-iptcExt:TemporalCoverage":  {
+            "tempCoverageFrom":  "2016:10:25 00:00:00+00:00",
+            "tempCoverageTo":  "2016:10:25 23:59:59+00:00"
+        },
+        "XMP-dc:Title":  "The Title (rec0102)",
+        "XMP-iptcExt:Transcript":  "Transcript (rec0102)",
+        "XMP-iptcExt:TranscriptLink":  [
+            {
+                "Link":  "http://example.com/transcripts/rec0102",
+                "LinkQualifier":  "http://example.com/linkqualifier/rec0102"
+            }
+        ],
+        "XMP-iptcExt:VideoBitRate":  "20170000",
+        "XMP-iptcExt:VideoBitRateMode#":  "variable",
+        "XMP-xmpDM:VideoCompressor":  "H264",
+        "XMP-xmpDM:VideoFrameRate":  "60",
+        "XMP-dc:Identifier":  "Video identifier (rec0102)",
+        "XMP-iptcExt:VideoEncodingProfile":  "videoEncodingProfile (rec0102)",
+        "XMP-xmpMM:RenditionClass":  "RenditionClass (rec0102)",
+        "XMP-iptcExt:VideoStreamsCount":  "2",
+        "XMP-xmpMM:VersionID":  "VersionID (rec0102)",
+        "XMP-iptcExt:VisualColor#":  "colour",
+        "XMP-iptcExt:WorkflowTag":  [
+            {
+                "CvTermName":  "CV-Term Name 1 (rec0102)",
+                "CvTermRefinedAbout":  "http://example.com/cv/refinements2/rec0102/codeX145",
+                "CvTermId":  "http://example.com/cv/wflowtag/rec0102/code987",
+                "CvId":  "http://example.com/cv/wflowtag/rec0102"
+            }
+        ],
+        "XMP-xmpMM:Pantry":  [
+            {
+                "XMP-dc:Rights":  "Copyright 2014 Video Footage Ltd.",
+                "XMP-dc:Description":  "Description of Clip 1",
+                "InstanceID":  "instanceId01"
+            },
+            {
+                "XMP-dc:Rights":  "Copyright 2015 Video Clips Inc.",
+                "XMP-dc:Description":  "Description of Clip 2",
+                "InstanceID":  "instanceId02"
+            }
+        ],
+        "XMP-xmpMM:Ingredients":  [
+            {
+                "ToPart":  "/time:273f25r862f25",
+                "DocumentID":  "instanceId01",
+                "FromPart":  "/time:1f25r589f25"
+            },
+            {
+                "ToPart":  "/time:1082f25r1634f25",
+                "DocumentID":  "instanceId02",
+                "FromPart":  "/time:347f25r899f25"
+            }
+        ]
+    }
+]
+

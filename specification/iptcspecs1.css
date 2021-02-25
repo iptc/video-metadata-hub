@@ -1,0 +1,77 @@
+/* CSS for web pages showing an IPTC specification */
+body {
+	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+    font-size: 1.1em;
+}
+.pageheader{
+    /*color:#455f72; dark*/
+    color:#4a90e2;
+}
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid gray;
+}
+th {
+    background-color:  #99d6ff;
+    font-size: 1em;
+    /* height: 40px; */
+}
+td {
+    padding-left: 5px;
+    padding-right: 3px;
+    font-size: 0.85em;
+}
+/* Header row should be sticky vertically (stay visible at the top when scrolled down) */
+.vmhmapping thead th, .vmhprop thead th {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+}
+/* Two leftmost columns in header and body  should be sticky horizontally
+   (stay visible at the top when scrolled right) */
+.vmhmapping thead th:first-child,.vmhmapping thead th:nth-child(2),
+.vmhprop thead th:first-child,.vmhprop thead th:nth-child(2) {
+  left: 0;
+  z-index: 1;
+}
+.vmhmapping tbody td:nth-child(1), .vmhprop tbody td:nth-child(1),
+.vmhmapping tbody td:nth-child(2), .vmhprop tbody td:nth-child(2) {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  left: 0;
+  border-right: 1px solid #CCC;
+}
+.hdrcolIptc{
+    background-color: #99d6ff;
+}
+.bgdcolIptc{
+    background-color: #d8effd;
+}
+.hdrcolNoniptc{
+    background-color: #b2f8b2;
+}
+.bgdcolNoniptc{
+    background-color: #defdde;
+}
+.hdrcolNoniptc2{
+    background-color: #ffd37a;
+}
+.bgdcolNoniptc2{
+    background-color: #faebcc;
+}
+.note1{ }
+.smallnote1{
+	font-size: 0.8em;
+}
+.modified{
+    background-color: lightgray;
+}
+.isnew{
+    background-color: #ccffcc;
+}
+/* Video Metadata Hub */
+.vmhmapping td, .vmhprop td {
+    font-size: 0.75em;
+}
