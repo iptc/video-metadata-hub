@@ -39,9 +39,9 @@
                         "format": "date-time"
                     },
                     "episode": {
+                        "title": "Episode",
                         "description": "Episode in a specific season of a TV or video series this video is a member of.",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/EpisodeSeason",
-                        "title": "Episode"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/EpisodeSeason"
                     },
                     "externalMetadataLinks": {
                         "title": "External Metadata URL",
@@ -62,39 +62,46 @@
                         "description": "Globally unambiguous identifier of the video regardless of renditions, formats, encodings etc. This identifier should be shared across all renditions.",
                         "type": "string"
                     },
+                    "metadataAuthority": {
+                        "title": "Metadata Authority",
+                        "description": "Party responsible for the accuracy of the metadata values.",
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
+                    },
+                    "metadataLastEdited": {
+                        "title": "Metadata Edit Date",
+                        "description": "Date of the last edit of the metadata of this video.",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "metadataLastEditor": {
+                        "title": "Metadata Editor",
+                        "description": "Party doing the last edit of the metadata of this video."
+                    },
+                    "parentId": {
+                        "title": "Parent Video Identifier",
+                        "description": "Globally unambiguous identifier of the video from which this video was derived.",
+                        "type": "string"
+                    },
                     "planningRefs": {
-                        "description": "Reference to a data item used for planning the shooting of this video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/EntityWRole"
-                        }
+                        "title": "Planning Reference",
+                        "description": "Reference to a data item used for planning the shooting of this video"
                     },
                     "publicationEvents": {
                         "title": "Publication Event",
-                        "description": "Date and optionally the time of publishing this video with name and identifier for the event of this publication.",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/PublicationEvent"
-                        }
+                        "description": "Date and optionally the time of publishing this video with name and identifier for the event of this publication."
                     },
                     "ratings": {
                         "title": "Rating",
-                        "description": "How the video is rated by a public source or an authority",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Rating"
-                        }
+                        "description": "How the video is rated by a public source or an authority"
                     },
                     "recordingDevice": {
+                        "title": "Recording Device",
+                        "description": "Device used for recording this video",
                         "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Device"
                     },
                     "registryEntries": {
                         "title": "Registry Entry",
-                        "description": "Identifier of the video issued by an identified registry.",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/RegistryEntry"
-                        }
+                        "description": "Identifier of the video issued by an identified registry."
                     },
                     "releaseReady": {
                         "title": "Ready for Release",
@@ -107,14 +114,14 @@
                         "type": "string"
                     },
                     "season": {
+                        "title": "Season",
                         "description": "Season of a TV or video series this video is a member of.",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/EpisodeSeason",
-                        "title": "Season"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/EpisodeSeason"
                     },
                     "series": {
+                        "title": "Series",
                         "description": "TV or video series this video is a member of.",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Series",
-                        "title": "Series"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Series"
                     },
                     "storylineIdentifiers": {
                         "title": "Storyline Identifier",
@@ -130,9 +137,9 @@
                         "type": "string"
                     },
                     "temporalCoverage": {
+                        "title": "Temporal Coverage",
                         "description": "Period of time covered by the video",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/TemporalCoverage",
-                        "title": "Temporal Coverage"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/TemporalCoverage"
                     },
                     "videoVersion": {
                         "title": "Video Version",
@@ -140,64 +147,44 @@
                         "type": "string"
                     },
                     "workflowTag": {
+                        "title": "Workflow Tag",
                         "description": "Indicator for the role of this video in a production workflow.",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/CvTerm",
-                        "title": "Workflow Tag"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/CvTerm"
                     },
                     "aboutCvTerms": {
                         "title": "CV Term About the Content",
-                        "description": "What the video is about expressed by term(s) selected from taxonomies or controlled vocabularies",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/CvTerm"
-                        }
+                        "description": "What the video is about expressed by term(s) selected from taxonomies or controlled vocabularies"
                     },
                     "dataOnScreen": {
                         "title": "Data Displayed on Screen",
-                        "description": "Text or other data shown in some region of the image.",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/RegionWDelimiter"
-                        }
+                        "description": "Text or other data shown in some region of the image."
                     },
                     "description": {
+                        "title": "Description",
                         "description": "Textual description of the content of the video",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang",
-                        "title": "Description"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang"
                     },
                     "dopesheet": {
+                        "title": "Dopesheet",
                         "description": "Shotlist with descriptions",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang",
-                        "title": "Dopesheet"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang"
                     },
                     "dopesheetLinks": {
                         "title": "Dopesheet Link",
-                        "description": "Link(s) to an external web resource providing a shotlist with descriptions",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/QualifiedLink"
-                        }
+                        "description": "Link(s) to an external web resource providing a shotlist with descriptions"
                     },
                     "featuredOrganisations": {
                         "title": "Featured Organisation",
-                        "description": "Organisation(s) featured by the content of the video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
-                        }
+                        "description": "Organisation(s) featured by the content of the video"
                     },
                     "genres": {
                         "title": "Genre",
-                        "description": "Artistic, style, journalistic, product or other genre(s) of the video.",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/CvTerm"
-                        }
+                        "description": "Artistic, style, journalistic, product or other genre(s) of the video."
                     },
                     "headline": {
+                        "title": "Headline ",
                         "description": "Short description of the content of the video",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang",
-                        "title": "Headline "
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang"
                     },
                     "keywords": {
                         "title": "Keyword",
@@ -214,112 +201,67 @@
                     },
                     "locationsCreated": {
                         "title": "Location Shot",
-                        "description": "Place from where the video was shot, in particular where the camera was located",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Location"
-                        }
+                        "description": "Place from where the video was shot, in particular where the camera was located"
                     },
                     "locationsShown": {
                         "title": "Location Shown",
-                        "description": "Place(s) shown by the video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Location"
-                        }
+                        "description": "Place(s) shown by the video"
                     },
                     "objectsShown": {
                         "title": "Object Shown",
-                        "description": "Object(s) shown by the video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
-                        }
+                        "description": "Object(s) shown by the video"
                     },
                     "personsHeard": {
                         "title": "Person Heard",
-                        "description": "Person(s) who can be heard only in the video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
-                        }
+                        "description": "Person(s) who can be heard only in the video"
                     },
                     "personsShown": {
                         "title": "Person Shown",
-                        "description": "Person(s) shown by the video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/PersonWDetails"
-                        }
+                        "description": "Person(s) shown by the video"
                     },
                     "productsShown": {
                         "title": "Product Shown",
-                        "description": "Product(s) identified by a GTIN code shown by the video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/ProductWGtin"
-                        }
+                        "description": "Product(s) identified by a GTIN code shown by the video"
                     },
                     "shownEvents": {
                         "title": "Shown Event",
-                        "description": "Event(s) shown by the video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
-                        }
+                        "description": "Event(s) shown by the video"
                     },
                     "snapshotLinks": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/LinkedImage"
-                        }
+                        "title": "Snapshot Link",
+                        "description": "A still image representing  the video."
                     },
                     "title": {
+                        "title": "Title",
                         "description": "Title of the video, should be a shorthand reference",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang",
-                        "title": "Title"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang"
                     },
                     "transcript": {
+                        "title": "Transcript",
                         "description": "Transcription of the video",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang",
-                        "title": "Transcript"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang"
                     },
                     "transcriptLinks": {
                         "title": "Transcript Link",
-                        "description": "Link(s) to an external web resource providing a transcription of the video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/QualifiedLink"
-                        }
+                        "description": "Link(s) to an external web resource providing a transcription of the video"
                     },
                     "videoShotTypes": {
                         "title": "Shot Type",
-                        "description": "Visual type(s) of the video",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
-                        }
+                        "description": "Visual type(s) of the video"
                     },
                     "visualColour": {
                         "title": "Visual Colour",
                         "description": "The visual colouring of the video.",
-                        "type": "string",
-                        "enum": [
-                            "dummy1"
-                        ]
+                        "type": "string"
                     },
                     "contributors": {
                         "title": "Contributor",
-                        "description": "Party or parties (person or organisation) which contributed to the video, refinement by the role attribute.",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/EntityWRole"
-                        }
+                        "description": "Party or parties (person or organisation) which contributed to the video, refinement by the role attribute."
                     },
                     "copyrightNotice": {
+                        "title": "Copyright Notice ",
                         "description": "Any textual notice necessary by legal needs or common use to indicate the current owner of the copyright of this media resource",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang",
-                        "title": "Copyright Notice "
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/AltLang"
                     },
                     "copyrightOwners": {
                         "title": "Rights Owner ",
@@ -336,11 +278,7 @@
                     },
                     "creators": {
                         "title": "Creator",
-                        "description": "Party or parties (person or organisation) which created the video, refinement by the role attribute. ",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/EntityWRole"
-                        }
+                        "description": "Party or parties (person or organisation) which created the video, refinement by the role attribute. "
                     },
                     "creditLine": {
                         "title": "Credit Line",
@@ -348,25 +286,17 @@
                         "type": "string"
                     },
                     "embdEncRightsExpr": {
-                        "title": "Embedded Rights and Licensing Terms",
-                        "description": "Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/EmbdEncRightsExpr"
-                        }
-                    },
-                    "linkedEncRightsExpr": {
-                        "title": "Linked Rights and Licensing Terms",
-                        "description": "Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/LinkedEncRightsExpr"
-                        }
+                        "title": "Rights and Licensing Terms (1)",
+                        "description": "Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)"
                     },
                     "licensor": {
+                        "title": "Licensor ",
                         "description": "Company or person to  be contacted for licensing",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity",
-                        "title": "Licensor "
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
+                    },
+                    "linkedEncRightsExpr": {
+                        "title": "Rights and Licensing Terms (2)",
+                        "description": "Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)"
                     },
                     "modelReleaseDocuments": {
                         "title": "Model Release Document",
@@ -377,9 +307,9 @@
                         }
                     },
                     "modelReleaseStatus": {
+                        "title": "Model Release Status",
                         "description": "Summarises the availability and scope of model releases authorizing usage of the likenesses of persons appearing in the video",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/CvTerm",
-                        "title": "Model Release Status"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/CvTerm"
                     },
                     "propertyReleaseDocuments": {
                         "title": "Property Release Document",
@@ -390,22 +320,18 @@
                         }
                     },
                     "propertyReleaseStatus": {
+                        "title": "Property Release Status",
                         "description": "Summarises the availability and scope of property releases authorising usage of the properties appearing in the photograph.",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/CvTerm",
-                        "title": "Property Release Status"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/CvTerm"
                     },
                     "supplier": {
+                        "title": "Supplier ",
                         "description": "Supplier of this copy of the media resource",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity",
-                        "title": "Supplier "
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
                     },
                     "supplyChainSources": {
                         "title": "Supply Chain Source",
-                        "description": "Person or party who has a role in the content supply chain.",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
-                        }
+                        "description": "Person or party who has a role in the content supply chain."
                     },
                     "audioBitRate": {
                         "title": "Audio Bitrate",
@@ -415,29 +341,27 @@
                     "audioBitRateType": {
                         "title": "Audio Bitrate Type",
                         "description": "Indicates if the bitrate of the audio data is fixed or variable",
-                        "type": "string",
-                        "enum": [
-                            "dummy1"
-                        ]
+                        "type": "string"
                     },
                     "audioBitsPerSample": {
+                        "title": "Audio Bits per Sample",
                         "description": "Number of bits used for an audio sample",
                         "type": "number"
                     },
                     "audioChannelCount": {
-                        "title": "Audio channels",
+                        "title": "Audio Channels",
                         "description": "Number of used audio channels",
                         "type": "number"
                     },
                     "audioChannelLayout": {
-                        "title": "Audio channel layout",
+                        "title": "Audio Channel Layout",
                         "description": "Term indicating the channel layout",
                         "type": "string"
                     },
                     "audioCoding": {
+                        "title": "Audio Coding",
                         "description": "Machine readable code and a human readable term for the used audio coding",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity",
-                        "title": "Audio Coding"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
                     },
                     "audioSampleRate": {
                         "title": "Audio Sample Rate",
@@ -446,27 +370,15 @@
                     },
                     "editorialDurationEnds": {
                         "title": "Editorial Duration End",
-                        "description": "The point in time and frames the content proposed for editorial use ends",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/VideoTime"
-                        }
+                        "description": "The point in time and frames the content proposed for editorial use ends"
                     },
                     "editorialDurationStarts": {
                         "title": "Editorial Duration Start",
-                        "description": "The point in time and frames the content proposed for editorial use starts",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/VideoTime"
-                        }
+                        "description": "The point in time and frames the content proposed for editorial use starts"
                     },
                     "editorialDurations": {
                         "title": "Editorial Duration",
-                        "description": "Duration of the video content proposed for editorial use",
-                        "type": "array",
-                        "items": {
-                            "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/VideoTime"
-                        }
+                        "description": "Duration of the video content proposed for editorial use"
                     },
                     "fileBitrate": {
                         "title": "File Bitrate",
@@ -474,19 +386,19 @@
                         "type": "number"
                     },
                     "fileDuration": {
+                        "title": "File Duration",
                         "description": "Duration of the overall video (from the first to the last frame)",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/VideoTime",
-                        "title": "File Duration"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/VideoTime"
                     },
                     "fileFormat": {
+                        "title": "File Format",
                         "description": "Format of the file containing the video data.",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity",
-                        "title": "File Format"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
                     },
                     "frameSize": {
+                        "title": "Frame Size",
                         "description": "Size of the video frame in pixels",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/FrameSize",
-                        "title": "Frame Size"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/FrameSize"
                     },
                     "mediaType": {
                         "title": "Media Type",
@@ -511,10 +423,7 @@
                     "streamReady": {
                         "title": "Stream-ready",
                         "description": "Indicates if this video can be used for streaming by the rule of having the key technical data of the video at the start rather than end of the file and that the wrapper and essense format are suitable for streaming",
-                        "type": "string",
-                        "enum": [
-                            "dummy1"
-                        ]
+                        "type": "string"
                     },
                     "videoBitrate": {
                         "title": "Video Bitrate",
@@ -524,15 +433,12 @@
                     "videoBitrateType": {
                         "title": "Video Bitrate Type",
                         "description": "Indicates if the bitrate of the video data is fixed or variable",
-                        "type": "string",
-                        "enum": [
-                            "dummy1"
-                        ]
+                        "type": "string"
                     },
                     "videoCoding": {
+                        "title": "Video Coding",
                         "description": "Machine readable code and a human readable term for the used video coding",
-                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity",
-                        "title": "Video Coding"
+                        "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/Entity"
                     },
                     "videoDisplayAspectRatio": {
                         "title": "Display Aspect Ratio",
