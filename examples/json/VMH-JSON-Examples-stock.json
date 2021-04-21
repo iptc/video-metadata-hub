@@ -1,0 +1,70 @@
+[
+    {
+        "photoVideoMetadataIPTC": {
+            "circaDateCreated": "2020-09-18",
+            "dateCreated": "2020-09-18",
+            "dateReleased": "2020-09-18",
+            "externalMetadataLinks": [
+                "https://vrmeta.io/tag/77c59ef67926aa7ac3"
+            ],
+            "feedIdentifier": "Mark Milstein",
+            "metadataLastEdited": "2020-10-21",
+            "metadataLastEditor": {
+                "name": {
+                    "en": "IPTC VM Working Group"
+                }
+            },
+            "metadataAuthority": {
+                "name": {
+                    "en": "Mark Milstein"
+                }
+            },
+            "publicationEvents": [
+                "IPTC VM Working Group Authentication Process"
+            ],
+            "recordingDevice": {
+                "manufacturer": "Panasonic",
+                "modelName": "HC-X1"
+            },
+            "registryEntries": "VRMETA_101010",
+            "stylePeriod": "Drone footage",
+            "temporalCoverage": {
+                "tempCoverageFrom": "2020",
+                "tempCoverageTo": "2020"
+            },
+            "parentId": "VRMETA_100000",
+            "description": {
+                "en": "An aerial view of the Budapest Container Port"
+            },
+            "keywords": [
+                "container port, Budapest, Hungary, railroad, trucking, transportation, logistics, aerial view"
+            ],
+            "locationsCreated": "Budapest",
+            "locationsShown": "Budapest",
+            "objectsShown": "Container port",
+            "videoShotTypes": "Aerial, long shot",
+            "title": {
+                "en": "An aerial view of the Budapest Container Port"
+            },
+            "copyrightNotice": {
+                "en": "Copyright VRMETA"
+            },
+            "copyrightYear": 2020.0,
+            "creators": [
+                {
+                    "name": {
+                        "en": "Mark Millstein"
+                    }
+                }
+            ],
+            "creditLine": "VRMETA",
+            "licensor": {
+                "name": {
+                    "en": "VRMETA"
+                }
+            },
+            "editorialDurationEnds": "N/A",
+            "editorialDurationStarts": "N/A"
+        }
+    }
+]

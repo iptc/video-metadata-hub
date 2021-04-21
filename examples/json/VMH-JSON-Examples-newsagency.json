@@ -1,0 +1,84 @@
+[
+    {
+        "photoVideoMetadataIPTC": {
+            "dateCreated": "1961-05-25",
+            "dateReleased": "1961-05-25",
+            "externalMetadataLinks": [
+                "https://www.nasa.gov/vision/space/features/jfk_speech.html"
+            ],
+            "feedIdentifier": "NASA Video",
+            "metadataAuthority": {
+                "name": {
+                    "en": "NASA"
+                }
+            },
+            "description": {
+                "en": "In an address to Congress on \"Urgent National Needs\" on May 25, 1961, President John F. Kennedy called for America to send astronauts to the moon and return him safely to Earth before the end of the decade."
+            },
+            "featuredOrganisations": "NASA, US Government",
+            "genres": "News",
+            "headline": {
+                "en": "A President Issues NASA's First Historic Challenge"
+            },
+            "language": "EN",
+            "locationsCreated": "Washington DC",
+            "locationsShown": "Washington DC",
+            "personsHeard": "President John F Kennedy",
+            "personsShown": "President John F Kennedy",
+            "contributors": [
+                {
+                    "name": {
+                        "en": "NASA"
+                    }
+                }
+            ],
+            "copyrightYear": 1961.0,
+            "creators": [
+                {
+                    "name": {
+                        "en": "NASA"
+                    }
+                }
+            ],
+            "copyrightOwners": [
+                {
+                    "name": {
+                        "en": "NASA; public domain"
+                    }
+                }
+            ],
+            "audioBitRate": 95000.0,
+            "audioBitsPerSample": 32.0,
+            "audioChannelLayout": "Stereo",
+            "audioChannelCount": 2.0,
+            "audioCoding": {
+                "name": {
+                    "en": "AAC"
+                }
+            },
+            "audioSampleRate": 44100.0,
+            "videoDisplayAspectRatio": "16:9",
+            "editorialDurations": "02:04",
+            "fileBitrate": 379000.0,
+            "fileFormat": {
+                "name": {
+                    "en": "MP4"
+                }
+            },
+            "frameSize": {
+                "widthPixels": 640,
+                "heightPixels": 360
+            },
+            "mediaType": "video/mp4",
+            "signalAspectRatio": "16:9",
+            "streamReady": "TRUE",
+            "videoCoding": {
+                "name": {
+                    "en": "H.264"
+                }
+            },
+            "videoFrameRate": 29.97,
+            "videoStreamsCount": 1.0
+        }
+    }
+]

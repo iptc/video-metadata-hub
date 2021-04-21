@@ -1,0 +1,76 @@
+[
+    {
+        "photoVideoMetadataIPTC": {
+            "dateCreated": "2020-04-28",
+            "dateModified": "2021-01-21",
+            "dateReleased": "2020-12-10",
+            "metadataAuthority": "MGM Resorts International Operations Inc.",
+            "storylineIdentifiers": [
+                "Las Vegas Properties, Bellagio"
+            ],
+            "parentId": "5588593",
+            "identifier": "106271516",
+            "videoVersion": "v.2",
+            "keywords": [
+                "Video",
+                "Fountains of Bellagio",
+                "Attractions",
+                "Entertainment & Attractions",
+                "Fountains",
+                "Drone",
+                "Drone Footage",
+                "Night",
+                "Exterior",
+                "Aerial",
+                "Architecture",
+                "Drone Footage - Night",
+                "Aerial View",
+                "Aircraft Point of View",
+                "Building - Exterior"
+            ],
+            "locationsCreated": [
+                "Bellagio, Las Vegas"
+            ],
+            "locationsShown": [
+                "Bellagio, Las Vegas"
+            ],
+            "objectsShown": [
+                "Fountains of Bellagio"
+            ],
+            "planningRefs": [
+                {
+                    "name": {
+                        "en-US": "Fountains of Bellagio"
+                    },
+                    "role": [
+                        "http://test.role/"
+                    ],
+                    "identifiers": [
+                        "http://test.identifier/"
+                    ]
+                }
+            ],
+            "shownEvents": [
+                {
+                    "name": {
+                        "en": "Aerial, exterior, night"
+                    }
+                }
+            ],
+            "title": {
+                "en": "BEL106271516"
+            },
+            "visualColour": "Color"
+        },
+        "photoVideoMetadata_Other": {
+        }
+    },
+    {
+        "mediafragment": {
+            "uri": "?t=0000100"
+        },
+        "photoVideoMetadataIPTC": {
+            "
+        }
+    }
+]

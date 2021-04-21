@@ -1,0 +1,102 @@
+[
+    {
+        "photoVideoMetadataIPTC": {
+            "dateCreated": "2020-04-28",
+            "dateModified": "2021-01-21",
+            "dateReleased": "2020-12-10",
+            "metadataAuthority": {
+                "name": {
+                    "en": "MGM Resorts International Operations Inc."
+                }
+            },
+            "storylineIdentifiers": [
+                "Las Vegas Properties, Bellagio"
+            ],
+            "parentId": "5588593",
+            "identifier": "106271516",
+            "videoVersion": "v.2",
+            "keywords": [
+                "Video; Fountains of Bellagio; Attractions; Entertainment & Attractions; Fountains; Drone; Drone Footage; Night; Exterior; Aerial; Architecture; Drone Footage - Night; Aerial View; Aircraft Point of View; Building - Exterior"
+            ],
+            "locationsCreated": "Bellagio, Las Vegas",
+            "locationsShown": "Bellagio, Las Vegas",
+            "objectsShown": "Fountains of Bellagio",
+            "shownEvents": "Aerial, exterior, night",
+            "title": {
+                "en": "BEL106271516"
+            },
+            "visualColour": "Color",
+            "contributors": [
+                {
+                    "name": {
+                        "en": "Mark Ott"
+                    }
+                }
+            ],
+            "copyrightNotice": {
+                "en": "MGM Resorts International Operations Inc."
+            },
+            "copyrightYear": 2020.0,
+            "creators": [
+                {
+                    "name": {
+                        "en": "Mark Ott"
+                    }
+                }
+            ],
+            "creditLine": "Mark Ott, 808 Post",
+            "licensor": {
+                "name": {
+                    "en": "MGM Resorts International Operations Inc."
+                }
+            },
+            "copyrightOwners": [
+                {
+                    "name": {
+                        "en": "MGM Resorts International Operations Inc."
+                    }
+                }
+            ],
+            "supplier": {
+                "name": {
+                    "en": "808 Post"
+                }
+            },
+            "supplyChainSources": "Mark Ott",
+            "audioBitRate": 317000.0,
+            "audioBitsPerSample": 32.0,
+            "audioChannelLayout": "Stereo",
+            "audioChannelCount": 2.0,
+            "audioCoding": {
+                "name": {
+                    "en": "AAC"
+                }
+            },
+            "audioSampleRate": 48000.0,
+            "videoDisplayAspectRatio": "16:9",
+            "editorialDurations": "4.53",
+            "fileBitrate": 10300000.0,
+            "fileFormat": {
+                "name": {
+                    "en": "MP4"
+                }
+            },
+            "frameSize": {
+                "widthPixels": 1920,
+                "heightPixels": 1080
+            },
+            "mediaType": "video/mp4",
+            "signalAspectRatio": "16:9",
+            "signalFormat": "ITU-R BT.709",
+            "streamReady": "TRUE",
+            "videoBitrate": 10000000.0,
+            "videoCoding": {
+                "name": {
+                    "en": "H.264"
+                }
+            },
+            "videoFrameRate": 29.97,
+            "videoStreamsCount": 1.0
+        }
+    }
+]

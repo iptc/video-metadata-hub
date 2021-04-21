@@ -1,0 +1,107 @@
+[
+    {
+        "photoVideoMetadataIPTC": {
+            "circaDateCreated": "1990s",
+            "dateModified": "No",
+            "episode": {
+                "name": {
+                    "en": "https://wellcomelibrary.org/item/b16766246"
+                }
+            },
+            "externalMetadataLinks": [
+                "https://wellcomelibrary.org/data/b16766246"
+            ],
+            "metadataAuthority": {
+                "name": {
+                    "en": "Wellcome Library"
+                }
+            },
+            "releaseReady": true,
+            "identifier": "b16766246",
+            "aboutCvTerms": "Public health",
+            "description": {
+                "en": "A television advertisement asking people to register for a Donor Card in order to donate organs after death. "
+            },
+            "dopesheetLinks": "https://wellcomelibrary.org/data/b16766246",
+            "genres": "Public information",
+            "headline": {
+                "en": "A television advertisement asking people to register for a Donor Card in order to donate organs after death. "
+            },
+            "keywords": [
+                "Organ procurement, Public health, Medical sciences, Organ transplantation, Health education, Health policy, Health services "
+            ],
+            "language": "En",
+            "snapshotLinks": "https://wellcomelibrary.org/posterimages/b16766246/poster",
+            "title": {
+                "en": "Donor card gift (commercial)."
+            },
+            "contributors": [
+                {
+                    "name": {
+                        "en": "This video was made from material preserved by the BFI National Archive."
+                    }
+                }
+            ],
+            "copyrightNotice": {
+                "en": "Crown copyright, managed by BFI; CC-BY-NC"
+            },
+            "creators": [
+                {
+                    "name": {
+                        "en": "This video was made from material preserved by the BFI National Archive."
+                    }
+                }
+            ],
+            "creditLine": "Wellcome Library",
+            "licensor": {
+                "name": {
+                    "en": "Wellcome Library"
+                }
+            },
+            "copyrightOwners": [
+                {
+                    "name": {
+                        "en": "Wellcome Library"
+                    }
+                }
+            ],
+            "supplier": {
+                "name": {
+                    "en": "Wellcome Library"
+                }
+            },
+            "audioBitsPerSample": 32.0,
+            "audioChannelLayout": "Stereo",
+            "audioChannelCount": 2.0,
+            "audioCoding": {
+                "name": {
+                    "en": "AAC"
+                }
+            },
+            "audioSampleRate": 44100.0,
+            "videoDisplayAspectRatio": "5x4",
+            "fileBitrate": 2300000.0,
+            "fileFormat": {
+                "name": {
+                    "en": "MP4"
+                }
+            },
+            "frameSize": {
+                "widthPixels": 768,
+                "heightPixels": 576
+            },
+            "mediaType": "video/mp4",
+            "signalAspectRatio": "5:4",
+            "signalFormat": "ITU-R BT.601",
+            "streamReady": "TRUE",
+            "videoBitrate": 2000000.0,
+            "videoCoding": {
+                "name": {
+                    "en": "H.264"
+                }
+            },
+            "videoFrameRate": 30.0,
+            "videoStreamsCount": 1.0
+        }
+    }
+]
