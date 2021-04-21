@@ -232,7 +232,7 @@ def main():
     service = build('sheets', 'v4', credentials=credentials)
 
     spreadsheetId = '1TgfvHcsbGvJqmF0iUUnaL-RAdd1lbentmb2LhcM8SDk'
-    rangeName = 'MappingRec 1.3.1 DRAFT!A4:R'
+    rangeName = 'MappingRec 1.3.1!A4:R'
     result1 = service.spreadsheets().values().get(
         spreadsheetId=spreadsheetId, range=rangeName).execute()
     valuesProp = result1.get('values', [])
