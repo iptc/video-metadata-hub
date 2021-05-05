@@ -72,7 +72,7 @@ def main():
 
     # create properties
     jsonprops = {}
-    for rowcounter in range(0, 85): #81
+    for rowcounter in range(0, 90): # to row 93
         try:
             valstr = valuesProp[rowcounter][0]
         except:
@@ -97,7 +97,9 @@ def main():
             valstr = valuesProp[rowcounter][18]
         except:
             valstr = ' '
+        # BQ changed 2021-03-10
         propname = propgroup + '-' + valstr.strip('\n')
+        # propname = valstr.strip('\n')
         try:
             valstr = valuesProp[rowcounter][20]
         except:
