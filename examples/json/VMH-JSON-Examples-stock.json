@@ -3,7 +3,7 @@
         "standard": {
             "name": "IPTC Video Metadata Hub",
             "version": "1.3",
-            "schema": "https://iptc.org/std/videometadatahub/recommendation/iptc-vmhub-schema.json"
+            "schema": "https://www.iptc.org/std/videometadatahub/recommendation/iptc-vmhub-1.3-schema.json"
         },
         "photoVideoMetadataIPTC": {
             "circaDateCreated": "2020-09-18",
