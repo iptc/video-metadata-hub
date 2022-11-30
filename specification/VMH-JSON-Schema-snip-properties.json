@@ -1,0 +1,482 @@
+{
+    "-pattern property: \"^(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+))$\"\n\nComment: this regex limits the property name to BCP47 language tags": {
+        "title": "",
+        "description": "",
+        "type": "string"
+    },
+    "administrative-circaDateCreated": {
+        "title": "Circa Date Created",
+        "description": "Approximate date or range of dates associated with the creation and production of a video.",
+        "type": "string"
+    },
+    "administrative-contentWarning": {
+        "title": "Content Warning",
+        "description": "Information to warn potential viewers about nudity, violence etc in the video\t"
+    },
+    "administrative-dateCreated": {
+        "title": "Date Created",
+        "description": "Designates the date and optionally the time the content of the video was created (rather than the date of the creation of the digital representation)",
+        "type": "string",
+        "format": "date-time"
+    },
+    "administrative-dateModified": {
+        "title": "Date Modified",
+        "description": "Date and optionally time when the video was modified last time",
+        "type": "string",
+        "format": "date-time"
+    },
+    "administrative-dateReleased": {
+        "title": "Date Released",
+        "description": "Date and optionally time of the public release of the video",
+        "type": "string",
+        "format": "date-time"
+    },
+    "administrative-digitalSourceType": {
+        "title": "Digital Source Type",
+        "description": "The type of the source of this digital video, including whether the video was captured, digitised or generated.",
+        "$ref": "#/definitions/CvTerm"
+    },
+    "administrative-episode": {
+        "title": "Episode",
+        "description": "Episode in a specific season of a TV or video series this video is a member of.",
+        "$ref": "#/definitions/EpisodeSeason"
+    },
+    "administrative-externalMetadataLinks": {
+        "title": "External Metadata URL",
+        "description": "Link(s) to an external web resource for retrieval of further metadata about this video",
+        "type": "array",
+        "items": {
+            "type": "string",
+            "format": "uri"
+        }
+    },
+    "administrative-feedIdentifier": {
+        "title": "Feed Identifier",
+        "description": "Identifier of the feed/source this video was delivered by",
+        "type": "string"
+    },
+    "administrative-identifier": {
+        "title": "Video Identifier",
+        "description": "Globally unambiguous identifier of the video regardless of renditions, formats, encodings etc. This identifier should be shared across all renditions.",
+        "type": "string"
+    },
+    "administrative-metadataAuthority": {
+        "title": "Metadata Authority",
+        "description": "Party responsible for the accuracy of the metadata values."
+    },
+    "administrative-metadataLastEdited": {
+        "title": "Metadata Edit Date",
+        "description": "Date of the last edit of the metadata of this video.",
+        "type": "string",
+        "format": "date-time"
+    },
+    "administrative-metadataLastEditor": {
+        "title": "Metadata Editor",
+        "description": "Party doing the last edit of the metadata of this video."
+    },
+    "administrative-parentId": {
+        "title": "Parent Video Identifier",
+        "description": "Globally unambiguous identifier of the video from which this video was derived.",
+        "type": "string"
+    },
+    "administrative-planningRefs": {
+        "title": "Planning Reference",
+        "description": "Reference to a data item used for planning the shooting of this video"
+    },
+    "administrative-publicationEvents": {
+        "title": "Publication Event",
+        "description": "Date and optionally the time of publishing this video with name and identifier for the event of this publication."
+    },
+    "administrative-ratings": {
+        "title": "Rating",
+        "description": "How the video is classified by a public authority such as MPA"
+    },
+    "administrative-recordingDevice": {
+        "title": "Recording Device",
+        "description": "Device used for recording this video",
+        "$ref": "#/definitions/Device"
+    },
+    "administrative-registryEntries": {
+        "title": "Registry Entry",
+        "description": "Identifier of the video issued by an identified registry."
+    },
+    "administrative-releaseReady": {
+        "title": "Ready for Release",
+        "description": "An indicator if this video is ready for being released to the public. This depends on rules by the party responsible for the publication.",
+        "type": "boolean"
+    },
+    "administrative-rendition": {
+        "title": "Video Rendition",
+        "description": "Unambiguous identifier of the video specific to a rendition. ",
+        "type": "string"
+    },
+    "administrative-reviewRatings": {
+        "title": "Review Rating",
+        "description": "An aesthetic rating given to the video by an external reviewer such as a news outlet        "
+    },
+    "administrative-season": {
+        "title": "Season",
+        "description": "Season of a TV or video series this video is a member of.",
+        "$ref": "#/definitions/EpisodeSeason"
+    },
+    "administrative-series": {
+        "title": "Series",
+        "description": "TV or video series this video is a member of.",
+        "$ref": "#/definitions/Series"
+    },
+    "administrative-storylineIdentifiers": {
+        "title": "Storyline Identifier",
+        "description": "Identifier(s) of a story evolving over time with which this video is associated",
+        "type": "array",
+        "items": {
+            "type": "string"
+        }
+    },
+    "administrative-stylePeriod": {
+        "title": "Style Period",
+        "description": "The style, historical or artistic period, movement, group, or school whose characteristics are represented by the video",
+        "type": "string"
+    },
+    "administrative-temporalCoverage": {
+        "title": "Temporal Coverage",
+        "description": "Period of time covered by the video",
+        "$ref": "#/definitions/TemporalCoverage"
+    },
+    "administrative-videoVersion": {
+        "title": "Video Version",
+        "description": "Version of the video identified by the Video Identifier",
+        "type": "string"
+    },
+    "administrative-workflowRating": {
+        "title": "Workflow Rating",
+        "description": "An aesthetic rating given to the video by its creator or editor, for example to mark the best take of a series",
+        "type": "number"
+    },
+    "administrative-workflowTag": {
+        "title": "Workflow Tag",
+        "description": "Indicator for the role of this video in a production workflow.",
+        "$ref": "#/definitions/CvTerm"
+    },
+    "describing a/v content-aboutCvTerms": {
+        "title": "CV Term About the Content",
+        "description": "What the video is about expressed by term(s) selected from taxonomies or controlled vocabularies"
+    },
+    "describing a/v content-altTextAccessibility": {
+        "title": "Alt Text (Accessibility)",
+        "description": "A brief textual description of the purpose and meaning of a video that can be accessed by assistive technology or displayed when the video is disabled in the browser. It should not exceed 250 characters.",
+        "$ref": "#/definitions/AltLang"
+    },
+    "describing a/v content-dataOnScreen": {
+        "title": "Data Displayed on Screen",
+        "description": "Text or other data shown in some region of the video."
+    },
+    "describing a/v content-description": {
+        "title": "Description",
+        "description": "Textual description of the content of the video",
+        "$ref": "#/definitions/AltLang"
+    },
+    "describing a/v content-dopesheet": {
+        "title": "Dopesheet",
+        "description": "Shotlist with descriptions",
+        "$ref": "#/definitions/AltLang"
+    },
+    "describing a/v content-dopesheetLinks": {
+        "title": "Dopesheet Link",
+        "description": "Link(s) to an external web resource providing a shotlist with descriptions"
+    },
+    "describing a/v content-extDescrAccessibility": {
+        "title": "Extended Description (Accessibility)",
+        "description": "A more detailed textual description of the purpose and meaning of a video that elaborates on the information provided by the Alt Text (Accessibility) property. This property does not have a character limitation and is not required if the Alt Text (Accessibility) field sufficiently describes the video.",
+        "$ref": "#/definitions/AltLang"
+    },
+    "describing a/v content-featuredOrganisations": {
+        "title": "Featured Organisation",
+        "description": "Organisation(s) featured by the content of the video"
+    },
+    "describing a/v content-genres": {
+        "title": "Genre",
+        "description": "Artistic, style, journalistic, product or other genre(s) of the video."
+    },
+    "describing a/v content-headline": {
+        "title": "Headline ",
+        "description": "Short description of the content of the video",
+        "$ref": "#/definitions/AltLang"
+    },
+    "describing a/v content-keywords": {
+        "title": "Keywords",
+        "description": "What the video is about expressed by a free choice of descriptive phrases or keywords"
+    },
+    "describing a/v content-language": {
+        "title": "Language Version",
+        "description": "Language version of the video",
+        "type": "string"
+    },
+    "describing a/v content-locationsCreated": {
+        "title": "Location Shot",
+        "description": "Place from where the video was shot, in particular where the camera was located"
+    },
+    "describing a/v content-locationsShown": {
+        "title": "Location Shown",
+        "description": "Place(s) shown by the video"
+    },
+    "describing a/v content-objectsShown": {
+        "title": "Object Shown",
+        "description": "Object(s) shown by the video"
+    },
+    "describing a/v content-personsHeard": {
+        "title": "Person Heard",
+        "description": "Person(s) who can be heard only in the video"
+    },
+    "describing a/v content-personsShown": {
+        "title": "Person Shown",
+        "description": "Person(s) shown by the video"
+    },
+    "describing a/v content-productsShown": {
+        "title": "Product Shown",
+        "description": "Product(s) identified by a GTIN code shown by the video"
+    },
+    "describing a/v content-shownEvents": {
+        "title": "Shown Event",
+        "description": "Event(s) shown by the video"
+    },
+    "describing a/v content-snapshotLinks": {
+        "title": "Snapshot Link",
+        "description": "A still image representing  the video."
+    },
+    "describing a/v content-timedTextLinks": {
+        "title": "Timed Text Link",
+        "description": "Link(s) to an external web resource providing a timed text track, used to provide captioning/subtitling or audio description of the video"
+    },
+    "describing a/v content-title": {
+        "title": "Title",
+        "description": "Title of the video, should be a shorthand reference",
+        "$ref": "#/definitions/AltLang"
+    },
+    "describing a/v content-transcript": {
+        "title": "Transcript",
+        "description": "Transcription of the video",
+        "$ref": "#/definitions/AltLang"
+    },
+    "describing a/v content-transcriptLinks": {
+        "title": "Transcript Link",
+        "description": "Link(s) to an external web resource providing a transcription of the video"
+    },
+    "describing a/v content-videoShotTypes": {
+        "title": "Shot Type",
+        "description": "Visual type(s) of the video"
+    },
+    "describing a/v content-visualColour": {
+        "title": "Visual Colour",
+        "description": "The visual colouring of the video.",
+        "enum": [
+            "dummy1"
+        ],
+        "type": "string"
+    },
+    "rights-contributors": {
+        "title": "Contributor",
+        "description": "Party or parties (person or organisation) which contributed to the video, refinement by the role attribute."
+    },
+    "rights-copyrightNotice": {
+        "title": "Copyright Notice ",
+        "description": "Any textual notice necessary by legal needs or common use to indicate the current owner of the copyright of this media resource",
+        "$ref": "#/definitions/AltLang"
+    },
+    "rights-copyrightOwners": {
+        "title": "Copyright Owner ",
+        "description": "Data identifying the individual or organisation owning the rights for this media resource which could be the video as a whole or a clip in a video. The optional role attribute may indicate which facet of rights is covered by this entity."
+    },
+    "rights-copyrightYear": {
+        "title": "Copyright Year",
+        "description": "Year of origin of the video, usually appearing in the copyright notice as a numeric value",
+        "type": "number"
+    },
+    "rights-creators": {
+        "title": "Creator",
+        "description": "Party or parties (person or organisation) which created the video, refinement by the role attribute. "
+    },
+    "rights-creditLine": {
+        "title": "Credit Line",
+        "description": "Credit to person(s) and/or organisation(s) required by the supplier of the video (clip) to be used when published.",
+        "type": "string"
+    },
+    "rights-embdEncRightsExpr": {
+        "title": "Embedded Encoded Rights Expression",
+        "description": "Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)"
+    },
+    "rights-licensor": {
+        "title": "Licensor ",
+        "description": "Company or person to  be contacted for licensing",
+        "$ref": "#/definitions/Entity"
+    },
+    "rights-linkedEncRightsExpr": {
+        "title": "Linked Encoded Rights Expression",
+        "description": "Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)"
+    },
+    "rights-modelReleaseDocuments": {
+        "title": "Model Release Document",
+        "description": "Identifier(s) of a Model Release document.",
+        "type": "array",
+        "items": {
+            "type": "string"
+        }
+    },
+    "rights-modelReleaseStatus": {
+        "title": "Model Release Status",
+        "description": "Summarises the availability and scope of model releases authorizing usage of the likenesses of persons appearing in the video",
+        "$ref": "#/definitions/CvTerm"
+    },
+    "rights-propertyReleaseDocuments": {
+        "title": "Property Release Document",
+        "description": "Identifier(s) of a Property Release document.",
+        "type": "array",
+        "items": {
+            "type": "string"
+        }
+    },
+    "rights-propertyReleaseStatus": {
+        "title": "Property Release Status",
+        "description": "Summarises the availability and scope of property releases authorising usage of the properties appearing in the photograph.",
+        "$ref": "#/definitions/CvTerm"
+    },
+    "rights-supplier": {
+        "title": "Supplier ",
+        "description": "Supplier of this copy of the media resource",
+        "$ref": "#/definitions/Entity"
+    },
+    "rights-supplyChainSources": {
+        "title": "Source (Supply Chain)",
+        "description": "Person or party who has a role in the content supply chain."
+    },
+    "technical-audioBitRate": {
+        "title": "Audio Bitrate",
+        "description": "Bit rate of the audio data depending on the Video Bit Rate Type: if fixed the fixed rate, if variable the maximum rate. The unit is bits per second.",
+        "type": "number"
+    },
+    "technical-audioBitRateType": {
+        "title": "Audio Bitrate Type",
+        "description": "Indicates if the bitrate of the audio data is fixed or variable",
+        "enum": [
+            "dummy1"
+        ],
+        "type": "string"
+    },
+    "technical-audioBitsPerSample": {
+        "title": "Audio Bits per Sample",
+        "description": "Number of bits used for an audio sample",
+        "type": "number"
+    },
+    "technical-audioChannelCount": {
+        "title": "Audio Channels",
+        "description": "Number of used audio channels",
+        "type": "number"
+    },
+    "technical-audioChannelLayout": {
+        "title": "Audio Channel Layout",
+        "description": "Term indicating the channel layout",
+        "type": "string"
+    },
+    "technical-audioCoding": {
+        "title": "Audio Coding",
+        "description": "Machine readable code and a human readable term for the used audio coding",
+        "$ref": "#/definitions/Entity"
+    },
+    "technical-audioSampleRate": {
+        "title": "Audio Sample Rate",
+        "description": "Rate used for sampling the audio",
+        "type": "number"
+    },
+    "technical-editorialDurationEnds": {
+        "title": "Editorial Duration End",
+        "description": "The point in time and frames the content proposed for editorial use ends"
+    },
+    "technical-editorialDurationStarts": {
+        "title": "Editorial Duration Start",
+        "description": "The point in time and frames the content proposed for editorial use starts"
+    },
+    "technical-editorialDurations": {
+        "title": "Editorial Duration",
+        "description": "Duration of the video content proposed for editorial use"
+    },
+    "technical-fileBitrate": {
+        "title": "File Bitrate",
+        "description": "The total bit rate of the all media streams in this file.",
+        "type": "number"
+    },
+    "technical-fileDuration": {
+        "title": "File Duration",
+        "description": "Duration of the overall video (from the first to the last frame)",
+        "$ref": "#/definitions/VideoTime"
+    },
+    "technical-fileFormat": {
+        "title": "File Format",
+        "description": "Format of the file containing the video data.",
+        "$ref": "#/definitions/Entity"
+    },
+    "technical-frameSize": {
+        "title": "Frame Size",
+        "description": "Size of the video frame in pixels",
+        "$ref": "#/definitions/FrameSize"
+    },
+    "technical-mediaType": {
+        "title": "Media Type",
+        "description": "IANA Media Type of the video.",
+        "type": "string"
+    },
+    "technical-orientation": {
+        "title": "Orientation",
+        "description": "Orientation of the visual content of the video as defined by TIFF.",
+        "type": "number"
+    },
+    "technical-signalAspectRatio": {
+        "title": "Signal Aspect Ratio",
+        "description": "Ratio of width and height in pixels of a frame",
+        "type": "string"
+    },
+    "technical-signalFormat": {
+        "title": "Signal Format",
+        "description": "Combined term including the size of the frame, interlaced/progressive, framerate ",
+        "type": "string"
+    },
+    "technical-streamReady": {
+        "title": "Stream-ready",
+        "description": "Indicates if this video can be used for streaming by the rule of having the key technical data of the video at the start rather than end of the file and that the wrapper and essense format are suitable for streaming",
+        "enum": [
+            "dummy1"
+        ],
+        "type": "string"
+    },
+    "technical-videoBitrate": {
+        "title": "Video Bitrate",
+        "description": "Bit rate of the video data depending on the Video Bit Rate Type: if fixed the fixed rate, if variable the maximum rate. The unit is bits per second.",
+        "type": "number"
+    },
+    "technical-videoBitrateType": {
+        "title": "Video Bitrate Type",
+        "description": "Indicates if the bitrate of the video data is fixed or variable",
+        "enum": [
+            "dummy1"
+        ],
+        "type": "string"
+    },
+    "technical-videoCoding": {
+        "title": "Video Coding",
+        "description": "Machine readable code and a human readable term for the used video coding",
+        "$ref": "#/definitions/Entity"
+    },
+    "technical-videoDisplayAspectRatio": {
+        "title": "Display Aspect Ratio",
+        "description": "Ratio of width and height of the displayed image. (Width and height do not require to be in pixels.)",
+        "type": "string"
+    },
+    "technical-videoEncodingProfile": {
+        "title": "Video Profile",
+        "description": "Name of the used video profile as defined by the maker of the encoding standard.",
+        "type": "string"
+    },
+    "technical-videoFrameRate": {
+        "title": "Video Frame Rate",
+        "description": "Used frame rate",
+        "type": "number"
+    }
+}

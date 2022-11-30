@@ -1,0 +1,846 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://www.iptc.org/std/videometadatahub/recommendation/iptc-vmhub-1.3-schema.json",
+    "title": "IPTC Video Metadata Hub JSON Schema",
+    "description": "Overall structure of video metadata of a single media asset - sets of metadata for the whole asset and fragments of the asset -- the properties comply with the IPTC Video Metadata Hub Recommendation 1.3 (IPTC/BQ/2021-05-10)",
+    "type": "array",
+    "minItems": 1,
+    "items": {
+        "type": "object",
+        "properties": {
+            "mediafragment": {
+                "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/MediaFragment"
+            },
+            "photoVideoMetadataIPTC": {
+                "description": "Container for IPTC photo/video metadata",
+                "type": "object",
+                "properties":
+{
+    "ArtworkOrObject": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "circaDateCreated": {
+                "title": "Circa Date Created",
+                "description": "Approximate date or range of dates associated with the creation and production of an artwork or object or its components.",
+                "type": "string"
+            },
+            "contentDescription": {
+                "title": "Content Description",
+                "description": "A textual description of the content depicted in the artwork or object.",
+                "$ref": "#/definitions/AltLang"
+            },
+            "contributionDescription": {
+                "title": "Contribution Description",
+                "description": "A textual description about a contribution made to an artwork or an object.",
+                "$ref": "#/definitions/AltLang"
+            },
+            "copyrightNotice": {
+                "title": "Copyright Notice",
+                "description": "Contains any necessary copyright notice for claiming the intellectual property for artwork or an object in the image and should identify the current owner of the copyright of this  work with associated intellectual property rights.",
+                "$ref": "#/definitions/AltLang"
+            },
+            "creatorNames": {
+                "title": "Creator",
+                "description": "Contains the name of the artist who has created artwork or an object in the  image. In cases where the artist could or should not be identified the name of a company or organisation may be appropriate.",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "creatorIdentifiers": {
+                "title": "Creator ID",
+                "description": "Globally unique identifier for the creator of artwork or object.",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "currentCopyrightOwnerIdentifier": {
+                "title": "Current Copyright Owner ID",
+                "description": "Globally unique identifier for the current owner of the copyright of the artwork or object.",
+                "type": "string",
+                "format": "uri"
+            },
+            "currentCopyrightOwnerName": {
+                "title": "Current Copyright Owner Name",
+                "description": "Name of the current owner of the copyright of the artwork or object.",
+                "type": "string"
+            },
+            "currentLicensorIdentifier": {
+                "title": "Current Licensor ID",
+                "description": "Globally unique identifier for the current licensor of the artwork or object.",
+                "type": "string",
+                "format": "uri"
+            },
+            "currentLicensorName": {
+                "title": "Current Licensor Name",
+                "description": "Name of the current licensor of the artwork or object.",
+                "type": "string"
+            },
+            "dateCreated": {
+                "title": "Date Created",
+                "description": "Designates the date and optionally the time the artwork or object in the image was created. This relates to artwork or objects with associated intellectual property rights.",
+                "type": "string",
+                "format": "date-time"
+            },
+            "physicalDescription": {
+                "title": "Physical Description",
+                "description": "A textual description of the physical characteristics of the artwork or object, without reference to the content depicted.",
+                "$ref": "#/definitions/AltLang"
+            },
+            "source": {
+                "title": "Source",
+                "description": "The organisation or body holding and registering the artwork or object in the image for inventory purposes.",
+                "type": "string"
+            },
+            "sourceInventoryNr": {
+                "title": "Source Inventory Number",
+                "description": "The inventory number issued by the organisation or body holding and registering the artwork or object in the image.",
+                "type": "string"
+            },
+            "sourceInventoryUrl": {
+                "title": "Source Inventory URL",
+                "description": "URL reference to the metadata record of the inventory maintained by the Source.",
+                "type": "string",
+                "format": "uri"
+            },
+            "stylePeriod": {
+                "title": "Style Period",
+                "description": "The style, historical or artistic period, movement, group, or school whose characteristics are represented in the artwork or object.",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "title": {
+                "title": "Title",
+                "description": "A reference for the artwork or object in the image.",
+                "$ref": "#/definitions/AltLang"
+            }
+        },
+        "required": []
+    },
+    "Concept": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "identifiers": {
+                "title": "Identifier",
+                "description": "Globally unique identifier of the concept",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "name": {
+                "title": "Name",
+                "description": "Full name of the concept",
+                "$ref": "#/definitions/AltLang"
+            }
+        },
+        "required": []
+    },
+    "ConceptWRole": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "identifiers": {
+                "title": "Identifier",
+                "description": "Globally unique identifier of the concept",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "name": {
+                "title": "Name",
+                "description": "Full name of the concept",
+                "$ref": "#/definitions/AltLang"
+            },
+            "role": {
+                "title": "Role",
+                "description": "Identifier of the role the concept has in the context of the metadata property",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            }
+        },
+        "required": []
+    },
+    "CvTerm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "cvId": {
+                "title": "CV-Term CV ID",
+                "description": "Globally unique identifier of the Controlled Vocabulary the term is from.",
+                "type": "string",
+                "format": "uri"
+            },
+            "cvTermId": {
+                "title": "CV-Term ID",
+                "description": "Globally unique identifier of the term from a Controlled Vocabulary.",
+                "type": "string",
+                "format": "uri"
+            },
+            "cvTermName": {
+                "title": "CV-Term name",
+                "description": "Natural language name of the term from a Controlled Vocabulary.",
+                "$ref": "#/definitions/AltLang"
+            },
+            "cvTermRefinedAbout": {
+                "title": "Refined 'aboutness' of the CV-Term",
+                "description": "Refinement of the 'about' relationship of the term with the content.",
+                "type": "string",
+                "format": "uri"
+            }
+        },
+        "required": [
+            "cvTermId"
+        ]
+    },
+    "Device": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "manufacturer": {
+                "title": "Manufacturer",
+                "description": "Name of the manufacturer of the device",
+                "type": "string"
+            },
+            "modelName": {
+                "title": "Model Name",
+                "description": "Name of the device model",
+                "type": "string"
+            },
+            "serialNumber": {
+                "title": "Serial Number",
+                "description": "Serial number, assigned by manufacturer",
+                "type": "string"
+            },
+            "attLensDescription": {
+                "title": "Attached Lens Description",
+                "description": "Short description of the lens used with the device at the time of the recording",
+                "type": "string"
+            },
+            "ownerDeviceId": {
+                "title": "Owner\u00b4s Device ID",
+                "description": "Identifier assigned by the owner of the device",
+                "type": "string"
+            }
+        },
+        "required": []
+    },
+    "EmbdEncRightsExpr": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "rightsExprLangId": {
+                "title": "Rights Expression Language ID",
+                "description": "Identifier of the rights expression language used by the rights expression.",
+                "type": "string",
+                "format": "uri"
+            },
+            "rightsExprEncType": {
+                "title": "Encoding type",
+                "description": "Encoding type of the rights expression, identified by an IANA Media Type.",
+                "type": "string"
+            },
+            "encRightsExpr": {
+                "title": "Encoded Rights Expression",
+                "description": "Embedded serialized rights expression using a rights expression language which is encoded as a string.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "rightsExprLangId",
+            "rightsExprEncType",
+            "encRightsExpr"
+        ]
+    },
+    "Entity": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "identifiers": {
+                "title": "Identifier",
+                "description": "Globally unique identifier of the entity",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "name": {
+                "title": "Name",
+                "description": "Full name of the entity",
+                "$ref": "#/definitions/AltLang"
+            }
+        },
+        "required": []
+    },
+    "EntityWRole": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "identifiers": {
+                "title": "Identifier",
+                "description": "Globally unique identifier of the entity",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "name": {
+                "title": "Name",
+                "description": "Full name of the entity",
+                "$ref": "#/definitions/AltLang"
+            },
+            "role": {
+                "title": "Role",
+                "description": "Identifier of the role the entity has in the context of the metadata property",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "required": []
+    },
+    "EpisodeSeason": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "title": "Name",
+                "description": "Name of the episode or season of a series",
+                "$ref": "#/definitions/AltLang"
+            },
+            "number": {
+                "title": "Number",
+                "description": "Number of the episode or season of a series",
+                "type": "number"
+            },
+            "identifier": {
+                "title": "Identifier",
+                "description": "Identifier of the episode or season of a series",
+                "type": "string",
+                "format": "uri"
+            }
+        },
+        "required": []
+    },
+    "FrameSize": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "widthPixels": {
+                "title": "Width",
+                "description": "Width of the video frame in pixels",
+                "type": "number"
+            },
+            "heightPixels": {
+                "title": "Height",
+                "description": "Height of the video frame in pixels",
+                "type": "number"
+            },
+            "unitPixels": {
+                "title": "Measure Unit",
+                "description": "Units of width and height values, fixed value \"pixels\"",
+                "type": "string"
+            }
+        },
+        "required": []
+    },
+    "LinkedEncRightsExpr": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "rightsExprLangId": {
+                "title": "Rights Expression Language ID",
+                "description": "Identifier of the rights expression language used by the rights expression.",
+                "type": "string",
+                "format": "uri"
+            },
+            "rightsExprEncType": {
+                "title": "Encoding type",
+                "description": "Encoding type of the rights expression, identified by an IANA Media Type.",
+                "type": "string"
+            },
+            "linkedRightsExpr": {
+                "title": "Link to Encoded Rights Expression",
+                "description": "Link to a rights expression using a rights expression language.",
+                "type": "string",
+                "format": "uri"
+            }
+        },
+        "required": [
+            "rightsExprLangId",
+            "rightsExprEncType",
+            "linkedRightsExpr"
+        ]
+    },
+    "LinkedImage": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "link": {
+                "title": "Image Link",
+                "description": "Link URL locating the image resource",
+                "type": "string",
+                "format": "uri"
+            },
+            "linkQualifiers": {
+                "title": "Image Qualifier",
+                "description": "Qualifier of the relationship of the image with the video",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "role": {
+                "title": "Image Role",
+                "description": "Role of this image in the context of the video",
+                "type": "string"
+            },
+            "mediaType": {
+                "title": "Media Type",
+                "description": "IANA Media (MIME) Type",
+                "type": "string"
+            },
+            "widthPixels": {
+                "title": "Image Width",
+                "description": "Width of the image, in pixels",
+                "type": "number"
+            },
+            "heightPixels": {
+                "title": "Image Height",
+                "description": "Height of the image, in pixels",
+                "type": "number"
+            },
+            "usedVideoFrame": {
+                "title": "Used Video Frame",
+                "description": "Frame of the video used for this still image.",
+                "$ref": "#/definitions/VideoTime"
+            }
+        },
+        "required": []
+    },
+    "Location": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "identifiers": {
+                "title": "Identifier",
+                "description": "Globally unique identifier of the location",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "name": {
+                "title": "Name",
+                "description": "Full name of the location",
+                "$ref": "#/definitions/AltLang"
+            },
+            "sublocation": {
+                "title": "Sublocation name",
+                "description": "Name of a sub location the Location is located in",
+                "$ref": "#/definitions/AltLang"
+            },
+            "city": {
+                "title": "City name",
+                "description": "Name of the city the Location is located in",
+                "$ref": "#/definitions/AltLang"
+            },
+            "provinceState": {
+                "title": "State/Province name",
+                "description": "Name of the state or province the Location is located in",
+                "$ref": "#/definitions/AltLang"
+            },
+            "countryName": {
+                "title": "Country name",
+                "description": "Name of the country the Location is located in",
+                "$ref": "#/definitions/AltLang"
+            },
+            "countryCode": {
+                "title": "Country ISO code",
+                "description": "ISO code of the country the Location is located in",
+                "type": "string"
+            },
+            "worldRegion": {
+                "title": "World region name",
+                "description": "Name of the world region the Location is located in",
+                "$ref": "#/definitions/AltLang"
+            },
+            "gpsLongitude": {
+                "title": "GPS-Longitude",
+                "description": "Longitude of a WGS84 based position of this Location",
+                "type": "number"
+            },
+            "gpsLatitude": {
+                "title": "GPS-Latitude",
+                "description": "Latitude of a WGS84 based position of this Location",
+                "type": "number"
+            },
+            "gpsAltitude": {
+                "title": "GPS-Altitude",
+                "description": "Altitude in meters of a WGS84 based position of this Location",
+                "type": "number"
+            }
+        },
+        "required": []
+    },
+    "PLUSBasicEntity": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "identifier": {
+                "title": "Identifier",
+                "description": "Globally unique identifier of the entity",
+                "type": "string"
+            },
+            "name": {
+                "title": "Name",
+                "description": "Full name of the entity",
+                "type": "string"
+            }
+        },
+        "required": []
+    },
+    "PersonWDetails": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "identifiers": {
+                "title": "Identifier",
+                "description": "Globally unique identifier of the person",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "name": {
+                "title": "Name",
+                "description": "Name of the person",
+                "$ref": "#/definitions/AltLang"
+            },
+            "description": {
+                "title": "Description",
+                "description": "A textual description of the person",
+                "$ref": "#/definitions/AltLang"
+            },
+            "characteristics": {
+                "title": "Characteristics",
+                "description": "A property or trait of the person"
+            }
+        },
+        "required": []
+    },
+    "ProductWGtin": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "gtin": {
+                "title": "GTIN",
+                "description": "A 14 digit GTIN (Global Trade Item Number) of the product (GTIN-8 to GTIN-14 codes are used).",
+                "type": "string"
+            },
+            "name": {
+                "title": "Name",
+                "description": "Name of the product.",
+                "$ref": "#/definitions/AltLang"
+            },
+            "description": {
+                "title": "Description",
+                "description": "A textual description of the product.",
+                "$ref": "#/definitions/AltLang"
+            }
+        },
+        "required": [
+            "gtin"
+        ]
+    },
+    "PublicationEvent": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "date": {
+                "title": "Publication Date",
+                "description": "Date and optionally the time of publishing the video",
+                "type": "string",
+                "format": "date-time"
+            },
+            "name": {
+                "title": "Publication Event Name",
+                "description": "Name of the event for publishing this video.",
+                "$ref": "#/definitions/AltLang"
+            },
+            "identifier": {
+                "title": "Publication Event Identifier",
+                "description": "Identifier of the event for publishing this video",
+                "type": "string",
+                "format": "uri"
+            }
+        },
+        "required": [
+            "date"
+        ]
+    },
+    "QualifiedLink": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "link": {
+                "title": "Link",
+                "description": "URL of  the link",
+                "type": "string",
+                "format": "uri"
+            },
+            "linkQualifier": {
+                "title": "Qualifier",
+                "description": "Term qualifying the use of the link",
+                "type": "string",
+                "format": "uri"
+            }
+        },
+        "required": []
+    },
+    "QualifiedLinkWLanguage": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "link": {
+                "title": "Link",
+                "description": "URL of  the link",
+                "type": "string",
+                "format": "uri"
+            },
+            "linkQualifier": {
+                "title": "Qualifier",
+                "description": "Term qualifying the use of the link",
+                "type": "string",
+                "format": "uri"
+            },
+            "linkLanguage": {
+                "title": "Language",
+                "description": "Language of the content at the link location",
+                "type": "string"
+            }
+        },
+        "required": []
+    },
+    "Rating": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "ratingValue": {
+                "title": "Rating Value",
+                "description": "Rating value as issued by the rating source",
+                "type": "string"
+            },
+            "ratingSourceLink": {
+                "title": "Rating Source Link",
+                "description": "Link to the site and optionally the page of the party which has issued the rating value, linked resource should explain the rating rules.",
+                "type": "string",
+                "format": "uri"
+            },
+            "ratingScaleMinValue": {
+                "title": "Rating Scale Min Value",
+                "description": "The value of the rating scale used for the lowest/worst rating",
+                "type": "string"
+            },
+            "ratingScaleMaxValue": {
+                "title": "Rating Scale Max Value",
+                "description": "The value of the rating scale used for the highest/best rating",
+                "type": "string"
+            },
+            "ratingValueLogoLink": {
+                "title": "Rating Value Logo",
+                "description": "Visualisation of the rating value referenced by a link",
+                "type": "string",
+                "format": "uri"
+            },
+            "ratingRegions": {
+                "title": "Rating Region",
+                "description": "Geopolitical region to which this rating applies."
+            }
+        },
+        "required": [
+            "ratingValue",
+            "ratingSourceLink"
+        ]
+    },
+    "RegistryEntry": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "assetIdentifier": {
+                "title": "Asset Identifier",
+                "description": "Unique identifier of the video as issued by a registry",
+                "type": "string"
+            },
+            "registryIdentifier": {
+                "title": "Registry Identifier",
+                "description": "An identifier for the registry which issued the identifier of the video.",
+                "type": "string",
+                "format": "uri"
+            },
+            "role": {
+                "title": "Role",
+                "description": "An identifier of the reason and/or purpose for this Registry Entry.",
+                "type": "string",
+                "format": "uri"
+            }
+        },
+        "required": [
+            "assetIdentifier",
+            "registryIdentifier"
+        ]
+    },
+    "Series": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "title": "Series name",
+                "description": "Name of the series",
+                "$ref": "#/definitions/AltLang"
+            },
+            "identifier": {
+                "title": "Series identifier",
+                "description": "Identifier for the series",
+                "type": "string",
+                "format": "uri"
+            }
+        },
+        "required": []
+    },
+    "TemporalCoverage": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "tempCoverageFrom": {
+                "title": "From Date",
+                "description": "Optionally truncated date when the temporal coverage starts",
+                "type": "string",
+                "format": "date-time"
+            },
+            "tempCoverageTo": {
+                "title": "To Date",
+                "description": "Optionally truncated date when the temporal coverage ends",
+                "type": "string",
+                "format": "date-time"
+            }
+        },
+        "required": []
+    },
+    "TextWRegionDelimiter": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "regionText": {
+                "title": "Text",
+                "description": "Text or textual data",
+                "type": "string"
+            },
+            "measureType": {
+                "title": "Measure Type",
+                "description": "How the measures of the rectangle are expressed",
+                "enum": [
+                    "dummy1"
+                ],
+                "type": "string"
+            },
+            "regionAreaX": {
+                "title": "Rectangle, upper left X",
+                "description": "Horizontal axis value of the upper left corner of the rectange",
+                "type": "number"
+            },
+            "regionAreaY": {
+                "title": "Rectangle, upper left Y",
+                "description": "Vertical axis value of the upper left corner of the rectange",
+                "type": "number"
+            },
+            "regionAreaWidth": {
+                "title": "Rectangle, horizontal size",
+                "description": "Horizontal width of the rectangle",
+                "type": "number"
+            },
+            "regionAreaHeight": {
+                "title": "Rectangle, vertical size",
+                "description": "Vertical height of the rectangle",
+                "type": "number"
+            }
+        },
+        "required": [
+            "regionText"
+        ]
+    },
+    "Time": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "scale": {
+                "title": "Scale",
+                "description": "",
+                "type": "string"
+            },
+            "value": {
+                "title": "Value",
+                "description": "",
+                "type": "string"
+            }
+        },
+        "required": []
+    },
+    "VideoTime": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "timeFormat": {
+                "title": "Time Format",
+                "description": "Identifier of the time format. For time code formats following SMPTE specifications.",
+                "enum": [
+                    "dummy1"
+                ],
+                "type": "string"
+            },
+            "timeValue": {
+                "title": "Time Value",
+                "description": "Formated string including hours, minutes, seconds, fractions of seconds or frames, depending on the Time Format",
+                "type": "string"
+            }
+        },
+        "required": [
+            "timeFormat",
+            "timeValue"
+        ]
+    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "required": [
+            "photoVideoMetadataIPTC"
+        ],
+        "patternProperties": {
+            "^photoVideoMetadata_[a-zA-Z0-9_]+": {
+                "description": "Container for a set of metadata from a party other than IPTC",
+                "type": "object"
+            }
+        },
+        "additionalProperties": false
+    },
+    "additionalProperties": false
+}
