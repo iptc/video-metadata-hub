@@ -1,0 +1,5 @@
+.DS_Store
+__pycache__
+client_secret.json
+token.pickle
+**.swp

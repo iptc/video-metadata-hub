@@ -25,12 +25,7 @@ try:
 except ImportError:
     flags = None
 
-# If modifying these scopes, delete your previously saved credentials
-# at ~/.credentials/sheets.googleapis.com-python-quickstart.json
-SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
-CLIENT_SECRET_FILE = 'client_secret.json'
-APPLICATION_NAME = 'Google Sheets API Python Quickstart'
-
+from constants import *
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -62,9 +57,10 @@ def get_credentials():
 
 def writeConcepts(valuesProp, fromRow, toRow, outputFN, toplevelkeyword):
     # open the output document
-    outputFP = ".\\output\\" + outputFN
+    filename = ".\\output\\" + outputFN
 
-    with open(outputFP, "w", encoding='utf-8') as outf:
+    print("Creating "+filename)
+    with open(filename, "w", encoding='utf-8') as outf:
         for rowindex in range(fromRow, toRow):
             # outf.write("\n")
 
@@ -99,9 +95,10 @@ def writeConcepts(valuesProp, fromRow, toRow, outputFN, toplevelkeyword):
 
 def writeConceptProperties(valuesProp, fromRow, toRow, outputFN, toplevelkeyword):
     # open the output document
-    outputFP = ".\\output\\" + outputFN
+    filename = ".\\output\\" + outputFN
 
-    with open(outputFP, "w", encoding='utf-8') as outf:
+    print("Creating "+filename)
+    with open(filename, "w", encoding='utf-8') as outf:
         for rowindex in range(fromRow, toRow):
             # outf.write("\n")
 

@@ -25,9 +25,7 @@ import xml.etree.ElementTree as ET
 import json
 import collections
 
-SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
-CLIENT_SECRET_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'client_secret.json')
-APPLICATION_NAME = 'Video Metadata Hub Documentation Generator'
+from constants import *
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -64,12 +62,10 @@ def main():
     service = build('sheets', 'v4', credentials=credentials)
 
     spreadsheetId = '1TgfvHcsbGvJqmF0iUUnaL-RAdd1lbentmb2LhcM8SDk'
-    rangeName = 'PropertiesRec 1.3.1 DRAFT!A3:T'
+    rangeName = 'Properties 1.4 DRAFT!A3:W'
     result1 = service.spreadsheets().values().get(
         spreadsheetId=spreadsheetId, range=rangeName).execute()
     valuesProp = result1.get('values', [])
-
-    import pdb; pdb.set_trace()
 
     # create properties
     jsonprops = {}
@@ -90,7 +86,9 @@ def main():
     jsonpropsordered = collections.OrderedDict(sorted(jsonprops.items()))
 
     # finally: write the JSON Schema snippets
-    with open("VMH-JSON-LD-contextMapping.json", "w") as outf:
+    filename = "VMH-JSON-LD-contextMapping.json"
+    with open(filename, "w") as outf:
+        print("Creating "+filename)
         json.dump(jsonpropsordered, outf)
 
 
