@@ -24,10 +24,7 @@ from google.auth.transport.requests import Request
 
 import xml.etree.ElementTree as ET
 
-
-SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
-CLIENT_SECRET_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'client_secret.json')
-APPLICATION_NAME = 'Video Metadata Hub Documentation Generator'
+from constants import *
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -63,49 +60,47 @@ def main():
     credentials = get_credentials()
     service = build('sheets', 'v4', credentials=credentials)
 
-    spreadsheetId = '1TgfvHcsbGvJqmF0iUUnaL-RAdd1lbentmb2LhcM8SDk'
-    rangeName = 'PropertiesRec!A3:W'
     result1 = service.spreadsheets().values().get(
-        spreadsheetId=spreadsheetId, range=rangeName).execute()
+        spreadsheetId=SpreadsheetId, range=PropertiesRangeName).execute()
     valuesProp = result1.get('values', [])
-
 
     # create properties
     jsonprops = {}
-    for rowcounter in range(0, 90): # to row 93
+    for rowcounter in range(FIRST_PROPERTY_ROW - 1, LAST_PROPERTY_ROW):
         try:
-            valstr = valuesProp[rowcounter][0]
+            valstr = valuesProp[rowcounter][0]  # Property Group
         except:
             valstr = ' '
         propgroup = valstr.strip('\n')
         try:
-            valstr = valuesProp[rowcounter][2]
+            valstr = valuesProp[rowcounter][2]  # Property Name (text)
         except:
             valstr = ' '
         proptitle = valstr.strip('\n')
         try:
-            valstr = valuesProp[rowcounter][4]
+            valstr = valuesProp[rowcounter][4]  # Definition (text)
         except:
             valstr = ' '
         propdef = valstr.strip('\n')
         try:
-            valstr = valuesProp[rowcounter][17]
+            valstr = valuesProp[rowcounter][17] # JSON property names
         except:
             valstr = ' '
-        propusedby = valstr.strip('\n')
+        # propname = propgroup + '-' + valstr.strip('\n')
+        propname = valstr.strip('\n')
         try:
-            valstr = valuesProp[rowcounter][18]
-        except:
-            valstr = ' '
-        # BQ changed 2021-03-10
-        propname = propgroup + '-' + valstr.strip('\n')
-        # propname = valstr.strip('\n')
-        try:
-            valstr = valuesProp[rowcounter][20]
+            valstr = valuesProp[rowcounter][19] # JSON data type
         except:
             valstr = ' '
         propparams = valstr.strip('\n')
-
+        print("row "+str(rowcounter)+", prop name = "+propname+", prop params = "+propparams)
+        
+        # propname = valstr.strip('\n')
+#        try:
+#            valstr = valuesProp[rowcounter][20]
+#        except:
+#            valstr = ' '
+#        propparams = valstr.strip('\n')
         propdetails = {}
         propdetails['title'] = proptitle
         propdetails['description'] = propdef
@@ -118,10 +113,10 @@ def main():
                 if len(params) > 1:
                     if params[1] == 'array':
                         propdetails['type'] = 'array'
-                        arrdetails['$ref'] = '#/definitions/' + refobjectname
+                        arrdetails['$ref'] = JSONSCHEMA_REF_PREFIX + '#/definitions/' + refobjectname
                         propdetails['items'] = arrdetails
                 else:
-                    propdetails['$ref'] = '#/definitions/' + refobjectname
+                    propdetails['$ref'] = JSONSCHEMA_REF_PREFIX + '#/definitions/' + refobjectname
         else: # a plain property
             params = propparams.split('/')
             proptype = params[0]
@@ -144,7 +139,9 @@ def main():
     jsonpropsordered = collections.OrderedDict(sorted(jsonprops.items()))
 
     # finally: write the JSON Schema snippets
-    with open("VMH-JSON-Schema-snip-properties.json", "w") as outf:
+    filename = "VMH-JSON-Schema-snip-properties.json"
+    print("Creating "+filename)
+    with open(filename, "w") as outf:
         json.dump(jsonpropsordered, outf, indent=4)
 
     # create referenced objects
@@ -153,37 +150,33 @@ def main():
     refobjectname1 = ''
     refobjprops = {}
 
-    for rowcounter in range(87, 185):
+    for rowcounter in range(FIRST_STRUCTURE_ROW - 1, LAST_STRUCTURE_ROW - 1):
         try:
-            valstr = valuesProp[rowcounter][0]
+            valstr = valuesProp[rowcounter][0]  # prop group
         except:
             valstr = ' '
         propgroup = valstr.strip('\n')
         try:
-            valstr = valuesProp[rowcounter][2]
+            valstr = valuesProp[rowcounter][2]  # prop name (human)
         except:
             valstr = ' '
         proptitle = valstr.strip('\n')
         try:
-            valstr = valuesProp[rowcounter][4]
+            valstr = valuesProp[rowcounter][4]  # prop definition (human)
         except:
             valstr = ' '
         propdef = valstr.strip('\n')
         try:
-            valstr = valuesProp[rowcounter][17]
+            valstr = valuesProp[rowcounter][17] # JSON property name
         except:
             valstr = ' '
-        propusedby = valstr.strip('\n')
+        propname = valstr.strip('\n')
         try:
-            valstr = valuesProp[rowcounter][18]
-        except:
-            valstr = ' '
-        propname = propgroup + '-' + valstr.strip('\n')
-        try:
-            valstr = valuesProp[rowcounter][20]
+            valstr = valuesProp[rowcounter][19] # JSON schema data type
         except:
             valstr = ' '
         propparams = valstr.strip('\n')
+        print("row "+str(rowcounter)+", prop name = "+propname+", prop params = "+propparams)
 
         if propparams == 'object':
             if refobject:
@@ -215,11 +208,17 @@ def main():
                             propdetails['items'] = arrdetails
                     else:
                         propdetails['$ref'] = '#/definitions/' + refobjectname
-            elif params != ['NA']:  # a plain property
-                params = propparams.split('/')
-                proptype = params[0]
-                propformat = params[1]
-                moreparams = params[2]
+            elif params != 'NA':  # a plain property
+                #params = propparams.split('/')
+                #if len(params) < 2:
+                #    import pdb; pdb.set_trace()
+                #proptype = params[0]
+                #propformat = params[1]
+                #moreparams = params[2]
+                try:
+                    (proptype, propformat, moreparams) = propparams.split('/')
+                except ValueError:
+                    raise Exception('JSON type not defined correctly: '+propparams+' in row '+str(rowcounter+1))
                 if moreparams.find('MANDATORY') > -1:
                     mandatoryprops.append(propname)
                 if moreparams.find('enum') > -1:
@@ -240,7 +239,9 @@ def main():
 
         jsonrefobjpropsordered = collections.OrderedDict(sorted(jsonrefobjprops.items()))
     # finally: write the JSON Schema snippet
-    with open("VMH-JSON-Schema-snip-refObjectproperties.json", "w") as outf:
+    filename = "VMH-JSON-Schema-snip-refObjectproperties.json"
+    with open(filename, "w") as outf:
+        print("Creating "+filename)
         json.dump(jsonrefobjpropsordered, outf, indent=4)
 
 

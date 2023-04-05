@@ -22,19 +22,7 @@ from google.auth.transport.requests import Request
 
 from lxml import etree as ET
 
-# If modifying these scopes, delete your previously saved credentials
-# at ~/.credentials/sheets.googleapis.com-python-quickstart.json
-SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
-CLIENT_SECRET_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'client_secret.json')
-APPLICATION_NAME = 'Video Metadata Hub Documentation Generator'
-
-# Constant values
-StdVersion = "1.3"
-HeaderAppendix = ""   # could be " - D-R-A-F-T - "
-IPTCApprovalDate = "13 May 2020"
-IPTCRevisionDate = "13 May 2020"
-CopyrightYear = "2020"
-
+from constants import *
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -70,15 +58,12 @@ def main():
     credentials = get_credentials()
     service = build('sheets', 'v4', credentials=credentials)
 
-    spreadsheetId = '1TgfvHcsbGvJqmF0iUUnaL-RAdd1lbentmb2LhcM8SDk'
-    rangeName = 'PropertiesRec 1.3.1 DRAFT!A3:W'
     result1 = service.spreadsheets().values().get(
-        spreadsheetId=spreadsheetId, range=rangeName).execute()
+        spreadsheetId=SpreadsheetId, range=PropertiesRangeName).execute()
     valuesProp = result1.get('values', [])
 
-    rangeName = 'PropErrata!A3:E'
     result2 = service.spreadsheets().values().get(
-        spreadsheetId=spreadsheetId, range=rangeName).execute()
+        spreadsheetId=SpreadsheetId, range=ErrataRangeName).execute()
     valuesErr = result2.get('values', [])
 
     # create the HTML document
@@ -93,7 +78,7 @@ def main():
     pageheader = ET.SubElement(body, 'h1', {'class':'pageheader'})
     iptcanc = ET.SubElement(pageheader, 'a', {'href':'https://iptc.org'})
     iptcimg = ET.SubElement(iptcanc, 'img', {'src':'https://iptc.org/download/resources/logos/iptc-gr_70x70.jpg', 'align':'left', 'border':'0'})
-    pageheader.text = 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Properties'
+    pageheader.text = 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + ' / Properties'
     seeotherdoc0 = ET.SubElement(body, 'p', {'class':'smallnote1'})
     seeotherdoc0.text = '.'
     seeotherdoc1 = ET.SubElement(body, 'p', {'class':'note1'})
@@ -170,15 +155,21 @@ def main():
             except:
                 valstr = ' '
             xcell1.text = valstr
+
+            # is the property new? (we highlight these in green)
+            try:
+                valstr = valuesProp[rowcounter][3]
+            except:
+                valstr = ''
+            if valstr == 'n':
+                propisnew = True
+
             try:
                 valstr = valuesProp[rowcounter][1]
             except:
                 valstr = ''
             if valstr == 'm':
                 xcell1.set('class', 'modified')
-            if valstr == 'n':
-                propisnew = True
-                xcell1.set('class', 'isnew')
 
             xcell2 = ET.SubElement(xrow, 'td', { 'class': 'bgdcolIptc'})
             try:
@@ -192,8 +183,7 @@ def main():
                 valstr = ''
             if valstr == 'm':
                 xcell2.set('class', 'modified')
-            if valstr == 'n':
-                propisnew = True
+            if propisnew:
                 xcell2.set('class', 'isnew')
 
             xcell3 = ET.SubElement(xrow, 'td')
@@ -208,6 +198,8 @@ def main():
                 valstr = ''
             if valstr == 'm':
                 xcell3.set('class', 'modified')
+            if propisnew:
+                xcell3.set('class', 'isnew')
 
             xcell4 = ET.SubElement(xrow, 'td')
             try:
@@ -285,12 +277,12 @@ def main():
 
             xcell10 = ET.SubElement(xrow, 'td')
             try:
-                valstr = valuesProp[rowcounter][18]
+                valstr = valuesProp[rowcounter][17]
             except:
                 valstr = ' '
             xcell10.text = valstr
             try:
-                valstr = valuesProp[rowcounter][19]
+                valstr = valuesProp[rowcounter][18]
             except:
                 valstr = ''
             if valstr == 'm':
@@ -298,12 +290,12 @@ def main():
 
             xcell11 = ET.SubElement(xrow, 'td')
             try:
-                valstr = valuesProp[rowcounter][20]
+                valstr = valuesProp[rowcounter][19]
             except:
                 valstr = ' '
             xcell11.text = valstr
             try:
-                valstr = valuesProp[rowcounter][21]
+                valstr = valuesProp[rowcounter][20]
             except:
                 valstr = ''
             if valstr == 'm':
@@ -359,6 +351,7 @@ def main():
             xcell4.text = valstr
 
     filename = "IPTC-VideoMetadataHub-props-Rec_"+StdVersion+".html"
+    print("Creating "+filename)
     with open(filename, 'w') as file:
         file.write(ET.tostring(xroot, pretty_print=True).decode())
 

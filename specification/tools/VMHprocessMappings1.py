@@ -8,6 +8,7 @@ Creator: Michael Steidl
 History:
     2016-11-25 mws: project started, download and HTML output ok
     2020-06-15 BQ: Updated and checked into GitHub
+    2022-09-29 BQ: Many updates to make changes less painful and remove repetitive code. Still more refactoring needed, but it works.
 """
 
 from __future__ import print_function
@@ -21,16 +22,82 @@ from google.auth.transport.requests import Request
 
 from lxml import etree as ET
 
-SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
-CLIENT_SECRET_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'client_secret.json')
-APPLICATION_NAME = 'Video Metadata Hub Documentation Generator'
+from constants import *
 
-# Constant values
-StdVersion = "1.3"
-HeaderAppendix = ""   # could be " - D-R-A-F-T - "
-IPTCApprovalDate = "13 May 2020"
-IPTCRevisionDate = "13 May 2020"
-CopyrightYear = "2020"
+MAPPINGS = [
+    {
+        'shortheading': 'DPP AS-11',
+        'heading': 'DPP AS-11',
+        'mappingsheetcolumn': 7,
+        'filenameid': 'DPP-AS-11'
+    },
+    {
+        'shortheading': 'MovieLabs MDDF',
+        'heading': 'MovieLabs MDDF',
+        'mappingsheetcolumn': 8,
+        'filenameid': 'MDDF'
+    },
+    {
+        'shortheading': 'Apple Quicktime',
+        'heading': 'Apple Quicktime',
+        'mappingsheetcolumn': 9,
+        'filenameid': 'AppleQT'
+    },
+    {
+        'shortheading': 'MPEG 7',
+        'heading': 'MPEG 7',
+        'mappingsheetcolumn': 11,
+        'filenameid': 'MPEG7'
+    },
+    {
+        'shortheading': 'NewsML-G2',
+        'heading': 'NewsML-G2',
+        'mappingsheetcolumn': 12,
+        'filenameid': 'NewsML-G2'
+    },
+    {
+        'shortheading': 'PB Core 2.1',
+        'heading': 'PB Core 2.1',
+        'mappingsheetcolumn': 13,
+        'filenameid': 'PBCore21'
+    },
+    {
+        'shortheading': 'Schema.org',
+        'heading': 'Schema.org',
+        'mappingsheetcolumn': 14,
+        'filenameid': 'SchemaOrg'
+    },
+    {
+        'shortheading': 'Sony Cameras',
+        'heading': 'Sony XDCAM & Planning',
+        'mappingsheetcolumn': 15,
+        'filenameid': 'SonyXDCAM'
+    },
+    {
+        'shortheading': 'Panasonic Cameras',
+        'heading': 'Panasonic/SMPTE P2',
+        'mappingsheetcolumn': 16,
+        'filenameid': 'SMPTEP2'
+    },
+    {
+        'shortheading': 'Canon Cameras',
+        'heading': 'Canon VideoClip XML',
+        'mappingsheetcolumn': 17,
+        'filenameid': 'CanonVClip'
+    },
+    {
+        'shortheading': 'exiftool',
+        'heading': 'exiftool field id',
+        'mappingsheetcolumn': 18,
+        'filenameid': 'exiftool'
+    },
+    {
+        'shortheading': 'EIDR Data Fields 2.0',
+        'heading': ' EIDR Data Fields 2.0',
+        'mappingsheetcolumn': 19,
+        'filenameid': 'EIDR'
+    }
+]
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -160,7 +227,7 @@ def createSpecificMapping(valuesProp, headingtext1, headingtext2, findmoreaturl,
 
         tbody = ET.SubElement(table, 'tbody')
 
-        for rowcounter in range(2, 186):
+        for rowcounter in range(2, 210):
             xrow = ET.SubElement(tbody, 'tr')
             teststr = valuesProp[rowcounter][0]
             if teststr == 'Property Structures (PS)':
@@ -231,13 +298,11 @@ def main():
     credentials = get_credentials()
     service = build('sheets', 'v4', credentials=credentials)
 
-    spreadsheetId = '1TgfvHcsbGvJqmF0iUUnaL-RAdd1lbentmb2LhcM8SDk'
-    rangeName = 'MappingRec 1.3.1!A4:R'
     result1 = service.spreadsheets().values().get(
-        spreadsheetId=spreadsheetId, range=rangeName).execute()
+        spreadsheetId=SpreadsheetId, range=MappingsRangeName).execute()
     valuesProp = result1.get('values', [])
 
-    # create the HTML document
+    # create the main mapping HTML document
     xroot = ET.Element('html')
     head = ET.SubElement(xroot, 'head')
     title = ET.SubElement(head, 'title')
@@ -287,37 +352,13 @@ def main():
         thcol6.text = 'XMP'
         thcol7 = ET.SubElement(throw, 'th', {'class':'hdrcol7'})
         thcol7.text = 'IPTC PVMD JSON'
-        thcol8 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc'})
-        thcol8link = ET.SubElement(thcol8,'a', {'href':'IPTC-VideoMetadataHub-mapping-AppleQT-Rec_'+StdVersion+'.html'})
-        thcol8link.text = 'Apple Quicktime'
-        thcol9 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc2'})
-        thcol9link = ET.SubElement(thcol9,'a', {'href':'IPTC-VideoMetadataHub-mapping-MPEG7-Rec_'+StdVersion+'.html'})
-        thcol9link.text = 'MPEG 7'
-        thcol10 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc'})
-        thcol10link = ET.SubElement(thcol10,'a', {'href':'IPTC-VideoMetadataHub-mapping-NewsMLG2-Rec_'+StdVersion+'.html'})
-        thcol10link.text = 'NewsML-G2'
-        thcol11 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc2'})
-        thcol11link = ET.SubElement(thcol11,'a', {'href':'IPTC-VideoMetadataHub-mapping-PBCore21-Rec_'+StdVersion+'.html'})
-        thcol11link.text = 'PB Core 2.1'
-        thcol12 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc'})
-        thcol12link = ET.SubElement(thcol12,'a', {'href':'IPTC-VideoMetadataHub-mapping-SchemaOrg-Rec_'+StdVersion+'.html'})
-        thcol12link.text = 'Schema.org'
-        # new in 2018-03
-        thcol13 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc2'})
-        thcol13link = ET.SubElement(thcol13,'a', {'href':'IPTC-VideoMetadataHub-mapping-SonyXDCAM-Rec_'+StdVersion+'.html'})
-        thcol13link.text = 'Sony XDCAM & Planning'
-        thcol14 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc'})
-        thcol14link = ET.SubElement(thcol14,'a', {'href':'IPTC-VideoMetadataHub-mapping-Panasonic-SMPTEP2-Rec_'+StdVersion+'.html'})
-        thcol14link.text = 'Panasonic/SMPTE P2'
-        thcol15 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc2'})
-        thcol15link = ET.SubElement(thcol15,'a', {'href':'IPTC-VideoMetadataHub-mapping-CanonVClip-Rec_'+StdVersion+'.html'})
-        thcol15link.text = 'Canon VideoClip XML'
-        thcol16 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc'})
-        thcol16link = ET.SubElement(thcol16,'a', {'href':'IPTC-VideoMetadataHub-mapping-exiftool-Rec_'+StdVersion+'.html'})
-        thcol16link.text = 'exiftool field ids'
-        thcol17 = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc2'})
-        thcol17link = ET.SubElement(thcol17,'a', {'href':'IPTC-VideoMetadataHub-mapping-EIDR-Rec_'+StdVersion+'.html'})
-        thcol17link.text = 'EIDR Data Fields 2.0'
+
+        for mapping in MAPPINGS:
+            heading = mapping['heading']
+            filename = 'IPTC-VideoMetadataHub-mapping-'+mapping['filenameid']+'-Rec_'+StdVersion+'.html'
+            thcol = ET.SubElement(throw, 'th', {'class':'hdrcolNoniptc'})
+            thcollink = ET.SubElement(thcol,'a', {'href': filename })
+            thcollink.text = heading
 
         # second row with "find more at ..." links
         throw = ET.SubElement(thead, 'tr')
@@ -344,101 +385,21 @@ def main():
             '<td class="hdrcolIptc"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
         throw.append(colcode)
 
-        moreatlink = valuesProp[0][7]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"> </td>')
-            throw.append(colcode)
-        moreatlink = valuesProp[0][9]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"> </td>')
-            throw.append(colcode)
-        moreatlink = valuesProp[0][10]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"> </td>')
-            throw.append(colcode)
-        moreatlink = valuesProp[0][11]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"> </td>')
-            throw.append(colcode)
-        moreatlink = valuesProp[0][12]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"> </td>')
-            throw.append(colcode)
-        moreatlink = valuesProp[0][13]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"> </td>')
-            throw.append(colcode)
-        moreatlink = valuesProp[0][14]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"> </td>')
-            throw.append(colcode)
-        moreatlink = valuesProp[0][15]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"> </td>')
-            throw.append(colcode)
-        moreatlink = valuesProp[0][16]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc"> </td>')
-            throw.append(colcode)
-        moreatlink = valuesProp[0][17]
-        if moreatlink != '':
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
-            throw.append(colcode)
-        else:
-            colcode = ET.fromstring(
-                '<td class="hdrcolNoniptc2"> </td>')
-            throw.append(colcode)
+        for mapping in MAPPINGS:
+            col = mapping['mappingsheetcolumn']
+            moreatlink = valuesProp[0][col]
+            if moreatlink != '':
+                colcode = ET.fromstring(
+                    '<td class="hdrcolNoniptc"><a href="' + moreatlink + '" target="_blank">Find more about it at ...</a></td>')
+                throw.append(colcode)
+            else:
+                colcode = ET.fromstring(
+                    '<td class="hdrcolNoniptc"> </td>')
+                throw.append(colcode)
 
         tbody = ET.SubElement(table, 'tbody')
-        for rowcounter in range(2, 186):
+        for rowcounter in range(2, 210):
             xrow = ET.SubElement(tbody, 'tr')
-
             teststr = valuesProp[rowcounter][0]
             if teststr == 'Property Structures (PS)':
                 xrow.set('style', 'background-color: #009999;')
@@ -468,7 +429,7 @@ def main():
             """
             xcell4 = ET.SubElement(xrow, 'td', {'class':'bgdcolIptc'})
             try:
-                valstr = valuesProp[rowcounter][3]
+                valstr = valuesProp[rowcounter][4]
             except:
                 valstr = ' '
             xcell4.text = valstr
@@ -494,93 +455,26 @@ def main():
                 valstr = ' '
             xcell7.text = valstr
 
-            xcell8 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc'})
-            try:
-                valstr = valuesProp[rowcounter][7]
-            except:
-                valstr = ' '
-            xcell8.text = valstr
-
-            xcell9 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc2'})
-            try:
-                valstr = valuesProp[rowcounter][9]
-            except:
-                valstr = ' '
-            xcell9.text = valstr
-
-            xcell10 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc'})
-            try:
-                valstr = valuesProp[rowcounter][10]
-            except:
-                valstr = ' '
-            xcell10.text = valstr
-
-            xcell11 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc2'})
-            try:
-                valstr = valuesProp[rowcounter][11]
-            except:
-                valstr = ' '
-            xcell11.text = valstr
-
-            xcell12 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc'})
-            try:
-                valstr = valuesProp[rowcounter][12]
-            except:
-                valstr = ' '
-            xcell12.text = valstr
-
-            xcell13 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc2'})
-            try:
-                valstr = valuesProp[rowcounter][13]
-            except:
-                valstr = ' '
-            xcell13.text = valstr
-
-            xcell14 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc'})
-            try:
-                valstr = valuesProp[rowcounter][14]
-            except:
-                valstr = ' '
-            xcell14.text = valstr
-
-            xcell15 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc2'})
-            try:
-                valstr = valuesProp[rowcounter][15]
-            except:
-                valstr = ' '
-            xcell15.text = valstr
-
-            xcell16 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc'})
-            try:
-                valstr = valuesProp[rowcounter][16]
-            except:
-                valstr = ' '
-            xcell16.text = valstr
-
-            xcell17 = ET.SubElement(xrow, 'td', {'class':'bgdcolNoniptc2'})
-            try:
-                valstr = valuesProp[rowcounter][17]
-            except:
-                valstr = ' '
-            xcell17.text = valstr
-
+            for mapping in MAPPINGS:
+                col = mapping['mappingsheetcolumn']
+                mappingcell = ET.SubElement(xrow, 'td', {'class':'bgdcolIptc'})
+                try:
+                    mappingcell.text = valuesProp[rowcounter][col]
+                except:
+                    mappingcell.text = ' '
 
     filename = "IPTC-VideoMetadataHub-mapping-Rec_"+StdVersion+".html"
     with open(filename, 'w') as file:
+        print("Creating "+filename)
         file.write(ET.tostring(xroot, pretty_print=True).decode())
 
-    moreatlink = valuesProp[0][7]
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - Apple Quicktime', 'Apple Quicktime', moreatlink, 7, 'IPTC-VideoMetadataHub-mapping-AppleQT-Rec_'+StdVersion+'.html')
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - MPEG 7', 'MPEG 7', moreatlink, 9,'IPTC-VideoMetadataHub-mapping-MPEG7-Rec_'+StdVersion+'.html')
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - NewsML-G2', 'NewsML-G2', moreatlink, 10,'IPTC-VideoMetadataHub-mapping-NewsMLG2-Rec_'+StdVersion+'.html')
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - PB Core 2.1', 'PB Core 2.1', moreatlink, 11,'IPTC-VideoMetadataHub-mapping-PBCore21-Rec_'+StdVersion+'.html')
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - Schema.org', 'Schema.org', moreatlink, 12,'IPTC-VideoMetadataHub-mapping-SchemaOrg-Rec_'+StdVersion+'.html')
-    # new in 2018-03
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - Sony Cameras ', 'Sony XDCAM & Planning', moreatlink, 13,'IPTC-VideoMetadataHub-mapping-SonyXDCAM-Rec_'+StdVersion+'.html')
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - Panasonic Cameras', 'Panasonic/SMPTE P2', moreatlink, 14,'IPTC-VideoMetadataHub-mapping-Panasonic-SMPTEP2-Rec_'+StdVersion+'.html')
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - Canon Cameras', 'Canon VideoClip XML', moreatlink, 15,'IPTC-VideoMetadataHub-mapping-CanonVClip-Rec_'+StdVersion+'.html')
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - exiftool', 'exiftool field id', moreatlink, 16,'IPTC-VideoMetadataHub-mapping-exiftool-Rec_'+StdVersion+'.html')
-    createSpecificMapping(valuesProp, 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - EIDR Data Fields 2.0', 'EIDR Data Fields 2.0', moreatlink, 17,'IPTC-VideoMetadataHub-mapping-EIDR-Rec_'+StdVersion+'.html')
+    for mapping in MAPPINGS:
+        htmlheading = 'IPTC Video Metadata Hub - Recommendation ' + StdVersion + HeaderAppendix + '/ Mapping VMHub - '+mapping['shortheading']
+        column = mapping['mappingsheetcolumn']
+        moreatlink = valuesProp[1][column]
+        filename = 'IPTC-VideoMetadataHub-mapping-'+mapping['filenameid']+'-Rec_'+StdVersion+'.html'
+        print("Creating "+filename)
+        createSpecificMapping(valuesProp, htmlheading, mapping['heading'], moreatlink, column, filename)
 
 if __name__ == '__main__':
     main()
