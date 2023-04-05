@@ -26,6 +26,9 @@ ErrataRangeName = 'PropErrata!A3:E'
 
 # these numbers are relative to the range name given in PropertiesRangeName
 FIRST_PROPERTY_ROW = 0
-LAST_PROPERTY_ROW = 96
+LAST_PROPERTY_ROW = 97
 FIRST_STRUCTURE_ROW = 100
 LAST_STRUCTURE_ROW = 233
+
+# prefix for JSON Schema shared definitions
+JSONSCHEMA_REF_PREFIX = 'https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json'

@@ -61,10 +61,10 @@ def main():
     credentials = get_credentials()
     service = build('sheets', 'v4', credentials=credentials)
 
-    spreadsheetId = '1TgfvHcsbGvJqmF0iUUnaL-RAdd1lbentmb2LhcM8SDk'
-    rangeName = 'Properties 1.4 DRAFT!A3:W'
+    #spreadsheetId = '1TgfvHcsbGvJqmF0iUUnaL-RAdd1lbentmb2LhcM8SDk'
+    #rangeName = 'Properties 1.4 DRAFT!A3:W'
     result1 = service.spreadsheets().values().get(
-        spreadsheetId=spreadsheetId, range=rangeName).execute()
+        spreadsheetId=SpreadsheetId, range=PropertiesRangeName).execute()
     valuesProp = result1.get('values', [])
 
     # create properties

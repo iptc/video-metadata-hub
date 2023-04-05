@@ -86,9 +86,8 @@ def main():
             valstr = valuesProp[rowcounter][17] # JSON property names
         except:
             valstr = ' '
-        propusedby = valstr.strip('\n')
-        # BQ changed 2021-03-10
-        propname = propgroup + '-' + valstr.strip('\n')
+        # propname = propgroup + '-' + valstr.strip('\n')
+        propname = valstr.strip('\n')
         try:
             valstr = valuesProp[rowcounter][19] # JSON data type
         except:
@@ -114,10 +113,10 @@ def main():
                 if len(params) > 1:
                     if params[1] == 'array':
                         propdetails['type'] = 'array'
-                        arrdetails['$ref'] = '#/definitions/' + refobjectname
+                        arrdetails['$ref'] = JSONSCHEMA_REF_PREFIX + '#/definitions/' + refobjectname
                         propdetails['items'] = arrdetails
                 else:
-                    propdetails['$ref'] = '#/definitions/' + refobjectname
+                    propdetails['$ref'] = JSONSCHEMA_REF_PREFIX + '#/definitions/' + refobjectname
         else: # a plain property
             params = propparams.split('/')
             proptype = params[0]
@@ -141,6 +140,7 @@ def main():
 
     # finally: write the JSON Schema snippets
     filename = "VMH-JSON-Schema-snip-properties.json"
+    print("Creating "+filename)
     with open(filename, "w") as outf:
         json.dump(jsonpropsordered, outf, indent=4)
 
