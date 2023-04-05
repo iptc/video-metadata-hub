@@ -39,11 +39,16 @@ Setup:
    sheet to mark new properties and modified cells).
 
 3. Update the JSON Schema:
-   Run `tools/VMHprocessJSONschema1.py`. This generates the snippet file `VMH-JSON-Schema-snip-refObjectproperties.json`.
+   Run `tools/VMHprocessJSONschema1.py`. This generates the snippet files `VMH-JSON-Schema-snip-refObjectproperties.json`
+   and `VMH-JSON-Schema-snip-properties.json`.
    Check that the snippet file looks correct.
    Copy the schema skeleton to a skeleton for the new schema version:
    `cp iptc-vmhub-schema-skeleton.json iptc-vmhub-schema-1.4.json`
-   Open up the new file, go to the properties section and insert the new snippet (on vim this is done using `:r`)
+   Open up the new file, go to the properties section and insert the *properties* snippet (on vim this is done using
+    `:r VMH-JSON-Schema-snip-properties.json`).
+   Use `check-jsonschema` to validate the example files:
+    `check-jsonschema --schemafile iptc-vmhub-1.4-schema.json ../examples/json/VMH-JSON-Examples-*`
+   You might have to remove the `dummy1` enums from the schema file, you can do that manually.
 
 4. If everything looks good, copy it to https://www.iptc.org/std/videometadatahub/recommendation/.
    Put the previous version files in
