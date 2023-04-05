@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"> 
+	<head> 
+		<title>IPTC Video Metadata Hub generator: VMHub 1.3</title> 
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Icons from Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="vmhub_generator_styles.css" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics - added by BQ on 2022-05-04 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DT7L7MRKEP"></script>
+    <script>
+</head> 
+  
+<body class="html5">
+    <div class="container-fluid">
+        <div class="row" id="header">
+            <div class="col">
+                <h1><span class="image"><img src="https://www.iptc.org/std/NewsML-G2/guidelines/images/iptc_sv_gradient_70x70.jpg" alt="IPTC logo"></span> IPTC Video Metadata Hub Generator</h1>
+                <p>This tool shows the capabilities of IPTC's Video Metadata Hub standard. VMHub can be expressed in JSON (as well as other formats). As you enter video metadata into the form, you can see the corresponding VMHub JSON appear.</p>
+                <p>For more information, see the <a href="https://iptc.org/standards/video-metadata-hub/">IPTC Video Metadata Hub pages on iptc.org</a> or the <a href="https://iptc.org/std/videometadatahub/userguide/">Video Metadata Hub User Guide</a>. Discuss this tool on the <a href="https://groups.io/g/iptc-videometadata">public iptc-videometadata email discussion group</a>.</p>
+                <div class="alert alert-info" role="alert">Please note that this tool demonstrates only a small subset of the available fields in IPTC video Metadata Hub. <a href="https://iptc.org/std/videometadatahub/recommendation/IPTC-VideoMetadataHub-props-Rec_1.3.html">The full VMHub spec</a> includes many more fields such as Episode/Season/Series, fields for People, Products and Events shown, model release and rights information, transcripts, and much more.</div> 
+            </div>
+        </div>
+        <div id="reactcontainer">
+        </div>
+    </div>
+    <!-- Load React -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js" -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. (the text/babel part means that it contains JSX tags) -->
+    <script type="text/babel" src="vmhub_generator.js"></script>
+    <!-- Bootstrap JS components -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body> 
+</html> 
+ 
