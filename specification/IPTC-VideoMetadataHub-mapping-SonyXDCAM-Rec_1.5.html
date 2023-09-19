@@ -1,0 +1,1969 @@
+<html>
+  <head>
+    <title>Video Metadata Hub Mapping</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link type="text/css" rel="stylesheet" href="iptcspecs1.css"/>
+  </head>
+  <body>
+    <h1 class="pageheader">IPTC Video Metadata Hub - Recommendation 1.5/ Mapping VMHub - Sony Cameras<a href="https://iptc.org"><img src="https://iptc.org/download/resources/logos/iptc-gr_70x70.jpg" align="left" border="0"/></a></h1>
+    <p class="note1">Return to <a href="IPTC-VideoMetadataHub-mapping-Rec_1.5.html">all recommended mappings of the Video Metadata Hub.</a></p>
+    <p class="note1">See the <a href="IPTC-VideoMetadataHub-props-Rec_1.5.html">specification of Video Metadata Hub properties</a></p>
+    <p class="note1">Mapping recommended on 4 Oct 2023. Document revision as of 4 Oct 2023.</p>
+    <p class="smallnote1">Copyright &#169; 2023, <a href="https://iptc.org">IPTC</a> - all rights reserved. Published under the Creative Commons Attribution 4.0 license <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
+    <p class="note1">In this table the columns with a blue header are defined by the Video Metadata Hub, the column with the green header is defined by Sony XDCAM &amp; Planning</p>
+    <p class="note1">Note on the column headers:<br/>EBUcore: based on the EBU Core Metadata Standard.<br/>XMP: based on the ISO XMP standard.<br/>PVMD: a specification of JSON properties for Photo and Video MetaData by IPTC (aka phovidmd).</p>
+    <table class="spec1 vmhmapping">
+      <thead>
+        <tr>
+          <th class="hdrcol1">Property Group</th>
+          <th class="hdrcol2">Property Name</th>
+          <th class="hdrcol3">Definition / Semantics</th>
+          <th class="hdrcol5">EBUcore</th>
+          <th class="hdrcol6">XMP</th>
+          <th class="hdrcol7">PVMD JSON</th>
+          <th class="hdrcolNoniptc">Sony XDCAM &amp; Planning</th>
+        </tr>
+        <tr>
+          <td class="hdrcol1"> </td>
+          <td class="hdrcol2"> </td>
+          <td class="hdrcol3"> </td>
+          <td class="hdrcolIptc">
+            <a href="https://tech.ebu.ch/MetadataEbuCore" target="_blank">Find more about it at ...</a>
+          </td>
+          <td class="hdrcolIptc">
+            <a href="http://www.adobe.com/devnet/xmp.html" target="_blank">Find more about it at ...</a>
+          </td>
+          <td class="hdrcolIptc">
+            <a href="http://www.iptc.org/std/videometadatahub/recommendation/IPTC-VideoMetadataHub-props-Rec_1.1.html" target="_blank">Find more about it at ...</a>
+          </td>
+          <td class="hdrcolNoniptc"> </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Circa Date Created</td>
+          <td class="bgdcolIptc">Approximate date or range of dates associated with the creation and production of a video.</td>
+          <td class="bgdcolIptc">date/@typeDefinition="ivqu:circaDateCreated" or @typeLabel="Circa Date Created"/alternative/@period="...value..."</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:CircaDateCreated</td>
+          <td class="bgdcolIptc">circaDateCreated</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Content Warning</td>
+          <td class="bgdcolIptc">Information to warn potential viewers about nudity, violence etc in the video	</td>
+          <td class="bgdcolIptc">ContentAlert</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ContentWarning</td>
+          <td class="bgdcolIptc">contentWarning</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Date Created</td>
+          <td class="bgdcolIptc">Designates the date and optionally the time the content of the video was created (rather than the date of the creation of the digital representation)</td>
+          <td class="bgdcolIptc">date/created</td>
+          <td class="bgdcolIptc">photoshop:DateCreated</td>
+          <td class="bgdcolIptc">dateCreated</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/CreationDate</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Date Modified</td>
+          <td class="bgdcolIptc">Date and optionally time when the video was modified last time</td>
+          <td class="bgdcolIptc">date/modified</td>
+          <td class="bgdcolIptc">xmp:ModifyDate</td>
+          <td class="bgdcolIptc">dateModified
+</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/LastUpdate</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Date Released</td>
+          <td class="bgdcolIptc">Date and optionally time of the public release of the video</td>
+          <td class="bgdcolIptc">date/released</td>
+          <td class="bgdcolIptc">xmpDM:releaseDate</td>
+          <td class="bgdcolIptc">dateReleased</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Digital Source Type</td>
+          <td class="bgdcolIptc">The type of the source of this digital video, including whether the video was generated by and algorithm with or without training data</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:DigitalSourceType</td>
+          <td class="bgdcolIptc">digitalSourceType</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Episode</td>
+          <td class="bgdcolIptc">Episode in a specific season of a TV or video series this video is a member of.</td>
+          <td class="bgdcolIptc">title/@typeLink="ivqu:episode"/dc:title + type 
+OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Episode</td>
+          <td class="bgdcolIptc">episode</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">External Metadata URL</td>
+          <td class="bgdcolIptc">Link(s) to an external web resource for retrieval of further metadata about this video</td>
+          <td class="bgdcolIptc">use relations and relatedInformationLinks for other AV resources or contacts/persons and organisations, events, etc.</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ExternalMetadataLink</td>
+          <td class="bgdcolIptc">externalMetadataLinks</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Feed Identifier</td>
+          <td class="bgdcolIptc">Identifier of the feed/source this video was delivered by</td>
+          <td class="bgdcolIptc">identifier/@typeLink="ivqu:feedId" or typeLabel="Feed Id"/dc:identifier </td>
+          <td class="bgdcolIptc">Iptc4xmpExt:FeedIdentifier</td>
+          <td class="bgdcolIptc">feedIdentifier</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Metadata Edit Date</td>
+          <td class="bgdcolIptc">Date of the last edit of the metadata of this video.</td>
+          <td class="bgdcolIptc">ebuCoreMain/@dateLastModified &amp; ebuCoreMain@/timeLastModified</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Metadata Editor</td>
+          <td class="bgdcolIptc">Party doing the last edit of the metadata of this video.</td>
+          <td class="bgdcolIptc">ebuCoreMain/metadataProvider (entity structure)</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Metadata Authority</td>
+          <td class="bgdcolIptc">Party responsible for the accuracy of the metadata values.</td>
+          <td class="bgdcolIptc">ebuCoreMain/metadataProvider (entity structure) + role</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Planning Reference</td>
+          <td class="bgdcolIptc">Reference to a data item used for planning the shooting of this video</td>
+          <td class="bgdcolIptc">date/planned</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:PlanningRef</td>
+          <td class="bgdcolIptc">planningRef</td>
+          <td class="bgdcolNoniptc">(PlanningMetadata/assignId)</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Publication Event</td>
+          <td class="bgdcolIptc">Date and optionally the time of publishing this video with name and identifier for the event of this publication.</td>
+          <td class="bgdcolIptc">publicationEvent/publicationDate</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:BroadcastDate</td>
+          <td class="bgdcolIptc">publicationEvents</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Rating</td>
+          <td class="bgdcolIptc">How the video is classified by a public authority such as MPA</td>
+          <td class="bgdcolIptc">audienceRating</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Rating</td>
+          <td class="bgdcolIptc">ratings</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Ready for Release</td>
+          <td class="bgdcolIptc">An indicator if this video is ready for being released to the public. This depends on rules by the party responsible for the publication.</td>
+          <td class="bgdcolIptc">format/technicalAttributeBoolean/@typeLink="ivqu:readyForRelease" or @typeLabel="Ready For Release"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ReleaseReady</td>
+          <td class="bgdcolIptc">releaseReady</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Recording Device</td>
+          <td class="bgdcolIptc">Device used for recording this video</td>
+          <td class="bgdcolIptc">format/technicalAttributeString/@typeLink="ivqu:recordingDevice" or @typeLabel="Recording Device"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RecDevice</td>
+          <td class="bgdcolIptc">recordingDevice</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Device (see also Property Structure Device below)</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Registry Entry</td>
+          <td class="bgdcolIptc">Identifier of the video issued by an identified registry.</td>
+          <td class="bgdcolIptc">identifier + typeLink="ivqu:registryEntry"/dc:identifier + attributor or typeLabel="Registry Entry" -&gt; ebucore identifier structure to specify the entity, etc.</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RegistryId</td>
+          <td class="bgdcolIptc">registryEntries</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Review Rating</td>
+          <td class="bgdcolIptc">An aesthetic rating given to the video by an external reviewer such as a news outlet        </td>
+          <td class="bgdcolIptc">rating/ratingValue or rating/ratingLink where rating is explicitly described like a web reference        </td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ReviewRating</td>
+          <td class="bgdcolIptc">reviewRatings</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Season</td>
+          <td class="bgdcolIptc">Season of a TV or video series this video is a member of.</td>
+          <td class="bgdcolIptc">title + typeLink="ivqu:season"/dc:title + type 
+OR dc:alternative +  typeLink="ivqu:season" or for both typeLabel="Season Title"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Season</td>
+          <td class="bgdcolIptc">season</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Series</td>
+          <td class="bgdcolIptc">TV or video series this video is a member of.</td>
+          <td class="bgdcolIptc">title/@typeLink="ivqu:series"/dc:title + type 
+OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Series</td>
+          <td class="bgdcolIptc">series</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Storyline Identifier</td>
+          <td class="bgdcolIptc">Identifier(s) of a story evolving over time with which this video is associated</td>
+          <td class="bgdcolIptc">identifier + typeLink="ivqu:storylineId"/dc:identifier or typeLabel="Story Line Id" and ebucore identifier structure to identify the source entity and more.</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:StorylineIdentifier</td>
+          <td class="bgdcolIptc">storylineIdentifiers</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Style Period</td>
+          <td class="bgdcolIptc">The style, historical or artistic period, movement, group, or school whose characteristics are represented by the video</td>
+          <td class="bgdcolIptc">date/@typeDefinition="ivqu:stylePeriod" or@ typeLabel="Style Period"/alternative/@period="...value..." + </td>
+          <td class="bgdcolIptc">Iptc4xmpExt:StylePeriod</td>
+          <td class="bgdcolIptc">stylePeriod</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Temporal Coverage</td>
+          <td class="bgdcolIptc">Period of time covered by the video</td>
+          <td class="bgdcolIptc">coverage/@typeLabel="Temporal Coverage or @typeLink="ivqu="temporalCoverage"/dc:coverage or use ebucore coverage/temporal structure</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:TemporalCoverage</td>
+          <td class="bgdcolIptc">temporalCoverage</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Parent Video Identifier</td>
+          <td class="bgdcolIptc">Globally unambiguous identifier of the video from which this video was derived.</td>
+          <td class="bgdcolIptc">hasParent and relationType structure</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Video Identifier</td>
+          <td class="bgdcolIptc">Globally unambiguous identifier of the video regardless of renditions, formats, encodings etc. This identifier should be shared across all renditions.</td>
+          <td class="bgdcolIptc">identifier + typeLink="ivqu:mediaId"/dc:identifier or typeLabel="Media Id" and identifier structure to identify the source entity and more.</td>
+          <td class="bgdcolIptc">dc:identifier</td>
+          <td class="bgdcolIptc">identifier</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/TargetMaterial/@umidRef
+</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Video Rendition</td>
+          <td class="bgdcolIptc">Unambiguous identifier of the video specific to a rendition. </td>
+          <td class="bgdcolIptc">identifier + typeLink="ivqu:videoRendition"/dc:identifier or typeLabel="Video Rendition" and identifier structure to identify the source entity and more.</td>
+          <td class="bgdcolIptc">xmpMM:RenditionClass</td>
+          <td class="bgdcolIptc">rendition</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Video Version</td>
+          <td class="bgdcolIptc">Version of the video identified by the Video Identifier</td>
+          <td class="bgdcolIptc">version/@typeLink="ivqu:mediaId" or @typeLabel="media Id"/"...value" or identifier + typeLink="ivqu:videoRendition"/dc:identifier or 
+typeLabel="Video Rendition" and identifier structure to identify the 
+source entity and more.</td>
+          <td class="bgdcolIptc">xmpMM:VersionID</td>
+          <td class="bgdcolIptc">videoVersion
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Workflow Rating</td>
+          <td class="bgdcolIptc">An aesthetic rating given to the video by its creator or editor, for example to mark the best take of a series</td>
+          <td class="bgdcolIptc">rating/ratingValue</td>
+          <td class="bgdcolIptc">xmp:Rating</td>
+          <td class="bgdcolIptc">workflowRating</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">Workflow Tag</td>
+          <td class="bgdcolIptc">Indicator for the role of this video in a production workflow.</td>
+          <td class="bgdcolIptc">type/@typeLink="ivqu:workflowTag" or typeLabel="Workflow Tag"/objectType/@typeLink or typeLabel with values from taxonomy or free text for typeLabel</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:WorkflowTag</td>
+          <td class="bgdcolIptc">workflowTag</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Alt Text (Accessibility)</td>
+          <td class="bgdcolIptc">A brief textual description of the purpose and meaning of a video that can be accessed by assistive technology or displayed when the video is disabled in the browser. It should not exceed 250 characters.</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpCore:AltTextAccessibility</td>
+          <td class="bgdcolIptc">altTextAccessibility</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">CV Term About the Content</td>
+          <td class="bgdcolIptc">What the video is about expressed by term(s) selected from taxonomies or controlled vocabularies</td>
+          <td class="bgdcolIptc">subject/subjectCode, subjectDefinition and/or subject/dc:subject (free text) and possibly a typeLink and/or typeLabel to define a type of subject at a lower level of granularity. This is also possible using the topic and theme elements of EBUCore.</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:AboutCvTerm</td>
+          <td class="bgdcolIptc">aboutCvTerms</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Data Displayed on Screen</td>
+          <td class="bgdcolIptc">Text or other data shown in some region of the video.</td>
+          <td class="bgdcolIptc">textLine + typeLink="ivqu:dataOnScreen" or typeLabel="Data On Screen"/text + timeStamp + textLinePosition</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:DataOnScreen</td>
+          <td class="bgdcolIptc">dataOnScreen</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Description</td>
+          <td class="bgdcolIptc">Textual description of the content of the video</td>
+          <td class="bgdcolIptc">description/dc:description plus typeLink or/and typeLabel for defining a type of description as appropriate</td>
+          <td class="bgdcolIptc">dc:description</td>
+          <td class="bgdcolIptc">description</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Description
+</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Dopesheet</td>
+          <td class="bgdcolIptc">Shotlist with descriptions</td>
+          <td class="bgdcolIptc">description + typeLink="ivqu:dopesheet" or typeLabel="Dopesheet"/dc:description</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Dopesheet</td>
+          <td class="bgdcolIptc">dopesheet</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Dopesheet Link</td>
+          <td class="bgdcolIptc">Link(s) to an external web resource providing a shotlist with descriptions</td>
+          <td class="bgdcolIptc">relation/@typeLink="ivqu:dopesheetLink" or @typeLabel="Dopesheet Link"/relationLink</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:DopesheetLink</td>
+          <td class="bgdcolIptc">dopesheetLinks</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Extended Description (Accessibility)</td>
+          <td class="bgdcolIptc">A more detailed textual description of the purpose and meaning of a video that elaborates on the information provided by the Alt Text (Accessibility) property. This property does not have a character limitation and is not required if the Alt Text (Accessibility) field sufficiently describes the video.</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpCore:ExtDescrAccessibility</td>
+          <td class="bgdcolIptc">extDescrAccessibility</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Featured Organisation</td>
+          <td class="bgdcolIptc">Organisation(s) featured by the content of the video</td>
+          <td class="bgdcolIptc">contributor/@typeLink="ivqu:featuredOrganisation" or typeLabel="Featured Organisation"/organisationDetails/organisationName or ebucore entity structure from more details and options</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:OrganisationInImageName
+Iptc4xmpExt:OrganisationInImageCode</td>
+          <td class="bgdcolIptc">featuredOrganisations</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Genre</td>
+          <td class="bgdcolIptc">Artistic, style, journalistic, product or other genre(s) of the video.</td>
+          <td class="bgdcolIptc">type/genre(@typeLink and @typeLabel with values from taxonomies</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Genre</td>
+          <td class="bgdcolIptc">genres</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Headline </td>
+          <td class="bgdcolIptc">Short description of the content of the video</td>
+          <td class="bgdcolIptc">description/@typeLink="ivqu:headline" and @typeLabel="Headline"/dc:description</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Headline</td>
+          <td class="bgdcolIptc">headline</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Keywords</td>
+          <td class="bgdcolIptc">What the video is about expressed by a free choice of descriptive phrases or keywords</td>
+          <td class="bgdcolIptc">description/@typeLink="ivqu:keyword" or @typeLabel="Keyword"/dc:description</td>
+          <td class="bgdcolIptc">dc:subject</td>
+          <td class="bgdcolIptc">keywords</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Language Version</td>
+          <td class="bgdcolIptc">Language version of the video</td>
+          <td class="bgdcolIptc">language/@typeLink="ivqu:languageVersion" or @typeLabel="Language Version"/dc:language</td>
+          <td class="bgdcolIptc">dc:language</td>
+          <td class="bgdcolIptc">language</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Location Shot</td>
+          <td class="bgdcolIptc">Place from where the video was shot, in particular where the camera was located</td>
+          <td class="bgdcolIptc">coverage/spatial/location/@typeLink="ivqu:locationShot" or @typeLabel="Location Shot"/name or use ebucore location structure for more granularity</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:LocationCreated</td>
+          <td class="bgdcolIptc">locationsCreated</td>
+          <td class="bgdcolNoniptc">PlanningMetadata/Properties/Meta[@name="Location"]</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Location Shown</td>
+          <td class="bgdcolIptc">Place(s) shown by the video</td>
+          <td class="bgdcolIptc">coverage/spatial/location/@typeLink="ivqu:locationShown" or @typeLabel="Location Shown"/name or use ebucore location structure for more granularity</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:LocationShown</td>
+          <td class="bgdcolIptc">locationsShown</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Object Shown</td>
+          <td class="bgdcolIptc">Object(s) shown by the video</td>
+          <td class="bgdcolIptc">Artefact + timestamp + position</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ArtworkOrObject</td>
+          <td class="bgdcolIptc">objectsShown
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Person Heard</td>
+          <td class="bgdcolIptc">Person(s) who can be heard only in the video</td>
+          <td class="bgdcolIptc">contributor/@typeLink="ivqu:personHeard" or typeLabel="Person Heard"/organisationDetails/organisationName or ebucore entity structure from more details and options. For timed identification use part/contributor</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:PersonHeard</td>
+          <td class="bgdcolIptc">personsHeard
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Person Shown</td>
+          <td class="bgdcolIptc">Person(s) shown by the video</td>
+          <td class="bgdcolIptc">contributor/@typeLink="ivqu:personShown" or typeLabel="Person Shown"/organisationDetails/organisationName or ebucore entity structure from more details and options. For timed identification use part/contributor</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:PersonInImageWDetails</td>
+          <td class="bgdcolIptc">personsShown
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Product Shown</td>
+          <td class="bgdcolIptc">Product(s) identified by a GTIN code shown by the video</td>
+          <td class="bgdcolIptc">subject + typeLink="ivqu:productShown"/subjectCode + subjectDefinition
+OR description + typeLink="ivqu:productShown"/dc:description</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ProductInImage</td>
+          <td class="bgdcolIptc">productsShown
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Shot Type</td>
+          <td class="bgdcolIptc">Visual type(s) of the video</td>
+          <td class="bgdcolIptc">type/objectType or format/technicalAttributeString or type/objectType or format/technicalAttributeUri in association with ad-hoc taxonomy</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:VideoShotType</td>
+          <td class="bgdcolIptc">videoShotTypes</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Shown Event</td>
+          <td class="bgdcolIptc">Event(s) shown by the video</td>
+          <td class="bgdcolIptc">Event/name or more using the ebucore event structure</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:EventExt</td>
+          <td class="bgdcolIptc">shownEvents</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Snapshot Link</td>
+          <td class="bgdcolIptc">A still image representing  the video.</td>
+          <td class="bgdcolIptc">format/locator/@typeLink="ivqu:snapshotLink" or @typeLabel="Snapshot Link"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:SnapshotLink</td>
+          <td class="bgdcolIptc">snapshotLinks</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/KeyFrame</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Timed Text Link</td>
+          <td class="bgdcolIptc">Link(s) to an external web resource providing a timed text track, used to provide captioning/subtitling or audio description of the video</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:TimedTextLink</td>
+          <td class="bgdcolIptc">timedTextLinks</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Title</td>
+          <td class="bgdcolIptc">Title of the video, should be a shorthand reference</td>
+          <td class="bgdcolIptc">title/dc:title</td>
+          <td class="bgdcolIptc">dc:title</td>
+          <td class="bgdcolIptc">title</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Title</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Transcript</td>
+          <td class="bgdcolIptc">Transcription of the video</td>
+          <td class="bgdcolIptc">description/@typeLink="ivqu:transcript" or typeLabel="Transcript"/dc:description or use textLine structure</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Transcript</td>
+          <td class="bgdcolIptc">transcript</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Transcript Link</td>
+          <td class="bgdcolIptc">Link(s) to an external web resource providing a transcription of the video</td>
+          <td class="bgdcolIptc">relation/@typeLink="ivqu:transcriptLink" or @typeLabel="Transcript Link"/relationLink</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:TranscriptLink</td>
+          <td class="bgdcolIptc">transcriptLinks</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">describing a/v content</td>
+          <td class="bgdcolIptc">Visual Colour</td>
+          <td class="bgdcolIptc">The visual colouring of the video.</td>
+          <td class="bgdcolIptc">format/technicalAttributeString +typeLink ='ivqu:visualColour"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:VisualColour</td>
+          <td class="bgdcolIptc">visualColour</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Contributor</td>
+          <td class="bgdcolIptc">Party or parties (person or organisation) which contributed to the video, refinement by the role attribute.</td>
+          <td class="bgdcolIptc">contributor/role for contributors and ebucore entity structure for more granularity</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Contributor</td>
+          <td class="bgdcolIptc">contributors</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Copyright Notice </td>
+          <td class="bgdcolIptc">Any textual notice necessary by legal needs or common use to indicate the current owner of the copyright of this media resource</td>
+          <td class="bgdcolIptc">rights/copyrightStatement</td>
+          <td class="bgdcolIptc">dc:rights</td>
+          <td class="bgdcolIptc">copyrightNotice
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Copyright Year</td>
+          <td class="bgdcolIptc">Year of origin of the video, usually appearing in the copyright notice as a numeric value</td>
+          <td class="bgdcolIptc">date/copyrighted</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:CopyrightYear</td>
+          <td class="bgdcolIptc">copyrightYear</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Creator</td>
+          <td class="bgdcolIptc">Party or parties (person or organisation) which created the video, refinement by the role attribute. </td>
+          <td class="bgdcolIptc">creator/role for creators
+OR contributor/role for creators and ebucore entity structure for more granularity</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Creator</td>
+          <td class="bgdcolIptc">creators</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Creator</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Credit Line</td>
+          <td class="bgdcolIptc">Credit to person(s) and/or organisation(s) required by the supplier of the video (clip) to be used when published.</td>
+          <td class="bgdcolIptc">rights/@typeLink="ivqu:creditline" or @typeLabel="Credit Line"/dc:rights or use ebucore contributor and granularity of the enty structure to build the credit list contributor by contributor and their respective roles.</td>
+          <td class="bgdcolIptc">photoshop:Credit</td>
+          <td class="bgdcolIptc">creditLine</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Data Mining</td>
+          <td class="bgdcolIptc">Data mining prohibition or permission, optionally with constraints.
+
+NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data mining for certain purposes (such as search indexing or research), and may overrule the value selected for this property. Similarly, the absence of a prohibition does not indicate that the asset owner grants permission for data mining or any other use of an asset. The prohibition &#8220;Prohibited except for search engine indexing&#8221; only permits data mining by search engines available to the public to identify the URL for an asset and its associated data (for the purpose of assisting the public in navigating to the URL for the asset), and prohibits all other uses, such as AI/ML training. The PLUS link:other-constraints[Other Constraints] property is human readable. The IPTC properties link:#embedded-encoded-rights-expression[Embedded Encoded Rights Expression] and link:#linked-encoded-rights-expression[Linked Encoded Rights Expression] are machine readable.</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">plus:DataMining</td>
+          <td class="bgdcolIptc">dataMining</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Other Constraints</td>
+          <td class="bgdcolIptc">Additional constraints on the use of the asset.</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">XMP-plus:OtherConstraints</td>
+          <td class="bgdcolIptc">otherConstraints</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Licensor </td>
+          <td class="bgdcolIptc">Company or person to  be contacted for licensing</td>
+          <td class="bgdcolIptc">rights/rightsHolder + role/@typeLink="ivqu:licensor" or @typeLabel="Licensor"</td>
+          <td class="bgdcolIptc">plus:Licensor</td>
+          <td class="bgdcolIptc">licensor
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Model Release Document</td>
+          <td class="bgdcolIptc">Identifier(s) of a Model Release document.</td>
+          <td class="bgdcolIptc">rights/@typeLink="ivqu:modelRelease" or @typeLabel="Model Release"/dc:rights</td>
+          <td class="bgdcolIptc">plus:ModelReleaseID</td>
+          <td class="bgdcolIptc">modelReleaseDocuments</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Model Release Status</td>
+          <td class="bgdcolIptc">Summarises the availability and scope of model releases authorizing usage of the likenesses of persons appearing in the video</td>
+          <td class="bgdcolIptc">rights/@typeLink="ivqu:modelReleaseStatus" or @typeLabel="Model Release Status"/dc:rights</td>
+          <td class="bgdcolIptc">plus:ModelReleaseStatus</td>
+          <td class="bgdcolIptc">modelReleaseStatus</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Property Release Document</td>
+          <td class="bgdcolIptc">Identifier(s) of a Property Release document.</td>
+          <td class="bgdcolIptc">rights/@typeLink="ivqu:propertyReleaseDocument" or @typeLabel="Property Release Document"/dc:rights</td>
+          <td class="bgdcolIptc">plus:PropertyReleaseID</td>
+          <td class="bgdcolIptc">propertyReleaseDocuments</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Property Release Status</td>
+          <td class="bgdcolIptc">Summarises the availability and scope of property releases authorising usage of the properties appearing in the photograph.</td>
+          <td class="bgdcolIptc">rights/@typeLink="ivqu:propertyReleaseStatus" or @typeLabel="Property Release Status"/dc:rights</td>
+          <td class="bgdcolIptc">plus:PropertyReleaseStatus</td>
+          <td class="bgdcolIptc">propertyReleaseStatus</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Embedded Encoded Rights Expression</td>
+          <td class="bgdcolIptc">Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)</td>
+          <td class="bgdcolIptc">rights/@typeLink="ivqu:extRights" or @typeLabel="Rights and Licensing Terms"/dc:rights</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:EmbdEncRightsExpr</td>
+          <td class="bgdcolIptc">embdEncRightsExpr</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Linked Encoded Rights Expression</td>
+          <td class="bgdcolIptc">Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)</td>
+          <td class="bgdcolIptc">rights/@typeLink="ivqu:extRights" or @typeLabel="Rights and Licensing Terms"/rightsLink</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:LinkedEncRightsExpr</td>
+          <td class="bgdcolIptc">linkedEncRightsExpr</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Copyright Owner</td>
+          <td class="bgdcolIptc">Data identifying the individual or organisation owning the rights for this media resource which could be the video as a whole or a clip in a video. The optional role attribute may indicate which facet of rights is covered by this entity.</td>
+          <td class="bgdcolIptc">rights/rightsHolder/@typeLink="ivqu:copyrightOwner" or @typeLabel="Copyright Owner" -&gt; see ebucore entity structure for person or organisation</td>
+          <td class="bgdcolIptc">plus:CopyrightOwner</td>
+          <td class="bgdcolIptc">copyrightOwners</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Supplier </td>
+          <td class="bgdcolIptc">Supplier of this copy of the media resource</td>
+          <td class="bgdcolIptc">contributor/role/@typeLink="ivqu:supplier" or @typeLabel="Supplier"</td>
+          <td class="bgdcolIptc">plus:ImageSupplier</td>
+          <td class="bgdcolIptc">supplier
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">rights</td>
+          <td class="bgdcolIptc">Supply Chain Source</td>
+          <td class="bgdcolIptc">Person or party who has a role in the content supply chain.</td>
+          <td class="bgdcolIptc">contributor/role="ivqu:supplychainSource"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:SupplyChainSource</td>
+          <td class="bgdcolIptc">supplyChainSources</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Audio Bitrate</td>
+          <td class="bgdcolIptc">Bit rate of the audio data depending on the Video Bit Rate Type: if fixed the fixed rate, if variable the maximum rate</td>
+          <td class="bgdcolIptc">format/audioFormat/bitRate</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:audioBitRate</td>
+          <td class="bgdcolIptc">audioBitRate</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Audio Bitrate Type</td>
+          <td class="bgdcolIptc">Indicates if the bitrate of the audio data is fixed or variable</td>
+          <td class="bgdcolIptc">format/audioFormat/bitRateMode</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:audioBitRateMode</td>
+          <td class="bgdcolIptc">audioBitRateType
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Audio Bits per Sample</td>
+          <td class="bgdcolIptc">Number of bits used for an audio sample</td>
+          <td class="bgdcolIptc">format/audioFormat/sampleSize</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:audioBitsPerSample</td>
+          <td class="bgdcolIptc">audioBitsPerSample</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Audio Channel Layout</td>
+          <td class="bgdcolIptc">Term indicating the channel layout</td>
+          <td class="bgdcolIptc">format/audioFormat/audioTrackConfiguration</td>
+          <td class="bgdcolIptc">xmpDM:audioChannelType</td>
+          <td class="bgdcolIptc">audioChannelLayout
+</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/AudioFormat</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Audio Channels</td>
+          <td class="bgdcolIptc">Number of used audio channels</td>
+          <td class="bgdcolIptc">format/audioFormat/channels</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:audioChannelCount</td>
+          <td class="bgdcolIptc">audioChannelCount</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/AudioFormat/@numOfChannel
+</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Audio Coding</td>
+          <td class="bgdcolIptc">Machine readable code and a human readable term for the used audio coding</td>
+          <td class="bgdcolIptc">format/audioFormat/encoding</td>
+          <td class="bgdcolIptc">xmpDM:audioCompressor</td>
+          <td class="bgdcolIptc">audioCoding</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/AudioFormat/AudioRecPort/@audioCodec</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Audio Sample Rate</td>
+          <td class="bgdcolIptc">Rate used for sampling the audio</td>
+          <td class="bgdcolIptc">format/audioFormat/samplingRate</td>
+          <td class="bgdcolIptc">xmpDM:audioSampleRate</td>
+          <td class="bgdcolIptc">audioSampleRate</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Display Aspect Ratio</td>
+          <td class="bgdcolIptc">Ratio of width and height of the displayed image. (Width and height do not require to be in pixels.)</td>
+          <td class="bgdcolIptc">aspectRatio/@typeLink="ivqu:displayAspectRatio" or @typeLabel=""Display Aspect Ratio" / factorNumerator and factorDenominator for e.g. 16/9 or 16:9...</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:videoDisplayAspectRatio</td>
+          <td class="bgdcolIptc">videoDisplayAspectRatio</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoLayout/@aspectRatio</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Editorial Duration</td>
+          <td class="bgdcolIptc">Duration of the video content proposed for editorial use</td>
+          <td class="bgdcolIptc">format/duration/@typeLink="ivqu:editorialDuration" or @typeLabel="Editorial Duration"</td>
+          <td class="bgdcolIptc">xmpDM:marker[xmpDM:type= "ivqu:editorialUseStart"] /xmpDM:duration
+</td>
+          <td class="bgdcolIptc">editorialDurations</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Editorial Duration End</td>
+          <td class="bgdcolIptc">The point in time and frames the content proposed for editorial use ends</td>
+          <td class="bgdcolIptc">format/end/@typeLink="ivqu:editorialDurationEnd" or @typeLabel="Editorial Duration End"</td>
+          <td class="bgdcolIptc">xmpDM:marker[xmpDM:type= "ivqu:editorialUseEnd"] /xmpDM:startTime</td>
+          <td class="bgdcolIptc">editorialDurationEnds</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Editorial Duration Start</td>
+          <td class="bgdcolIptc">The point in time and frames the content proposed for editorial use starts</td>
+          <td class="bgdcolIptc">format/start/@typeLink="ivqu:editorialDurationStart" or @typeLabel="Editorial Duration Start"</td>
+          <td class="bgdcolIptc">xmpDM:marker[xmpDM:type= "ivqu:editorialUseStart"] /xmpDM:startTime</td>
+          <td class="bgdcolIptc">editorialDurationStarts</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">File Bitrate</td>
+          <td class="bgdcolIptc">The total bit rate of the all media streams in this file.</td>
+          <td class="bgdcolIptc">format/overallBitRate</td>
+          <td class="bgdcolIptc">xmpDM:fileDataRate</td>
+          <td class="bgdcolIptc">fileBitrate</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">File Duration</td>
+          <td class="bgdcolIptc">Duration of the overall video (from the first to the last frame)</td>
+          <td class="bgdcolIptc">format/duration</td>
+          <td class="bgdcolIptc">xmpDM:duration</td>
+          <td class="bgdcolIptc">fileDuration</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Duration</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">File Format</td>
+          <td class="bgdcolIptc">Format of the file containing the video data.</td>
+          <td class="bgdcolIptc">format/containerformat/containerEncoding (@typeLabel, @typeLabel for taxonomies or free text) and more using the containerFormat structure for more granularity</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ContainerFormat</td>
+          <td class="bgdcolIptc">fileFormat</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Frame Size</td>
+          <td class="bgdcolIptc">Size of the video frame in pixels</td>
+          <td class="bgdcolIptc">format/videoFormat/width and height</td>
+          <td class="bgdcolIptc">xmpDM:videoFrameSize</td>
+          <td class="bgdcolIptc">frameSize
+</td>
+          <td class="bgdcolNoniptc">see Property Structure Frame Size</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Media Type</td>
+          <td class="bgdcolIptc">IANA Media Type of the video.</td>
+          <td class="bgdcolIptc">format/mimeType</td>
+          <td class="bgdcolIptc">dc:format</td>
+          <td class="bgdcolIptc">mediaType</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Orientation</td>
+          <td class="bgdcolIptc">Orientation of the visual content of the video as defined by TIFF.</td>
+          <td class="bgdcolIptc">format/imageFormat/orientation</td>
+          <td class="bgdcolIptc">tiff:orientation</td>
+          <td class="bgdcolIptc">orientation</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Signal Aspect Ratio</td>
+          <td class="bgdcolIptc">Ratio of width and height in pixels of a frame</td>
+          <td class="bgdcolIptc">aspectRatio/@typeLink="ivqu:signalAspectRatio" or @typeLabel="Signal Aspect Ratio"</td>
+          <td class="bgdcolIptc">xmpDM:videoPixelAspectRatio</td>
+          <td class="bgdcolIptc">signalAspectRatio</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Signal Format</td>
+          <td class="bgdcolIptc">Combined term including the size of the frame, interlaced/progressive, framerate </td>
+          <td class="bgdcolIptc">format/videoFormat/technicalAttributeString/@typeLink="ivqu:signalFormat" or @typeLabel="Signal Format"</td>
+          <td class="bgdcolIptc">xmpDM:videoFieldOrder</td>
+          <td class="bgdcolIptc">signalFormat</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Stream-ready</td>
+          <td class="bgdcolIptc">Indicates if this video can be used for streaming by the rule of having the key technical data of the video at the start rather than end of the file and that the wrapper and essense format are suitable for streaming</td>
+          <td class="bgdcolIptc">format/technicalAttributeString + @typeLink="ivqu:streamReady" or @typeLabel="Stream ready"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:StreamReady</td>
+          <td class="bgdcolIptc">streamReady</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Video Bitrate</td>
+          <td class="bgdcolIptc">Bit rate of the video data depending on the Video Bit Rate Type: if fixed the fixed rate, if variable the maximum rate</td>
+          <td class="bgdcolIptc">format/videoFormat/bitRate</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:videoBitRate</td>
+          <td class="bgdcolIptc">videoBitrate</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Video Bitrate Type</td>
+          <td class="bgdcolIptc">Indicates if the bitrate of the video data is fixed or variable</td>
+          <td class="bgdcolIptc">format/videoFormat/bitRateMode</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:videoBitRateMode</td>
+          <td class="bgdcolIptc">videoBitrateType</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Video Coding</td>
+          <td class="bgdcolIptc">Machine readable code and a human readable term for the used video coding</td>
+          <td class="bgdcolIptc">format/videoFormat/encoding</td>
+          <td class="bgdcolIptc">xmpDM:videoCompressor</td>
+          <td class="bgdcolIptc">videoCoding</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoFrame/@videoCodec</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Video Frame Rate</td>
+          <td class="bgdcolIptc">Used frame rate</td>
+          <td class="bgdcolIptc">format/videoFormat/frameRate</td>
+          <td class="bgdcolIptc">xmpDM:videoFrameRate</td>
+          <td class="bgdcolIptc">videoFrameRate</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoFrame/@formatFps</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Video Profile</td>
+          <td class="bgdcolIptc">Name of the used video profile as defined by the maker of the encoding standard.</td>
+          <td class="bgdcolIptc">format/videoFormat/encoding/profile</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:videoEncodingProfile</td>
+          <td class="bgdcolIptc">videoEncodingProfile</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoFrame/@videoCodec</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">technical</td>
+          <td class="bgdcolIptc">Video Streams Count</td>
+          <td class="bgdcolIptc">Count of video streams in a video file.</td>
+          <td class="bgdcolIptc">format/videoFormat/technicalAttributeInteger [@typeLink="ivqu:videoStreamCount" or@typeLabel="Video Stream Count"] if same format for all video channel, other number of videoFormats provide in the current metadata file</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:videoStreamsCount</td>
+          <td class="bgdcolIptc">videoStreamsCount</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">tool</td>
+          <td class="bgdcolIptc">Markers</td>
+          <td class="bgdcolIptc">A marker describes a location in an audio or video sequence. It is used to identify for which part of the video (a clip of the video as a whole) a set of IPTC Video Metadata properties is used.</td>
+          <td class="bgdcolIptc">use part + description or other metadata for timed markers of different custom types</td>
+          <td class="bgdcolIptc">xmpDM:marker</td>
+          <td class="bgdcolIptc">NA
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #009999;">
+          <td class="bgdcolIptc">Property Structures (PS)</td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Concept</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Entity</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Identifier</td>
+          <td class="bgdcolIptc">Globally unique identifier of the entity/concept</td>
+          <td class="bgdcolIptc">entityId or contactId or organisationId, otherwsie each class in EBUCore has its own ID. For concepts, the ID is part of the termID/URI</td>
+          <td class="bgdcolIptc">xmp:identifier</td>
+          <td class="bgdcolIptc">identifiers</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Name</td>
+          <td class="bgdcolIptc">Full name of the entity/concept</td>
+          <td class="bgdcolIptc">contactDetails/Name or /givenName+ /familyName or organisationName or simialr for other classes or typeLabel for taxonomies</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Name</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Concept with role</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">EntityWRole</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Identifier</td>
+          <td class="bgdcolIptc">Globally unique identifier of the entity/concept</td>
+          <td class="bgdcolIptc">entityId or contactId or organisationId</td>
+          <td class="bgdcolIptc">xmp:identifier</td>
+          <td class="bgdcolIptc">identifiers</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Name</td>
+          <td class="bgdcolIptc">Full name of the entity/concept</td>
+          <td class="bgdcolIptc">contactDetails/Name or /givenName+ /familyName or organisation/organisationName</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Name</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Role</td>
+          <td class="bgdcolIptc">Identifier of the role the entity has in the context of the metadata property</td>
+          <td class="bgdcolIptc">role</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Role</td>
+          <td class="bgdcolIptc">role</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS CV-Term</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">CvTerm</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">CV-Term CV ID</td>
+          <td class="bgdcolIptc">Globally unique identifier of the Controlled Vocabulary the term is from.</td>
+          <td class="bgdcolIptc">ebucore:typeThesaurus</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:CvId</td>
+          <td class="bgdcolIptc">cvId
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">CV-Term ID</td>
+          <td class="bgdcolIptc">Globally unique identifier of the term from a Controlled Vocabulary.</td>
+          <td class="bgdcolIptc">ebucore:typeLink</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:CvTermId</td>
+          <td class="bgdcolIptc">cvTermId
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">CV-Term name</td>
+          <td class="bgdcolIptc">Natural language name of the term from a Controlled Vocabulary.</td>
+          <td class="bgdcolIptc">ebucore:typeLabel</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:CvTermName</td>
+          <td class="bgdcolIptc">cvTermName</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Refined 'aboutness' of the CV-Term</td>
+          <td class="bgdcolIptc">Refinement of the 'about' relationship of the term with the content.</td>
+          <td class="bgdcolIptc">In ebucore, this is logically and contextually  defined by the relation for which a controlled term is used</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:CvTermRefinedAbout</td>
+          <td class="bgdcolIptc">cvTermRefinedAbout</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Device</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Device is used in EBU CCDM, not EBUCore</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Device</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Manufacturer</td>
+          <td class="bgdcolIptc">Name of the manufacturer of the device</td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Manufacturer</td>
+          <td class="bgdcolIptc">manufacturer</td>
+          <td class="bgdcolNoniptc">manufacturer</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Model Name</td>
+          <td class="bgdcolIptc">Name of the device model</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ModelName</td>
+          <td class="bgdcolIptc">modelName</td>
+          <td class="bgdcolNoniptc">modelName</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Serial Number</td>
+          <td class="bgdcolIptc">Serial number, assigned by manufacturer</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:SerialNumber</td>
+          <td class="bgdcolIptc">serialNumber</td>
+          <td class="bgdcolNoniptc">serialNo</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Attached Lens Description</td>
+          <td class="bgdcolIptc">Short description of the lens used with the device at the time of the recording</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:AttLensDescription</td>
+          <td class="bgdcolIptc">attLensDescription</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Owner&#180;s Device ID</td>
+          <td class="bgdcolIptc">Identifier assigned by the owner of the device</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:OwnersDeviceId</td>
+          <td class="bgdcolIptc">ownerDeviceId</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Embedded Encoded Rights Expression</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">EmbdEncRightsExpr</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rights Expression Language ID</td>
+          <td class="bgdcolIptc">Identifier of the rights expression language used by the rights expression.</td>
+          <td class="bgdcolIptc">rights/rightsID</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RightsExprLangId</td>
+          <td class="bgdcolIptc">rightsExprLangId</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Encoding type</td>
+          <td class="bgdcolIptc">Encoding type of the rights expression, identified by an IANA Media Type.</td>
+          <td class="bgdcolIptc">rights/typeLabel</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RightsExprEncType</td>
+          <td class="bgdcolIptc">rightsExprEncType</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Encoded Rights Expression</td>
+          <td class="bgdcolIptc">Embedded serialized rights expression using a rights expression language which is encoded as a string.</td>
+          <td class="bgdcolIptc">rights/dc:rights or rights/rightsLink</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:EncRightsExpr</td>
+          <td class="bgdcolIptc">encRightsExpr</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Entity</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Entity</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Identifier</td>
+          <td class="bgdcolIptc">Globally unique identifier of the entity</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">xmp:Identifier</td>
+          <td class="bgdcolIptc">identifiers</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Name</td>
+          <td class="bgdcolIptc">Full name of the entity</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Name</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Entity with Role</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">EntityWRole</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Identifier</td>
+          <td class="bgdcolIptc">Globally unique identifier of the entity</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">xmp:Identifier</td>
+          <td class="bgdcolIptc">identifiers</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Name</td>
+          <td class="bgdcolIptc">Full name of the entity</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Name</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Role</td>
+          <td class="bgdcolIptc">Identifier of the role the entity has in the context of the metadata property</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Role</td>
+          <td class="bgdcolIptc">role</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Episode/Season</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">isEpisodeOf, isSeasonOf, hasEpisode, hasSeason, hasSeries, isSeriesOf</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">EpisodeSeason</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Name</td>
+          <td class="bgdcolIptc">Name of the episode or season of a series</td>
+          <td class="bgdcolIptc">title/ @typeLink="ivqu:episodeTitle" or typeLabel="Episode Title" OR @typeLink="ivqu:seasonTitle" or @typeLabel="Season Title"/dc:title + type 
+OR dc:alternative + type - also applies to series in EBUCore</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Name</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Number</td>
+          <td class="bgdcolIptc">Number of the episode or season of a series</td>
+          <td class="bgdcolIptc">title + typeLink="ivqu:episodeNo OR ivqu:seasonNo"/dc:title + type 
+OR dc:alternative + type or similar use with alternative/dc:alternative  - also applies to series in EBUCore</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Number</td>
+          <td class="bgdcolIptc">number</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Identifier</td>
+          <td class="bgdcolIptc">Identifier of the episode or season of a series</td>
+          <td class="bgdcolIptc">identifier/@typeLink="ivqu:episodeIdentifier" or @typeLabel="Episode Identifier" OR or similar of r Season - also applies to series in EBUCore</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Identifier</td>
+          <td class="bgdcolIptc">identifier</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Frame Size</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">FrameSize</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Width</td>
+          <td class="bgdcolIptc">Width of the video frame in pixels</td>
+          <td class="bgdcolIptc">format/width</td>
+          <td class="bgdcolIptc">stDim:w</td>
+          <td class="bgdcolIptc">widthPixels</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoLayout/@pixel
+</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Height</td>
+          <td class="bgdcolIptc">Height of the video frame in pixels</td>
+          <td class="bgdcolIptc">format/height or format/lines</td>
+          <td class="bgdcolIptc">stDim:h</td>
+          <td class="bgdcolIptc">heightPixels</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoLayout/@numOfVerticalLine</td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Measure Unit</td>
+          <td class="bgdcolIptc">Units of width and height values, fixed value "pixels"</td>
+          <td class="bgdcolIptc">width/@unit and height/@unit</td>
+          <td class="bgdcolIptc">stDim:unit</td>
+          <td class="bgdcolIptc">unitPixels</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Linked Encoded Rights Expression</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">LinkedEncRightsExpr</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rights Expression Language ID</td>
+          <td class="bgdcolIptc">Identifier of the rights expression language used by the rights expression.</td>
+          <td class="bgdcolIptc">rights/@rightsID</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RightsExprLangId</td>
+          <td class="bgdcolIptc">rightsExprLangId</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Encoding type</td>
+          <td class="bgdcolIptc">Encoding type of the rights expression, identified by an IANA Media Type.</td>
+          <td class="bgdcolIptc">rights/rightsEncoding/@typeLabel or @typeLink is existing taxonomy</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RightsExprEncType</td>
+          <td class="bgdcolIptc">rightsExprEncType</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Link to Encoded Rights Expression</td>
+          <td class="bgdcolIptc">Link to a rights expression using a rights expression language.</td>
+          <td class="bgdcolIptc">rights/rightsLink</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RightsExprLangId</td>
+          <td class="bgdcolIptc">linkedRightsExpr</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Linked Image</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">the format element is about an image</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">LinkedImage</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Image Link</td>
+          <td class="bgdcolIptc">Link URL locating the image resource</td>
+          <td class="bgdcolIptc">format/Locator</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Link</td>
+          <td class="bgdcolIptc">link</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Image Qualifier
+</td>
+          <td class="bgdcolIptc">Qualifier of the relationship of the image with the video</td>
+          <td class="bgdcolIptc">format/imageFormat/technicalAttributeUri or @typeLink</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:LinkQualifier</td>
+          <td class="bgdcolIptc">linkQualifiers</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Image Role</td>
+          <td class="bgdcolIptc">Role of this image in the context of the video</td>
+          <td class="bgdcolIptc">
+format/imageFormat/technicalAttributeString or @typeLabel</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ImageRole</td>
+          <td class="bgdcolIptc">role</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Media Type</td>
+          <td class="bgdcolIptc">IANA Media (MIME) Type</td>
+          <td class="bgdcolIptc">format/mimeType</td>
+          <td class="bgdcolIptc">dc:format</td>
+          <td class="bgdcolIptc">mediaType</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Image Width</td>
+          <td class="bgdcolIptc">Width of the image, in pixels</td>
+          <td class="bgdcolIptc">
+format/imageFormat/width</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:WidthPixels</td>
+          <td class="bgdcolIptc">widthPixels</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Image Height</td>
+          <td class="bgdcolIptc">Height of the image, in pixels</td>
+          <td class="bgdcolIptc">
+format/imageFormat/height</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:HeightPixels</td>
+          <td class="bgdcolIptc">heightPixels</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Used Video Frame</td>
+          <td class="bgdcolIptc">Frame of the video used for this still image.
+</td>
+          <td class="bgdcolIptc">format/Locator with W3C fragment locator</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:UsedVideoFrame</td>
+          <td class="bgdcolIptc">usedVideoFrame</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Location</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Location</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Identifier</td>
+          <td class="bgdcolIptc">Globally unique identifier of the location</td>
+          <td class="bgdcolIptc">coverage/spatial/location/locationId</td>
+          <td class="bgdcolIptc">xmp:identifier</td>
+          <td class="bgdcolIptc">identifiers</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Name</td>
+          <td class="bgdcolIptc">Full name of the location</td>
+          <td class="bgdcolIptc">coverage/spatial/location/name</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:LocationName</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Sublocation name</td>
+          <td class="bgdcolIptc">Name of a sub location the Location is located in</td>
+          <td class="bgdcolIptc">coverage/spatial/location/name (multi-occurence +typeLabel or typeLink, etc.)</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Sublocation</td>
+          <td class="bgdcolIptc">sublocation
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">City name</td>
+          <td class="bgdcolIptc">Name of the city the Location is located in</td>
+          <td class="bgdcolIptc">coverage/spatial/location/name (multi-occurence +typeLabel or typeLink, etc.)</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:City</td>
+          <td class="bgdcolIptc">city</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">State/Province name</td>
+          <td class="bgdcolIptc">Name of the state or province the Location is located in</td>
+          <td class="bgdcolIptc">coverage/spatial/location/name (multi-occurence +typeLabel or typeLink, etc.)</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:StateProvince</td>
+          <td class="bgdcolIptc">provinceState</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Country name</td>
+          <td class="bgdcolIptc">Name of the country the Location is located in</td>
+          <td class="bgdcolIptc">coverage/spatial/location/name (multi-occurence +typeLabel or typeLink, etc.)</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:CountryName</td>
+          <td class="bgdcolIptc">countryName
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Country ISO code</td>
+          <td class="bgdcolIptc">ISO code of the country the Location is located in</td>
+          <td class="bgdcolIptc">coverage/spatial/location/code</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:CountryCode</td>
+          <td class="bgdcolIptc">countryCode</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">World region name</td>
+          <td class="bgdcolIptc">Name of the world region the Location is located in</td>
+          <td class="bgdcolIptc">coverage/spatial/location/region</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:WorldRegion</td>
+          <td class="bgdcolIptc">worldRegion</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">GPS-Longitude</td>
+          <td class="bgdcolIptc">Longitude of a WGS84 based position of this Location</td>
+          <td class="bgdcolIptc">coverage/spatial/location/coordinates/posx + typeLabel="GPS"</td>
+          <td class="bgdcolIptc">exif:GPSLongitude</td>
+          <td class="bgdcolIptc">gpsLongitude</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">GPS-Latitude</td>
+          <td class="bgdcolIptc">Latitude of a WGS84 based position of this Location</td>
+          <td class="bgdcolIptc">coverage/spatial/location/coordinates/posy + typeLabel="GPS"</td>
+          <td class="bgdcolIptc">exif:GPSLatitude</td>
+          <td class="bgdcolIptc">gpsLatitude</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">GPS-Altitude</td>
+          <td class="bgdcolIptc">Altitude in meters of a WGS84 based position of this Location</td>
+          <td class="bgdcolIptc">coverage/spatial/location/altitude</td>
+          <td class="bgdcolIptc">exif:GPSAltitude</td>
+          <td class="bgdcolIptc">gpsAltitude</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Person Details</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">PersonWDetails</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Identifier</td>
+          <td class="bgdcolIptc">Globally unique identifier of the person</td>
+          <td class="bgdcolIptc">@contactId</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:PersonId</td>
+          <td class="bgdcolIptc">identifiers</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Name</td>
+          <td class="bgdcolIptc">Name of the person</td>
+          <td class="bgdcolIptc">contactDetails/Name or /givenName+ /familyName</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:PersonName</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Description</td>
+          <td class="bgdcolIptc">A textual description of the person</td>
+          <td class="bgdcolIptc">See all EBUCore attributes in the entity structure</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:PersonDescription</td>
+          <td class="bgdcolIptc">description</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Characteristics</td>
+          <td class="bgdcolIptc">A property or trait of the person</td>
+          <td class="bgdcolIptc">See all EBUCore attributes in the entity structure</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:PersonCharacteristic</td>
+          <td class="bgdcolIptc">characteristics</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Product with GTIN</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">ProductWGtin</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">GTIN</td>
+          <td class="bgdcolIptc">A 14 digit GTIN (Global Trade Item Number) of the product (GTIN-8 to GTIN-14 codes are used).</td>
+          <td class="bgdcolIptc">Use ebucore identifier or description with the appropriate type</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ProductGTIN</td>
+          <td class="bgdcolIptc">gtin</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Name</td>
+          <td class="bgdcolIptc">Name of the product.</td>
+          <td class="bgdcolIptc">Use title or alternative with the appropriate type</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ProductName</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Description</td>
+          <td class="bgdcolIptc">A textual description of the product.</td>
+          <td class="bgdcolIptc">Use description with the appropriate type</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:ProductDescription</td>
+          <td class="bgdcolIptc">description</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Publication Event</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">See the rich publicationEvent structure in EBUCore</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">PublicationEvent</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Publication Date</td>
+          <td class="bgdcolIptc">Date and optionally the time of publishing the video</td>
+          <td class="bgdcolIptc">publicationEvent/publicationDate + publicationTime</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Date</td>
+          <td class="bgdcolIptc">date</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Publication Event Name</td>
+          <td class="bgdcolIptc">Name of the event for publishing this video.</td>
+          <td class="bgdcolIptc">publicationEvent/@publicationEventName</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Name</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Publication Event Identifier</td>
+          <td class="bgdcolIptc">Identifier of the event for publishing this video</td>
+          <td class="bgdcolIptc">publicationEvent/@publicationEventId</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Identifier</td>
+          <td class="bgdcolIptc">identifier</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Qualified Link</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">EBUCore typeLink and typeLabel</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">QualifiedLink</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Link</td>
+          <td class="bgdcolIptc">URL of  the link</td>
+          <td class="bgdcolIptc">{URL link of a property}</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Link</td>
+          <td class="bgdcolIptc">link</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Qualifier</td>
+          <td class="bgdcolIptc">Term qualifying the use of the link</td>
+          <td class="bgdcolIptc">{qualifier attribute, if available, of the property}</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:LinkQualifier</td>
+          <td class="bgdcolIptc">linkQualifier</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Qualified Link with Language</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Link</td>
+          <td class="bgdcolIptc">URL of  the link</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Link</td>
+          <td class="bgdcolIptc">link</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Qualifier</td>
+          <td class="bgdcolIptc">Term qualifying the use of the link</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:LinkQualifier</td>
+          <td class="bgdcolIptc">linkQualifier</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Language</td>
+          <td class="bgdcolIptc">Language of the content at the link location</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:LinkLanguage</td>
+          <td class="bgdcolIptc">linkLanguage</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Rating</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rating</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rating Value</td>
+          <td class="bgdcolIptc">Rating value as issued by the rating source</td>
+          <td class="bgdcolIptc">rating/ratingValue</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RatingValue</td>
+          <td class="bgdcolIptc">ratingValue</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rating Source Link</td>
+          <td class="bgdcolIptc">Link to the site and optionally the page of the party which has issued the rating value, linked resource should explain the rating rules.</td>
+          <td class="bgdcolIptc">rating/ratingLink</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RatingSourceLink</td>
+          <td class="bgdcolIptc">ratingSourceLink</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rating Scale Min Value</td>
+          <td class="bgdcolIptc">The value of the rating scale used for the lowest/worst rating</td>
+          <td class="bgdcolIptc">rating/ratingScaleMinValue</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RatingScaleMinValue</td>
+          <td class="bgdcolIptc">ratingScaleMinValue</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rating Scale Max Value</td>
+          <td class="bgdcolIptc">The value of the rating scale used for the highest/best rating</td>
+          <td class="bgdcolIptc">rating/ratingScaleMaxValue</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RatingScaleMaxValue</td>
+          <td class="bgdcolIptc">ratingScaleMaxValue</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rating Value Logo</td>
+          <td class="bgdcolIptc">Visualisation of the rating value referenced by a link</td>
+          <td class="bgdcolIptc">rating/linkToLogo</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RatingValueLogoLink</td>
+          <td class="bgdcolIptc">ratingValueLogoLink
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rating Region</td>
+          <td class="bgdcolIptc">Geopolitical region to which this rating applies.</td>
+          <td class="bgdcolIptc">rating/ratingRegion</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RatingRegion</td>
+          <td class="bgdcolIptc">ratingRegions</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Registry Entry</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">RegistryEntry</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Asset Identifier</td>
+          <td class="bgdcolIptc">Unique identifier of the video as issued by a registry</td>
+          <td class="bgdcolIptc">identifier/@typeLink="ivqu:assetId" or @typeLabel="Asset Id"/dc:identifier</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RegItemId</td>
+          <td class="bgdcolIptc">assetIdentifier</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Registry Identifier</td>
+          <td class="bgdcolIptc">An identifier for the registry which issued the identifier of the video.</td>
+          <td class="bgdcolIptc">identifier/@typeLink="ivqu:registryId" or @typeLabel="Registry Id"/dc:identifier</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RegOrgId</td>
+          <td class="bgdcolIptc">registryIdentifier</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Role</td>
+          <td class="bgdcolIptc">An identifier of the reason and/or purpose for this Registry Entry.</td>
+          <td class="bgdcolIptc">identifier/@note</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RegEntryRole</td>
+          <td class="bgdcolIptc">role</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Series</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Series</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Series name</td>
+          <td class="bgdcolIptc">Name of the series</td>
+          <td class="bgdcolIptc">title/@typeLink="ivqu:series" or typeLabel="Series Title"/dc:title is the xml document is about the series
+OR alternmativeTitle/@typeLink="ivqu:series" or typeLabel="Series Title"/dc:alternative if in complement to the programme title</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Name</td>
+          <td class="bgdcolIptc">name</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Series identifier</td>
+          <td class="bgdcolIptc">Identifier for the series</td>
+          <td class="bgdcolIptc">identifier/@typeLink="ivqu:series" or @typeLabel="Series Identifier"</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Identifier</td>
+          <td class="bgdcolIptc">identifier</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Temporal Coverage</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">TemporalCoverage</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">From Date</td>
+          <td class="bgdcolIptc">Optionally truncated date when the temporal coverage starts</td>
+          <td class="bgdcolIptc">coverage/temporal/periodOfTime/startDate</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:tempCoverageFrom</td>
+          <td class="bgdcolIptc">tempCoverageFrom
+</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">To Date</td>
+          <td class="bgdcolIptc">Optionally truncated date when the temporal coverage ends</td>
+          <td class="bgdcolIptc">coverage/temporal/periodOfTime/endDate</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:tempCoverageTo</td>
+          <td class="bgdcolIptc">tempCoverageTo</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Text with region delimiter</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">TextWRegionDelimiter</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Text</td>
+          <td class="bgdcolIptc">Text or textual data</td>
+          <td class="bgdcolIptc">textLine/text</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:RegionText</td>
+          <td class="bgdcolIptc">regionText</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Measure Type</td>
+          <td class="bgdcolIptc">How the measures of the rectangle are expressed</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Region/@stArea:unit</td>
+          <td class="bgdcolIptc">measureType</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rectangle, upper left X</td>
+          <td class="bgdcolIptc">Horizontal axis value of the upper left corner of the rectangle</td>
+          <td class="bgdcolIptc">textLine/textLinePosition/leftTopCornerLineNumber</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Region/@stArea:x</td>
+          <td class="bgdcolIptc">regionAreaX</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rectangle, upper left Y</td>
+          <td class="bgdcolIptc">Vertical axis value of the upper left corner of the rectangle</td>
+          <td class="bgdcolIptc">textLine/textLinePosition/leftTopCornerPixelNumber</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Region/@stArea:y</td>
+          <td class="bgdcolIptc">regionAreaY</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rectangle, horizontal size</td>
+          <td class="bgdcolIptc">Horizontal width of the rectangle</td>
+          <td class="bgdcolIptc">textLine/textLinePosition/width</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Region/@stArea:w</td>
+          <td class="bgdcolIptc">regionAreaWidth</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Rectangle, vertical size</td>
+          <td class="bgdcolIptc">Vertical height of the rectangle</td>
+          <td class="bgdcolIptc">textLine/textLinePosition/height</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:Region/@stArea:h</td>
+          <td class="bgdcolIptc">regionAreaHeight</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr style="background-color: #00cccc;">
+          <td class="bgdcolIptc">PS Video Time</td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">VideoTime</td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Time Format</td>
+          <td class="bgdcolIptc">Identifier of the time format. For time code formats following SMPTE specifications.</td>
+          <td class="bgdcolIptc">format/technicalAttributeString/@typeLink="ivqu:timeFormat" or typeLabel="Time Format" or just use the appropriate time format provided in ebucore</td>
+          <td class="bgdcolIptc">xmpDM:TimeFormat</td>
+          <td class="bgdcolIptc">timeFormat</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc"></td>
+          <td class="bgdcolIptc">Time Value</td>
+          <td class="bgdcolIptc">Formated string including hours, minutes, seconds, fractions of seconds or frames, depending on the Time Format</td>
+          <td class="bgdcolIptc">format/start, format/end, partStartTime, partEndTime</td>
+          <td class="bgdcolIptc">xmpDM:TimeValue</td>
+          <td class="bgdcolIptc">timeValue</td>
+          <td class="bgdcolNoniptc"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
