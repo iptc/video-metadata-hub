@@ -25,36 +25,7 @@ from google.auth.transport.requests import Request
 import xml.etree.ElementTree as ET
 
 from constants import *
-
-def get_credentials():
-    """Gets valid user credentials from storage.
-
-    If nothing has been stored, or if the stored credentials are invalid,
-    the OAuth2 flow is completed to obtain the new credentials.
-
-    Returns:
-        Credentials, the obtained credential.
-    """
-
-    creds = None
-    # The file token.pickle stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
-    if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token:
-            creds = pickle.load(token)
-    # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                CLIENT_SECRET_FILE, SCOPES)
-            creds = flow.run_local_server(port=0)
-        # Save the credentials for the next run
-        with open('token.pickle', 'wb') as token:
-            pickle.dump(creds, token)
-    return creds
+from credentials import get_credentials
 
 def main():
     credentials = get_credentials()
@@ -93,7 +64,6 @@ def main():
         except:
             valstr = ' '
         propparams = valstr.strip('\n')
-        print("row "+str(rowcounter)+", prop name = "+propname+", prop params = "+propparams)
         
         # propname = valstr.strip('\n')
 #        try:
@@ -176,7 +146,6 @@ def main():
         except:
             valstr = ' '
         propparams = valstr.strip('\n')
-        print("row "+str(rowcounter)+", prop name = "+propname+", prop params = "+propparams)
 
         if propparams == 'object':
             if refobject:

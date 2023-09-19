@@ -23,6 +23,7 @@ from google.auth.transport.requests import Request
 from lxml import etree as ET
 
 from constants import *
+from credentials import get_credentials
 
 MAPPINGS = [
     {
@@ -99,35 +100,6 @@ MAPPINGS = [
     }
 ]
 
-def get_credentials():
-    """Gets valid user credentials from storage.
-
-    If nothing has been stored, or if the stored credentials are invalid,
-    the OAuth2 flow is completed to obtain the new credentials.
-
-    Returns:
-        Credentials, the obtained credential.
-    """
-
-    creds = None
-    # The file token.pickle stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
-    if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token:
-            creds = pickle.load(token)
-    # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                CLIENT_SECRET_FILE, SCOPES)
-            creds = flow.run_local_server(port=0)
-        # Save the credentials for the next run
-        with open('token.pickle', 'wb') as token:
-            pickle.dump(creds, token)
-    return creds
 
 def createSpecificMapping(valuesProp, headingtext1, headingtext2, findmoreaturl, mapIdx, filename):
     # create the HTML document
@@ -227,7 +199,7 @@ def createSpecificMapping(valuesProp, headingtext1, headingtext2, findmoreaturl,
 
         tbody = ET.SubElement(table, 'tbody')
 
-        for rowcounter in range(2, 210):
+        for rowcounter in range(2, 211):
             xrow = ET.SubElement(tbody, 'tr')
             teststr = valuesProp[rowcounter][0]
             if teststr == 'Property Structures (PS)':
@@ -398,7 +370,7 @@ def main():
                 throw.append(colcode)
 
         tbody = ET.SubElement(table, 'tbody')
-        for rowcounter in range(2, 210):
+        for rowcounter in range(2, 211):
             xrow = ET.SubElement(tbody, 'tr')
             teststr = valuesProp[rowcounter][0]
             if teststr == 'Property Structures (PS)':

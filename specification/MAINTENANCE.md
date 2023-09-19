@@ -43,7 +43,7 @@ Setup:
    and `VMH-JSON-Schema-snip-properties.json`.
    Check that the snippet file looks correct.
    Copy the schema skeleton to a skeleton for the new schema version:
-   `cp iptc-vmhub-schema-skeleton.json iptc-vmhub-schema-1.4.json`
+   `cp iptc-vmhub-schema-skeleton.json /iptc-vmhub-1.5-schema.json`
    Open up the new file, go to the properties section and insert the *properties* snippet (on vim this is done using
     `:r VMH-JSON-Schema-snip-properties.json`).
    Use `check-jsonschema` to validate the example files:
