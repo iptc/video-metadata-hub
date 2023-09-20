@@ -770,23 +770,6 @@
             "regionText"
         ]
     },
-    "Time": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-            "scale": {
-                "title": "Scale",
-                "description": "",
-                "type": "string"
-            },
-            "value": {
-                "title": "Value",
-                "description": "",
-                "type": "string"
-            }
-        },
-        "required": []
-    },
     "VideoTime": {
         "type": "object",
         "additionalProperties": false,

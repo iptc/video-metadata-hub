@@ -82,6 +82,17 @@
         "description": "Credit to person(s) and/or organisation(s) required by the supplier of the video (clip) to be used when published.",
         "type": "string"
     },
+    "dataMining": {
+        "title": "Data Mining",
+        "description": "Data mining prohibition or permission, optionally with constraints.",
+        "type": "string",
+        "format": "uri"
+    },
+    "dataMiningConstraint ?": {
+        "title": "Other Constraints",
+        "description": "Additional constraints on the use of the asset.",
+        "type": "string"
+    },
     "dataOnScreen": {
         "title": "Data Displayed on Screen",
         "description": "Text or other data shown in some region of the video."
