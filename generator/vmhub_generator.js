@@ -27,7 +27,8 @@ class VMHubGenerator extends React.Component {
             altid_name: '',
             altid_value: '',
             ednote: '',
-            digitalsourcetytpe: ''
+            digitalsourcetytpe: '',
+            datamining: ''
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -134,6 +135,11 @@ class VMHubGenerator extends React.Component {
                 'http://cv.iptc.org/newscodes/digitalsourcetype/' +
                 this.state.digitalsourcetype;
         }
+        if (this.state.datamining) {
+            jsonObj['datamining'] =
+                'http://ns.useplus.org/ldf/vocab/' +
+                this.state.datamining;
+        }
  
         return JSON.stringify(jsonObj, null, '\t');
     }
@@ -216,6 +222,11 @@ class VMHubGenerator extends React.Component {
             exiftoolObj['XMP-iptcExt:DigitalSourceType'] =
                 'http://cv.iptc.org/newscodes/digitalsourcetype/' +
                 this.state.digitalsourcetype;
+        }
+        if (this.state.datamining) {
+            exiftoolObj['XMP-plus:DataMining'] =
+                'http://ns.useplus.org/ldf/vocab/' +
+                this.state.datamining;
         }
         return JSON.stringify(exiftoolObj, null, '\t');
     }
@@ -306,10 +317,16 @@ class VMHubGenerator extends React.Component {
             c2patoolObj['Iptc4xmpExt:LocationShown'].push(locationShown);
         }
         if (this.state.digitalsourcetype) {
-            c2patoolObj['XMP-iptcExt:DigitalSourceType'] = 
+            c2patoolObj['Iptc4xmpExt:DigitalSourceType'] = 
                 'http://cv.iptc.org/newscodes/digitalsourcetype/' +
                 this.state.digitalsourcetype;
         }
+        if (this.state.datamining) {
+            c2patoolObj['plus:DataMining'] = 
+                'http://ns.useplus.org/ldf/vocab/' +
+                this.state.datamining;
+        }
+
         var data = c2patoolObj;
         var assertionObj = {
             "alg": "es256",
@@ -925,6 +942,23 @@ class VMHubGenerator extends React.Component {
                 <div className="form-row">
                     <label className="col-sm-3 col-form-label" htmlFor="copyrightnotice">Copyright Notice</label>
                     <div className="col-sm-9"> <input className="form-control form-control-sm" type="text" id="copyrightnotice" name="copyrightnotice" size="25" title="Copyright notice for this item." value={this.state.copyrightnotice} onChange={this.handleInputChange} tabIndex="13" />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <label className="col-sm-3 col-form-label" htmlFor="digitalsourcetype">Data Mining</label>
+                    <div className="col-sm-9">
+                        <select className="form-control form-control-sm" id="datamining" name="datamining" size="1" value={this.state.datamining} onChange={this.handleInputChange} tabIndex="14">
+                            <option value=""> (None) </option>
+                            <option value="DMI-UNSPECIFIED">Unspecified - no prohibition defined</option>
+                            <option value="DMI-ALLOWED">Allowed</option>
+                            <option value="DMI-PROHIBITED-AIMLTRAINING">Prohibited for AI/ML training</option>
+                            <option value="DMI-PROHIBITED-GENAIMLTRAINING">Prohibited for Generative AI/ML training</option>
+                            <option value="DMI-PROHIBITED-EXCEPTSEARCHENGINEINDEXING">Prohibited except for search engine indexing</option>
+                            <option value="DMI-PROHIBITED">Prohibited</option>
+                            <option value="DMI-PROHIBITED-SEECONSTRAINT">Prohibited, see Other Constraints property</option>
+                            <option value="DMI-PROHIBITED-SEEEMBEDDEDRIGHTSEXPR">Prohibited, see Embedded Encoded Rights Expression property</option>
+                            <option value="DMI-PROHIBITED-SEELINKEDRIGHTSEXPR">Prohibited, see Linked Encoded Rights Expression property</option>
+                        </select>
                     </div>
                 </div>
                 <div className="form-row">
