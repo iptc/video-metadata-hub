@@ -26,7 +26,8 @@ class VMHubGenerator extends React.Component {
             locationshown: '',
             altid_name: '',
             altid_value: '',
-            ednote: ''
+            ednote: '',
+            digitalsourcetytpe: ''
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -128,6 +129,12 @@ class VMHubGenerator extends React.Component {
             var locationShown = { 'name': locationShownName };
             jsonObj['locationsShown'].push(locationShown);
         }
+        if (this.state.digitalsourcetype) {
+            jsonObj['digitalsourcetype'] =
+                'http://cv.iptc.org/newscodes/digitalsourcetype/' +
+                this.state.digitalsourcetype;
+        }
+ 
         return JSON.stringify(jsonObj, null, '\t');
     }
 
@@ -204,6 +211,11 @@ class VMHubGenerator extends React.Component {
                 'LocationName': this.state.locationshown
             };
             exiftoolObj['XMP-iptcExt:LocationShown'].push(locationShown);
+        }
+        if (this.state.digitalsourcetype) {
+            exiftoolObj['XMP-iptcExt:DigitalSourceType'] =
+                'http://cv.iptc.org/newscodes/digitalsourcetype/' +
+                this.state.digitalsourcetype;
         }
         return JSON.stringify(exiftoolObj, null, '\t');
     }
@@ -292,6 +304,11 @@ class VMHubGenerator extends React.Component {
                 'Iptc4xmpExt:LocationName': this.state.locationshown
             };
             c2patoolObj['Iptc4xmpExt:LocationShown'].push(locationShown);
+        }
+        if (this.state.digitalsourcetype) {
+            c2patoolObj['XMP-iptcExt:DigitalSourceType'] = 
+                'http://cv.iptc.org/newscodes/digitalsourcetype/' +
+                this.state.digitalsourcetype;
         }
         var data = c2patoolObj;
         var assertionObj = {
@@ -946,21 +963,45 @@ class VMHubGenerator extends React.Component {
                         <input className="form-control form-control-sm" type="text" id="locationshown" name="locationshown" size="40" title="Location Shown" value={this.state.locationshown} onChange={this.handleInputChange} tabIndex="16"/>
                     </div>
                 </div>
+                <div className="form-row">
+                    <label className="col-sm-3 col-form-label" htmlFor="digitalsourcetype">Digital Source Type</label>
+                    <div className="col-sm-9">
+                        <select className="form-control form-control-sm" id="digitalsourcetype" name="digitalsourcetype" size="1" value={this.state.digitalsourcetype} onChange={this.handleInputChange} tabIndex="17">
+                            <option value=""> (None) </option>
+                            <option value="digitalCapture">Original digital capture sampled from real life</option>
+                            <option value="negativeFilm">Digitised from a negative on film</option>
+                            <option value="positiveFilm">Digitised from a positive on film</option>
+                            <option value="print">Digitised from a print on non-transparent medium</option>
+                            <option value="minorHumanEdits">Original media with minor human edits</option>
+                            <option value="compositeCapture">Composite of captured elements</option>
+                            <option value="algorithmicallyEnhanced">Algorithmically-enhanced media</option>
+                            <option value="dataDrivenMedia">Data-driven media</option>
+                            <option value="digitalArt">Digital art</option>
+                            <option value="virtualRecording">Virtual recording</option>
+                            <option value="compositeSynthetic">Composite including synthetic elements</option>
+                            <option value="trainedAlgorithmicMedia">Trained algorithmic media</option>
+                            <option value="algorithmicMedia">Pure algorithmic media</option>
+                        </select>
+                    </div>
+                </div>
         </div>
         <div className="col">
             <div className="outputbox">
-                <legend>{outputtext} &nbsp; <small><a href="#" onClick={this.copyToClipboard}>Copy to clipboard <i className="fas fa-copy" /></a></small></legend>
                 <div className="form-row">
-                    <div className="col-sm-6">
+                    <legend>{outputtext}</legend>
+                    <div className="col-sm-4">
                         Choose output format:
                     </div>
                     <div className="col-sm-5">
-                        <select className="form-control" id="outputformat" name="outputformat" onChange={this.handleInputChange} tabIndex="17">
+                        <select className="form-control" id="outputformat" name="outputformat" onChange={this.handleInputChange} tabIndex="18">
                             <option value="json">JSON</option>
                             <option value="exiftoolxmp">JSON XMP (for Exiftool)</option>
                             <option value="c2patool">C2PA assertion (for c2patool)</option>
                             <option value="newsmlg2">NewsML-G2</option>
                         </select>
+                    </div>
+                    <div className="col-sm-3">
+                        <a href="#" className="form-control btn btn-light" onClick={this.copyToClipboard}>Copy to clipboard <i className="fas fa-copy" /></a>
                     </div>
                 </div>
                 <div className={this.state.qcodeVisible ? "form-row" : "form-row d-none"} id="qcodeSelector">
