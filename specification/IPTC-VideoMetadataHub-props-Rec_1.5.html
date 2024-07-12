@@ -13,7 +13,7 @@
     <p class="note1"></p>
     <p class="note1">Boxes with green background show a new property or Property Structure. Boxes with grey background show a fixed erratum - <a href="#errata">see a list of errata at the bottom of this page</a> and how they were fixed.</p>
     <p class="smallnote1">Copyright &#169; 2023, <a href="https://iptc.org">IPTC</a> - all rights reserved. Published under the Creative Commons Attribution 4.0 license <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
-    <p class="note1">Note on the ... Property headers:<br/>EBUcore: based on the EBU Core Metadata Standard.<br/>XMP: based on the ISO XMP standard.<br/>PVMD: a specification of JSON properties for Photo and Video MetaData by IPTC (aka phovidmd).</p>
+    <p class="note1">Note on the ... Property headers:<br/>XMP: based on the ISO XMP standard.<br/>PVMD: a specification of JSON properties for Photo and Video MetaData by IPTC (aka phovidmd).</p>
     <p class="smallnote1">Note on the JSON Data Type column. It shows three values separated by /: 1) the JSON datatype (could be an object, with uppercase name), 2) optionally a sub-type defined by JSON Schema, 3) optionally "array" if multiple values are supported. </p>
     <table class="spec1 vmhprop">
       <thead>
@@ -24,7 +24,6 @@
           <th class="hdrcol4">User Notes</th>
           <th class="hdrcol5">Change Notes</th>
           <th class="hdrcol6">Basic Type/Cardinality</th>
-          <th class="hdrcol7">EBUcore Property</th>
           <th class="hdrcol8">XMP Property</th>
           <th class="hdrcol9">XMP Data Type</th>
           <th class="hdrcol10">PVMD JSON Property</th>
@@ -39,7 +38,6 @@
           <td>Primarily for archival use if exact dates are not available.</td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>date/@typeDefinition="ivqu:circaDateCreated" or @typeLabel="Circa Date Created"/alternative/@period="...value..."</td>
           <td>Iptc4xmpExt:CircaDateCreated</td>
           <td>Text</td>
           <td>circaDateCreated</td>
@@ -52,7 +50,6 @@
           <td>Use of the CV https://cv.iptc.org/newscodes/contentwarning/ is recommended.</td>
           <td>New 1.4</td>
           <td>Concept structure (0..unbounded)</td>
-          <td></td>
           <td>Iptc4xmpExt:ContentWarning</td>
           <td>Bag of CV Term structure</td>
           <td>contentWarning</td>
@@ -65,7 +62,6 @@
           <td>If exact dates are not available use Circa Date Created.</td>
           <td>Changed 1.4</td>
           <td>Date (0..1)</td>
-          <td>date/created</td>
           <td>photoshop:DateCreated</td>
           <td>Date</td>
           <td>dateCreated</td>
@@ -78,7 +74,6 @@
           <td></td>
           <td>New 1.0</td>
           <td>Date (0..1)</td>
-          <td>date/modified</td>
           <td>xmp:ModifyDate</td>
           <td>Date</td>
           <td>dateModified
@@ -92,7 +87,6 @@
           <td></td>
           <td>Changed 1.3</td>
           <td>Date (0..1) (Year only, Year-Month only, Year-Month-Day optional with time)</td>
-          <td>date/released</td>
           <td>xmpDM:releaseDate</td>
           <td>Date</td>
           <td>dateReleased</td>
@@ -105,7 +99,6 @@
           <td>Use of the CV https://cv.iptc.org/newscodes/digitalsourcetype/ is recommended.</td>
           <td>New 1.4</td>
           <td>Concept structure (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:DigitalSourceType</td>
           <td>CV Term structure</td>
           <td>digitalSourceType</td>
@@ -118,8 +111,6 @@
           <td></td>
           <td>New 1.0</td>
           <td>Episode/Season Structure (0..1)</td>
-          <td>title/@typeLink="ivqu:episode"/dc:title + type 
-OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</td>
           <td>Iptc4xmpExt:Episode</td>
           <td>Episode structure</td>
           <td>episode</td>
@@ -132,7 +123,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.0</td>
           <td>URL (0..unbounded)</td>
-          <td>use relations and relatedInformationLinks for other AV resources or contacts/persons and organisations, events, etc.</td>
           <td>Iptc4xmpExt:ExternalMetadataLink</td>
           <td>Bag of URL</td>
           <td>externalMetadataLinks</td>
@@ -145,7 +135,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>identifier/@typeLink="ivqu:feedId" or typeLabel="Feed Id"/dc:identifier </td>
           <td>Iptc4xmpExt:FeedIdentifier</td>
           <td>Text</td>
           <td>feedIdentifier</td>
@@ -158,7 +147,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.3</td>
           <td>Date(0..1)</td>
-          <td>ebuCoreMain/@dateLastModified &amp; ebuCoreMain@/timeLastModified</td>
           <td>Iptc4xmpExt:metadataLastEdited</td>
           <td>Date</td>
           <td>metadataLastEdited</td>
@@ -171,7 +159,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.3</td>
           <td>Entity Structure (0..1)</td>
-          <td>ebuCoreMain/metadataProvider (entity structure)</td>
           <td>Iptc4xmpExt:metadataLastEditor</td>
           <td>Entity structure</td>
           <td>metadataLastEditor</td>
@@ -184,7 +171,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.3</td>
           <td>Entity Structure (0..1)</td>
-          <td>ebuCoreMain/metadataProvider (entity structure) + role</td>
           <td>Iptc4xmpExt:metadataAuthority</td>
           <td>Entity structure</td>
           <td>metadataAuthority</td>
@@ -197,7 +183,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.2</td>
           <td>Entity with role structure (0..unbounded)</td>
-          <td>date/planned</td>
           <td>Iptc4xmpExt:PlanningRef</td>
           <td>Bag Enitity with Role structure</td>
           <td>planningRefs</td>
@@ -210,7 +195,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.0</td>
           <td>Publication Event structure (0..unbounded)</td>
-          <td>publicationEvent/publicationDate</td>
           <td>Iptc4xmpExt:PublicationEvent</td>
           <td>Bag Publication Event structure</td>
           <td>publicationEvents</td>
@@ -223,7 +207,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>Changed 1.4</td>
           <td>Rating structure (0..unbounded)</td>
-          <td>audienceRating</td>
           <td>Iptc4xmpExt:Rating</td>
           <td>Bag Rating structure</td>
           <td>ratings</td>
@@ -236,7 +219,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.0</td>
           <td>Boolean (0..1)</td>
-          <td>format/technicalAttributeBoolean/@typeLink="ivqu:readyForRelease" or @typeLabel="Ready For Release"</td>
           <td>Iptc4xmpExt:ReleaseReady</td>
           <td>Boolean</td>
           <td>releaseReady</td>
@@ -249,7 +231,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.2</td>
           <td>Device structure (0..1)</td>
-          <td>format/technicalAttributeString/@typeLink="ivqu:recordingDevice" or @typeLabel="Recording Device"</td>
           <td>Iptc4xmpExt:RecDevice</td>
           <td>Device structure</td>
           <td>recordingDevice</td>
@@ -262,7 +243,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td>What is considered a registry can be interpreted in a wide sense as the controlled management of assets with asset-specific identifiers</td>
           <td>New 1.0</td>
           <td>Registry Entry structure (0..unbounded)</td>
-          <td>identifier + typeLink="ivqu:registryEntry"/dc:identifier + attributor or typeLabel="Registry Entry" -&gt; ebucore identifier structure to specify the entity, etc.</td>
           <td>Iptc4xmpExt:RegistryId</td>
           <td>Bag Registry Entry (structure)</td>
           <td>registryEntries</td>
@@ -275,7 +255,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.4</td>
           <td>Rating structure (0..unbounded)</td>
-          <td>rating/ratingValue or rating/ratingLink where rating is explicitly described like a web reference        </td>
           <td>Iptc4xmpExt:ReviewRating</td>
           <td>Bag Rating structure</td>
           <td>reviewRatings</td>
@@ -288,8 +267,6 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td></td>
           <td>New 1.0</td>
           <td>Episode/Season structure (0..1)</td>
-          <td>title + typeLink="ivqu:season"/dc:title + type 
-OR dc:alternative +  typeLink="ivqu:season" or for both typeLabel="Season Title"</td>
           <td>Iptc4xmpExt:Season</td>
           <td>Season structure</td>
           <td>season</td>
@@ -302,8 +279,6 @@ OR dc:alternative +  typeLink="ivqu:season" or for both typeLabel="Season Title"
           <td></td>
           <td>New 1.0</td>
           <td>Series structure (0..1)</td>
-          <td>title/@typeLink="ivqu:series"/dc:title + type 
-OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</td>
           <td>Iptc4xmpExt:Series</td>
           <td>Series structure</td>
           <td>series</td>
@@ -316,7 +291,6 @@ OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</t
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..unbounded)</td>
-          <td>identifier + typeLink="ivqu:storylineId"/dc:identifier or typeLabel="Story Line Id" and ebucore identifier structure to identify the source entity and more.</td>
           <td>Iptc4xmpExt:StorylineIdentifier</td>
           <td>Bag of Text</td>
           <td>storylineIdentifiers</td>
@@ -329,7 +303,6 @@ OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</t
           <td>The Style Period may be different from the Temporal Coverage</td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>date/@typeDefinition="ivqu:stylePeriod" or@ typeLabel="Style Period"/alternative/@period="...value..." + </td>
           <td>Iptc4xmpExt:StylePeriod</td>
           <td>Text</td>
           <td>stylePeriod</td>
@@ -342,7 +315,6 @@ OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</t
           <td>The period of Temporal Coverage may be different from the Style Period.</td>
           <td>New 1.0</td>
           <td>Temporal Coverage structure (0..1)</td>
-          <td>coverage/@typeLabel="Temporal Coverage or @typeLink="ivqu="temporalCoverage"/dc:coverage or use ebucore coverage/temporal structure</td>
           <td>Iptc4xmpExt:TemporalCoverage</td>
           <td>Temporal Coverage Structure</td>
           <td>temporalCoverage</td>
@@ -355,7 +327,6 @@ OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</t
           <td>This video could be a variant in the technical video format, a variant in edit, a variant in language of the referenced video.</td>
           <td>New 1.3</td>
           <td>Text/URI (0..1)</td>
-          <td>hasParent and relationType structure</td>
           <td>Iptc4xmpExt:parentId</td>
           <td>Text</td>
           <td>parentId</td>
@@ -368,7 +339,6 @@ OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</t
           <td>IPTC advises to follow the guidelines by either EIDR or ISAN (http://www.eidr.org or http://www.isan.org)</td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>identifier + typeLink="ivqu:mediaId"/dc:identifier or typeLabel="Media Id" and identifier structure to identify the source entity and more.</td>
           <td>dc:identifier</td>
           <td>Text</td>
           <td>identifier</td>
@@ -381,7 +351,6 @@ OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</t
           <td>Definitions of specific renditions are not provided by IPTC. Definitions of renditions may be based on format or encoding etc and can be set by producers of videos and/or system vendors.</td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>identifier + typeLink="ivqu:videoRendition"/dc:identifier or typeLabel="Video Rendition" and identifier structure to identify the source entity and more.</td>
           <td>xmpMM:RenditionClass</td>
           <td>Text</td>
           <td>rendition</td>
@@ -394,9 +363,6 @@ OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</t
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>version/@typeLink="ivqu:mediaId" or @typeLabel="media Id"/"...value" or identifier + typeLink="ivqu:videoRendition"/dc:identifier or 
-typeLabel="Video Rendition" and identifier structure to identify the 
-source entity and more.</td>
           <td>xmpMM:VersionID</td>
           <td>Text</td>
           <td>videoVersion
@@ -410,7 +376,6 @@ source entity and more.</td>
           <td></td>
           <td>New 1.4</td>
           <td>Rating structure (0..unbounded)        </td>
-          <td>rating/ratingValue</td>
           <td>xmp:Rating</td>
           <td>Closed Choice Real</td>
           <td>workflowRating</td>
@@ -423,7 +388,6 @@ source entity and more.</td>
           <td>Could be used to indicate footage, edited video, program masters, etc. Values are typically codes defined by a production company.</td>
           <td>New 1.0</td>
           <td>Concept structure (0..1)</td>
-          <td>type/@typeLink="ivqu:workflowTag" or typeLabel="Workflow Tag"/objectType/@typeLink or typeLabel with values from taxonomy or free text for typeLabel</td>
           <td>Iptc4xmpExt:WorkflowTag</td>
           <td>CV Term structure</td>
           <td>workflowTag</td>
@@ -436,7 +400,6 @@ source entity and more.</td>
           <td>This property should not be confused with the IPTC property Headline, which is a brief synopsis or summary of the contents of the video. This property is required for conformance with the W3C Web Content Accessibility Guidelines (WCAG).</td>
           <td>New 1.4</td>
           <td>Text + language tag (0..1)</td>
-          <td></td>
           <td>Iptc4xmpCore:AltTextAccessibility</td>
           <td>Lang Alt</td>
           <td>altTextAccessibility</td>
@@ -449,7 +412,6 @@ source entity and more.</td>
           <td></td>
           <td>New 1.0</td>
           <td>Concept structure (0..unbounded)</td>
-          <td>subject/subjectCode, subjectDefinition and/or subject/dc:subject (free text) and possibly a typeLink and/or typeLabel to define a type of subject at a lower level of granularity. This is also possible using the topic and theme elements of EBUCore.</td>
           <td>Iptc4xmpExt:AboutCvTerm</td>
           <td>Bag CV Term structure</td>
           <td>aboutCvTerms</td>
@@ -463,7 +425,6 @@ source entity and more.</td>
           <td></td>
           <td>Changed 1.4</td>
           <td>Text with Region Delimiter structure (0..unbounded)</td>
-          <td>textLine + typeLink="ivqu:dataOnScreen" or typeLabel="Data On Screen"/text + timeStamp + textLinePosition</td>
           <td>Iptc4xmpExt:DataOnScreen</td>
           <td>Bag  Text with Region Delimiter structure</td>
           <td>dataOnScreen</td>
@@ -476,7 +437,6 @@ source entity and more.</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>description/dc:description plus typeLink or/and typeLabel for defining a type of description as appropriate</td>
           <td>dc:description</td>
           <td>Lang Alt</td>
           <td>description</td>
@@ -489,7 +449,6 @@ source entity and more.</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>description + typeLink="ivqu:dopesheet" or typeLabel="Dopesheet"/dc:description</td>
           <td>Iptc4xmpExt:Dopesheet</td>
           <td>Lang Alt</td>
           <td>dopesheet</td>
@@ -502,7 +461,6 @@ source entity and more.</td>
           <td></td>
           <td>New 1.0</td>
           <td>Qualified Link structure (0..unbounded)</td>
-          <td>relation/@typeLink="ivqu:dopesheetLink" or @typeLabel="Dopesheet Link"/relationLink</td>
           <td>Iptc4xmpExt:DopesheetLink</td>
           <td>Bag Qualified Link</td>
           <td>dopesheetLinks</td>
@@ -515,7 +473,6 @@ source entity and more.</td>
           <td>This property should not be confused with the IPTC property Description, which is the who, what, when, where, why, how of a video. This property can be combined with Alt Text (Accessibility) if and when a brief description is not sufficient to convey the purpose and meaning of a video. It should not repeat the information in the Alt Text (Accessibility) property. It is required for conformance with the W3C Web Content Accessibility Guidelines (WCAG).</td>
           <td>New 1.4</td>
           <td>Text + language tag (0..1)</td>
-          <td></td>
           <td>Iptc4xmpCore:ExtDescrAccessibility</td>
           <td>Lang Alt</td>
           <td>extDescrAccessibility</td>
@@ -528,7 +485,6 @@ source entity and more.</td>
           <td></td>
           <td>New 1.0</td>
           <td>Entity structure (0..unbounded)</td>
-          <td>contributor/@typeLink="ivqu:featuredOrganisation" or typeLabel="Featured Organisation"/organisationDetails/organisationName or ebucore entity structure from more details and options</td>
           <td>Iptc4xmpExt:OrganisationInImageName
 Iptc4xmpExt:OrganisationInImageCode</td>
           <td>Bag Text
@@ -543,7 +499,6 @@ Bag Text</td>
           <td></td>
           <td>New 1.0</td>
           <td>CV-Term structure (0..unbounded)</td>
-          <td>type/genre(@typeLink and @typeLabel with values from taxonomies</td>
           <td>Iptc4xmpExt:Genre</td>
           <td>Bag CV Term structure</td>
           <td>genres</td>
@@ -557,7 +512,6 @@ Bag Text</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>description/@typeLink="ivqu:headline" and @typeLabel="Headline"/dc:description</td>
           <td>Iptc4xmpExt:Headline</td>
           <td>Lang Alt</td>
           <td>headline</td>
@@ -570,7 +524,6 @@ Bag Text</td>
           <td></td>
           <td>Changed 1.4</td>
           <td>Text + language tag (0..unbounded)</td>
-          <td>description/@typeLink="ivqu:keyword" or @typeLabel="Keyword"/dc:description</td>
           <td>dc:subject</td>
           <td>Bag Lang Alt</td>
           <td>keywords</td>
@@ -583,7 +536,6 @@ Bag Text</td>
           <td></td>
           <td>New 1.0</td>
           <td>Language tag (0..1)</td>
-          <td>language/@typeLink="ivqu:languageVersion" or @typeLabel="Language Version"/dc:language</td>
           <td>dc:language</td>
           <td>Text Closed Choice</td>
           <td>language</td>
@@ -596,7 +548,6 @@ Bag Text</td>
           <td>May be used multiple times for edited videos with clips shot at different locations.</td>
           <td>New 1.0</td>
           <td>Location structure (0..unbounded)</td>
-          <td>coverage/spatial/location/@typeLink="ivqu:locationShot" or @typeLabel="Location Shot"/name or use ebucore location structure for more granularity</td>
           <td>Iptc4xmpExt:LocationCreated</td>
           <td>Bag Location structure</td>
           <td>locationsCreated</td>
@@ -609,7 +560,6 @@ Bag Text</td>
           <td></td>
           <td>New 1.0</td>
           <td>Location structure (0..unbounded)</td>
-          <td>coverage/spatial/location/@typeLink="ivqu:locationShown" or @typeLabel="Location Shown"/name or use ebucore location structure for more granularity</td>
           <td>Iptc4xmpExt:LocationShown</td>
           <td>Bag Location structure</td>
           <td>locationsShown</td>
@@ -622,7 +572,6 @@ Bag Text</td>
           <td></td>
           <td>New 1.0</td>
           <td>Entity structure (0..unbounded)</td>
-          <td>Artefact + timestamp + position</td>
           <td>Iptc4xmpExt:ArtworkOrObject</td>
           <td>Bag Artwork/Object structure</td>
           <td>objectsShown
@@ -636,7 +585,6 @@ Bag Text</td>
           <td></td>
           <td>New 1.0</td>
           <td>Entity structure (0..unbounded)</td>
-          <td>contributor/@typeLink="ivqu:personHeard" or typeLabel="Person Heard"/organisationDetails/organisationName or ebucore entity structure from more details and options. For timed identification use part/contributor</td>
           <td>Iptc4xmpExt:PersonHeard</td>
           <td>Bag Entity structure</td>
           <td>personsHeard
@@ -650,7 +598,6 @@ Bag Text</td>
           <td></td>
           <td>New 1.0</td>
           <td>Entity Structure or Person Details structure (0..unbounded)</td>
-          <td>contributor/@typeLink="ivqu:personShown" or typeLabel="Person Shown"/organisationDetails/organisationName or ebucore entity structure from more details and options. For timed identification use part/contributor</td>
           <td>Iptc4xmpExt:PersonInImageWDetails</td>
           <td>Bag PersonWDetails structure</td>
           <td>personsShown
@@ -664,8 +611,6 @@ Bag Text</td>
           <td></td>
           <td>New 1.0</td>
           <td>Product with GTIN structure (0..unbounded)</td>
-          <td>subject + typeLink="ivqu:productShown"/subjectCode + subjectDefinition
-OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td>Iptc4xmpExt:ProductInImage</td>
           <td>Bag Product structure</td>
           <td>productsShown
@@ -679,7 +624,6 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td></td>
           <td>New 1.0</td>
           <td>Concept structure (0..unbounded)</td>
-          <td>type/objectType or format/technicalAttributeString or type/objectType or format/technicalAttributeUri in association with ad-hoc taxonomy</td>
           <td>Iptc4xmpExt:VideoShotType</td>
           <td>Bag Entity structure</td>
           <td>videoShotTypes</td>
@@ -692,7 +636,6 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td></td>
           <td>New 1.0</td>
           <td>Entity structure (0..unbounded)</td>
-          <td>Event/name or more using the ebucore event structure</td>
           <td>Iptc4xmpExt:EventExt</td>
           <td>Bag Entity structure</td>
           <td>shownEvents</td>
@@ -705,7 +648,6 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td></td>
           <td>New 1.1</td>
           <td>Linked Image structure (0..unbounded)</td>
-          <td>format/locator/@typeLink="ivqu:snapshotLink" or @typeLabel="Snapshot Link"</td>
           <td>Iptc4xmpExt:SnapshotLink</td>
           <td>Bag Linked Image</td>
           <td>snapshotLinks</td>
@@ -718,7 +660,6 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td></td>
           <td>New 1.4</td>
           <td>Qualified Link with Language structure (0..unbounded)</td>
-          <td></td>
           <td>Iptc4xmpExt:TimedTextLink</td>
           <td>Bag Qualified Link with Language</td>
           <td>timedTextLinks</td>
@@ -731,7 +672,6 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td></td>
           <td>Changed 1.4</td>
           <td>Text + language tag (0..1)</td>
-          <td>title/dc:title</td>
           <td>dc:title</td>
           <td>Lang Alt</td>
           <td>title</td>
@@ -745,7 +685,6 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td></td>
           <td>Changed 1.4</td>
           <td>Text + language tag (0..1)</td>
-          <td>description/@typeLink="ivqu:transcript" or typeLabel="Transcript"/dc:description or use textLine structure</td>
           <td>Iptc4xmpExt:Transcript</td>
           <td>Lang Alt</td>
           <td>transcript</td>
@@ -758,7 +697,6 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td></td>
           <td>New 1.0</td>
           <td>Qualified Link structure (0..unbounded)</td>
-          <td>relation/@typeLink="ivqu:transcriptLink" or @typeLabel="Transcript Link"/relationLink</td>
           <td>Iptc4xmpExt:TranscriptLink</td>
           <td>Bag Qualified Link</td>
           <td>transcriptLinks</td>
@@ -774,7 +712,6 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
 Enumeration:
 - black and white/monochrome
 - colour</td>
-          <td>format/technicalAttributeString +typeLink ='ivqu:visualColour"</td>
           <td>Iptc4xmpExt:VisualColour</td>
           <td>Closed Choice
 - bw-monochrome
@@ -790,7 +727,6 @@ Enumeration:
 Vocabulary of roles of persons contributiong to a video should be based on the use by a video or movie producer assocation.</td>
           <td>New 1.0</td>
           <td>Entity with role structure (0..unbounded)</td>
-          <td>contributor/role for contributors and ebucore entity structure for more granularity</td>
           <td>Iptc4xmpExt:Contributor</td>
           <td>Bag Entity with Role structure</td>
           <td>contributors</td>
@@ -803,7 +739,6 @@ Vocabulary of roles of persons contributiong to a video should be based on the u
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>rights/copyrightStatement</td>
           <td>dc:rights</td>
           <td>Lang Alt</td>
           <td>copyrightNotice
@@ -817,7 +752,6 @@ Vocabulary of roles of persons contributiong to a video should be based on the u
           <td></td>
           <td>Changed 1.4</td>
           <td>Number/integer (0..1)</td>
-          <td>date/copyrighted</td>
           <td>Iptc4xmpExt:CopyrightYear</td>
           <td>number</td>
           <td>copyrightYear</td>
@@ -831,8 +765,6 @@ Vocabulary of roles of persons contributiong to a video should be based on the u
 Vocabulary of roles of persons creating a video should be based on the use by a video or movie producer assocation.</td>
           <td>New 1.0</td>
           <td>Entity with role structure (0..unbounded)</td>
-          <td>creator/role for creators
-OR contributor/role for creators and ebucore entity structure for more granularity</td>
           <td>Iptc4xmpExt:Creator</td>
           <td>Bag Entity with Role structure</td>
           <td>creators</td>
@@ -845,7 +777,6 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>rights/@typeLink="ivqu:creditline" or @typeLabel="Credit Line"/dc:rights or use ebucore contributor and granularity of the enty structure to build the credit list contributor by contributor and their respective roles.</td>
           <td>photoshop:Credit</td>
           <td>Text</td>
           <td>creditLine</td>
@@ -860,7 +791,6 @@ OR contributor/role for creators and ebucore entity structure for more granulari
 NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data mining for certain purposes (such as search indexing or research), and may overrule the value selected for this property. Similarly, the absence of a prohibition does not indicate that the asset owner grants permission for data mining or any other use of an asset. The prohibition &#8220;Prohibited except for search engine indexing&#8221; only permits data mining by search engines available to the public to identify the URL for an asset and its associated data (for the purpose of assisting the public in navigating to the URL for the asset), and prohibits all other uses, such as AI/ML training. The PLUS link:other-constraints[Other Constraints] property is human readable. The IPTC properties link:#embedded-encoded-rights-expression[Embedded Encoded Rights Expression] and link:#linked-encoded-rights-expression[Linked Encoded Rights Expression] are machine readable.</td>
           <td class="isnew">New 1.5</td>
           <td>PLUS CV Term/URI</td>
-          <td></td>
           <td>plus:DataMining</td>
           <td>see PLUS spec</td>
           <td>dataMining</td>
@@ -873,7 +803,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td>Constraints may limit the scope of usage allowed</td>
           <td class="isnew">New 1.5</td>
           <td>Text + language tag (0..1)</td>
-          <td></td>
           <td>plus:OtherConstraints</td>
           <td>see PLUS spec</td>
           <td>dataMiningConstraint ?</td>
@@ -886,7 +815,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td></td>
           <td>New 1.0</td>
           <td>Entity structure (0..1)</td>
-          <td>rights/rightsHolder + role/@typeLink="ivqu:licensor" or @typeLabel="Licensor"</td>
           <td>plus:Licensor</td>
           <td>see PLUS spec</td>
           <td>licensor
@@ -900,7 +828,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..unbounded)</td>
-          <td>rights/@typeLink="ivqu:modelRelease" or @typeLabel="Model Release"/dc:rights</td>
           <td>plus:ModelReleaseID</td>
           <td>see PLUS spec</td>
           <td>modelReleaseDocuments</td>
@@ -913,7 +840,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td></td>
           <td>New 1.0</td>
           <td>PLUS CV Term/URI</td>
-          <td>rights/@typeLink="ivqu:modelReleaseStatus" or @typeLabel="Model Release Status"/dc:rights</td>
           <td>plus:ModelReleaseStatus</td>
           <td>see PLUS spec</td>
           <td>modelReleaseStatus</td>
@@ -926,7 +852,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..unbounded)</td>
-          <td>rights/@typeLink="ivqu:propertyReleaseDocument" or @typeLabel="Property Release Document"/dc:rights</td>
           <td>plus:PropertyReleaseID</td>
           <td>see PLUS spec</td>
           <td>propertyReleaseDocuments</td>
@@ -939,7 +864,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td></td>
           <td>New 1.0</td>
           <td>PLUS CV Term/URI</td>
-          <td>rights/@typeLink="ivqu:propertyReleaseStatus" or @typeLabel="Property Release Status"/dc:rights</td>
           <td>plus:PropertyReleaseStatus</td>
           <td>see PLUS spec</td>
           <td>propertyReleaseStatus</td>
@@ -952,7 +876,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td>Embedded rights expression can cover only machine readable expression.</td>
           <td>Changed 1.4</td>
           <td>Embedded Encoded Rights Expression structure (0..unbounded)</td>
-          <td>rights/@typeLink="ivqu:extRights" or @typeLabel="Rights and Licensing Terms"/dc:rights</td>
           <td>Iptc4xmpExt:EmbdEncRightsExpr</td>
           <td>Bag Embedded Encoded Rights Expression structure</td>
           <td>embdEncRightsExpr</td>
@@ -965,7 +888,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td>Embedded rights expression can cover only machine readable expression.</td>
           <td>Changed 1.4</td>
           <td>Linked Encoded Rights Expression structure (0..unbounded)</td>
-          <td>rights/@typeLink="ivqu:extRights" or @typeLabel="Rights and Licensing Terms"/rightsLink</td>
           <td>Iptc4xmpExt:LinkedEncRightsExpr</td>
           <td>Bag Linked Encoded Rights Expression structure</td>
           <td>linkedEncRightsExpr</td>
@@ -978,7 +900,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td></td>
           <td>Changed 1.4</td>
           <td>Entity with role (0..unbounded)</td>
-          <td>rights/rightsHolder/@typeLink="ivqu:copyrightOwner" or @typeLabel="Copyright Owner" -&gt; see ebucore entity structure for person or organisation</td>
           <td>plus:CopyrightOwner</td>
           <td>see PLUS spec</td>
           <td>copyrightOwners</td>
@@ -991,7 +912,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td></td>
           <td>New 1.0</td>
           <td>Entity structure (0..1)</td>
-          <td>contributor/role/@typeLink="ivqu:supplier" or @typeLabel="Supplier"</td>
           <td>plus:ImageSupplier</td>
           <td>see PLUS spec</td>
           <td>supplier
@@ -1005,7 +925,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td></td>
           <td>Changed 1.4</td>
           <td>Text (0..1)</td>
-          <td>contributor/role="ivqu:supplychainSource"</td>
           <td>photoshop:Source</td>
           <td>Text</td>
           <td>supplyChainSources</td>
@@ -1018,7 +937,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
           <td></td>
           <td>New 1.0</td>
           <td>Number (0..1)</td>
-          <td>format/audioFormat/bitRate</td>
           <td>Iptc4xmpExt:audioBitRate</td>
           <td>Integer</td>
           <td>audioBitRate</td>
@@ -1034,7 +952,6 @@ NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data 
 Enumeration
 - fixed
 - variable</td>
-          <td>format/audioFormat/bitRateMode</td>
           <td>Iptc4xmpExt:audioBitRateMode</td>
           <td>Closed Choice Text
 - fixed
@@ -1050,7 +967,6 @@ Enumeration
           <td></td>
           <td>New 1.2</td>
           <td>Number (0..1)</td>
-          <td>format/audioFormat/sampleSize</td>
           <td>Iptc4xmpExt:audioBitsPerSample</td>
           <td>Integer</td>
           <td>audioBitsPerSample</td>
@@ -1063,7 +979,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>format/audioFormat/audioTrackConfiguration</td>
           <td>xmpDM:audioChannelType</td>
           <td>Closed Choice Text</td>
           <td>audioChannelLayout
@@ -1077,7 +992,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Number (0..1)</td>
-          <td>format/audioFormat/channels</td>
           <td>Iptc4xmpExt:audioChannelCount</td>
           <td>Closed Choice or
 Integer</td>
@@ -1091,7 +1005,6 @@ Integer</td>
           <td></td>
           <td>New 1.0</td>
           <td>Entity structure (0..1)</td>
-          <td>format/audioFormat/encoding</td>
           <td>xmpDM:audioCompressor</td>
           <td>Text</td>
           <td>audioCoding</td>
@@ -1104,7 +1017,6 @@ Integer</td>
           <td></td>
           <td>New 1.0</td>
           <td>Number (0..1)</td>
-          <td>format/audioFormat/samplingRate</td>
           <td>xmpDM:audioSampleRate</td>
           <td>Rational</td>
           <td>audioSampleRate</td>
@@ -1117,7 +1029,6 @@ Integer</td>
           <td>e.g. 2.39:1</td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>aspectRatio/@typeLink="ivqu:displayAspectRatio" or @typeLabel=""Display Aspect Ratio" / factorNumerator and factorDenominator for e.g. 16/9 or 16:9...</td>
           <td>Iptc4xmpExt:videoDisplayAspectRatio</td>
           <td>Rational</td>
           <td>videoDisplayAspectRatio</td>
@@ -1130,7 +1041,6 @@ Integer</td>
           <td>Multiple occurrences should be used for the same value in different time formats</td>
           <td>New 1.0</td>
           <td>Video Time structure (0..unbounded)</td>
-          <td>format/duration/@typeLink="ivqu:editorialDuration" or @typeLabel="Editorial Duration"</td>
           <td>xmpDM:markers[xmpDM:type= "ivqu:editorialDuration"] /xmpDM:startTime + /xmpDM:duration</td>
           <td>Marker</td>
           <td>editorialDurations</td>
@@ -1144,7 +1054,6 @@ Integer</td>
           <td>Multiple occurrences should be used for the same value in different time formats</td>
           <td>New 1.0</td>
           <td>Video Time structure (0..unbounded)</td>
-          <td>format/end/@typeLink="ivqu:editorialDurationEnd" or @typeLabel="Editorial Duration End"</td>
           <td>xmpDM:markers[xmpDM:type= "ivqu:editorialDurationEnd"] /xmpDM:startTime</td>
           <td>Marker</td>
           <td>editorialDurationEnds</td>
@@ -1158,7 +1067,6 @@ Integer</td>
           <td>Multiple occurrences should be used for the same value in different time formats</td>
           <td>New 1.0</td>
           <td>Video Time structure (0..unbounded)</td>
-          <td>format/start/@typeLink="ivqu:editorialDurationStart" or @typeLabel="Editorial Duration Start"</td>
           <td>xmpDM:markers[xmpDM:type= "ivqu:editorialDurationStart"] /xmpDM:startTime</td>
           <td>Marker</td>
           <td>editorialDurationStarts</td>
@@ -1172,7 +1080,6 @@ Integer</td>
           <td></td>
           <td>New 1.0</td>
           <td>Number (0..1)</td>
-          <td>format/overallBitRate</td>
           <td>xmpDM:fileDataRate</td>
           <td>Rational</td>
           <td>fileBitrate</td>
@@ -1185,7 +1092,6 @@ Integer</td>
           <td>Multiple occurrences should be used for the same value in different time formats</td>
           <td>New 1.0</td>
           <td>Video Time structure (0..1)</td>
-          <td>format/duration</td>
           <td>xmpDM:duration</td>
           <td>Time</td>
           <td>fileDuration</td>
@@ -1198,7 +1104,6 @@ Integer</td>
           <td></td>
           <td>New 1.0</td>
           <td>Entity structure (0..1)</td>
-          <td>format/containerformat/containerEncoding (@typeLabel, @typeLabel for taxonomies or free text) and more using the containerFormat structure for more granularity</td>
           <td>Iptc4xmpExt:ContainerFormat</td>
           <td>Entity structure</td>
           <td>fileFormat</td>
@@ -1211,7 +1116,6 @@ Integer</td>
           <td></td>
           <td>New 1.0</td>
           <td>Frame Size structure (0..1)</td>
-          <td>format/videoFormat/width and height</td>
           <td>xmpDM:videoFrameSize</td>
           <td>Dimensions</td>
           <td>frameSize
@@ -1225,7 +1129,6 @@ Integer</td>
           <td>e.g. "video/quicktime"</td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>format/mimeType</td>
           <td>dc:format</td>
           <td>MIMEType</td>
           <td>mediaType</td>
@@ -1238,7 +1141,6 @@ Integer</td>
           <td></td>
           <td>New 1.0</td>
           <td>Number (0..1) (TIFF 6.0 orientation - with a user guideline ("no flips"))</td>
-          <td>format/imageFormat/orientation</td>
           <td>tiff:orientation</td>
           <td>Closed Choice of Integer</td>
           <td>orientation</td>
@@ -1251,7 +1153,6 @@ Integer</td>
           <td>e.g. 16:9</td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>aspectRatio/@typeLink="ivqu:signalAspectRatio" or @typeLabel="Signal Aspect Ratio"</td>
           <td>xmpDM:videoPixelAspectRatio</td>
           <td>Rational</td>
           <td>signalAspectRatio</td>
@@ -1264,7 +1165,6 @@ Integer</td>
           <td>e.g. "1080p"</td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>format/videoFormat/technicalAttributeString/@typeLink="ivqu:signalFormat" or @typeLabel="Signal Format"</td>
           <td>xmpDM:videoFieldOrder</td>
           <td>Text</td>
           <td>signalFormat</td>
@@ -1281,7 +1181,6 @@ Enumeration:
 - true
 - false
 - unknown</td>
-          <td>format/technicalAttributeString + @typeLink="ivqu:streamReady" or @typeLabel="Stream ready"</td>
           <td>Iptc4xmpExt:StreamReady</td>
           <td>Closed Choice of Text
 - true
@@ -1297,7 +1196,6 @@ Enumeration:
           <td></td>
           <td>New 1.0</td>
           <td>Number (0..1)</td>
-          <td>format/videoFormat/bitRate</td>
           <td>Iptc4xmpExt:videoBitRate</td>
           <td>Integer</td>
           <td>videoBitrate</td>
@@ -1313,7 +1211,6 @@ Enumeration:
 Enumeration
 - fixed
 - variable</td>
-          <td>format/videoFormat/bitRateMode</td>
           <td>Iptc4xmpExt:videoBitRateMode</td>
           <td>Closed Choice Text
 - fixed
@@ -1328,7 +1225,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Entity structure (0..1)</td>
-          <td>format/videoFormat/encoding</td>
           <td>xmpDM:videoCompressor</td>
           <td>Text</td>
           <td>videoCoding</td>
@@ -1341,7 +1237,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Number (0..1)</td>
-          <td>format/videoFormat/frameRate</td>
           <td>xmpDM:videoFrameRate</td>
           <td>Real</td>
           <td>videoFrameRate</td>
@@ -1354,7 +1249,6 @@ Enumeration
           <td>e.g. "High 4:2:2"</td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>format/videoFormat/encoding/profile</td>
           <td>Iptc4xmpExt:videoEncodingProfile</td>
           <td>Text</td>
           <td>videoEncodingProfile</td>
@@ -1367,7 +1261,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Number (0..1)</td>
-          <td>format/videoFormat/technicalAttributeInteger [@typeLink="ivqu:videoStreamCount" or@typeLabel="Video Stream Count"] if same format for all video channel, other number of videoFormats provide in the current metadata file</td>
           <td>Iptc4xmpExt:videoStreamsCount</td>
           <td>Integer</td>
           <td>videoStreamsCount</td>
@@ -1380,7 +1273,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>XMP specific type</td>
-          <td>use part + description or other metadata for timed markers of different custom types</td>
           <td>xmpDM:markers</td>
           <td>Marker</td>
           <td>NA
@@ -1390,7 +1282,6 @@ Enumeration
         <tr style="background-color: #009999;">
           <td class="bgdcolIptc">Property Structures (PS)</td>
           <td class="bgdcolIptc"> </td>
-          <td> </td>
           <td> </td>
           <td> </td>
           <td> </td>
@@ -1409,7 +1300,6 @@ Enumeration
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>Concept</td>
           <td>object</td>
         </tr>
@@ -1420,7 +1310,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (0..unbounded)</td>
-          <td>entityId or contactId or organisationId</td>
           <td>xmp:Identifier</td>
           <td>Bag Text</td>
           <td>identifiers</td>
@@ -1433,7 +1322,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>contactDetails/Name or /givenName+ /familyName or organisationName</td>
           <td>Iptc4xmpExt:Name</td>
           <td>Lang Alt</td>
           <td>name</td>
@@ -1449,7 +1337,6 @@ Enumeration
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>ConceptWRole</td>
           <td>object</td>
         </tr>
@@ -1460,7 +1347,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (0..unbounded)</td>
-          <td>entityId or contactId or organisationId</td>
           <td>xmp:Identifier</td>
           <td>Bag Text</td>
           <td>identifiers</td>
@@ -1473,7 +1359,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>contactDetails/Name or /givenName+ /familyName or organisationName</td>
           <td>Iptc4xmpExt:Name</td>
           <td>Lang Alt</td>
           <td>name</td>
@@ -1487,7 +1372,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>URI (0..unbounded)</td>
-          <td>role</td>
           <td>Iptc4xmpExt:Role</td>
           <td>Bag URI</td>
           <td>role</td>
@@ -1502,7 +1386,6 @@ Enumeration
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>CvTerm</td>
           <td>object</td>
         </tr>
@@ -1513,7 +1396,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (0..1)</td>
-          <td>ebucore:typeThesaurus</td>
           <td>Iptc4xmpExt:CvId</td>
           <td>URI</td>
           <td>cvId
@@ -1527,7 +1409,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (1)</td>
-          <td>ebucore:typeLink</td>
           <td>Iptc4xmpExt:CvTermId</td>
           <td>URI</td>
           <td>cvTermId
@@ -1541,7 +1422,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>ebucore:typeLabel</td>
           <td>Iptc4xmpExt:CvTermName</td>
           <td>LangAlt</td>
           <td>cvTermName</td>
@@ -1554,7 +1434,6 @@ Enumeration
           <td>E.g. an identifier for "shown emotion" could be used to indicate that the CV-Term covers this facet.</td>
           <td>New 1.0</td>
           <td>Text/URI (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:CvTermRefinedAbout</td>
           <td>URI</td>
           <td>cvTermRefinedAbout</td>
@@ -1569,7 +1448,6 @@ Enumeration
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>Device</td>
           <td>object</td>
         </tr>
@@ -1580,7 +1458,6 @@ Enumeration
           <td></td>
           <td>New 1.2</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:Manufacturer</td>
           <td>Text</td>
           <td>manufacturer</td>
@@ -1593,7 +1470,6 @@ Enumeration
           <td></td>
           <td>New 1.2</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:ModelName</td>
           <td>Text</td>
           <td>modelName</td>
@@ -1606,7 +1482,6 @@ Enumeration
           <td></td>
           <td>New 1.2</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:SerialNumber</td>
           <td>Text</td>
           <td>serialNumber</td>
@@ -1619,7 +1494,6 @@ Enumeration
           <td></td>
           <td>New 1.2</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:AttLensDescription</td>
           <td>Text</td>
           <td>attLensDescription</td>
@@ -1632,7 +1506,6 @@ Enumeration
           <td></td>
           <td>New 1.2</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:OwnersDeviceId</td>
           <td>Text</td>
           <td>ownerDeviceId</td>
@@ -1647,7 +1520,6 @@ Enumeration
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>EmbdEncRightsExpr</td>
           <td>object</td>
         </tr>
@@ -1658,7 +1530,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (1)</td>
-          <td>rights/rightsID</td>
           <td>Iptc4xmpExt:RightsExprLangId</td>
           <td>URI</td>
           <td>rightsExprLangId</td>
@@ -1671,7 +1542,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text (1)</td>
-          <td>rights/typeLabel</td>
           <td>Iptc4xmpExt:RightsExprEncType</td>
           <td>MIMEtype</td>
           <td>rightsExprEncType</td>
@@ -1684,7 +1554,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text (1)</td>
-          <td>dc:rights or rightsLink</td>
           <td>Iptc4xmpExt:EncRightsExpr</td>
           <td>Text</td>
           <td>encRightsExpr</td>
@@ -1699,7 +1568,6 @@ Enumeration
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>Entity</td>
           <td>object</td>
         </tr>
@@ -1710,7 +1578,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (0..unbounded)</td>
-          <td>entityId or contactId or organisationId</td>
           <td>xmp:Identifier</td>
           <td>Bag Text</td>
           <td>identifiers</td>
@@ -1723,7 +1590,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>contactDetails/Name or /givenName+ /familyName or organisationName</td>
           <td>Iptc4xmpExt:Name</td>
           <td>Lang Alt</td>
           <td>name</td>
@@ -1739,7 +1605,6 @@ Enumeration
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>EntityWRole</td>
           <td>object</td>
         </tr>
@@ -1750,7 +1615,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (0..unbounded)</td>
-          <td>entityId or contactId or organisationId</td>
           <td>xmp:Identifier</td>
           <td>Bag Text</td>
           <td>identifiers</td>
@@ -1763,7 +1627,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>contactDetails/Name or /givenName+ /familyName or organisationName</td>
           <td>Iptc4xmpExt:Name</td>
           <td>Lang Alt</td>
           <td>name</td>
@@ -1777,7 +1640,6 @@ Enumeration
           <td></td>
           <td>Changed 1.4</td>
           <td>Text (0..unbounded)</td>
-          <td>role</td>
           <td>Iptc4xmpExt:Role</td>
           <td>Bag Text</td>
           <td>role</td>
@@ -1790,7 +1652,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td></td>
-          <td>isEpisodeOf, isSeasonOf, hasEpisode, hasSeason</td>
           <td></td>
           <td></td>
           <td>EpisodeSeason</td>
@@ -1803,8 +1664,6 @@ Enumeration
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>title + typeLink="ivqu:episode OR ivqu:season"/dc:title + type 
-OR dc:alternative + type</td>
           <td>Iptc4xmpExt:Name</td>
           <td>Text</td>
           <td>name</td>
@@ -1817,8 +1676,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>Integer (0..1)</td>
-          <td>title + typeLink="ivqu:episodeNo OR ivqu:seasonNo"/dc:title + type 
-OR dc:alternative + type</td>
           <td>Iptc4xmpExt:Number</td>
           <td>Text</td>
           <td>number</td>
@@ -1831,7 +1688,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>URI (0..1)</td>
-          <td>identifier + typeLink="ivqu:episode OR ivqu:season"</td>
           <td>Iptc4xmpExt:Identifier</td>
           <td>URI</td>
           <td>identifier</td>
@@ -1846,7 +1702,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>FrameSize</td>
           <td>object</td>
         </tr>
@@ -1857,7 +1712,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>Number (1)</td>
-          <td>format/width</td>
           <td>stDim:w</td>
           <td>integer</td>
           <td>widthPixels</td>
@@ -1870,7 +1724,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>Number (1)</td>
-          <td>format/height, format/lines</td>
           <td>stDim:h</td>
           <td>integer</td>
           <td>heightPixels</td>
@@ -1883,7 +1736,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text(1)</td>
-          <td></td>
           <td>stDim:unit</td>
           <td>Text</td>
           <td>unitPixels</td>
@@ -1898,7 +1750,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>LinkedEncRightsExpr</td>
           <td>object</td>
         </tr>
@@ -1909,7 +1760,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (1)</td>
-          <td>rights/rightsID</td>
           <td>Iptc4xmpExt:RightsExprLangId</td>
           <td>URI</td>
           <td>rightsExprLangId</td>
@@ -1922,7 +1772,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>rights/typeLabel</td>
           <td>Iptc4xmpExt:RightsExprEncType</td>
           <td>MIMEtype</td>
           <td>rightsExprEncType</td>
@@ -1935,7 +1784,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>URL (1)</td>
-          <td>dc:rights or rightsLink</td>
           <td>Iptc4xmpExt:LinkedRightsExpr</td>
           <td>Text/URL</td>
           <td>linkedRightsExpr</td>
@@ -1951,7 +1799,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>LinkedImage</td>
           <td>object</td>
         </tr>
@@ -1962,7 +1809,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.1</td>
           <td>URL (1)</td>
-          <td>format/Locator</td>
           <td>Iptc4xmpExt:Link</td>
           <td>URL</td>
           <td>link</td>
@@ -1975,7 +1821,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.1</td>
           <td>URI (0..unbounded)</td>
-          <td>format/imageFormat/technicalAttributeUri or @typeLink</td>
           <td>Iptc4xmpExt:LinkQualifier</td>
           <td>Bag URI</td>
           <td>linkQualifiers</td>
@@ -1988,8 +1833,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.1</td>
           <td>Text (0..1)</td>
-          <td>
-format/imageFormat/technicalAttributeString or @typeLabel</td>
           <td>Iptc4xmpExt:ImageRole</td>
           <td>Text</td>
           <td>role</td>
@@ -2002,7 +1845,6 @@ format/imageFormat/technicalAttributeString or @typeLabel</td>
           <td></td>
           <td>New 1.1</td>
           <td>Text (0..1)</td>
-          <td>format/mimeType</td>
           <td>dc:format</td>
           <td></td>
           <td>mediaType</td>
@@ -2015,8 +1857,6 @@ format/imageFormat/technicalAttributeString or @typeLabel</td>
           <td></td>
           <td>New 1.1</td>
           <td>Integer (0..1)</td>
-          <td>
-format/imageFormat/width</td>
           <td>Iptc4xmpExt:WidthPixels</td>
           <td>integer</td>
           <td>widthPixels</td>
@@ -2029,8 +1869,6 @@ format/imageFormat/width</td>
           <td></td>
           <td>New 1.1</td>
           <td>Integer (0..1)</td>
-          <td>
-format/imageFormat/height</td>
           <td>Iptc4xmpExt:HeightPixels</td>
           <td>integer</td>
           <td>heightPixels</td>
@@ -2044,7 +1882,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.1</td>
           <td>Video Time structure (0..1)</td>
-          <td>format/Locator with W3C fragment locator</td>
           <td>Iptc4xmpExt:UsedVideoFrame</td>
           <td>Video Time</td>
           <td>usedVideoFrame</td>
@@ -2059,7 +1896,6 @@ format/imageFormat/height</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>Location</td>
           <td>object</td>
         </tr>
@@ -2070,7 +1906,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (0..unbounded)</td>
-          <td>coverage/spatial/location/locationId</td>
           <td>xmp:Identifier</td>
           <td>Bag Text</td>
           <td>identifiers</td>
@@ -2083,7 +1918,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>coverage/spatial/location/name</td>
           <td>Iptc4xmpExt:LocationName</td>
           <td>Lang Alt</td>
           <td>name</td>
@@ -2096,7 +1930,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>coverage/spatial/location/name (multi-occurence +typeLabel or typeLink, etc.)</td>
           <td>Iptc4xmpExt:Sublocation</td>
           <td>Text</td>
           <td>sublocation
@@ -2111,7 +1944,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>coverage/spatial/location/name (multi-occurence +typeLabel or typeLink, etc.)</td>
           <td>Iptc4xmpExt:City</td>
           <td>Text</td>
           <td>city</td>
@@ -2125,7 +1957,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>coverage/spatial/location/name (multi-occurence +typeLabel or typeLink, etc.)</td>
           <td>Iptc4xmpExt:ProvinceState</td>
           <td>Text</td>
           <td>provinceState</td>
@@ -2139,7 +1970,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>coverage/spatial/location/name (multi-occurence +typeLabel or typeLink, etc.)</td>
           <td>Iptc4xmpExt:CountryName</td>
           <td>Text</td>
           <td>countryName
@@ -2154,7 +1984,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>coverage/spatial/location/code</td>
           <td>Iptc4xmpExt:CountryCode</td>
           <td>Text</td>
           <td>countryCode</td>
@@ -2167,7 +1996,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>coverage/spatial/location/region</td>
           <td>Iptc4xmpExt:WorldRegion</td>
           <td>Text</td>
           <td>worldRegion</td>
@@ -2181,7 +2009,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Number/decimal (0..1)</td>
-          <td>coverage/spatial/location/coordinates/posx + typeLabel="GPS"</td>
           <td>exif:GPSLongitude</td>
           <td>Exif GPSCoordinate</td>
           <td>gpsLongitude</td>
@@ -2194,7 +2021,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Number/decimal (0..1)</td>
-          <td>coverage/spatial/location/coordinates/posy + typeLabel="GPS"</td>
           <td>exif:GPSLatitude</td>
           <td>Exif GPSCoordinate</td>
           <td>gpsLatitude</td>
@@ -2207,7 +2033,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Number/decimal (0..1)</td>
-          <td>coverage/spatial/location/altitude</td>
           <td>exif:GPSAltitude</td>
           <td>Exif Rational</td>
           <td>gpsAltitude</td>
@@ -2222,7 +2047,6 @@ format/imageFormat/height</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>PersonWDetails</td>
           <td>object</td>
         </tr>
@@ -2233,7 +2057,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text/URI (0..unbounded)</td>
-          <td>contactId</td>
           <td>Iptc4xmpExt:PersonId</td>
           <td>Bag URI</td>
           <td>identifiers</td>
@@ -2246,7 +2069,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>contactDetails/Name or /givenName+ /familyName</td>
           <td>Iptc4xmpExt:PersonName</td>
           <td>Lang Alt</td>
           <td>name</td>
@@ -2259,7 +2081,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>See all EBUCore attributes</td>
           <td>Iptc4xmpExt:PersonDescription</td>
           <td>Lang Alt</td>
           <td>description</td>
@@ -2272,7 +2093,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Concept structure (0..unbounded)</td>
-          <td>See all EBUCore attributes</td>
           <td>Iptc4xmpExt:PersonCharacteristic</td>
           <td>Bag CV-Term structure</td>
           <td>characteristics</td>
@@ -2287,7 +2107,6 @@ format/imageFormat/height</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>ProductWGtin</td>
           <td>object</td>
         </tr>
@@ -2298,7 +2117,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text (1)</td>
-          <td></td>
           <td>Iptc4xmpExt:ProductGTIN</td>
           <td>Text</td>
           <td>gtin</td>
@@ -2311,7 +2129,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:ProductName</td>
           <td>Lang Alt</td>
           <td>name</td>
@@ -2324,7 +2141,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:ProductDescription</td>
           <td>Lang Alt</td>
           <td>description</td>
@@ -2339,7 +2155,6 @@ format/imageFormat/height</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>PublicationEvent</td>
           <td>object</td>
         </tr>
@@ -2350,7 +2165,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Date (1)</td>
-          <td>publicationEvent/publicationDate + publicationTime</td>
           <td>Iptc4xmpExt:Date</td>
           <td>Date</td>
           <td>date</td>
@@ -2363,7 +2177,6 @@ format/imageFormat/height</td>
           <td>The name may include the broadcasting company, the country, if this is a (regional) first publication etc</td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>publicationEvent/....</td>
           <td>Iptc4xmpExt:Name</td>
           <td>Text</td>
           <td>name</td>
@@ -2376,7 +2189,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>URI (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:Identifier</td>
           <td>URI</td>
           <td>identifier</td>
@@ -2391,7 +2203,6 @@ format/imageFormat/height</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>QualifiedLink</td>
           <td>object</td>
         </tr>
@@ -2402,7 +2213,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>URL (1)</td>
-          <td>{URL link of a property}</td>
           <td>Iptc4xmpExt:Link</td>
           <td>URL</td>
           <td>link</td>
@@ -2415,7 +2225,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>URI (0..1)</td>
-          <td>{qualifier attribute, if available, of the property}</td>
           <td>Iptc4xmpExt:LinkQualifier</td>
           <td>URI</td>
           <td>linkQualifier</td>
@@ -2430,7 +2239,6 @@ format/imageFormat/height</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>QualifiedLinkWLanguage</td>
           <td>object</td>
         </tr>
@@ -2441,7 +2249,6 @@ format/imageFormat/height</td>
           <td></td>
           <td class="isnew">New 1.4</td>
           <td>URL (1)</td>
-          <td>{URL link of a property}</td>
           <td>Iptc4xmpExt:Link</td>
           <td>URL</td>
           <td>link</td>
@@ -2454,7 +2261,6 @@ format/imageFormat/height</td>
           <td></td>
           <td class="isnew">New 1.4</td>
           <td>URI (0..1)</td>
-          <td>{qualifier attribute, if available, of the property}</td>
           <td>Iptc4xmpExt:LinkQualifier</td>
           <td>URI</td>
           <td>linkQualifier</td>
@@ -2467,7 +2273,6 @@ format/imageFormat/height</td>
           <td></td>
           <td class="isnew">New 1.4</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:LinkLanguage</td>
           <td>Text</td>
           <td>linkLanguage</td>
@@ -2482,7 +2287,6 @@ format/imageFormat/height</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>Rating</td>
           <td>object</td>
         </tr>
@@ -2493,7 +2297,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text (1)</td>
-          <td>rating/ratingValue</td>
           <td>Iptc4xmpExt:RatingValue</td>
           <td>Text</td>
           <td>ratingValue</td>
@@ -2506,7 +2309,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>URL (1)</td>
-          <td>rating/ratingLink</td>
           <td>Iptc4xmpExt:RatingSourceLink</td>
           <td>Text (URI)</td>
           <td>ratingSourceLink</td>
@@ -2519,7 +2321,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>rating/ratingScaleMinValue</td>
           <td>Iptc4xmpExt:RatingScaleMinValue</td>
           <td>Text</td>
           <td>ratingScaleMinValue</td>
@@ -2532,7 +2333,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text (0..1)</td>
-          <td>rating/ratingScaleMaxValue</td>
           <td>Iptc4xmpExt:RatingScaleMaxValue</td>
           <td>Text</td>
           <td>ratingScaleMaxValue</td>
@@ -2545,7 +2345,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>URL (0..1)</td>
-          <td>rating/linkToLogo</td>
           <td>Iptc4xmpExt:RatingValueLogoLink</td>
           <td>Text (URL)</td>
           <td>ratingValueLogoLink
@@ -2559,7 +2358,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Location Entity structure (0..unbounded)</td>
-          <td>rating/ratingRegion</td>
           <td>Iptc4xmpExt:RatingRegion</td>
           <td>Bag Location structure</td>
           <td>ratingRegions</td>
@@ -2574,7 +2372,6 @@ format/imageFormat/height</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>RegistryEntry</td>
           <td>object</td>
         </tr>
@@ -2585,7 +2382,6 @@ format/imageFormat/height</td>
           <td>This value shall not be changed after being applied.</td>
           <td>New 1.0</td>
           <td>Text (preferred: URI) (1)</td>
-          <td>identifier + typeLink="ivqu:assetId"/dc:identifier</td>
           <td>Iptc4xmpExt:RegItemId</td>
           <td>Text</td>
           <td>assetIdentifier</td>
@@ -2598,7 +2394,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text (preferred: URI) (1)</td>
-          <td>identifier + typeLink="ivqu:registryId"/dc:identifier</td>
           <td>Iptc4xmpExt:RegOrgId</td>
           <td>Text</td>
           <td>registryIdentifier</td>
@@ -2611,7 +2406,6 @@ format/imageFormat/height</td>
           <td>Could indicated e.g. "Id of the previous supplier", "Id of the original copyright owner", "Id used by the archive", etc</td>
           <td>New 1.0</td>
           <td>Text/URI (0..1)</td>
-          <td>identifier + typeLink="ivqu:registryRole"/dc:identifier</td>
           <td>Iptc4xmpExt:RegEntryRole</td>
           <td>Text</td>
           <td>role</td>
@@ -2626,7 +2420,6 @@ format/imageFormat/height</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>Series</td>
           <td>object</td>
         </tr>
@@ -2637,8 +2430,6 @@ format/imageFormat/height</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text + language tag (0..1)</td>
-          <td>title + typeLink="ivqu:series"/dc:title + type 
-OR dc:alternative + type</td>
           <td>Iptc4xmpExt:Name</td>
           <td>Text</td>
           <td>name</td>
@@ -2651,7 +2442,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>URI (0..1)</td>
-          <td>identifier + typeLink="ivqu:series"</td>
           <td>Iptc4xmpExt:Identifier</td>
           <td>URI</td>
           <td>identifier</td>
@@ -2666,7 +2456,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>TemporalCoverage</td>
           <td>object</td>
         </tr>
@@ -2677,7 +2466,6 @@ OR dc:alternative + type</td>
           <td>Truncated date means: the date value can be year + month + day OR year + month OR year only</td>
           <td>New 1.0</td>
           <td>Date(1)</td>
-          <td>coverage/temporal/periodOfTime/startDate</td>
           <td>Iptc4xmpExt:tempCoverageFrom</td>
           <td>Date</td>
           <td>tempCoverageFrom
@@ -2691,7 +2479,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>Date(1)</td>
-          <td>coverage/temporal/periodOfTime/endDate</td>
           <td>Iptc4xmpExt:tempCoverageTo</td>
           <td>Date</td>
           <td>tempCoverageTo</td>
@@ -2706,7 +2493,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>TextWRegionDelimiter</td>
           <td>object</td>
         </tr>
@@ -2717,7 +2503,6 @@ OR dc:alternative + type</td>
           <td></td>
           <td>New 1.0</td>
           <td>Text (1)</td>
-          <td></td>
           <td>Iptc4xmpExt:RegionText</td>
           <td>Text</td>
           <td>regionText</td>
@@ -2733,7 +2518,6 @@ Ratio: percentage of the width or height, reference point upper left corner of t
           <td>Text (0..1) - enumeration
 - absolutePixels
 - ratio</td>
-          <td></td>
           <td>Iptc4xmpExt:Region/stArea:unit</td>
           <td>Closed Choice:
 - pixel
@@ -2748,7 +2532,6 @@ Ratio: percentage of the width or height, reference point upper left corner of t
           <td></td>
           <td>New 1.0</td>
           <td>Decimal (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:Region/stArea:x</td>
           <td>Real</td>
           <td>regionAreaX</td>
@@ -2761,7 +2544,6 @@ Ratio: percentage of the width or height, reference point upper left corner of t
           <td></td>
           <td>New 1.0</td>
           <td>Decimal (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:Region/stArea:y</td>
           <td>Real</td>
           <td>regionAreaY</td>
@@ -2774,7 +2556,6 @@ Ratio: percentage of the width or height, reference point upper left corner of t
           <td></td>
           <td>New 1.0</td>
           <td>Decimal (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:Region/stArea:w</td>
           <td>Real</td>
           <td>regionAreaWidth</td>
@@ -2787,7 +2568,6 @@ Ratio: percentage of the width or height, reference point upper left corner of t
           <td></td>
           <td>New 1.0</td>
           <td>Decimal (0..1)</td>
-          <td></td>
           <td>Iptc4xmpExt:Region/stArea:h</td>
           <td>Real</td>
           <td>regionAreaHeight</td>
@@ -2799,7 +2579,6 @@ Ratio: percentage of the width or height, reference point upper left corner of t
           <td></td>
           <td></td>
           <td>New 1.0</td>
-          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -2825,7 +2604,6 @@ Enumeration:
 - smpteTC5994drop
 - smpteTC60
 - smpteTC23976</td>
-          <td>format/technicalAttributeString + typeLink="ivqu:timeFormat"</td>
           <td>xmpDM:timeFormat</td>
           <td>Closed choice Text
 24Timecode
@@ -2848,7 +2626,6 @@ Enumeration:
           <td></td>
           <td>New 1.0</td>
           <td>Text (1)</td>
-          <td>format/start, format/end, partStartTime, partEndTime</td>
           <td>xmpDM:timeValue</td>
           <td>Text</td>
           <td>timeValue</td>
@@ -2860,7 +2637,6 @@ Enumeration:
           <td></td>
           <td></td>
           <td>New 1.3</td>
-          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -2876,7 +2652,6 @@ Enumeration:
           <td>Text (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>identifier</td>
           <td>string//</td>
         </tr>
@@ -2889,7 +2664,6 @@ Enumeration:
           <td>Text (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>name</td>
           <td>string//</td>
         </tr>
@@ -2899,7 +2673,6 @@ Enumeration:
           <td></td>
           <td></td>
           <td>New 1.3</td>
-          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -2915,7 +2688,6 @@ Enumeration:
           <td>Text (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>circaDateCreated</td>
           <td>string//</td>
         </tr>
@@ -2927,7 +2699,6 @@ Enumeration:
 </td>
           <td>New 1.3</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td></td>
           <td></td>
           <td>contentDescription</td>
@@ -2943,7 +2714,6 @@ Enumeration:
           <td>Text (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>contributionDescription</td>
           <td>AltLang
 </td>
@@ -2955,7 +2725,6 @@ Enumeration:
           <td></td>
           <td>New 1.3</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td></td>
           <td></td>
           <td>copyrightNotice</td>
@@ -2970,7 +2739,6 @@ Enumeration:
           <td>Text (0..unbounded)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>creatorNames</td>
           <td>string//array</td>
         </tr>
@@ -2981,7 +2749,6 @@ Enumeration:
           <td>Add the IDs in the same sequence as the Creator names</td>
           <td>New 1.3</td>
           <td>URL (0..unbounded)</td>
-          <td></td>
           <td></td>
           <td></td>
           <td>creatorIdentifiers</td>
@@ -2997,7 +2764,6 @@ Enumeration:
           <td>URI (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>currentCopyrightOwnerIdentifier</td>
           <td>string/uri/</td>
         </tr>
@@ -3008,7 +2774,6 @@ Enumeration:
           <td></td>
           <td>New 1.3</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td></td>
           <td></td>
           <td>currentCopyrightOwnerName</td>
@@ -3023,7 +2788,6 @@ Enumeration:
           <td>URI (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>currentLicensorIdentifier</td>
           <td>string/uri/</td>
         </tr>
@@ -3034,7 +2798,6 @@ Enumeration:
           <td></td>
           <td>New 1.3</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td></td>
           <td></td>
           <td>currentLicensorName</td>
@@ -3049,7 +2812,6 @@ Enumeration:
           <td>DateTime (preferred: truncated DateTime)  (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>dateCreated</td>
           <td>string/date-time/</td>
         </tr>
@@ -3060,7 +2822,6 @@ Enumeration:
           <td>Object type, materials-techniques and measurements may be described.</td>
           <td>New 1.3</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td></td>
           <td></td>
           <td>physicalDescription</td>
@@ -3075,7 +2836,6 @@ Enumeration:
           <td>Text (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>source</td>
           <td>string//</td>
         </tr>
@@ -3086,7 +2846,6 @@ Enumeration:
           <td></td>
           <td>New 1.3</td>
           <td>Text (0..1)</td>
-          <td></td>
           <td></td>
           <td></td>
           <td>sourceInventoryNr</td>
@@ -3101,7 +2860,6 @@ Enumeration:
           <td>URL (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>sourceInventoryUrl</td>
           <td>string/uri/</td>
         </tr>
@@ -3112,7 +2870,6 @@ Enumeration:
           <td>It is advised to take the terms from a Controlled Vocabulary.</td>
           <td>New 1.3</td>
           <td>Text (0..unbounded)</td>
-          <td></td>
           <td></td>
           <td></td>
           <td>stylePeriod</td>
@@ -3128,14 +2885,12 @@ Enumeration:
           <td>Text (0..1)</td>
           <td></td>
           <td></td>
-          <td></td>
           <td>title</td>
           <td>AltLang</td>
         </tr>
         <tr style="background-color: #00cccc;">
           <td class="bgdcolIptc">PS Time</td>
           <td class="bgdcolIptc"></td>
-          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -3154,7 +2909,6 @@ Enumeration:
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>scale</td>
           <td>string//</td>
         </tr>
@@ -3167,7 +2921,6 @@ Enumeration:
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
           <td>value</td>
           <td>string//</td>
         </tr>
@@ -3177,7 +2930,6 @@ Enumeration:
           <td></td>
           <td></td>
           <td>New 1.0</td>
-          <td></td>
           <td></td>
           <td></td>
           <td></td>

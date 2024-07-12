@@ -78,7 +78,7 @@ def main():
     copyrightnotice = ET.fromstring('<p class="smallnote1">Copyright © ' + CopyrightYear + ', <a href="https://iptc.org">IPTC</a> - all rights reserved. Published under the Creative Commons Attribution 4.0 license <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>')
     body.append(copyrightnotice)
 
-    propnote1 = ET.fromstring('<p class="note1">Note on the ... Property headers:<br />EBUcore: based on the EBU Core Metadata Standard.<br />XMP: based on the ISO XMP standard.<br />PVMD: a specification of JSON properties for Photo and Video MetaData by IPTC (aka phovidmd).</p>')
+    propnote1 = ET.fromstring('<p class="note1">Note on the ... Property headers:<br />XMP: based on the ISO XMP standard.<br />PVMD: a specification of JSON properties for Photo and Video MetaData by IPTC (aka phovidmd).</p>')
     body.append(propnote1)
     jsonnote1 = ET.SubElement(body, 'p', {'class':'smallnote1'})
     jsonnote1.text = 'Note on the JSON Data Type column. It shows three values separated by /: 1) the JSON datatype (could be an object, with uppercase name), 2) optionally a sub-type defined by JSON Schema, 3) optionally "array" if multiple values are supported. '
@@ -102,8 +102,8 @@ def main():
         thcol5.text = 'Change Notes'
         thcol6 = ET.SubElement(throw, 'th', {'class':'hdrcol6'})
         thcol6.text = 'Basic Type/Cardinality'
-        thcol7 = ET.SubElement(throw, 'th', {'class':'hdrcol7'})
-        thcol7.text = 'EBUcore Property'
+        #thcol7 = ET.SubElement(throw, 'th', {'class':'hdrcol7'})
+        #thcol7.text = 'EBUcore Property'
         thcol8 = ET.SubElement(throw, 'th', {'class':'hdrcol8'})
         thcol8.text = 'XMP Property'
         thcol9 = ET.SubElement(throw, 'th', {'class':'hdrcol9'})
@@ -211,18 +211,18 @@ def main():
             if valstr == 'm':
                 xcell6.set('class', 'modified')
 
-            xcell7 = ET.SubElement(xrow, 'td')
-            try:
-                valstr = valuesProp[rowcounter][11]
-            except:
-                valstr = ' '
-            xcell7.text = valstr
-            try:
-                valstr = valuesProp[rowcounter][12]
-            except:
-                valstr = ''
-            if valstr == 'm':
-                xcell7.set('class', 'modified')
+            #xcell7 = ET.SubElement(xrow, 'td')
+            #try:
+            #    valstr = valuesProp[rowcounter][11]
+            #except:
+            #    valstr = ' '
+            #xcell7.text = valstr
+            #try:
+            #    valstr = valuesProp[rowcounter][12]
+            #except:
+            #    valstr = ''
+            #if valstr == 'm':
+            #    xcell7.set('class', 'modified')
 
             xcell8 = ET.SubElement(xrow, 'td')
             try:
