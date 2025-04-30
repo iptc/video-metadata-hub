@@ -76,17 +76,15 @@ def main():
         propdetails['description'] = propdef
 
         arrdetails = {}
-        if propparams[0].isupper(): # a referenced structure
-            params = propparams.split('/')
-            if len(params) > 0:
-                refobjectname = params[0]
-                if len(params) > 1:
-                    if params[1] == 'array':
-                        propdetails['type'] = 'array'
-                        arrdetails['$ref'] = JSONSCHEMA_REF_PREFIX + '#/definitions/' + refobjectname
-                        propdetails['items'] = arrdetails
-                else:
-                    propdetails['$ref'] = JSONSCHEMA_REF_PREFIX + '#/definitions/' + refobjectname
+        params = propparams.split('/')
+        if params[0] == 'object': # a referenced structure
+            refobjectname = params[1]
+            if params[1] == 'array':
+                propdetails['type'] = 'array'
+                arrdetails['$ref'] = JSONSCHEMA_REF_PREFIX + '#/definitions/' + refobjectname
+                propdetails['items'] = arrdetails
+            else:
+                propdetails['$ref'] = JSONSCHEMA_REF_PREFIX + '#/definitions/' + refobjectname
         else: # a plain property
             params = propparams.split('/')
             proptype = params[0]
