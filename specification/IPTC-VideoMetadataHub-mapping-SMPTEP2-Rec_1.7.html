@@ -5,12 +5,12 @@
     <link type="text/css" rel="stylesheet" href="iptcspecs1.css"/>
   </head>
   <body>
-    <h1 class="pageheader">IPTC Video Metadata Hub - Recommendation 1.6/ Mapping VMHub - DPP AS-11<a href="https://iptc.org"><img src="https://iptc.org/download/resources/logos/iptc-gr_70x70.jpg" align="left" border="0"/></a></h1>
-    <p class="note1">Return to <a href="IPTC-VideoMetadataHub-mapping-Rec_1.6.html">all recommended mappings of the Video Metadata Hub.</a></p>
-    <p class="note1">See the <a href="IPTC-VideoMetadataHub-props-Rec_1.6.html">specification of Video Metadata Hub properties</a></p>
-    <p class="note1">Mapping recommended on 16 May 2025. Document revision as of 16 May 2025.</p>
+    <h1 class="pageheader">IPTC Video Metadata Hub - Recommendation 1.7/ Mapping VMHub - Panasonic Cameras<a href="https://iptc.org"><img src="https://iptc.org/download/resources/logos/iptc-gr_70x70.jpg" align="left" border="0"/></a></h1>
+    <p class="note1">Return to <a href="IPTC-VideoMetadataHub-mapping-Rec_1.7.html">all recommended mappings of the Video Metadata Hub.</a></p>
+    <p class="note1">See the <a href="IPTC-VideoMetadataHub-props-Rec_1.7.html">specification of Video Metadata Hub properties</a></p>
+    <p class="note1">Mapping recommended on 16 October 2025. Document revision as of 16 October 2025.</p>
     <p class="smallnote1">Copyright &#169; 2025, <a href="https://iptc.org">IPTC</a> - all rights reserved. Published under the Creative Commons Attribution 4.0 license <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
-    <p class="note1">In this table the columns with a blue header are defined by the Video Metadata Hub, the column with the green header is defined by DPP AS-11</p>
+    <p class="note1">In this table the columns with a blue header are defined by the Video Metadata Hub, the column with the green header is defined by Panasonic/SMPTE P2</p>
     <p class="note1">Note on the column headers:<br/>EBUcore: based on the EBU Core Metadata Standard.<br/>XMP: based on the ISO XMP standard.<br/>PVMD: a specification of JSON properties for Photo and Video MetaData by IPTC (aka phovidmd).</p>
     <table class="spec1 vmhmapping">
       <thead>
@@ -21,7 +21,7 @@
           <th class="hdrcol5">EBUcore</th>
           <th class="hdrcol6">XMP</th>
           <th class="hdrcol7">PVMD JSON</th>
-          <th class="hdrcolNoniptc">DPP AS-11</th>
+          <th class="hdrcolNoniptc">Panasonic/SMPTE P2</th>
         </tr>
         <tr>
           <td class="hdrcol1"> </td>
@@ -36,12 +36,46 @@
           <td class="hdrcolIptc">
             <a href="https://tech.ebu.ch/MetadataEbuCore" target="_blank">Find more about it at ...</a>
           </td>
-          <td class="hdrcolNoniptc">
-            <a href="https://www.thedpp.com/as-11/" target="_blank">Find more about it at ...</a>
-          </td>
+          <td class="hdrcolNoniptc"> </td>
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">AI System Used</td>
+          <td class="bgdcolIptc">The AI engine and/or the model name used to generate this media.</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:AISystemUsed</td>
+          <td class="bgdcolIptc">aISystemUsed</td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">AI System Version Used</td>
+          <td class="bgdcolIptc">The version of the AI system used to generate this media, if known.</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:AISystemVersionUsed</td>
+          <td class="bgdcolIptc">aISystemVersionUsed</td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">AI Prompt Information</td>
+          <td class="bgdcolIptc">The information that was given to the generative AI service as &#8220;prompt(s)&#8221; in order to generate this media.</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:AIPromptInformation</td>
+          <td class="bgdcolIptc">aIPromptInformation</td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
+        <tr>
+          <td class="bgdcolIptc">administrative</td>
+          <td class="bgdcolIptc">AI Prompt Writer Name</td>
+          <td class="bgdcolIptc">Name of the person who wrote the prompt used for generating this media.</td>
+          <td class="bgdcolIptc">Iptc4xmpExt:AIPromptWriterName</td>
+          <td class="bgdcolIptc">aIPromptWriterName</td>
+          <td class="bgdcolIptc"> </td>
+          <td class="bgdcolNoniptc"> </td>
+        </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
           <td class="bgdcolIptc">Circa Date Created</td>
@@ -67,7 +101,7 @@
           <td class="bgdcolIptc">photoshop:DateCreated</td>
           <td class="bgdcolIptc">dateCreated</td>
           <td class="bgdcolIptc">date/created</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/CreationDate</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
@@ -77,7 +111,7 @@
           <td class="bgdcolIptc">dateModified
 </td>
           <td class="bgdcolIptc">date/modified</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/LastUpdate</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
@@ -132,7 +166,7 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td class="bgdcolIptc"></td>
           <td class="bgdcolIptc"></td>
           <td class="bgdcolIptc">ebuCoreMain/@dateLastModified &amp; ebuCoreMain@/timeLastModified</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc"> </td>
         </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
@@ -141,7 +175,7 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td class="bgdcolIptc"></td>
           <td class="bgdcolIptc"></td>
           <td class="bgdcolIptc">ebuCoreMain/metadataProvider (entity structure)</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc"> </td>
         </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
@@ -150,7 +184,7 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td class="bgdcolIptc"></td>
           <td class="bgdcolIptc"></td>
           <td class="bgdcolIptc">ebuCoreMain/metadataProvider (entity structure) + role</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc"> </td>
         </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
@@ -159,7 +193,7 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td class="bgdcolIptc">Iptc4xmpExt:PlanningRef</td>
           <td class="bgdcolIptc">planningRef</td>
           <td class="bgdcolIptc">date/planned</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">(PlanningMetadata/assignId)</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
@@ -195,7 +229,7 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td class="bgdcolIptc">Iptc4xmpExt:RecDevice</td>
           <td class="bgdcolIptc">recordingDevice</td>
           <td class="bgdcolIptc">format/technicalAttributeString/@typeLink="ivqu:recordingDevice" or @typeLabel="Recording Device"</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Device (see also Property Structure Device below)</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
@@ -204,7 +238,7 @@ OR alternative/@typeLink="ivqu:episode" or for both @typeLabel="Episode Title"</
           <td class="bgdcolIptc">Iptc4xmpExt:RegistryId</td>
           <td class="bgdcolIptc">registryEntries</td>
           <td class="bgdcolIptc">identifier + typeLink="ivqu:registryEntry"/dc:identifier + attributor or typeLabel="Registry Entry" -&gt; ebucore identifier structure to specify the entity, etc.</td>
-          <td class="bgdcolNoniptc">UKDPP_Other_Identifier, UKDPP_Other_Identifier_Type ?</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
@@ -278,7 +312,8 @@ OR  alternative/@ typeLink="ivqu:series" or for both typeLabel="Series Title"</t
           <td class="bgdcolIptc">dc:identifier</td>
           <td class="bgdcolIptc">identifier</td>
           <td class="bgdcolIptc">identifier + typeLink="ivqu:mediaId"/dc:identifier or typeLabel="Media Id" and identifier structure to identify the source entity and more.</td>
-          <td class="bgdcolNoniptc">UKDPP_Production_Number</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/TargetMaterial/@umidRef
+</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">administrative</td>
@@ -353,7 +388,8 @@ source entity and more.</td>
           <td class="bgdcolIptc">dc:description</td>
           <td class="bgdcolIptc">description</td>
           <td class="bgdcolIptc">description/dc:description plus typeLink or/and typeLabel for defining a type of description as appropriate</td>
-          <td class="bgdcolNoniptc">UKDPP_Synopsis</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Description
+</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">describing a/v content</td>
@@ -399,7 +435,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
           <td class="bgdcolIptc">Iptc4xmpExt:Genre</td>
           <td class="bgdcolIptc">genres</td>
           <td class="bgdcolIptc">type/genre(@typeLink and @typeLabel with values from taxonomies</td>
-          <td class="bgdcolNoniptc">UKDPP_Genre</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc">describing a/v content</td>
@@ -426,7 +462,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
           <td class="bgdcolIptc">dc:language</td>
           <td class="bgdcolIptc">language</td>
           <td class="bgdcolIptc">language/@typeLink="ivqu:languageVersion" or @typeLabel="Language Version"/dc:language</td>
-          <td class="bgdcolNoniptc">AS_11_Primary_Audio_Language</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc">describing a/v content</td>
@@ -435,7 +471,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
           <td class="bgdcolIptc">Iptc4xmpExt:LocationCreated</td>
           <td class="bgdcolIptc">locationsCreated</td>
           <td class="bgdcolIptc">coverage/spatial/location/@typeLink="ivqu:locationShot" or @typeLabel="Location Shot"/name or use ebucore location structure for more granularity</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">PlanningMetadata/Properties/Meta[@name="Location"]</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">describing a/v content</td>
@@ -512,7 +548,7 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td class="bgdcolIptc">Iptc4xmpExt:SnapshotLink</td>
           <td class="bgdcolIptc">snapshotLinks</td>
           <td class="bgdcolIptc">format/locator/@typeLink="ivqu:snapshotLink" or @typeLabel="Snapshot Link"</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/KeyFrame</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">describing a/v content</td>
@@ -530,7 +566,7 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td class="bgdcolIptc">dc:title</td>
           <td class="bgdcolIptc">title</td>
           <td class="bgdcolIptc">title/dc:title</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Title</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">describing a/v content</td>
@@ -576,7 +612,7 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td class="bgdcolIptc">copyrightNotice
 </td>
           <td class="bgdcolIptc">rights/copyrightStatement</td>
-          <td class="bgdcolNoniptc">UKDPP_Originator ?</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc">rights</td>
@@ -585,7 +621,7 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td class="bgdcolIptc">Iptc4xmpExt:CopyrightYear</td>
           <td class="bgdcolIptc">copyrightYear</td>
           <td class="bgdcolIptc">date/copyrighted</td>
-          <td class="bgdcolNoniptc">UKDPP_Copyright_Year</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc">rights</td>
@@ -595,7 +631,7 @@ OR description + typeLink="ivqu:productShown"/dc:description</td>
           <td class="bgdcolIptc">creators</td>
           <td class="bgdcolIptc">creator/role for creators
 OR contributor/role for creators and ebucore entity structure for more granularity</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Creator</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">rights</td>
@@ -714,7 +750,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">supplier
 </td>
           <td class="bgdcolIptc">contributor/role/@typeLink="ivqu:supplier" or @typeLabel="Supplier"</td>
-          <td class="bgdcolNoniptc">UKDPP_Distributor (inside Entity structure)</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc">rights</td>
@@ -761,7 +797,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">audioChannelLayout
 </td>
           <td class="bgdcolIptc">format/audioFormat/audioTrackConfiguration</td>
-          <td class="bgdcolNoniptc">AS_11_Audio_Track_Layout</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/AudioFormat</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -770,7 +806,8 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">Iptc4xmpExt:audioChannelCount</td>
           <td class="bgdcolIptc">audioChannelCount</td>
           <td class="bgdcolIptc">format/audioFormat/channels</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/AudioFormat/@numOfChannel
+</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -779,7 +816,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">xmpDM:audioCompressor</td>
           <td class="bgdcolIptc">audioCoding</td>
           <td class="bgdcolIptc">format/audioFormat/encoding</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/AudioFormat/AudioRecPort/@audioCodec</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -797,7 +834,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">Iptc4xmpExt:videoDisplayAspectRatio</td>
           <td class="bgdcolIptc">videoDisplayAspectRatio</td>
           <td class="bgdcolIptc">aspectRatio/@typeLink="ivqu:displayAspectRatio" or @typeLabel=""Display Aspect Ratio" / factorNumerator and factorDenominator for e.g. 16/9 or 16:9...</td>
-          <td class="bgdcolNoniptc">UKDPP_Picture_Ratio</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoLayout/@aspectRatio</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -807,7 +844,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
 </td>
           <td class="bgdcolIptc">editorialDurations</td>
           <td class="bgdcolIptc">format/duration/@typeLink="ivqu:editorialDuration" or @typeLabel="Editorial Duration"</td>
-          <td class="bgdcolNoniptc">UKDPP_Total_Programme_Duration ?</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -843,7 +880,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">xmpDM:duration</td>
           <td class="bgdcolIptc">fileDuration</td>
           <td class="bgdcolIptc">format/duration</td>
-          <td class="bgdcolNoniptc">UKDPP_Total_Programme_Duration ?</td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/Duration</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -862,7 +899,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">frameSize
 </td>
           <td class="bgdcolIptc">format/videoFormat/width and height</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">see Property Structure Frame Size</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -934,7 +971,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">xmpDM:videoCompressor</td>
           <td class="bgdcolIptc">videoCoding</td>
           <td class="bgdcolIptc">format/videoFormat/encoding</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoFrame/@videoCodec</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -943,7 +980,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">xmpDM:videoFrameRate</td>
           <td class="bgdcolIptc">videoFrameRate</td>
           <td class="bgdcolIptc">format/videoFormat/frameRate</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoFrame/@formatFps</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -952,7 +989,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">Iptc4xmpExt:videoEncodingProfile</td>
           <td class="bgdcolIptc">videoEncodingProfile</td>
           <td class="bgdcolIptc">format/videoFormat/encoding/profile</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoFrame/@videoCodec</td>
         </tr>
         <tr>
           <td class="bgdcolIptc">technical</td>
@@ -1108,7 +1145,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">Iptc4xmpExt:Manufacturer</td>
           <td class="bgdcolIptc">manufacturer</td>
           <td class="bgdcolIptc"> </td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">manufacturer</td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>
@@ -1117,7 +1154,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">Iptc4xmpExt:ModelName</td>
           <td class="bgdcolIptc">modelName</td>
           <td class="bgdcolIptc"></td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">modelName</td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>
@@ -1126,7 +1163,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">Iptc4xmpExt:SerialNumber</td>
           <td class="bgdcolIptc">serialNumber</td>
           <td class="bgdcolIptc"></td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">serialNo</td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>
@@ -1262,7 +1299,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
           <td class="bgdcolIptc">name</td>
           <td class="bgdcolIptc">title/ @typeLink="ivqu:episodeTitle" or typeLabel="Episode Title" OR @typeLink="ivqu:seasonTitle" or @typeLabel="Season Title"/dc:title + type 
 OR dc:alternative + type - also applies to series in EBUCore</td>
-          <td class="bgdcolNoniptc">AS_11_Programme_Title</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>
@@ -1272,7 +1309,7 @@ OR dc:alternative + type - also applies to series in EBUCore</td>
           <td class="bgdcolIptc">number</td>
           <td class="bgdcolIptc">title + typeLink="ivqu:episodeNo OR ivqu:seasonNo"/dc:title + type 
 OR dc:alternative + type or similar use with alternative/dc:alternative  - also applies to series in EBUCore</td>
-          <td class="bgdcolNoniptc">AS_11_Episode_Title_Number</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>
@@ -1299,7 +1336,8 @@ OR dc:alternative + type or similar use with alternative/dc:alternative  - also 
           <td class="bgdcolIptc">stDim:w</td>
           <td class="bgdcolIptc">widthPixels</td>
           <td class="bgdcolIptc">format/width</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoLayout/@pixel
+</td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>
@@ -1308,7 +1346,7 @@ OR dc:alternative + type or similar use with alternative/dc:alternative  - also 
           <td class="bgdcolIptc">stDim:h</td>
           <td class="bgdcolIptc">heightPixels</td>
           <td class="bgdcolIptc">format/height or format/lines</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc">NonRealTimeMeta/VideoFormat/VideoLayout/@numOfVerticalLine</td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>
@@ -1639,7 +1677,7 @@ format/imageFormat/height</td>
           <td class="bgdcolIptc">Iptc4xmpExt:Date</td>
           <td class="bgdcolIptc">date</td>
           <td class="bgdcolIptc">publicationEvent/publicationDate + publicationTime</td>
-          <td class="bgdcolNoniptc">UKDPP_Completion_Date</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>
@@ -1666,7 +1704,7 @@ format/imageFormat/height</td>
           <td class="bgdcolIptc"></td>
           <td class="bgdcolIptc">QualifiedLink</td>
           <td class="bgdcolIptc">EBUCore typeLink and typeLabel</td>
-          <td class="bgdcolNoniptc"></td>
+          <td class="bgdcolNoniptc"> </td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>
@@ -1839,7 +1877,7 @@ format/imageFormat/height</td>
           <td class="bgdcolIptc">name</td>
           <td class="bgdcolIptc">title/@typeLink="ivqu:series" or typeLabel="Series Title"/dc:title is the xml document is about the series
 OR alternmativeTitle/@typeLink="ivqu:series" or typeLabel="Series Title"/dc:alternative if in complement to the programme title</td>
-          <td class="bgdcolNoniptc">AS_11_Series_Title</td>
+          <td class="bgdcolNoniptc"></td>
         </tr>
         <tr>
           <td class="bgdcolIptc"></td>

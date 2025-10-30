@@ -199,7 +199,7 @@ def createSpecificMapping(valuesProp, headingtext1, headingtext2, findmoreaturl,
 
         tbody = ET.SubElement(table, 'tbody')
 
-        for rowcounter in range(2, 211):
+        for rowcounter in range(MAPPINGS_FIRST_PROPERTY_ROW, MAPPINGS_LAST_PROPERTY_ROW):
             xrow = ET.SubElement(tbody, 'tr')
             teststr = valuesProp[rowcounter][0]
             if teststr == 'Property Structures (PS)':
@@ -370,7 +370,8 @@ def main():
                 throw.append(colcode)
 
         tbody = ET.SubElement(table, 'tbody')
-        for rowcounter in range(2, 211):
+
+        for rowcounter in range(MAPPINGS_FIRST_PROPERTY_ROW, MAPPINGS_LAST_PROPERTY_ROW):
             xrow = ET.SubElement(tbody, 'tr')
             teststr = valuesProp[rowcounter][0]
             if teststr == 'Property Structures (PS)':
