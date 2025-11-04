@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://www.iptc.org/std/videometadatahub/recommendation/iptc-vmhub-{{ version }}-schema.json",
+    "title": "IPTC Video Metadata Hub JSON Schema",
+    "description": "Overall structure of video metadata of a single media asset - sets of metadata for the whole asset and fragments of the asset -- the properties comply with the IPTC Video Metadata Hub Recommendation {{ version }} (IPTC/{{ approval_date }})",
+    "type": "array",
+    "minItems": 1,
+    "items": {
+        "type": "object",
+        "properties": {
+            "mediafragment": {
+                "$ref": "https://www.iptc.org/std/phovidmd/iptc-phovidmdshared-schema.json#/definitions/MediaFragment"
+            },
+            "photoVideoMetadataIPTC": {
+                "description": "Container for IPTC photo/video metadata",
+                "type": "object",
+                "properties": {
+                    {% for prop_name, prop_data in properties.items() %}
+                    "{{ prop_name }}": {
+                        "title": "{{ prop_data.title }}",
+                        "description": "{{ prop_data.description }}"{% if prop_data.type %},
+                        "type": "{{ prop_data.type }}"{% endif %}{% if prop_data.format %},
+                        "format": "{{ prop_data.format }}"{% endif %}{% if prop_data.ref %},
+                        "$ref": "{{ prop_data.ref }}"{% endif %}{% if prop_data.items %},
+                        "items": {{ prop_data.items | tojson }}{% endif %}{% if prop_data.enum %},
+                        "enum": {{ prop_data.enum | tojson }}{% endif %}
+                    }{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                },
+                "additionalProperties": false
+            }
+        },
+        "required": [
+            "photoVideoMetadataIPTC"
+        ],
+        "patternProperties": {
+            "^photoVideoMetadata_[a-zA-Z0-9_]+": {
+                "description": "Container for a set of metadata from a party other than IPTC",
+                "type": "object"
+            }
+        },
+        "additionalProperties": false
+    },
+    "additionalProperties": false
+}
+

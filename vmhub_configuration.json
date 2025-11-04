@@ -1,0 +1,56 @@
+{
+  "default_version": "1.7",
+  "spreadsheet_id": "1TgfvHcsbGvJqmF0iUUnaL-RAdd1lbentmb2LhcM8SDk",
+  "versions": {
+    "1.7": {
+      "version": "1.7",
+      "approval_date": "16 October 2025",
+      "revision_date": "16 October 2025",
+      "copyright_year": "2025",
+      "header_appendix": "",
+      "google_sheet_tabs": {
+        "properties": "PropertiesRec 1.7!A3:W",
+        "structures": "PropertiesRec 1.7!A109:W236",
+        "mappings": "MappingsRec 1.7!A6:V",
+        "examples": "Examples!A3:AB99",
+        "errata": "PropErrata!A3:E"
+      },
+      "column_indices": {
+        "category": 0,
+        "modified_flag_1": 1,
+        "property_name": 2,
+        "new_flag": 3,
+        "definition": 4,
+        "modified_flag_2": 5,
+        "user_notes": 6,
+        "modified_flag_3": 7,
+        "type_cardinality": 8,
+        "modified_flag_4": 9,
+        "change_notes": 10,
+        "core_sort": 11,
+        "ebucore_prop": 12,
+        "ebucore_modified": 13,
+        "xmp_prop": 14,
+        "xmp_modified": 15,
+        "xmp_type": 16,
+        "xmp_type_modified": 17,
+        "json_prop": 18,
+        "json_modified": 19,
+        "json_type": 20,
+        "json_type_modified": 21
+      },
+      "row_ranges": {
+        "first_property_row": 0,
+        "last_property_row": 104,
+        "first_structure_row": 107,
+        "last_structure_row": 239,
+        "mappings_first_property_row": 2,
+        "mappings_last_property_row": 215
+      },
+      "features": {
+        "has_core_sort_column": true,
+        "supports_custom_panel_core": true
+      }
+    }
+  }
+}
