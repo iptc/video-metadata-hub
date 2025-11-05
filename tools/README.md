@@ -5,7 +5,7 @@
 Modern, multi-version system for generating all VMHub artifacts from the
 "Video Metadata Hub Working Document" on Google Sheets.
 
-**For maintainers:** See `/MAINTENANCE.md` for the quick start workflow.
+**For maintainers:** See `MAINTENANCE.md` for the quick start workflow.
 **For developers:** This document covers the system architecture and how to extend it.
 
 ## Quick Start
@@ -288,7 +288,6 @@ video-metadata-hub/
 │   ├── generate_*.py            # Generator scripts
 │   ├── requirements.txt         # Python dependencies
 │   ├── README.md                # This file
-│   └── legacy/                  # Deprecated old scripts
 ├── specification/               # Generated artifacts (output)
 └── examples/                    # Example videos
 ```
