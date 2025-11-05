@@ -1,0 +1,17 @@
+{% for category in exampleprops %}
+==== {{ category.name }}
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+{% for property in category.properties %}
+|[[{{ property.anchor }}]]{{ property.name }}
+a|{{ property.example_value }}
+{% if property.notes %}
+
+_{{ property.notes }}_
+{% endif %}
+{% endfor %}
+|===
+{% endfor %}
+
+

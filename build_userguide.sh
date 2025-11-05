@@ -1,9 +1,9 @@
 #!/bin/bash
-# Build VMHub Specification Artifacts
+# Build VMHub User Guide Artifacts
 #
 # Brendan Quinn, IPTC 2025 (created with the help of Cursor)
 #
-# Usage: ./build_spec.sh [version]
+# Usage: ./build_userguide.sh [version]
 #   version: Optional VMHub version (e.g., 1.7). Uses default if not specified.
 #
 # Run from repository root
@@ -30,7 +30,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 echo "========================================="
-echo "VMHub Specification Artifact Generator"
+echo "VMHub User Guide Artifact Generator"
 echo "========================================="
 echo ""
 
@@ -61,40 +61,58 @@ else
 fi
 echo ""
 
-# Generate properties HTML
-echo "Generating properties HTML..."
-python3 generate_properties_html.py $VERSION_ARG
+# Generate properties include
+echo "Generating properties include..."
+python3 generate_userguide_properties.py $VERSION_ARG
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}✓ Properties HTML generated${NC}"
+    echo -e "${GREEN}✓ Properties include generated${NC}"
 else
-    echo -e "${RED}✗ Failed to generate properties HTML${NC}"
+    echo -e "${RED}✗ Failed to generate properties include${NC}"
     exit 1
 fi
 echo ""
 
-# Generate mappings HTML
-echo "Generating mappings HTML..."
-python3 generate_mappings_html.py $VERSION_ARG
+# Generate structures include
+echo "Generating structures include..."
+python3 generate_userguide_structures.py $VERSION_ARG
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}✓ Mappings HTML generated${NC}"
+    echo -e "${GREEN}✓ Structures include generated${NC}"
 else
-    echo -e "${RED}✗ Failed to generate mappings HTML${NC}"
+    echo -e "${RED}✗ Failed to generate structures include${NC}"
     exit 1
 fi
 echo ""
 
-# Generate JSON Schema
-echo "Generating JSON Schema..."
-python3 generate_json_schema.py $VERSION_ARG
+# Generate examples includes
+echo "Generating examples includes..."
+python3 generate_userguide_examples.py $VERSION_ARG
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}✓ JSON Schema generated${NC}"
+    echo -e "${GREEN}✓ Examples includes generated${NC}"
 else
-    echo -e "${RED}✗ Failed to generate JSON Schema${NC}"
+    echo -e "${RED}✗ Failed to generate examples includes${NC}"
     exit 1
 fi
 echo ""
 
+# Generate HTML from AsciiDoc
+echo "Generating HTML from AsciiDoc..."
+cd "$SCRIPT_DIR/video-metadata-guidelines"
+if [ -f "asciidoctor-to-html.sh" ]; then
+    ./asciidoctor-to-html.sh
+    if [ $? -eq 0 ]; then
+        echo -e "${GREEN}✓ User guide HTML generated${NC}"
+    else
+        echo -e "${RED}✗ Failed to generate user guide HTML${NC}"
+        exit 1
+    fi
+else
+    echo -e "${RED}✗ asciidoctor-to-html.sh not found${NC}"
+    exit 1
+fi
+
+echo ""
 echo "========================================="
-echo -e "${GREEN}✓ All spec artifacts generated successfully!${NC}"
+echo -e "${GREEN}✓ All user guide artifacts generated successfully!${NC}"
 echo "========================================="
+
 

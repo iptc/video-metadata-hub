@@ -9,12 +9,16 @@ For detailed documentation, see `/tools/README.md`
 
 ### Setup (First Time)
 
-1. Install Python dependencies:
+1. Create and activate a Python virtual environment (recommended):
    ```bash
-   cd tools
-   pip3 install -r requirements.txt
+   # From repository root
+   python3 -m venv venv
+   source venv/bin/activate
+   
+   # Install dependencies
+   pip install -r tools/requirements.txt
    ```
-
+   
 2. Download Google Sheets credentials:
    - Visit: https://console.cloud.google.com/apis/credentials?project=green-bedrock-150715
    - Download `client_secret.json`
@@ -28,27 +32,41 @@ For detailed documentation, see `/tools/README.md`
 
 ### Generate Artifacts for a New Version
 
-The system uses `/vmhub_configuration.json` for all version settings.
+The system uses `vmhub_configuration.json` for configuration settings for all VMHub versions.
 
 #### 1. Update Configuration
 
-Edit `/vmhub_configuration.json` in the repository root:
+Edit `vmhub_configuration.json` in the repository root:
 - Update `default_version` to the new version (e.g., "1.8")
 - Add a new version entry with all settings (dates, sheet tabs, column indices)
-- See existing versions for template
+- See existing versions for examples
 
 #### 2. Generate All Artifacts
 
 ```bash
 # From repository root
-./build_spec.sh 1.8
+./build_all.sh 1.8
 ```
 
-This generates:
+This generates both **specification** and **user guide** artifacts:
+
+**Specification artifacts** (`specification/` directory):
 - Properties HTML page: `IPTC-VideoMetadataHub-props-Rec_1.8.html`
 - JSON Schema: `iptc-vmhub-1.8-schema.json`
-- All mapping pages
-- (More generators to be added)
+- All mapping pages (XMP, JSON, ExifTool, etc.)
+- Example videos with metadata
+
+**User guide artifacts** (`video-metadata-guidelines/_includes/` directory):
+- `properties.adoc` - Properties documentation
+- `structures.adoc` - Property structures documentation
+- 6 example files for different use cases
+- Final HTML user guide (`video-metadata-guidelines/index.html`)
+
+You can also generate artifacts separately:
+```bash
+./build_spec.sh 1.8      # Specification only
+./build_userguide.sh 1.8 # User guide only
+```
 
 #### 3. Validate Outputs
 
@@ -72,8 +90,9 @@ You can regenerate artifacts for any configured version:
 
 ```bash
 # From repository root
-./build_spec.sh 1.7  # Regenerate version 1.7
-./build_spec.sh 1.6  # Regenerate version 1.6
+./build_all.sh 1.7       # Regenerate all version 1.7 artifacts
+./build_spec.sh 1.6      # Regenerate only version 1.6 specification
+./build_userguide.sh 1.7 # Regenerate only version 1.7 user guide
 ```
 
 ## System Architecture
@@ -82,8 +101,16 @@ The new system consists of:
 - **Configuration**: `/vmhub_configuration.json` - all version settings
 - **Shared Library**: `/tools/lib/` - reusable data loading code
 - **Templates**: `/tools/templates/` - Jinja2 templates for all outputs
+  - `html/` - Specification HTML templates
+  - `json/` - JSON Schema templates
+  - `userguide_includes/` - AsciiDoc templates for user guide
 - **Generators**: `/tools/generate_*.py` - scripts to create each artifact
-- **Build Script**: `/build_spec.sh` - orchestrates generators
+  - Specification generators: properties, mappings, JSON schema, examples
+  - User guide generators: properties, structures, examples
+- **Build Scripts**: 
+  - `/build_all.sh` - orchestrates all generators
+  - `/build_spec.sh` - specification generators only
+  - `/build_userguide.sh` - user guide generators only
 
 ## Migration from Old System
 
@@ -99,7 +126,7 @@ Ensure `vmhub_configuration.json` exists in the repository root.
 
 Download `client_secret.json` from Google Cloud Console and place in `tools/` directory.
 
-### "Version X.X not found"
+### "Version X.X not found in configuration"
 
 Edit `vmhub_configuration.json` and add that version's configuration. Use existing versions as a template.
 

@@ -1,0 +1,1529 @@
+[[administrative]]
+=== Administrative fields
+
+[[AI-System-Used]]
+==== AI System Used
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*AI System Used*
+|Definition|The AI engine and/or the model name used to generate this media.
+|Notes|For example, ChatGPT DALL-E, Google Gemini, ChatGPT
+|Type and cardinality|Text (0..1)
+|Change history|New 1.7
+|XMP ID and data type|Iptc4xmpExt:AISystemUsed (Text)
+|JSON ID and data type|aISystemUsed (string//)
+|===
+
+[[AI-System-Version-Used]]
+==== AI System Version Used
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*AI System Version Used*
+|Definition|The version of the AI system used to generate this media, if known.
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.7
+|XMP ID and data type|Iptc4xmpExt:AISystemVersionUsed (Text)
+|JSON ID and data type|aISystemVersionUsed (string//)
+|===
+
+[[AI-Prompt-Information]]
+==== AI Prompt Information
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*AI Prompt Information*
+|Definition|The information that was given to the generative AI service as “prompt(s)” in order to generate this media.
+|Notes|This may include negative [excludes] and positive [includes] statements in the prompt.
+|Type and cardinality|Text (0..1)
+|Change history|New 1.7
+|XMP ID and data type|Iptc4xmpExt:AIPromptInformation (Text)
+|JSON ID and data type|aIPromptInformation (string//)
+|===
+
+[[AI-Prompt-Writer-Name]]
+==== AI Prompt Writer Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*AI Prompt Writer Name*
+|Definition|Name of the person who wrote the prompt used for generating this media.
+|Notes|This person should not be considered as the media creator.
+|Type and cardinality|Text (0..1)
+|Change history|New 1.7
+|XMP ID and data type|Iptc4xmpExt:AIPromptWriterName (Text)
+|JSON ID and data type|aIPromptWriterName (string//)
+|===
+
+[[Circa-Date-Created]]
+==== Circa Date Created
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Circa Date Created*
+|Definition|Approximate date or range of dates associated with the creation and production of a video.
+|Notes|Primarily for archival use if exact dates are not available.
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:CircaDateCreated (Text)
+|JSON ID and data type|circaDateCreated (string//)
+|===
+
+[[Content-Warning]]
+==== Content Warning
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Content Warning*
+|Definition|Information to warn potential viewers about nudity, violence etc in the video	
+|Notes|Use of the CV https://cv.iptc.org/newscodes/contentwarning/ is recommended.
+|Type and cardinality|<<Concept Structure>> (0..unbounded)
+|Change history|New 1.4
+|XMP ID and data type|Iptc4xmpExt:ContentWarning (Bag of CV Term structure)
+|JSON ID and data type|contentWarning (object/CvTerm/array)
+|===
+
+[[Date-Created]]
+==== Date Created
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Date Created*
+|Definition|Designates the date and optionally the time the content of the video was created (rather than the date of the creation of the digital representation)
+|Notes|If exact dates are not available use Circa Date Created.
+|Type and cardinality|Date (0..1)
+|Change history|Changed 1.4
+|XMP ID and data type|photoshop:DateCreated (Date)
+|JSON ID and data type|dateCreated (string/date-time/)
+|===
+
+[[Date-Modified]]
+==== Date Modified
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Date Modified*
+|Definition|Date and optionally time when the video was modified last time
+
+|Type and cardinality|Date (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmp:ModifyDate (Date)
+|JSON ID and data type|dateModified
+ (string/date-time/)
+|===
+
+[[Date-Released]]
+==== Date Released
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Date Released*
+|Definition|Date and optionally time of the public release of the video
+
+|Type and cardinality|Date (0..1) (Year only, Year-Month only, Year-Month-Day optional with time)
+|Change history|Changed 1.3
+|XMP ID and data type|xmpDM:releaseDate (Date)
+|JSON ID and data type|dateReleased (string/date-time/)
+|===
+
+[[Digital-Source-Type]]
+==== Digital Source Type
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Digital Source Type*
+|Definition|The type of the source of this digital video, including whether the video was captured, digitised or generated.
+|Notes|Use of the CV https://cv.iptc.org/newscodes/digitalsourcetype/ is recommended.
+|Type and cardinality|<<Concept Structure>> (0..1)
+|Change history|New 1.4
+|XMP ID and data type|Iptc4xmpExt:DigitalSourceType (CV Term structure)
+|JSON ID and data type|digitalSourceType (object/CvTerm/)
+|===
+
+[[Episode]]
+==== Episode
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Episode*
+|Definition|Episode in a specific season of a TV or video series this video is a member of.
+
+|Type and cardinality|<<Episode/Season Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Episode (Episode structure)
+|JSON ID and data type|episode (object/EpisodeSeason/)
+|===
+
+[[External-Metadata-URL]]
+==== External Metadata URL
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*External Metadata URL*
+|Definition|Link(s) to an external web resource for retrieval of further metadata about this video
+
+|Type and cardinality|URL (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:ExternalMetadataLink (Bag of URL)
+|JSON ID and data type|externalMetadataLinks (string/uri/array)
+|===
+
+[[Feed-Identifier]]
+==== Feed Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Feed Identifier*
+|Definition|Identifier of the feed/source this video was delivered by
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:FeedIdentifier (Text)
+|JSON ID and data type|feedIdentifier (string//)
+|===
+
+[[Metadata-Edit-Date]]
+==== Metadata Edit Date
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Metadata Edit Date*
+|Definition|Date of the last edit of the metadata of this video.
+
+|Type and cardinality|Date(0..1)
+|Change history|New 1.3
+|XMP ID and data type|Iptc4xmpExt:metadataLastEdited (Date)
+|JSON ID and data type|metadataLastEdited (string/date-time/)
+|===
+
+[[Metadata-Editor]]
+==== Metadata Editor
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Metadata Editor*
+|Definition|Party doing the last edit of the metadata of this video.
+
+|Type and cardinality|<<Entity Structure>> (0..1)
+|Change history|New 1.3
+|XMP ID and data type|Iptc4xmpExt:metadataLastEditor (Entity structure)
+|JSON ID and data type|metadataLastEditor (object/Entity/)
+|===
+
+[[Metadata-Authority]]
+==== Metadata Authority
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Metadata Authority*
+|Definition|Party responsible for the accuracy of the metadata values.
+
+|Type and cardinality|<<Entity Structure>> (0..1)
+|Change history|New 1.3
+|XMP ID and data type|Iptc4xmpExt:metadataAuthority (Entity structure)
+|JSON ID and data type|metadataAuthority (object/Entity/)
+|===
+
+[[Planning-Reference]]
+==== Planning Reference
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Planning Reference*
+|Definition|Reference to a data item used for planning the shooting of this video
+
+|Type and cardinality|<<Entity with role Structure>> (0..unbounded)
+|Change history|New 1.2
+|XMP ID and data type|Iptc4xmpExt:PlanningRef (Bag Enitity with Role structure)
+|JSON ID and data type|planningRefs (object/EntityWRole/array)
+|===
+
+[[Publication-Event]]
+==== Publication Event
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Publication Event*
+|Definition|Date and optionally the time of publishing this video with name and identifier for the event of this publication.
+
+|Type and cardinality|<<Publication Event Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:PublicationEvent (Bag Publication Event structure)
+|JSON ID and data type|publicationEvents (object/PublicationEvent/array)
+|===
+
+[[Rating]]
+==== Rating
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rating*
+|Definition|How the video is classified by a public authority such as MPA
+
+|Type and cardinality|<<Rating Structure>> (0..unbounded)
+|Change history|Changed 1.4
+|XMP ID and data type|Iptc4xmpExt:Rating (Bag Rating structure)
+|JSON ID and data type|ratings (object/Rating/array)
+|===
+
+[[Ready-for-Release]]
+==== Ready for Release
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Ready for Release*
+|Definition|An indicator if this video is ready for being released to the public. This depends on rules by the party responsible for the publication.
+
+|Type and cardinality|Boolean (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:ReleaseReady (Boolean)
+|JSON ID and data type|releaseReady (boolean//)
+|===
+
+[[Recording-Device]]
+==== Recording Device
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Recording Device*
+|Definition|Device used for recording this video
+
+|Type and cardinality|<<Device Structure>> (0..1)
+|Change history|New 1.2
+|XMP ID and data type|Iptc4xmpExt:RecDevice (Device structure)
+|JSON ID and data type|recordingDevice (object/Device/)
+|===
+
+[[Registry-Entry]]
+==== Registry Entry
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Registry Entry*
+|Definition|Identifier of the video issued by an identified registry.
+|Notes|What is considered a registry can be interpreted in a wide sense as the controlled management of assets with asset-specific identifiers
+|Type and cardinality|<<Registry Entry Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RegistryId (Bag Registry Entry (structure))
+|JSON ID and data type|registryEntries (object/RegistryEntry/array)
+|===
+
+[[Review-Rating]]
+==== Review Rating
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Review Rating*
+|Definition|An aesthetic rating given to the video by an external reviewer such as a news outlet.
+
+|Type and cardinality|<<Rating Structure>> (0..unbounded)
+|Change history|New 1.4
+|XMP ID and data type|Iptc4xmpExt:ReviewRating (Bag Rating structure)
+|JSON ID and data type|reviewRatings (object/Rating/array)
+|===
+
+[[Season]]
+==== Season
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Season*
+|Definition|Season of a TV or video series this video is a member of.
+
+|Type and cardinality|<<Episode/Season Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Season (Season structure)
+|JSON ID and data type|season (object/EpisodeSeason/)
+|===
+
+[[Series]]
+==== Series
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Series*
+|Definition|TV or video series this video is a member of.
+
+|Type and cardinality|<<Series Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Series (Series structure)
+|JSON ID and data type|series (object/Series/)
+|===
+
+[[Storyline-Identifier]]
+==== Storyline Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Storyline Identifier*
+|Definition|Identifier(s) of a story evolving over time with which this video is associated
+
+|Type and cardinality|Text (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:StorylineIdentifier (Bag of Text)
+|JSON ID and data type|storylineIdentifiers (string//array)
+|===
+
+[[Style-Period]]
+==== Style Period
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Style Period*
+|Definition|The style, historical or artistic period, movement, group, or school whose characteristics are represented by the video
+|Notes|The Style Period may be different from the Temporal Coverage
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:StylePeriod (Text)
+|JSON ID and data type|stylePeriod (string//)
+|===
+
+[[Temporal-Coverage]]
+==== Temporal Coverage
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Temporal Coverage*
+|Definition|Period of time covered by the video
+|Notes|The period of Temporal Coverage may be different from the Style Period.
+|Type and cardinality|<<Temporal Coverage Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:TemporalCoverage (Temporal Coverage Structure)
+|JSON ID and data type|temporalCoverage (object/TemporalCoverage/)
+|===
+
+[[Parent-Video-Identifier]]
+==== Parent Video Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Parent Video Identifier*
+|Definition|Globally unambiguous identifier of the video from which this video was derived.
+|Notes|This video could be a variant in the technical video format, a variant in edit, a variant in language of the referenced video.
+|Type and cardinality|Text/URI (0..1)
+|Change history|New 1.3
+|XMP ID and data type|Iptc4xmpExt:parentId (Text)
+|JSON ID and data type|parentId (string//)
+|===
+
+[[Video-Identifier]]
+==== Video Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Video Identifier*
+|Definition|Globally unambiguous identifier of the video regardless of renditions, formats, encodings etc. This identifier should be shared across all renditions.
+|Notes|IPTC advises to follow the guidelines by either EIDR or ISAN (http://www.eidr.org or http://www.isan.org)
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|dc:identifier (Text)
+|JSON ID and data type|identifier (string//)
+|===
+
+[[Video-Rendition]]
+==== Video Rendition
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Video Rendition*
+|Definition|Unambiguous identifier of the video specific to a rendition. 
+|Notes|Definitions of specific renditions are not provided by IPTC. Definitions of renditions may be based on format or encoding etc and can be set by producers of videos and/or system vendors.
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpMM:RenditionClass (Text)
+|JSON ID and data type|rendition (string//)
+|===
+
+[[Video-Version]]
+==== Video Version
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Video Version*
+|Definition|Version of the video identified by the Video Identifier
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpMM:VersionID (Text)
+|JSON ID and data type|videoVersion
+ (string//)
+|===
+
+[[Workflow-Rating]]
+==== Workflow Rating
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Workflow Rating*
+|Definition|An aesthetic rating given to the video by its creator or editor, for example to mark the best take of a series
+
+|Type and cardinality|<<Rating Structure>> (0..unbounded)        
+|Change history|New 1.4
+|XMP ID and data type|xmp:Rating (Closed Choice Real)
+|JSON ID and data type|workflowRating (number//)
+|===
+
+[[Workflow-Tag]]
+==== Workflow Tag
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Workflow Tag*
+|Definition|Indicator for the role of this video in a production workflow.
+|Notes|Could be used to indicate footage, edited video, program masters, etc. Values are typically codes defined by a production company.
+|Type and cardinality|<<Concept Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:WorkflowTag (CV Term structure)
+|JSON ID and data type|workflowTag (object/CvTerm/)
+|===
+
+[[describing a/v content]]
+=== Fields describing audio/visual content
+
+[[Alt-Text-Accessibility]]
+==== Alt Text (Accessibility)
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Alt Text (Accessibility)*
+|Definition|A brief textual description of the purpose and meaning of a video that can be accessed by assistive technology or displayed when the video is disabled in the browser. It should not exceed 250 characters.
+|Notes|This property should not be confused with the IPTC property Headline, which is a brief synopsis or summary of the contents of the video. This property is required for conformance with the W3C Web Content Accessibility Guidelines (WCAG).
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.4
+|XMP ID and data type|Iptc4xmpCore:AltTextAccessibility (Lang Alt)
+|JSON ID and data type|altTextAccessibility (object/AltLang/)
+|===
+
+[[CV-Term-About-the-Content]]
+==== CV Term About the Content
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*CV Term About the Content*
+|Definition|What the video is about expressed by term(s) selected from taxonomies or controlled vocabularies
+
+|Type and cardinality|<<Concept Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:AboutCvTerm (Bag CV Term structure)
+|JSON ID and data type|aboutCvTerms (object/CvTerm/array)
+|===
+
+[[Data-Displayed-on-Screen]]
+==== Data Displayed on Screen
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Data Displayed on Screen*
+|Definition|Text or other data shown in some region of the video.
+
+|Type and cardinality|<<Text with Region Delimiter Structure>> (0..unbounded)
+|Change history|Changed 1.4
+|XMP ID and data type|Iptc4xmpExt:DataOnScreen (Bag  Text with Region Delimiter structure)
+|JSON ID and data type|dataOnScreen (object/TextWRegionDelimiter/array)
+|===
+
+[[Description]]
+==== Description
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Description*
+|Definition|Textual description of the content of the video
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|dc:description (Lang Alt)
+|JSON ID and data type|description (object/AltLang/)
+|===
+
+[[Dopesheet]]
+==== Dopesheet
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Dopesheet*
+|Definition|Shotlist with descriptions
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Dopesheet (Lang Alt)
+|JSON ID and data type|dopesheet (object/AltLang/)
+|===
+
+[[Dopesheet-Link]]
+==== Dopesheet Link
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Dopesheet Link*
+|Definition|Link(s) to an external web resource providing a shotlist with descriptions
+
+|Type and cardinality|<<Qualified Link Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:DopesheetLink (Bag Qualified Link)
+|JSON ID and data type|dopesheetLinks (object/QualifiedLink/array)
+|===
+
+[[Extended-Description-Accessibility]]
+==== Extended Description (Accessibility)
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Extended Description (Accessibility)*
+|Definition|A more detailed textual description of the purpose and meaning of a video that elaborates on the information provided by the Alt Text (Accessibility) property. This property does not have a character limitation and is not required if the Alt Text (Accessibility) field sufficiently describes the video.
+|Notes|This property should not be confused with the IPTC property Description, which is the who, what, when, where, why, how of a video. This property can be combined with Alt Text (Accessibility) if and when a brief description is not sufficient to convey the purpose and meaning of a video. It should not repeat the information in the Alt Text (Accessibility) property. It is required for conformance with the W3C Web Content Accessibility Guidelines (WCAG).
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.4
+|XMP ID and data type|Iptc4xmpCore:ExtDescrAccessibility (Lang Alt)
+|JSON ID and data type|extDescrAccessibility (object/AltLang/)
+|===
+
+[[Featured-Organisation]]
+==== Featured Organisation
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Featured Organisation*
+|Definition|Organisation(s) featured by the content of the video
+
+|Type and cardinality|<<Entity Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:OrganisationInImageName
+Iptc4xmpExt:OrganisationInImageCode (Bag Text
+Bag Text)
+|JSON ID and data type|featuredOrganisations (object/Entity/array)
+|===
+
+[[Genre]]
+==== Genre
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Genre*
+|Definition|Artistic, style, journalistic, product or other genre(s) of the video.
+
+|Type and cardinality|<<CV-Term Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Genre (Bag CV Term structure)
+|JSON ID and data type|genres (object/CvTerm/array)
+|===
+
+[[Headline-]]
+==== Headline 
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Headline *
+|Definition|Short description of the content of the video
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Headline (Lang Alt)
+|JSON ID and data type|headline (object/AltLang/)
+|===
+
+[[Keywords]]
+==== Keywords
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Keywords*
+|Definition|What the video is about expressed by a free choice of descriptive phrases or keywords
+
+|Type and cardinality|Text + language tag (0..unbounded)
+|Change history|Changed 1.4
+|XMP ID and data type|dc:subject (Bag Lang Alt)
+|JSON ID and data type|keywords (object/AltLang//array)
+|===
+
+[[Language]]
+==== Language
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Language*
+|Definition|Language of the video
+
+|Type and cardinality|Language tag (0..1)
+|Change history|Changed 1.6
+|XMP ID and data type|dc:language (Text Closed Choice)
+|JSON ID and data type|language (string//)
+|===
+
+[[Location-Shot]]
+==== Location Shot
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Location Shot*
+|Definition|Place from where the video was shot, in particular where the camera was located
+|Notes|May be used multiple times for edited videos with clips shot at different locations.
+|Type and cardinality|<<Location Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:LocationCreated (Bag Location structure)
+|JSON ID and data type|locationsCreated (object/Location/array)
+|===
+
+[[Location-Shown]]
+==== Location Shown
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Location Shown*
+|Definition|Place(s) shown by the video
+
+|Type and cardinality|<<Location Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:LocationShown (Bag Location structure)
+|JSON ID and data type|locationsShown (object/Location/array)
+|===
+
+[[Object-Shown]]
+==== Object Shown
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Object Shown*
+|Definition|Object(s) shown by the video
+
+|Type and cardinality|<<Entity Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:ArtworkOrObject (Bag Artwork/Object structure)
+|JSON ID and data type|objectsShown
+ (object/Entity/array)
+|===
+
+[[Person-Heard]]
+==== Person Heard
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Person Heard*
+|Definition|Person(s) who can be heard only in the video
+
+|Type and cardinality|<<Entity Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:PersonHeard (Bag Entity structure)
+|JSON ID and data type|personsHeard
+ (object/Entity/array)
+|===
+
+[[Person-Shown]]
+==== Person Shown
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Person Shown*
+|Definition|Person(s) shown by the video
+
+|Type and cardinality|<<Entity Structure>> or <<Person Details Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:PersonInImageWDetails (Bag PersonWDetails structure)
+|JSON ID and data type|personsShown
+ (object/PersonWDetails/array)
+|===
+
+[[Product-Shown]]
+==== Product Shown
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Product Shown*
+|Definition|Product(s) identified by a GTIN code shown by the video
+
+|Type and cardinality|<<Product with GTIN Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:ProductInImage (Bag Product structure)
+|JSON ID and data type|productsShown
+ (object/ProductWGTIN/array)
+|===
+
+[[Shot-Type]]
+==== Shot Type
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Shot Type*
+|Definition|Visual type(s) of the video
+
+|Type and cardinality|<<Concept Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:VideoShotType (Bag Entity structure)
+|JSON ID and data type|videoShotTypes (object/Entity/array)
+|===
+
+[[Shown-Event]]
+==== Shown Event
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Shown Event*
+|Definition|Event(s) shown by the video
+
+|Type and cardinality|<<Entity Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:EventExt (Bag Entity structure)
+|JSON ID and data type|shownEvents (object/Entity/array)
+|===
+
+[[Snapshot-Link]]
+==== Snapshot Link
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Snapshot Link*
+|Definition|A still image representing  the video.
+
+|Type and cardinality|<<Linked Image Structure>> (0..unbounded)
+|Change history|New 1.1
+|XMP ID and data type|Iptc4xmpExt:SnapshotLink (Bag Linked Image)
+|JSON ID and data type|snapshotLinks (object/LinkedImage/array)
+|===
+
+[[Timed-Text-Link]]
+==== Timed Text Link
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Timed Text Link*
+|Definition|Link(s) to an external web resource providing a timed text track, used to provide captioning/subtitling or audio description of the video
+
+|Type and cardinality|<<Qualified Link with Language Structure>> (0..unbounded)
+|Change history|New 1.4
+|XMP ID and data type|Iptc4xmpExt:TimedTextLink (Bag Qualified Link with Language)
+|JSON ID and data type|timedTextLinks (object/QualifiedLinkWithLanguage/array)
+|===
+
+[[Title]]
+==== Title
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Title*
+|Definition|Title of the video, should be a shorthand reference
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|Changed 1.4
+|XMP ID and data type|dc:title (Lang Alt)
+|JSON ID and data type|title (object/AltLang/)
+|===
+
+[[Transcript]]
+==== Transcript
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Transcript*
+|Definition|Transcription of the video
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|Changed 1.4
+|XMP ID and data type|Iptc4xmpExt:Transcript (Lang Alt)
+|JSON ID and data type|transcript (object/AltLang/)
+|===
+
+[[Transcript-Link]]
+==== Transcript Link
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Transcript Link*
+|Definition|Link(s) to an external web resource providing a transcription of the video
+
+|Type and cardinality|<<Qualified Link Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:TranscriptLink (Bag Qualified Link)
+|JSON ID and data type|transcriptLinks (object/QualifiedLink/array)
+|===
+
+[[Visual-Colour]]
+==== Visual Colour
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Visual Colour*
+|Definition|The visual colouring of the video.
+|Notes|Technical details of the colours are covered by …
+|Type and cardinality|Text (0..1)
+Enumeration:
+- black and white/monochrome
+- colour
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:VisualColour (Closed Choice
+- bw-monochrome
+- colour)
+|JSON ID and data type|visualColour (string//enum)
+|===
+
+[[rights]]
+=== Rights fields
+
+[[Contributor]]
+==== Contributor
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Contributor*
+|Definition|Party or parties (person or organisation) which contributed to the video, refinement by the role attribute.
+|Notes|A distinction between contributor and creator should follow rights laws, contracts or common business rules.
+Vocabulary of roles of persons contributiong to a video should be based on the use by a video or movie producer assocation.
+|Type and cardinality|<<Entity with role Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Contributor (Bag Entity with Role structure)
+|JSON ID and data type|contributors (object/EntityWRole/array)
+|===
+
+[[Copyright-Notice-]]
+==== Copyright Notice 
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Copyright Notice *
+|Definition|Any textual notice necessary by legal needs or common use to indicate the current owner of the copyright of this media resource
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|dc:rights (Lang Alt)
+|JSON ID and data type|copyrightNotice
+ (object/AltLang/)
+|===
+
+[[Copyright-Year]]
+==== Copyright Year
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Copyright Year*
+|Definition|Year of origin of the video, usually appearing in the copyright notice as a numeric value
+
+|Type and cardinality|Number/integer (0..1)
+|Change history|Changed 1.4
+|XMP ID and data type|Iptc4xmpExt:CopyrightYear (number)
+|JSON ID and data type|copyrightYear (number//)
+|===
+
+[[Creator]]
+==== Creator
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Creator*
+|Definition|Party or parties (person or organisation) which created the video, refinement by the role attribute. 
+|Notes|A distinction between creator and contributor should follow rights laws, contracts or common business rules. 
+Vocabulary of roles of persons creating a video should be based on the use by a video or movie producer assocation.
+|Type and cardinality|<<Entity with role Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Creator (Bag Entity with Role structure)
+|JSON ID and data type|creators (object/EntityWRole/array)
+|===
+
+[[Credit-Line]]
+==== Credit Line
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Credit Line*
+|Definition|Credit to person(s) and/or organisation(s) required by the supplier of the video (clip) to be used when published.
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|photoshop:Credit (Text)
+|JSON ID and data type|creditLine (string//)
+|===
+
+[[Data-Mining]]
+==== Data Mining
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Data Mining*
+|Definition|Data mining prohibition or permission, optionally with constraints.
+|Notes|This is a http://ns.useplus.org/LDF/ldf-XMPSpecification#DataMining[structured PLUS version 2.0 property]. The value must be one of the URIs listed in the Controlled Vocabulary section of the PLUS specification for the Data Mining property.
+
+NOTE: Regional laws applying to an asset may prohibit, constrain, or allow data mining for certain purposes (such as search indexing or research), and may overrule the value selected for this property. Similarly, the absence of a prohibition does not indicate that the asset owner grants permission for data mining or any other use of an asset. The prohibition “Prohibited except for search engine indexing” only permits data mining by search engines available to the public to identify the URL for an asset and its associated data (for the purpose of assisting the public in navigating to the URL for the asset), and prohibits all other uses, such as AI/ML training. The PLUS link:other-constraints[Other Constraints] property is human readable. The IPTC properties link:#embedded-encoded-rights-expression[Embedded Encoded Rights Expression] and link:#linked-encoded-rights-expression[Linked Encoded Rights Expression] are machine readable.
+|Type and cardinality|PLUS CV Term/URI
+|Change history|New 1.5
+|XMP ID and data type|plus:DataMining (see PLUS spec)
+|JSON ID and data type|dataMining (string/uri/)
+|===
+
+[[Other-Constraints]]
+==== Other Constraints
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Other Constraints*
+|Definition|Additional constraints on the use of the asset.
+|Notes|Constraints may limit the scope of usage allowed
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.5
+|XMP ID and data type|plus:OtherConstraints (see PLUS spec)
+|JSON ID and data type|dataMiningConstraint ? (string//)
+|===
+
+[[Licensor-]]
+==== Licensor 
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Licensor *
+|Definition|Company or person to  be contacted for licensing
+
+|Type and cardinality|<<Entity Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|plus:Licensor (see PLUS spec)
+|JSON ID and data type|licensor
+ (object/Entity/)
+|===
+
+[[Model-Release-Document]]
+==== Model Release Document
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Model Release Document*
+|Definition|Identifier(s) of a Model Release document.
+
+|Type and cardinality|Text (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|plus:ModelReleaseID (see PLUS spec)
+|JSON ID and data type|modelReleaseDocuments (string//array)
+|===
+
+[[Model-Release-Status]]
+==== Model Release Status
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Model Release Status*
+|Definition|Summarises the availability and scope of model releases authorizing usage of the likenesses of persons appearing in the video
+
+|Type and cardinality|PLUS CV Term/URI
+|Change history|New 1.0
+|XMP ID and data type|plus:ModelReleaseStatus (see PLUS spec)
+|JSON ID and data type|modelReleaseStatus (object/CvTerm/)
+|===
+
+[[Property-Release-Document]]
+==== Property Release Document
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Property Release Document*
+|Definition|Identifier(s) of a Property Release document.
+
+|Type and cardinality|Text (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|plus:PropertyReleaseID (see PLUS spec)
+|JSON ID and data type|propertyReleaseDocuments (string//array)
+|===
+
+[[Property-Release-Status]]
+==== Property Release Status
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Property Release Status*
+|Definition|Summarises the availability and scope of property releases authorising usage of the properties appearing in the photograph.
+
+|Type and cardinality|PLUS CV Term/URI
+|Change history|New 1.0
+|XMP ID and data type|plus:PropertyReleaseStatus (see PLUS spec)
+|JSON ID and data type|propertyReleaseStatus (object/CvTerm/)
+|===
+
+[[Rights-Usage-Terms]]
+==== Rights Usage Terms
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rights Usage Terms*
+|Definition|The licensing parameters of the video expressed in free-text.
+|Notes|Rights and licensing -related properties can be used in parallel to express the licensed usage in more controlled terms.
+|Type and cardinality|Text (0..1)
+|Change history|New 1.6
+|XMP ID and data type|xmpRights:UsageTerms (Lang Alt)
+|JSON ID and data type|usageTerms (object/AltLang/)
+|===
+
+[[Embedded-Encoded-Rights-Expression]]
+==== Embedded Encoded Rights Expression
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Embedded Encoded Rights Expression*
+|Definition|Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)
+|Notes|Embedded rights expression can cover only machine readable expression.
+|Type and cardinality|<<Embedded Encoded Rights Expression Structure>> (0..unbounded)
+|Change history|Changed 1.4
+|XMP ID and data type|Iptc4xmpExt:EmbdEncRightsExpr (Bag Embedded Encoded Rights Expression structure)
+|JSON ID and data type|embdEncRightsExpr (object/EmbdEncRightsExpr/array)
+|===
+
+[[Linked-Encoded-Rights-Expression]]
+==== Linked Encoded Rights Expression
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Linked Encoded Rights Expression*
+|Definition|Structure covering the assertion of rights, the granting of licenses and both in human and a machine readable ways (including restrictions, embargoes, duties ...)
+|Notes|Embedded rights expression can cover only machine readable expression.
+|Type and cardinality|<<Linked Encoded Rights Expression Structure>> (0..unbounded)
+|Change history|Changed 1.4
+|XMP ID and data type|Iptc4xmpExt:LinkedEncRightsExpr (Bag Linked Encoded Rights Expression structure)
+|JSON ID and data type|linkedEncRightsExpr (object/LinkedEncRightsExpr/array)
+|===
+
+[[Copyright-Owner-]]
+==== Copyright Owner 
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Copyright Owner *
+|Definition|Data identifying the individual or organisation owning the rights for this media resource which could be the video as a whole or a clip in a video. The optional role attribute may indicate which facet of rights is covered by this entity.
+
+|Type and cardinality|Entity with role (0..unbounded)
+|Change history|Changed 1.4
+|XMP ID and data type|plus:CopyrightOwner (see PLUS spec)
+|JSON ID and data type|copyrightOwners (object/EntityWRole/array)
+|===
+
+[[Supplier-]]
+==== Supplier 
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Supplier *
+|Definition|Supplier of this copy of the media resource
+
+|Type and cardinality|<<Entity Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|plus:ImageSupplier (see PLUS spec)
+|JSON ID and data type|supplier
+ (object/Entity/)
+|===
+
+[[Source-Supply-Chain]]
+==== Source (Supply Chain)
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Source (Supply Chain)*
+|Definition|Person, party or system that has a role in the content supply chain.
+
+|Type and cardinality|Text (0..1)
+|Change history|Changed 1.6
+|XMP ID and data type|photoshop:Source (Text)
+|JSON ID and data type|source (string//)
+|===
+
+[[technical]]
+=== Technical fields
+
+[[Audio-Bitrate]]
+==== Audio Bitrate
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Audio Bitrate*
+|Definition|Bit rate of the audio data depending on the Video Bit Rate Type: if fixed the fixed rate, if variable the maximum rate. The unit is bits per second.
+
+|Type and cardinality|Number (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:audioBitRate (Integer)
+|JSON ID and data type|audioBitRate (number//)
+|===
+
+[[Audio-Bitrate-Type]]
+==== Audio Bitrate Type
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Audio Bitrate Type*
+|Definition|Indicates if the bitrate of the audio data is fixed or variable
+
+|Type and cardinality|Text (0..1)
+Enumeration
+- fixed
+- variable
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:audioBitRateMode (Closed Choice Text
+- fixed
+- variable)
+|JSON ID and data type|audioBitRateType
+ (string//enum)
+|===
+
+[[Audio-Bits-per-Sample]]
+==== Audio Bits per Sample
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Audio Bits per Sample*
+|Definition|Number of bits used for an audio sample
+
+|Type and cardinality|Number (0..1)
+|Change history|New 1.2
+|XMP ID and data type|Iptc4xmpExt:audioBitsPerSample (Integer)
+|JSON ID and data type|audioBitsPerSample (number//)
+|===
+
+[[Audio-Channel-Layout]]
+==== Audio Channel Layout
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Audio Channel Layout*
+|Definition|Term indicating the channel layout
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:audioChannelType (Closed Choice Text)
+|JSON ID and data type|audioChannelLayout
+ (string//)
+|===
+
+[[Audio-Channels]]
+==== Audio Channels
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Audio Channels*
+|Definition|Number of used audio channels
+
+|Type and cardinality|Number (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:audioChannelCount (Closed Choice or
+Integer)
+|JSON ID and data type|audioChannelCount (number//)
+|===
+
+[[Audio-Coding]]
+==== Audio Coding
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Audio Coding*
+|Definition|Machine readable code and a human readable term for the used audio coding
+
+|Type and cardinality|<<Entity Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:audioCompressor (Text)
+|JSON ID and data type|audioCoding (object/Entity/)
+|===
+
+[[Audio-Sample-Rate]]
+==== Audio Sample Rate
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Audio Sample Rate*
+|Definition|Rate used for sampling the audio
+
+|Type and cardinality|Number (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:audioSampleRate (Rational)
+|JSON ID and data type|audioSampleRate (number//)
+|===
+
+[[Display-Aspect-Ratio]]
+==== Display Aspect Ratio
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Display Aspect Ratio*
+|Definition|Ratio of width and height of the displayed image. (Width and height do not require to be in pixels.)
+|Notes|e.g. 2.39:1
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:videoDisplayAspectRatio (Rational)
+|JSON ID and data type|videoDisplayAspectRatio (string//)
+|===
+
+[[Editorial-Duration]]
+==== Editorial Duration
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Editorial Duration*
+|Definition|Duration of the video content proposed for editorial use
+|Notes|Multiple occurrences should be used for the same value in different time formats
+|Type and cardinality|<<Video Time Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:markers[xmpDM:type= "ivqu:editorialDuration"] /xmpDM:startTime + /xmpDM:duration (Marker)
+|JSON ID and data type|editorialDurations (object/VideoTime/array)
+|===
+
+[[Editorial-Duration-End]]
+==== Editorial Duration End
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Editorial Duration End*
+|Definition|The point in time and frames the content proposed for editorial use ends
+|Notes|Multiple occurrences should be used for the same value in different time formats
+|Type and cardinality|<<Video Time Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:markers[xmpDM:type= "ivqu:editorialDurationEnd"] /xmpDM:startTime (Marker)
+|JSON ID and data type|editorialDurationEnds (object/VideoTime/array)
+|===
+
+[[Editorial-Duration-Start]]
+==== Editorial Duration Start
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Editorial Duration Start*
+|Definition|The point in time and frames the content proposed for editorial use starts
+|Notes|Multiple occurrences should be used for the same value in different time formats
+|Type and cardinality|<<Video Time Structure>> (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:markers[xmpDM:type= "ivqu:editorialDurationStart"] /xmpDM:startTime (Marker)
+|JSON ID and data type|editorialDurationStarts (object/VideoTime/array)
+|===
+
+[[File-Bitrate]]
+==== File Bitrate
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*File Bitrate*
+|Definition|The total bit rate of the all media streams in this file.
+
+|Type and cardinality|Number (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:fileDataRate (Rational)
+|JSON ID and data type|fileBitrate (number//)
+|===
+
+[[File-Duration]]
+==== File Duration
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*File Duration*
+|Definition|Duration of the overall video (from the first to the last frame)
+|Notes|Multiple occurrences should be used for the same value in different time formats
+|Type and cardinality|<<Video Time Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:duration (Time)
+|JSON ID and data type|fileDuration (object/VideoTime/)
+|===
+
+[[File-Format]]
+==== File Format
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*File Format*
+|Definition|Format of the file containing the video data.
+
+|Type and cardinality|<<Entity Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:ContainerFormat (Entity structure)
+|JSON ID and data type|fileFormat (object/Entity/)
+|===
+
+[[Frame-Size]]
+==== Frame Size
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Frame Size*
+|Definition|Size of the video frame in pixels
+
+|Type and cardinality|<<Frame Size Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:videoFrameSize (Dimensions)
+|JSON ID and data type|frameSize
+ (object/FrameSize/)
+|===
+
+[[Media-Type]]
+==== Media Type
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Media Type*
+|Definition|IANA Media Type of the video.
+|Notes|e.g. "video/quicktime"
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|dc:format (MIMEType)
+|JSON ID and data type|mediaType (string//)
+|===
+
+[[Orientation]]
+==== Orientation
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Orientation*
+|Definition|Orientation of the visual content of the video as defined by TIFF.
+
+|Type and cardinality|Number (0..1) (TIFF 6.0 orientation - with a user guideline ("no flips"))
+|Change history|New 1.0
+|XMP ID and data type|tiff:orientation (Closed Choice of Integer)
+|JSON ID and data type|orientation (number//)
+|===
+
+[[Signal-Aspect-Ratio]]
+==== Signal Aspect Ratio
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Signal Aspect Ratio*
+|Definition|Ratio of width and height in pixels of a frame
+|Notes|e.g. 16:9
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:videoPixelAspectRatio (Rational)
+|JSON ID and data type|signalAspectRatio (string//)
+|===
+
+[[Signal-Format]]
+==== Signal Format
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Signal Format*
+|Definition|Combined term including the size of the frame, interlaced/progressive, framerate 
+|Notes|e.g. "1080p"
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:videoFieldOrder (Text)
+|JSON ID and data type|signalFormat (string//)
+|===
+
+[[Stream-ready]]
+==== Stream-ready
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Stream-ready*
+|Definition|Indicates if this video can be used for streaming by the rule of having the key technical data of the video at the start rather than end of the file and that the wrapper and essense format are suitable for streaming
+
+|Type and cardinality|Text (0..1)
+Enumeration:
+- true
+- false
+- unknown
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:StreamReady (Closed Choice of Text
+- true
+- false
+- unknown)
+|JSON ID and data type|streamReady (string//enum)
+|===
+
+[[Video-Bitrate]]
+==== Video Bitrate
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Video Bitrate*
+|Definition|Bit rate of the video data depending on the Video Bit Rate Type: if fixed the fixed rate, if variable the maximum rate. The unit is bits per second.
+
+|Type and cardinality|Number (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:videoBitRate (Integer)
+|JSON ID and data type|videoBitrate (number//)
+|===
+
+[[Video-Bitrate-Type]]
+==== Video Bitrate Type
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Video Bitrate Type*
+|Definition|Indicates if the bitrate of the video data is fixed or variable
+
+|Type and cardinality|Text (0..1)
+Enumeration
+- fixed
+- variable
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:videoBitRateMode (Closed Choice Text
+- fixed
+- variable)
+|JSON ID and data type|videoBitrateType (string//enum)
+|===
+
+[[Video-Coding]]
+==== Video Coding
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Video Coding*
+|Definition|Machine readable code and a human readable term for the used video coding
+
+|Type and cardinality|<<Entity Structure>> (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:videoCompressor (Text)
+|JSON ID and data type|videoCoding (object/Entity/)
+|===
+
+[[Video-Frame-Rate]]
+==== Video Frame Rate
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Video Frame Rate*
+|Definition|Used frame rate
+
+|Type and cardinality|Number (0..1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:videoFrameRate (Real)
+|JSON ID and data type|videoFrameRate (number//)
+|===
+
+[[Video-Profile]]
+==== Video Profile
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Video Profile*
+|Definition|Name of the used video profile as defined by the maker of the encoding standard.
+|Notes|e.g. "High 4:2:2"
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:videoEncodingProfile (Text)
+|JSON ID and data type|videoEncodingProfile (string//)
+|===
+
+[[Video-Streams-Count]]
+==== Video Streams Count
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Video Streams Count*
+|Definition|Count of video streams in a video file.
+
+|Type and cardinality|Number (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:videoStreamsCount (Integer)
+|JSON ID and data type|videoStreamsCount (number//)
+|===
+
+[[tool]]
+=== Time marker
+
+[[Markers]]
+==== Markers
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Markers*
+|Definition|A marker describes a location in an audio or video sequence. It is used to identify for which part of the video (a clip of the video as a whole) a set of IPTC Video Metadata properties is used.
+
+|Type and cardinality|XMP specific type
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:markers (Marker)
+|JSON ID and data type|NA
+ (NA)
+|===
+
+
+

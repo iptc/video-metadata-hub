@@ -72,9 +72,17 @@ Each generator is a standalone Python script that:
 - Outputs to the appropriate location
 
 Available generators:
+
+**Specification Generators:**
 - `generate_properties_html.py` - Properties specification page
+- `generate_mappings_html.py` - Mapping specification pages
 - `generate_json_schema.py` - JSON Schema
-- More generators to be added...
+- `generate_example_videos.py` - Example videos with metadata
+
+**User Guide Generators:**
+- `generate_userguide_properties.py` - Properties AsciiDoc include
+- `generate_userguide_structures.py` - Structures AsciiDoc include
+- `generate_userguide_examples.py` - Examples AsciiDoc includes (6 use cases)
 
 ## Setup
 

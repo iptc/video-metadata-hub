@@ -355,6 +355,65 @@ def load_examples_data(version_config: Dict, credentials, range_name: str) -> Li
     return result.get('values', [])
 
 
+def build_examples_table(values: List[List], version_config: Dict, example_column: int,
+                        notes_column: int, linkid: str) -> List[Dict]:
+    """
+    Build examples table data from Google Sheets values
+
+    Args:
+        values: Raw values from Google Sheets
+        version_config: Version configuration
+        example_column: Column index containing example values
+        notes_column: Column index containing notes
+        linkid: Link ID prefix for anchors
+
+    Returns:
+        List of category dicts with example properties
+    """
+    cols = version_config['column_indices']
+    category_id = ''
+    exampleprops = []
+    property_category = {}
+
+    for row in values:
+        if len(row) <= cols['property_name']:
+            continue
+
+        # Check for new category
+        if row[cols['category']] != category_id:
+            category_id = row[cols['category']]
+            if property_category:
+                exampleprops.append(property_category)
+            property_category = {
+                'id': category_id,
+                'name': CATEGORY_MAPPING.get(category_id, category_id),
+                'properties': []
+            }
+
+        # Get example value
+        example_data = row[example_column] if len(row) > example_column else ''
+        if not example_data:
+            continue  # Skip properties with no example
+
+        prop_data = {
+            'anchor': linkid + 'example' + text_to_anchor(row[cols['property_name']]),
+            'name': row[cols['property_name']],
+            'example_value': example_data
+        }
+
+        # Add notes if present
+        if len(row) > notes_column and row[notes_column]:
+            prop_data['notes'] = row[notes_column]
+
+        property_category['properties'].append(prop_data)
+
+    # Add last category
+    if category_id and property_category:
+        exampleprops.append(property_category)
+
+    return exampleprops
+
+
 if __name__ == '__main__':
     # Test data loading
     from .version_loader import get_version_config

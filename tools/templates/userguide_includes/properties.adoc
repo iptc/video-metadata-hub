@@ -1,0 +1,20 @@
+{% for category in properties %}[[{{ category.id }}]]
+=== {{ category.name }}
+{% for property in category.properties %}
+[[{{ property.anchor }}]]
+==== {{ property.name }}
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*{{ property.name }}*
+|Definition|{{ property.definition }}
+{% if property.note %}|Notes|{{ property.note }}{% endif %}
+|Type and cardinality|{{ property.type_cardinality_with_link }}
+|Change history|{{ property.history if property.history else 'New in this version' }}
+|XMP ID and data type|{{ property.xmp_id if property.xmp_id else 'N/A' }} ({{ property.xmp_type if property.xmp_type else 'N/A' }})
+|JSON ID and data type|{{ property.json_schema_id if property.json_schema_id else 'N/A' }} ({{ property.json_schema_type if property.json_schema_type else 'N/A' }})
+|===
+{% endfor %}
+{% endfor %}
+
+

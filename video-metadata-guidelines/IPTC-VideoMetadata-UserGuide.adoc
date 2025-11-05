@@ -1,0 +1,634 @@
+= image:iptc_sv_gradient_70x70.jpg[IPTC logo] Video Metadata Hub User Guide
+keywords: iptc, video metadata, vmhub, video library, footage metadata, videos, film, news, metadata, standard
+:doctype: book
+:imagesdir: ./images
+:includedir: ./_includes
+:stylesdir: stylesheets/
+:stylesheet: asciidoctor-iptc-stds-02.css
+:source-highlighter: coderay
+:source-language: asciidoc
+:icons: font
+:author: IPTC Video Metadata Working Group
+:email: office@iptc.org
+:version-label: Video Metadata Hub
+:revnumber: rev 1.7
+:revremark: Revised 2025-11-xx
+:toc: left
+:toclevels: 3
+:nofooter:
+:sectnums:
+:sectnumlevels: 4
+:sectanchors:
+:sectlinks:
+
+== Introduction
+
+This document is designed to familiarise developers, architects and video makers
+with the *IPTC Video Metadata Hub*, a specification of key metadata fields and a
+mapping of those fields between commonly-used video formats. It provides a short
+guideline on the use and meaning of each "field" or "property" in the IPTC Video
+Metadata Hub.
+
+=== What IPTC Video Metadata Hub is For
+
+IPTC's Video Metadata Hub is a *universal metadata schema for video and audio* developed
+with the key goal of storing and exchanging metadata in a safe and reliable way.
+
+It is not a new video metadata standard, in the sense that it does not define
+any new fields that are not already defined in other formats.
+
+Instead, it defines a common set of video metadata fields, giving precise
+semantics -- so we will know exactly what we mean by "Contributor" or "Creator"
+-- and shows how each of those common fields can be used in existing video
+standards such as MovieLabs MDDF, DPP's implementation of the AS-11 profile of
+MXF, EBUCore, PBCore, IPTC Photo Metadata Standard, Apple Quicktime, MPEG7,
+and camera-specific formats such as Panasonic P2 and Sony XDCAM.
+
+These properties can be used for describing the *visible and audible content*,
+*rights and licensing information*, *administrative details* and *technical
+characteristics* of a video in a system-independent way.
+
+It's like Dublin Core, but for video metadata.
+
+image:video-metadata-hub-intro-pic.png[Overview of IPTC Video Metadata Hub]
+
+=== What problem are we solving?
+
+Metadata is stored in different ways in existing video formats. For video
+editors it is very difficult to move video metadata between systems and the
+semantics are not always clear.
+
+For example, location information can be described in various existing video
+metadata formats as:
+
+* `location` with `role=0` in QuickTime
+* `Creation/location` in MPEG7
+* `located` in NewsML-G2
+* `locationCreated` in schema.org
+* `Shoot/Location` in SMPTE P2
+
+IPTC Video Metadata Hub describes two fields, <<Location-Shot,Location Shot>>
+and <<Location-Shown,Location Shown>>, with very clearly defined semantics, and
+the fields are mapped to fields of existing video formats, so metadata can be
+moved between systems from different vendors.
+
+=== Using Video Metadata Hub with your video and audio content
+
+The way in which Video Metadata Hub fields are associated with your audiovisual
+content will vary depending on the workflows and technical file structures used
+in your organisation.
+
+Typically users will choose one of three mechanisms for expressing Video
+Metadata Hub properties for their content:
+
+Sidecar files:: Some organisations will choose to associate metadata in
+so-called "sidecar files", in a format such as JSON, NewsML-G2 or as an XML
+component in an IMF package. We have created a JSON Schema for IPTC Video
+Metadata Hub which makes this easy to do.
+
+Embedded metadata:: Other organisations will embed metadata into the video file, using a structure
+such as an XMP metadata packet in a UUID box in an ISO Base Media File Format (ISOBMFF)
+or Quicktime file.
+
+External database:: A third option is to simply use Video Metadata Hub properties in a database schema
+describing metadata in a Digital Asset Management system.
+
+== About the IPTC Video Metadata User Guide
+
+=== IPTC Video Metadata Hub version used by this User Guide
+
+This document is based on IPTC Video Metadata Hub version 1.7 which was
+approved in October 2025.
+
+The specification for Video Metadata Hub is separated into two parts: 
+https://iptc.org/std/videometadatahub/recommendation/IPTC-VideoMetadataHub-props-Rec_1.7.html[IPTC
+Video Metadata Hub properties] and https://iptc.org/std/videometadatahub/recommendation/IPTC-VideoMetadataHub-mapping-Rec_1.7.html[IPTC Video Metadata Hub mappings] showing how to apply these core properties in many existing video standards.
+
+Examples, information and the specification document can be obtained from  
+https://iptc.org/std/videometadatahub/
+
+=== Version history
+
+==== What's new in version 1.7 of Video Metadata Hub?
+
+For version 1.7, we added new properties to cover AI-generated content. These properties were also added to the IPTC Photo Metadata Standard at the same time.
+
+  * *AI System Used* - The AI engine and/or the model name used to generate this media.
+  * *AI System Version Used* - The version of the AI system used to generate this media, if known.
+  * *AI Prompt Information* - The information that was given to the generative AI service as “prompt(s)” in order to generate this media.
+  * *AI Prompt Writer Name* - Name of the person who wrote the prompt used for generating this media.
+
+==== What's new in version 1.6 of Video Metadata Hub?
+
+  * *Language* - updated from "Language Version"
+  * *Rights Usage Terms* - new property added, described as "The licensing parameters of the video described in free text"
+  * *Source (Supply Chain)* - changes from an array to a single text entity
+
+==== What's new in version 1.5 of Video Metadata Hub?
+
+  * *Data Mining* - New property added, described as “Data mining prohibition or permission, optionally with constraints:
+  * *Other Constraints* - New property added, described as "Additional constraints on the use of the asset"
+
+==== What’s new in version 1.4 of Video Metadata Hub?
+
+Version 1.4 introduces several new properties and several changes to add accessibility properties and to align it more closely with the IPTC Photo Metadata Standard:
+
+New properties:
+
+  * *Content Warning*: signals to viewers such as drug references, nudity or violence, and health warnings such as flashing lights.
+  * *Digital Source Type*: whether the content was created by a digital camera, scanned from film, or created using or with the assistance of a computer.
+  * *Review Rating*: a third-party review such as a film’s rating on Rotten Tomatoes.
+  * *Workflow Rating*: equivalent to the XMP rating field, a numeric scale generally used by creators to tag shots/takes/videos that are of higher quality.
+  * *Alt Text (Accessibility)*: Short text describing the video to those who cannot view it.
+  * *Extended Description (Accessibility)*: Longer description more fully describing the purpose and meaning of the video, elaborating on the information given in the Alt Text (Accessibility) property.
+  * *Timed Text Link*: refers to an external file used for text with timing information using a standard such as WebVTT or W3C Timed Text, usually used for subtitles, closed captions or audio description
+
+Changed properties:
+
+  * *Date Created*: modified description to align it with Photo Metadata.
+  * *Rating*: modified description to make it more specifically about audience content classifications such as MPA ratings
+  * *Data Displayed on Screen*: changed description.
+  * *Keywords*: Pluralised label to match the equivalent in Photo Metadata.
+  * *Title*: changed data type to allow multiple languages
+  * *Transcript*: changed data type to allow multiple languages
+  * *Copyright Year*: changed description to add "year of origin of the video"
+  * *Embedded Encoded Rights Expression*: property label changed from "Rights and Licensing Terms (1)" to clarify and align with Photo Metadata
+  * *Linked Encoded Rights Expression*: property label changed from "Rights and Licensing Terms (2)" to clarify and align with Photo Metadata
+  * *Copyright Owner*: label change label from "Rights Owner" to align with Photo Metadata
+  * *Source (Supply Chain)*: Change label and XMP property to align it with Photo Metadata
+
+New property structures:
+
+  * *Qualified Link with Language*: used by Timed Text Link, specifies an external file along with its role (eg "audio description") and human language (eg "Spanish")
+
+Changed property structures:
+
+  * *Embedded Encoded Rights Expression structure*: changed label from "Embedded Rights Expression Structure" to align with Photo Metadata
+  * *Linked Encoded Rights Expression structure*: changed label from "Linked Rights Expression Structure" to align with Photo Metadata
+  * Data type of "Role" in the *Entity with Role structure* was changed from URI to Text to align with Photo Metadata
+
+=== Copyright
+
+Copyright © 2025 IPTC, International Press Telecommunications Council. All rights reserved.
+
+The IPTC Video Metadata User Guide document is published under the Creative
+Commons Attribution 4.0 license - see the full license agreement at
+http://creativecommons.org/licenses/by/4.0/.
+
+By obtaining, using and/or copying this document, you (the licensee) agree that
+you have read, understood, and will comply with the terms and conditions of the
+license.
+
+Materials used in this guide are either in the public domain or are available
+with the permission of their respective copyright holders. All materials of this
+IPTC standard covered by copyright shall be licensable at no charge.
+
+=== Acknowledgements
+
+This document is the result of a team effort by members of the Video Metadata
+Working Group of the International Press Telecommunications Council (IPTC), with
+input and assistance from other contributors.
+
+The User Guide up to this version was edited by (in alphabetical order):
+
+Linda Burman (Individual IPTC member),
+Derek Coller (https://www.gettyimages.com/[Getty Images]),
+Pam Fisher (Individual Member and lead of the IPTC Video Metadata Working Group),
+Mark Milstein (https://www.microstocksolutions.com/[Microstocksolutions])
+Brendan Quinn (https://iptc.org/[IPTC]),
+David Riecks (http://www.controlledvocabulary.com/[www.controlledvocabulary.com]/PLUS),
+Michael Steidl (Honorary IPTC member),
+Alison Sullivan (Individual Member).
+
+=== How to contact IPTC
+
+Join the public IPTC Video Metadata discussion group: https://groups.io/g/iptc-videometadata/ 
+
+Submit a message on our website: https://iptc.org/about-iptc/contact-us/ 
+
+Visit IPTC's website: https://iptc.org/standards/video-metadata-hub/
+
+Follow IPTC on Twitter: http://www.twitter.com/IPTC/[@IPTC]
+
+=== About IPTC
+
+The IPTC, based in London, brings together the world's leading news agencies,
+publishers and industry vendors. It develops and promotes efficient technical
+standards to improve the management and exchange of information between content
+providers, intermediaries and consumers. The standards enable easy,
+cost-effective and rapid innovation and include the Photo Metadata standard,
+the Video Metadata Hub, the news exchange formats NewsML-G2, ninjs, SportsML-G2
+and NITF, rNews for marking up online news, the rights expression language
+RightsML, and NewsCodes taxonomies for categorising news.
+
+IPTC is a not-for-profit membership organisation registered in England -
+https://iptc.org/participate/membership/[find more about membership]. 
+
+Business address:
+
+ IPTC International Press Telecommunications Council 
+ 25 Southampton Buildings 
+ London WC2A 1AL 
+ United Kingdom
+
+[#use-cases]
+== Use Cases for Video Metadata Hub
+
+The Video Metadata Hub aims to provide a comprehensive set of properties,
+however specific applications may not require each of these.  
+
+To make Video Metadata Hub easier to understand, a set of six initial use cases
+has been outlined, each typically requiring only a subset of VMH properties:
+
+Enterprise Advertising Production:: Non-broadcast corporate marketing video assets 
+
+Galleries, Libraries, Archives, Museums (GLAM):: Moving image material held by cultural institutions, for preservation, exhibition or reference
+
+Stock Footage:: Individual film/video footage clips from production or archive, made available for licensing or repurposing
+
+Long-form Production:: Finished programming ready for broadcast playout or OTT delivery. (Note that the example video for long-form production will be added to this guide in the future)
+
+Broadcast Media Management:: Broadcast asset management for repository and archive. (Note that the example video for Broadcast Media Management will be added to this guide in the future)
+
+News Agency:: Individual video news item distributed or published by a news agency
+
+For each of these use cases, we provide an example video below, showing the Video
+Metadata Hub fields that would apply to that use case in particular.
+
+=== Enterprise Advertising Production example
+
+Thanks to Allison Sullivan of MGM Resorts for providing the example footage:
+
+image:eap_example.jpg[Thumbnail for Enterprise Advertising Production example footage]
+
+include::{includedir}/enterprise-advertising-production-example.adoc[]
+
+=== Galleries, Libraries, Archives, Museums example
+
+image:glam_example.jpg[Thumbnail for GLAM example footage]
+
+include::{includedir}/glam-example.adoc[]
+
+=== Stock Footage example
+
+Thanks to Mark Milstein of Microstocksolutions for providing the example footage:
+
+image:sf_example.jpg[Thumbnail for Stock Footage example footage]
+
+include::{includedir}/stock-example.adoc[]
+
+// TODO
+//=== Long-form Production example
+
+//image:lfp_example.jpg[Thumbnail for Long-form Production example footage]
+
+//include::{includedir}/long-form-production-example.adoc[]
+
+// TODO
+//=== Broadcast Media Management example
+
+//image:bmm_example.jpg[Thumbnail for Broadcast Media Management example footage]
+
+//include::{includedir}/broadcast-media-management-example.adoc[]
+
+=== News Agency example
+
+image:na_example.jpg[Thumbnail for News Agency example footage]
+
+include::{includedir}/news-agency-example.adoc[]
+
+
+== Properties and Mappings for video metadata
+
+The Video Metadata Hub's set of metadata properties includes:
+
+* 26 properties describing *what can be seen and heard* in the video
+* 15 properties providing *rights-related information*
+* 30 properties for *administrative purposes*
+* 26 properties covering *technical characteristics*
+* 26 *property structures* which are used for the properties listed above.
+
+Each property is defined by:
+
+* its name
+* a definition of its semantics
+* a basic data type
+* a definition how often it may occur in the metadata about a piece of video
+(its "cardinality")
+
+The properties are defined in detail in the <<property-reference-table, Property
+Reference Table>> below.
+
+Each property can be used to describe a clip within a video or the video as a
+whole.
+
+Below the property table we describe how these properties can be mapped to
+many existing video structures using our mapping table.
+
+=== Core Properties for Video Metadata Hub
+
+Recognising that the alphabetical list of properties can be hard to work with,
+the IPTC Video Metadata Working Group has identified a "core" set of properties
+that are recommended to be used in the majority of cases.
+
+There is nothing special about these properties; they have the same status as
+all other Video Metadata Hub properties. We simply highlight them here for ease
+of use and recommend that editing tools implement these properties as a minimum set.
+
+[width=95%,%header,cols="25%,50%,25%"]
+|===
+| Property name | Description | Format
+
+| <<Title>> | Title of the video, should be a shorthand reference | Text + language tag (0..1)
+| <<Headline>> | Short description of the content of the video | Text + language tag (0..1)
+| <<Description>> | Textual description of the content of the video | Text + language tag (0..1)
+| <<Keywords>> | What the video is about expressed by a free choice of descriptive phrases or keywords | Text + language tag (0..unbounded)
+| <<Location Shown>> | Place(s) shown by the video | Location structure (0..unbounded)
+| <<Alt Text (Accessibility)>> | A brief textual description of the purpose and meaning of a video that can be accessed by assistive technology or displayed when the video is disabled in the browser. It should not exceed 250 characters. |  Text + language tag (0..1)
+| <<Video Identifier>> | Globally unambiguous identifier of the video regardless of renditions, formats, encodings etc. This identifier should be shared across all renditions. | Text (0..1)
+| <<Date Created>> | Designates the date and optionally the time the content of the video was created (rather than the date of the creation of the digital representation) | Date (0..1)
+| <<Creator>> | Party or parties (person or organisation) which created the video, refinement by the role attribute. | Entity with role structure (0..unbounded)
+| <<Copyright Notice>> | Any textual notice necessary by legal needs or common use to indicate the current owner of the copyright of this media resource | Text + language tag (0..1)
+| <<Copyright Owner>> | Data identifying the individual or organisation owning the rights for this media resource which could be the video as a whole or a clip in a video. The optional role attribute may indicate which facet of rights is covered by this entity. | Entity with role (0..unbounded)
+| <<Copyright Year>> | Year of origin of the video, usually appearing in the copyright notice as a numeric value | Number/integer (0..1)
+| <<Credit Line>> | Credit to person(s) and/or organisation(s) required by the supplier of the video (clip) to be used when published. | Text (0..1)
+| <<Contributor>> | Party or parties (person or organisation) which contributed to the video, refinement by the role attribute. | Entity with role structure (0..unbounded)
+| <<Language Version>> | Language version of the video | Language tag (0..1)
+| <<Workflow Rating>> | An aesthetic rating given to the video by its creator or editor, for example to mark the best take of a series |  Rating structure (0..unbounded)
+| <<Digital Source Type>> | The type of the source of this digital video, including whether the video was captured, digitised or generated. |  Concept structure (0..1)
+| <<Data Mining>> | Data mining prohibition or permission, optionally with constraints. | PLUS CV Term/URI
+| <<Media Type>> | IANA Media Type of the video. | Text (0..1)
+| <<File Format>> | Format of the file containing the video data. | Entity structure (0..1)
+| <<File Duration>> | Duration of the overall video (from the first to the last frame) | Video Time structure (0..1)
+|===
+
+[#property-reference-table]
+== Property Reference Table
+
+This section provides a reference of property labels and names in alphabetical
+order for quick location of specific fields and their guidelines.
+
+Each property has a data type such as Text or Date. Where the property requires
+a more complex structure such as <<Location Structure>>, it is hyperlinked to the
+below section which defines the properties that make up each property structure.
+
+include::{includedir}/properties.adoc[]
+
+== Property Structures
+
+This section describes the structures used in the above properties. Some properties
+are single-valued and have a simple datatype suich as "string". Others have a
+more complex structure with nested values. These types are sometimes shared between
+more than one property. They are documented below.
+
+include::{includedir}/structures.adoc[]
+
+== Recommended Property Mappings
+
+Many Video Metadata Hub properties are mapped to properties defined by one or
+more of the below standards, to make implementation easier for vendors:
+
+* Apple QuickTime
+* Canon VideoClip XML (as of Video Metadata Hub 1.2)
+* DPP profile of the AS-11 specification, built on MXF (added in Video Metadata Hub 1.4)
+* EBUCore (updated in Video Metadata Hub 1.3)
+* EIDR Data Fields
+* IPTC NewsML-G2
+* MovieLabs MDDF (added in Video Metadata Hub 1.4)
+* MPEG 7 (ISO 15938-5)
+* PBCore 2.1
+* Schema.org
+* SMPTE P2 as used by Panasonic
+* Sony XDCAM & planning (as of Video Metadata Hub 1.2)
+
+The mappings can be obtained from the
+https://iptc.org/std/videometadatahub/recommendation/IPTC-VideoMetadataHub-mapping-Rec_1.7.html[IPTC Video Metadata Hub mappings]
+table.
+
+=== Using the mapping table
+
+For example, if an organisation uses NewsML-G2 as its main metadata format,
+and wants to describe the unique identifier for the video file (<<Video-Identifier,Video Identifier>> in VM Hub).
+
+Looking up the appropriate row in
+https://iptc.org/std/videometadatahub/recommendation/IPTC-VideoMetadataHub-mapping-Rec_1.7.html[the mapping table],
+and then consulting the NewsML-G2 column,
+we can see that the recommended mapping is `contentMeta/altId[@role="altidrole:vmhVideoId"]`.
+
+So this means that the video identifier should be represented as follows in the NewsML-G2 file:
+
+    <contentMeta>
+        <altId role="altidrole:vmhVideoId">xxxx</altId>
+    </contentMeta>
+
+== JSON Schema for Video Metadata Hub
+
+The IPTC Video Metadata Working Group has created a JSON Schema to help users create
+metadata packages in the JSON format. These could be embedded into a video file, or
+used as a separate file accompanying the video, known as a "sidecar" file.
+
+We recommend that the JSON format could be used for lightweight exchage of video
+metadata, e.g. by APIs.
+
+The JSON Schema for this format is located at
+https://www.iptc.org/std/videometadatahub/recommendation/iptc-vmhub-1.7-schema.json.
+A JSON Schema-aware editor can help users to create metadata files in that format,
+or tool makers could write software that outputs that format from a graphical user interface.
+
+The IPTC's interactive https://iptc.org/std/videometadatahub/generator/[IPTC Video
+Metadata Hub Generator tool] can be used to create Video Metadata Hub metadata
+in JSON format for testing and prototyping purposes. (Note that the generator tool
+does not currently support all VMHub properties.)
+
+See also the <<JSON Example Files>> section below.
+
+// TODO
+// == Technical implementation
+
+// All Video Metadata Hub properties can be expressed by these technical standards:
+
+// * EBU Core – for metadata in standalone documents associated with the
+// video binary
+// * XMP – for metadata embedded into the binary video file
+// * JSON – for standalone and light-weight exchange of metadata, e.g. by APIs
+
+== Usage examples and reference images
+
+=== Example and reference videos using embedded XMP and exiftool
+
+We have created some sample video files with IPTC Video Metadata Hub properties
+embedded into video files using the XMP format.
+
+The example files can be found at https://iptc.org/std/videometadatahub/examples/.
+
+File names starting with `IPTC-VMHub-RefVideo-Rec` are "reference videos".
+They have a value for each and every Video Metadata Hub property, embedded using
+the XMP format. Currently only properties specified in VMHub versions 1.0 to 1.2
+are included due to exiftool support.
+
+View the embedded metadata by downloading and examining the file, for example
+using the command-line tool https://exiftool.org/[exiftool]:
+
+    $ curl --output refvideo.mp4 https://www.iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec0100.mp4
+    $ exiftool -G1 -json -struct refvideo.mp4
+
+Below we show an extract of the embedded metadata resulting from the above command,
+showing the Video Metadata Hub tags extracted by exiftool:
+
+[source,exiftool output]
+----
+{
+  [ ... ]
+  "LinkedEncRightsExpr": [{
+    "LinkedRightsExpr": "http://example.org/linkedrightsexpression/id986/Rec0100",
+    "RightsExprEncType": "IANA Media Type of ERE (Rec0100)",
+    "RightsExprLangId": "http://example.org/RELids/id4712/Rec0100"
+  }],
+  "LocationCreated": [{
+    "City": "City (Location created1) (Rec0100)",
+    "CountryCode": "R16",
+    "CountryName": "CountryName (Location created1) (Rec0100)",
+    "GPSAltitude": "180 m",
+    "GPSLatitude": "16 deg 20' 1.20\" N",
+    "GPSLongitude": "48 deg 14' 1.80\" E",
+    "LocationId": ["Location Id (Location created1) (Rec0100)"],
+    "LocationName": "Name of Location Created 1 (Rec0100)",
+    "ProvinceState": "Province/State (Location created1) (Rec0100)",
+    "Sublocation": "Sublocation (Location created1) (Rec0100)",
+    "WorldRegion": "Worldregion (Location created1) (Rec0100)"
+  }],
+  "LocationShown": [{
+    "City": "City (Location shown1) (Rec0100)",
+    "CountryCode": "R16",
+  [ ... ]
+----
+
+Please note that the field names used by exiftool do not exactly match the names
+in the Video Metadata Hub specification.
+
+To view the raw XMP data, use the command:
+
+    $ exiftool -xmp -b refvideo.mp4
+
+=== JSON Example Files
+
+Example JSON files aligning with our standard use cases are available at
+https://iptc.org/std/videometadatahub/examples/json/.
+
+Here is an extract of the example that relates to the Galleries, Libraries, Archives
+and Museums (GLAM) use case:
+
+        [...]
+        "photoVideoMetadataIPTC": {
+            "circaDateCreated": "1990s",
+            "dateModified": "No",
+            "episode": {
+                "name": {
+                    "en": "https://wellcomelibrary.org/item/b16766246"
+                }
+            },
+            "externalMetadataLinks": [
+                "https://wellcomelibrary.org/data/b16766246"
+            ],
+            "metadataAuthority": {
+                "name": {
+                    "en": "Wellcome Library"
+                }
+            },
+            "releaseReady": true,
+            "identifier": "b16766246",
+            "aboutCvTerms": "Public health",
+            "description": {
+                "en": "A television advertisement asking people to register for a Donor Card in order to donate organs after death. "
+            },
+            "dopesheetLinks": "https://wellcomelibrary.org/data/b16766246",
+            "genres": "Public information",
+            "headline": {
+                "en": "A television advertisement asking people to register for a Donor Card in order to donate organs after death. "
+            },
+        [...]
+
+[#generator]
+=== IPTC Video Metadata Hub Generator
+
+The IPTC's interactive https://iptc.org/std/videometadatahub/generator/[IPTC Video
+Metadata Hub Generator tool] can be used to create Video Metadata Hub metadata
+in various formats for testing and prototyping purposes.
+
+A web form allows users to enter sample metadata values and a file is automatically
+generated in any of a variety of output formats.
+
+Formats available include:
+* *JSON* - following the <<_json_schema_for_video_metadata_hub,IPTC VMHub JSON Schema described above >>,
+users can create JSON files that can be used as sidecar documents in video applications.
+* *JSON XMP (for Exiftool)* - using exiftool's JSON property names, this creates a JSON file that can be
+embedded into a video file using exiftool with the following command:
+
+    $ exiftool -v -XMP:all= -j=<JSON file> <videofile>
+
+(Note that the `-XMP:all=` argument removes all existing XMP metadata before the new metadata is added. If this behaviour is not desired, that part can be omitted.)
+* *NewsML-G2* - using IPTC's NewsML-G2 format which is heavily used in the news industry, especially for content syndication.
+* *c2patool* - Generates a JSON-LD block containing a C2PA assertion that can be embedded using `c2patool`. See the <<C2PA,C2PA section>> for details.
+
+Note that the generator tool does not currently support all VMHub properties.
+
+[#C2PA]
+=== Using c2patool to embed IPTC Video Metadata
+
+The https://c2pa.org/specifications/specifications/1.3/specs/C2PA_Specification.html[C2PA specification] defines a method that can be used to embed metadata into media files in a way that is cryptographically verifiable and therefore tamper-evident. See more at https://c2pa.org/[the C2PA website].
+
+IPTC Video Metadata Hub metadata is the standard way to add video metadata to C2PA files
+(see https://c2pa.org/specifications/specifications/1.3/specs/C2PA_Specification.html#_iptc_photo_and_video_metadata[the
+IPTC metadata section of the C2PA technical specification].
+
+Using the <<generator,IPTC Video Metadata Hub Generator>>, the IPTC has developed an easy way to create metadata records that can be embedded into video files using the C2PA specification. This is achieved using the command-line tool https://opensource.contentauthenticity.org/docs/c2patool/[c2patool] which was developed by the https://contentauthenticity.org/[Content Authenticity Initiative].
+
+To add C2PA-enabled metadata to a video file, follow these steps:
+
+. Using the https://iptc.org/std/videometadatahub/generator/[Video Metadata Hub generator] tool, enter the desired values into the appropriate metadata form fields.
+. Select "C2PA assertion (for c2patool)" as the output format.
+. Save the generated JSON-LD block to a file (for example, by copying it to clipboard and pasting it into a simple text editor such as Notepad or TextEdit).
+. Add the metadata to your video using the  c2patool command:
+
+    $ c2patool <input video file> -m iptc-vmhub-assertion.json -o <output video file>
+
+=== Using c2patool to view IPTC Video Metadata
+
+Currently, the standard Content Authenticity Initiative tools such as https://verify.contentauthenticity.org/inspect[verify.contentauthenticity.org] do not display IPTC Video Metadata properties.
+
+To view IPTC embedded metadata, you must also use c2patool on the command line:
+
+    $ c2patool <output video file>
+
+This should show the full contents of all assertions in the video file, including those that you just added.
+
+=== Example video files using embedded C2PA video metadata
+
+At http://iptc.org/std/videometadatahub/examples/c2pa/ we show some example files
+using the above technique to embed video metadata. These include:
+
+* a "minimal assertion" using only the core set of properties
+* a "generator assertion" using all properties exposed via the IPTC Video Metadata Hub Generator
+* a "maximal assertion" that uses all Video Metadata Hub properties.
+
+Both the assertions (as JSON files) and the video files (including the embedded assertion,
+signed using a C2PA test certificate) are included.
+
+== How can you help?
+
+* *Software vendors*: implement the standard in your systems to support
+interoperability. The standard is freely available and free to implement.
+
+* *Broadcasters and video producers*: encourage your software vendors and
+manufacturers to implement IPTC Video Metadata Hub in their systems.
+
+* *Media managers*: as you configure your Digital Asset Management systems'
+metadata fields, consider using the Video Metadata Hub properties as
+the basis for your metadata schema, to ensure easy supply chain interchange
+and compatibility with other systems in the future.
+
+== Contact us
+
+If you would like to implement IPTC Video Metadata Hub, suggest changes or help
+us spread the word, please contact the IPTC Video Metadata Working Group via the
+public discussion list https://groups.io/g/iptc-videometadata .

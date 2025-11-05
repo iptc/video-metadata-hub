@@ -1,0 +1,142 @@
+
+==== Administrative fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[stock-exampleexampleCirca-Date-Created]]Circa Date Created
+a|2020-09-18
+
+
+|[[stock-exampleexampleDate-Created]]Date Created
+a|2020-09-18
+
+
+|[[stock-exampleexampleDate-Released]]Date Released
+a|2020-09-18
+
+
+|[[stock-exampleexampleExternal-Metadata-URL]]External Metadata URL
+a|https://vrmeta.io/tag/77c59ef67926aa7ac3
+
+
+|[[stock-exampleexampleFeed-Identifier]]Feed Identifier
+a|Mark Milstein
+
+
+|[[stock-exampleexampleMetadata-Edit-Date]]Metadata Edit Date
+a|2020-10-21
+
+
+|[[stock-exampleexampleMetadata-Editor]]Metadata Editor
+a|IPTC VM Working Group
+
+
+|[[stock-exampleexampleMetadata-Authority]]Metadata Authority
+a|Mark Milstein
+
+
+|[[stock-exampleexamplePublication-Event]]Publication Event
+a|IPTC VM Working Group Authentication Process
+
+
+|[[stock-exampleexampleRecording-Device]]Recording Device
+a|{ "manufacturer": "Panasonic", "modelName": "HC-X1"}
+
+
+|[[stock-exampleexampleRegistry-Entry]]Registry Entry
+a|VRMETA_101010
+
+
+|[[stock-exampleexampleStyle-Period]]Style Period
+a|Drone footage
+
+
+|[[stock-exampleexampleTemporal-Coverage]]Temporal Coverage
+a|{ "tempCoverageFrom": "2020", "tempCoverageTo": "2020" }
+
+
+|[[stock-exampleexampleParent-Video-Identifier]]Parent Video Identifier
+a|VRMETA_100000
+
+
+|===
+
+==== Fields describing audio/visual content
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[stock-exampleexampleDescription]]Description
+a|An aerial view of the Budapest Container Port
+
+
+|[[stock-exampleexampleKeywords]]Keywords
+a|container port, Budapest, Hungary, railroad, trucking, transportation, logistics, aerial view
+
+
+|[[stock-exampleexampleLocation-Shot]]Location Shot
+a|Budapest
+
+
+|[[stock-exampleexampleLocation-Shown]]Location Shown
+a|Budapest
+
+
+|[[stock-exampleexampleObject-Shown]]Object Shown
+a|Container port
+
+
+|[[stock-exampleexampleShot-Type]]Shot Type
+a|Aerial, long shot
+
+
+|[[stock-exampleexampleTitle]]Title
+a|An aerial view of the Budapest Container Port
+
+
+|===
+
+==== Rights fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[stock-exampleexampleCopyright-Notice-]]Copyright Notice 
+a|Copyright VRMETA
+
+
+|[[stock-exampleexampleCopyright-Year]]Copyright Year
+a|2020
+
+
+|[[stock-exampleexampleCreator]]Creator
+a|Mark Millstein
+
+
+|[[stock-exampleexampleCredit-Line]]Credit Line
+a|VRMETA
+
+
+|[[stock-exampleexampleLicensor-]]Licensor 
+a|VRMETA
+
+
+|===
+
+==== Technical fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[stock-exampleexampleEditorial-Duration-End]]Editorial Duration End
+a|N/A
+
+
+|[[stock-exampleexampleEditorial-Duration-Start]]Editorial Duration Start
+a|N/A
+
+
+|===
+
+

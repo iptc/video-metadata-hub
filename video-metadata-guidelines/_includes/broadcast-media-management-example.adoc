@@ -1,0 +1,30 @@
+
+==== Administrative fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|===
+
+==== Fields describing audio/visual content
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|===
+
+==== Rights fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|===
+
+==== Technical fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|===
+
+
