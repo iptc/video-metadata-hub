@@ -1,7 +1,12 @@
 # IPTC Video Metadata Hub - Artifact Generation Tools
 
+**Developer Documentation**
+
 Modern, multi-version system for generating all VMHub artifacts from the
 "Video Metadata Hub Working Document" on Google Sheets.
+
+**For maintainers:** See `/MAINTENANCE.md` for the quick start workflow.
+**For developers:** This document covers the system architecture and how to extend it.
 
 ## Quick Start
 

@@ -89,12 +89,36 @@ The new system consists of:
 
 Old scripts have been moved to `/tools/legacy/` and are deprecated. The old system used hardcoded column indices and lxml. The new system is template-based and supports multiple versions through configuration.
 
-## For Complete Documentation
+## Troubleshooting
+
+### "Configuration file not found"
+
+Ensure `vmhub_configuration.json` exists in the repository root.
+
+### "Client secret not found"
+
+Download `client_secret.json` from Google Cloud Console and place in `tools/` directory.
+
+### "Version X.X not found"
+
+Edit `vmhub_configuration.json` and add that version's configuration. Use existing versions as a template.
+
+### Column Index Mismatch
+
+If Google Sheet structure changes between versions:
+1. Note which column was added/removed
+2. Update column indices in configuration for that version  
+3. All indices after the change need to shift by 1
+
+### Import Errors
+
+Install dependencies: `pip3 install -r tools/requirements.txt`
+
+## For Developer Documentation
 
 See `/tools/README.md` for:
-- Detailed usage instructions
-- Multi-version support details
+- System architecture details
 - How to add new generators
-- Troubleshooting guide
-- Development guidelines
+- Template development
+- Library API documentation
 

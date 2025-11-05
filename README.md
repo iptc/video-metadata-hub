@@ -14,9 +14,8 @@ This generates all specification artifacts from the IPTC Video Metadata Working 
 The `specification` folder contains the HTML files used on https://iptc.org/std/videometadatahub/recommendation/
 
 These are generated from Google Sheets using the modern tooling in `tools/`. See:
-- `MAINTENANCE.md` - Version update workflow
-- `tools/README.md` - Complete documentation
-- `tools/GETTING_STARTED.md` - Quick start guide
+- **`MAINTENANCE.md`** - How to maintain and generate new versions (start here!)
+- **`tools/README.md`** - Developer documentation and system architecture
 
 ## Example files
 
