@@ -62,7 +62,7 @@
             {% for category in properties %}
                 {% for property in category.properties %}
                 <tr{% if property.is_new %} style="background-color: #90EE90;"{% endif %}>
-                    <td class="bgdcolIptc">{{ category.name if loop.first else '' }}</td>
+                    <td class="bgdcolIptc">{{ category.name }}</td>
                     <td class="bgdcolIptc{% if property.is_new %} isnew{% endif %}">{{ property.name }}</td>
                     <td{% if property.is_new %} class="isnew"{% endif %}>{{ property.definition }}</td>
                     <td>{{ property.note if property.note else ' ' }}</td>

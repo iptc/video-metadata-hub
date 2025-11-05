@@ -138,7 +138,7 @@ def load_properties_data(version_config: Dict, credentials) -> List[Dict]:
             prop_data['json_schema_type'] = row[cols['json_type']]
         
         # New/modified flags
-        if len(row) > cols['new_flag'] and row[cols['new_flag']] == 'n':
+        if len(row) > cols['property_name_modified_flag'] and row[cols['property_name_modified_flag']] == 'n':
             prop_data['is_new'] = True
         
         property_category['properties'].append(prop_data)
