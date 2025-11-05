@@ -112,10 +112,6 @@ The new system consists of:
   - `/build_spec.sh` - specification generators only
   - `/build_userguide.sh` - user guide generators only
 
-## Migration from Old System
-
-Old scripts have been moved to `/tools/legacy/` and are deprecated. The old system used hardcoded column indices and lxml. The new system is template-based and supports multiple versions through configuration.
-
 ## Troubleshooting
 
 ### "Configuration file not found"
