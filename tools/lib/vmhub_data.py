@@ -122,8 +122,8 @@ def load_properties_data(version_config: Dict, credentials) -> List[Dict]:
             prop_data['history'] = row[cols['change_notes']]
         
         # Core sort order (only in v1.7+)
-        if cols['core_sort'] is not None and len(row) > cols['core_sort']:
-            prop_data['sort_order'] = row[cols['core_sort']]
+        if cols['core_sort_order'] is not None and len(row) > cols['core_sort_order']:
+            prop_data['sort_order'] = row[cols['core_sort_order']]
         
         # XMP properties
         if len(row) > cols['xmp_prop'] and row[cols['xmp_prop']]:
