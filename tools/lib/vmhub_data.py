@@ -131,6 +131,11 @@ def load_properties_data(version_config: Dict, credentials) -> List[Dict]:
         if len(row) > cols['xmp_type'] and row[cols['xmp_type']]:
             prop_data['xmp_type'] = row[cols['xmp_type']]
         
+        # ExifTool tag
+        if 'exiftool_tag' in cols and cols['exiftool_tag'] is not None:
+            if len(row) > cols['exiftool_tag'] and row[cols['exiftool_tag']]:
+                prop_data['exiftool_tag'] = row[cols['exiftool_tag']]
+        
         # JSON/PVMD properties
         if len(row) > cols['json_prop'] and row[cols['json_prop']]:
             prop_data['json_schema_id'] = row[cols['json_prop']]
@@ -254,6 +259,11 @@ def load_structures_data(version_config: Dict, credentials, backrefs: Optional[D
                 structure_prop['xmp_id'] = row[cols['xmp_prop']]
             if len(row) > cols['xmp_type'] and row[cols['xmp_type']]:
                 structure_prop['xmp_type'] = row[cols['xmp_type']]
+            
+            # ExifTool tag
+            if 'exiftool_tag' in cols and cols['exiftool_tag'] is not None:
+                if len(row) > cols['exiftool_tag'] and row[cols['exiftool_tag']]:
+                    structure_prop['exiftool_tag'] = row[cols['exiftool_tag']]
             
             if len(row) > cols['json_prop'] and row[cols['json_prop']]:
                 structure_prop['json_schema_name'] = row[cols['json_prop']]

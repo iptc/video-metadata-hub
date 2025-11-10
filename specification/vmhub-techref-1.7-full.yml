@@ -1,0 +1,1948 @@
+documentation_available_at: https://iptc.org/std/photometadata/documentation/techreference
+release_comment: IPTC Video Metadata Hub version 1.7
+release_timestamp: '2025-11-10T10:20:11Z'
+vmh_top:
+  AI-System-Used:
+    name: AI System Used
+    definition: The AI engine and/or the model name used to generate this media.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#AI-System-Used'
+    datatype: Text (0..1)
+    XMPid: Iptc4xmpExt:AISystemUsed
+    etXMP: XMP-iptcExt:AISystemUsed
+  AI-System-Version-Used:
+    name: AI System Version Used
+    definition: The version of the AI system used to generate this media, if known.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#AI-System-Version-Used'
+    datatype: Text (0..1)
+    XMPid: Iptc4xmpExt:AISystemVersionUsed
+    etXMP: XMP-iptcExt:AISystemVersionUsed
+  AI-Prompt-Information:
+    name: AI Prompt Information
+    definition: The information that was given to the generative AI service as “prompt(s)”
+      in order to generate this media.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#AI-Prompt-Information'
+    datatype: Text (0..1)
+    XMPid: Iptc4xmpExt:AIPromptInformation
+    etXMP: XMP-iptcExt:AIPromptInformation
+  AI-Prompt-Writer-Name:
+    name: AI Prompt Writer Name
+    definition: Name of the person who wrote the prompt used for generating this media.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#AI-Prompt-Writer-Name'
+    datatype: Text (0..1)
+    XMPid: Iptc4xmpExt:AIPromptWriterName
+    etXMP: XMP-iptcExt:AIPromptWriterName
+  Circa-Date-Created:
+    name: Circa Date Created
+    definition: Approximate date or range of dates associated with the creation and
+      production of a video.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Circa-Date-Created'
+    datatype: Text (0..1)
+    XMPid: Iptc4xmpExt:CircaDateCreated
+    etXMP: XMP-iptcExt:CircaDateCreated
+  Content-Warning:
+    name: Content Warning
+    definition: "Information to warn potential viewers about nudity, violence etc\
+      \ in the video\t"
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Content-Warning'
+    datatype: Concept structure (0..unbounded)
+    XMPid: Iptc4xmpExt:ContentWarning
+    etXMP: XMP-iptcExt:ContentWarning//array
+  Date-Created:
+    name: Date Created
+    definition: Designates the date and optionally the time the content of the video
+      was created (rather than the date of the creation of the digital representation)
+    ugtopic: administrative
+    sortorder: core070
+    specidx: '#Date-Created'
+    datatype: Date (0..1)
+    XMPid: photoshop:DateCreated
+    etXMP: XMP-photoshop:DateCreated/date-time
+  Date-Modified:
+    name: Date Modified
+    definition: Date and optionally time when the video was modified last time
+    ugtopic: administrative
+    sortorder: core080
+    specidx: '#Date-Modified'
+    datatype: Date (0..1)
+    XMPid: xmp:ModifyDate
+    etXMP: XMP-xmp:ModifyDate/date-time
+  Date-Released:
+    name: Date Released
+    definition: Date and optionally time of the public release of the video
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Date-Released'
+    datatype: Date (0..1) (Year only, Year-Month only, Year-Month-Day optional with
+      time)
+    XMPid: xmpDM:releaseDate
+    etXMP: XMP-xmpDM:ReleaseDate/date-time
+  Digital-Source-Type:
+    name: Digital Source Type
+    definition: The type of the source of this digital video, including whether the
+      video was captured, digitised or generated.
+    ugtopic: administrative
+    sortorder: core100
+    specidx: '#Digital-Source-Type'
+    datatype: Concept structure (0..1)
+    XMPid: Iptc4xmpExt:DigitalSourceType
+    etXMP: XMP-iptcExt:DigitalSourceType
+  Episode:
+    name: Episode
+    definition: Episode in a specific season of a TV or video series this video is
+      a member of.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Episode'
+    datatype: Episode
+    propoccurrence: Season Structure (0..1)
+    XMPid: Iptc4xmpExt:Episode
+    etXMP: XMP-iptcExt:Episode/EpisodeSeason
+  External-Metadata-URL:
+    name: External Metadata URL
+    definition: Link(s) to an external web resource for retrieval of further metadata
+      about this video
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#External-Metadata-URL'
+    datatype: URL (0..unbounded)
+    XMPid: Iptc4xmpExt:ExternalMetadataLink
+    etXMP: XMP-iptcExt:ExternalMetadataLink//array
+  Feed-Identifier:
+    name: Feed Identifier
+    definition: Identifier of the feed/source this video was delivered by
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Feed-Identifier'
+    datatype: Text (0..1)
+    XMPid: Iptc4xmpExt:FeedIdentifier
+    etXMP: XMP-iptcExt:FeedIdentifier
+  Metadata-Edit-Date:
+    name: Metadata Edit Date
+    definition: Date of the last edit of the metadata of this video.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Metadata-Edit-Date'
+    datatype: Date(0..1)
+    XMPid: Iptc4xmpExt:metadataLastEdited
+    etXMP: XMP-iptcExt:MetadataLastEdited
+  Metadata-Editor:
+    name: Metadata Editor
+    definition: Party doing the last edit of the metadata of this video.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Metadata-Editor'
+    datatype: Entity Structure (0..1)
+    XMPid: Iptc4xmpExt:metadataLastEditor
+    etXMP: XMP-iptcExt:MetadataLastEditor
+  Metadata-Authority:
+    name: Metadata Authority
+    definition: Party responsible for the accuracy of the metadata values.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Metadata-Authority'
+    datatype: Entity Structure (0..1)
+    XMPid: Iptc4xmpExt:metadataAuthority
+    etXMP: XMP-iptcExt:MetadataAuthority
+  Planning-Reference:
+    name: Planning Reference
+    definition: Reference to a data item used for planning the shooting of this video
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Planning-Reference'
+    datatype: Entity with role structure (0..unbounded)
+    XMPid: Iptc4xmpExt:PlanningRef
+    etXMP: XMP-iptcExt:PlanningRef/EntityWRole/array
+  Publication-Event:
+    name: Publication Event
+    definition: Date and optionally the time of publishing this video with name and
+      identifier for the event of this publication.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Publication-Event'
+    datatype: Publication Event structure (0..unbounded)
+    XMPid: Iptc4xmpExt:PublicationEvent
+    etXMP: XMP-iptcExt:PublicationEvent/PublicationEvent
+  Rating:
+    name: Rating
+    definition: How the video is classified by a public authority such as MPA
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Rating'
+    datatype: Rating structure (0..unbounded)
+    XMPid: Iptc4xmpExt:Rating
+    etXMP: XMP-iptcExt:Rating/Rating/array
+  Ready-for-Release:
+    name: Ready for Release
+    definition: An indicator if this video is ready for being released to the public.
+      This depends on rules by the party responsible for the publication.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Ready-for-Release'
+    datatype: Boolean (0..1)
+    XMPid: Iptc4xmpExt:ReleaseReady
+    etXMP: XMP-iptcExt:ReleaseReady
+  Recording-Device:
+    name: Recording Device
+    definition: Device used for recording this video
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Recording-Device'
+    datatype: Device structure (0..1)
+    XMPid: Iptc4xmpExt:RecDevice
+    etXMP: XMP-iptcExt:RecDevice/Device
+  Registry-Entry:
+    name: Registry Entry
+    definition: Identifier of the video issued by an identified registry.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Registry-Entry'
+    datatype: Registry Entry structure (0..unbounded)
+    XMPid: Iptc4xmpExt:RegistryId
+    etXMP: XMP-iptcExt:RegistryId/RegistryEntryDetails/array
+  Review-Rating:
+    name: Review Rating
+    definition: An aesthetic rating given to the video by an external reviewer such
+      as a news outlet.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Review-Rating'
+    datatype: Rating structure (0..unbounded)
+    XMPid: Iptc4xmpExt:ReviewRating
+    etXMP: XMP-iptcExt:ReviewRating/Rating/array
+  Season:
+    name: Season
+    definition: Season of a TV or video series this video is a member of.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Season'
+    datatype: Episode
+    propoccurrence: Season structure (0..1)
+    XMPid: Iptc4xmpExt:Season
+    etXMP: XMP-iptcExt:Season/EpisodeSeason
+  Series:
+    name: Series
+    definition: TV or video series this video is a member of.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Series'
+    datatype: Series structure (0..1)
+    XMPid: Iptc4xmpExt:Series
+    etXMP: XMP-iptcExt:Series/Series
+  Storyline-Identifier:
+    name: Storyline Identifier
+    definition: Identifier(s) of a story evolving over time with which this video
+      is associated
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Storyline-Identifier'
+    datatype: Text (0..unbounded)
+    XMPid: Iptc4xmpExt:StorylineIdentifier
+    etXMP: XMP-iptcExt:StorylineIdentifier//array
+  Style-Period:
+    name: Style Period
+    definition: The style, historical or artistic period, movement, group, or school
+      whose characteristics are represented by the video
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Style-Period'
+    datatype: Text (0..1)
+    XMPid: Iptc4xmpExt:StylePeriod
+    etXMP: XMP-iptcExt:ArtworkStylePeriod
+  Temporal-Coverage:
+    name: Temporal Coverage
+    definition: Period of time covered by the video
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Temporal-Coverage'
+    datatype: Temporal Coverage structure (0..1)
+    XMPid: Iptc4xmpExt:TemporalCoverage
+    etXMP: XMP-iptcExt:TemporalCoverage/TemporalCoverage
+  Parent-Video-Identifier:
+    name: Parent Video Identifier
+    definition: Globally unambiguous identifier of the video from which this video
+      was derived.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Parent-Video-Identifier'
+    datatype: Text
+    propoccurrence: URI (0..1)
+    XMPid: Iptc4xmpExt:parentId
+    etXMP: XMP-iptcExt:ParentId
+  Video-Identifier:
+    name: Video Identifier
+    definition: Globally unambiguous identifier of the video regardless of renditions,
+      formats, encodings etc. This identifier should be shared across all renditions.
+    ugtopic: administrative
+    sortorder: core110
+    specidx: '#Video-Identifier'
+    datatype: Text (0..1)
+    XMPid: dc:identifier
+    etXMP: XMP-dc:Identifier
+  Video-Rendition:
+    name: Video Rendition
+    definition: 'Unambiguous identifier of the video specific to a rendition. '
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Video-Rendition'
+    datatype: Text (0..1)
+    XMPid: xmpMM:RenditionClass
+    etXMP: XMP-xmpMM:RenditionClass
+  Video-Version:
+    name: Video Version
+    definition: Version of the video identified by the Video Identifier
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Video-Version'
+    datatype: Text (0..1)
+    XMPid: xmpMM:VersionID
+    etXMP: XMP-xmpMM:VersionID
+  Workflow-Rating:
+    name: Workflow Rating
+    definition: An aesthetic rating given to the video by its creator or editor, for
+      example to mark the best take of a series
+    ugtopic: administrative
+    sortorder: core120
+    specidx: '#Workflow-Rating'
+    datatype: Rating structure (0..unbounded)
+    XMPid: xmp:Rating
+    etXMP: XMP:rating
+  Workflow-Tag:
+    name: Workflow Tag
+    definition: Indicator for the role of this video in a production workflow.
+    ugtopic: administrative
+    sortorder: ''
+    specidx: '#Workflow-Tag'
+    datatype: Concept structure (0..1)
+    XMPid: Iptc4xmpExt:WorkflowTag
+    etXMP: XMP-iptcExt:WorkflowTag/CvTermDetails
+  Alt-Text-Accessibility:
+    name: Alt Text (Accessibility)
+    definition: A brief textual description of the purpose and meaning of a video
+      that can be accessed by assistive technology or displayed when the video is
+      disabled in the browser. It should not exceed 250 characters.
+    ugtopic: describing a/v content
+    sortorder: core050
+    specidx: '#Alt-Text-Accessibility'
+    datatype: Text + language tag (0..1)
+    XMPid: Iptc4xmpCore:AltTextAccessibility
+    etXMP: XMP-iptcCore:AltTextAccessibility
+  CV-Term-About-the-Content:
+    name: CV Term About the Content
+    definition: What the video is about expressed by term(s) selected from taxonomies
+      or controlled vocabularies
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#CV-Term-About-the-Content'
+    datatype: Concept structure (0..unbounded)
+    XMPid: Iptc4xmpExt:AboutCvTerm
+    etXMP: XMP-iptcExt:AboutCvTerm/CvTermDetails
+  Data-Displayed-on-Screen:
+    name: Data Displayed on Screen
+    definition: Text or other data shown in some region of the video.
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Data-Displayed-on-Screen'
+    datatype: Text with Region Delimiter structure (0..unbounded)
+    XMPid: Iptc4xmpExt:DataOnScreen
+    etXMP: XMP-iptcExt:DataOnScreen/TextRegion/array
+  Description:
+    name: Description
+    definition: Textual description of the content of the video
+    ugtopic: describing a/v content
+    sortorder: core030
+    specidx: '#Description'
+    datatype: Text + language tag (0..1)
+    XMPid: dc:description
+    etXMP: XMP-dc:Description
+  Dopesheet:
+    name: Dopesheet
+    definition: Shotlist with descriptions
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Dopesheet'
+    datatype: Text + language tag (0..1)
+    XMPid: Iptc4xmpExt:Dopesheet
+    etXMP: XMP-iptcExt:Dopesheet
+  Dopesheet-Link:
+    name: Dopesheet Link
+    definition: Link(s) to an external web resource providing a shotlist with descriptions
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Dopesheet-Link'
+    datatype: Qualified Link structure (0..unbounded)
+    XMPid: Iptc4xmpExt:DopesheetLink
+    etXMP: XMP-iptcExt:DopesheetLink/QualifiedLink
+  Extended-Description-Accessibility:
+    name: Extended Description (Accessibility)
+    definition: A more detailed textual description of the purpose and meaning of
+      a video that elaborates on the information provided by the Alt Text (Accessibility)
+      property. This property does not have a character limitation and is not required
+      if the Alt Text (Accessibility) field sufficiently describes the video.
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Extended-Description-Accessibility'
+    datatype: Text + language tag (0..1)
+    XMPid: Iptc4xmpCore:ExtDescrAccessibility
+    etXMP: XMP-iptcCore:ExtDescrAccessibility
+  Featured-Organisation:
+    name: Featured Organisation
+    definition: Organisation(s) featured by the content of the video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Featured-Organisation'
+    datatype: Entity structure (0..unbounded)
+    XMPid: 'Iptc4xmpExt:OrganisationInImageName
+
+      Iptc4xmpExt:OrganisationInImageCode'
+    etXMP: XMP-iptcExt:OrganisationInImageName/Entity/array,XMP-iptcExt:OrganisationInImageCode/Entity/array
+  Genre:
+    name: Genre
+    definition: Artistic, style, journalistic, product or other genre(s) of the video.
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Genre'
+    datatype: CV-Term structure (0..unbounded)
+    XMPid: Iptc4xmpExt:Genre
+    etXMP: XMP-iptcExt:Genre/CvTermDetails
+  Headline-:
+    name: 'Headline '
+    definition: Short description of the content of the video
+    ugtopic: describing a/v content
+    sortorder: core020
+    specidx: '#Headline-'
+    datatype: Text + language tag (0..1)
+    XMPid: Iptc4xmpExt:Headline
+    etXMP: XMP-iptcExt:Headline
+  Keywords:
+    name: Keywords
+    definition: What the video is about expressed by a free choice of descriptive
+      phrases or keywords
+    ugtopic: describing a/v content
+    sortorder: core040
+    specidx: '#Keywords'
+    datatype: Text + language tag (0..unbounded)
+    XMPid: dc:subject
+    etXMP: XMP-dc:Subject//array
+  Language:
+    name: Language
+    definition: Language of the video
+    ugtopic: describing a/v content
+    sortorder: core090
+    specidx: '#Language'
+    datatype: Language tag (0..1)
+    XMPid: dc:language
+    etXMP: XMP-dc:Language
+  Location-Shot:
+    name: Location Shot
+    definition: Place from where the video was shot, in particular where the camera
+      was located
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Location-Shot'
+    datatype: Location structure (0..unbounded)
+    XMPid: Iptc4xmpExt:LocationCreated
+    etXMP: XMP-iptcExt:LocationCreated/LocationDetails/array
+  Location-Shown:
+    name: Location Shown
+    definition: Place(s) shown by the video
+    ugtopic: describing a/v content
+    sortorder: core060
+    specidx: '#Location-Shown'
+    datatype: Location structure (0..unbounded)
+    XMPid: Iptc4xmpExt:LocationShown
+    etXMP: XMP-iptcExt:LocationShown/LocationDetails/array
+  Object-Shown:
+    name: Object Shown
+    definition: Object(s) shown by the video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Object-Shown'
+    datatype: Entity structure (0..unbounded)
+    XMPid: Iptc4xmpExt:ArtworkOrObject
+    etXMP: XMP-iptcExt:ArtworkOrObject/ArtworkOrObjectDetails/array
+  Person-Heard:
+    name: Person Heard
+    definition: Person(s) who can be heard only in the video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Person-Heard'
+    datatype: Entity structure (0..unbounded)
+    XMPid: Iptc4xmpExt:PersonHeard
+    etXMP: XMP-iptcExt:PersonHeard/Entity/array
+  Person-Shown:
+    name: Person Shown
+    definition: Person(s) shown by the video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Person-Shown'
+    datatype: Entity Structure or Person Details structure (0..unbounded)
+    XMPid: Iptc4xmpExt:PersonInImageWDetails
+    etXMP: XMP-iptcExt:PersonInImageWDetails/PersonDetails/array
+  Product-Shown:
+    name: Product Shown
+    definition: Product(s) identified by a GTIN code shown by the video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Product-Shown'
+    datatype: Product with GTIN structure (0..unbounded)
+    XMPid: Iptc4xmpExt:ProductInImage
+    etXMP: XMP-iptcExt:ProductInImage/ProductDetails/array
+  Shot-Type:
+    name: Shot Type
+    definition: Visual type(s) of the video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Shot-Type'
+    datatype: Concept structure (0..unbounded)
+    XMPid: Iptc4xmpExt:VideoShotType
+    etXMP: XMP-iptcExt:VideoShotType/Entity/array
+  Shown-Event:
+    name: Shown Event
+    definition: Event(s) shown by the video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Shown-Event'
+    datatype: Entity structure (0..unbounded)
+    XMPid: Iptc4xmpExt:EventExt
+    etXMP: XMP-iptcExt:ShownEvent/Entity/array
+  Snapshot-Link:
+    name: Snapshot Link
+    definition: A still image representing  the video.
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Snapshot-Link'
+    datatype: Linked Image structure (0..unbounded)
+    XMPid: Iptc4xmpExt:SnapshotLink
+    etXMP: XMP-iptcExt:SnapshotLink/LinkedImage/array
+  Timed-Text-Link:
+    name: Timed Text Link
+    definition: Link(s) to an external web resource providing a timed text track,
+      used to provide captioning/subtitling or audio description of the video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Timed-Text-Link'
+    datatype: Qualified Link with Language structure (0..unbounded)
+    XMPid: Iptc4xmpExt:TimedTextLink
+    etXMP: XMP-iptcExt:TimedTextLink/QualifiedLinkWLanguage/array
+  Title:
+    name: Title
+    definition: Title of the video, should be a shorthand reference
+    ugtopic: describing a/v content
+    sortorder: core010
+    specidx: '#Title'
+    datatype: Text + language tag (0..1)
+    XMPid: dc:title
+    etXMP: XMP-dc:Title
+  Transcript:
+    name: Transcript
+    definition: Transcription of the video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Transcript'
+    datatype: Text + language tag (0..1)
+    XMPid: Iptc4xmpExt:Transcript
+    etXMP: XMP-iptcExt:Transcript
+  Transcript-Link:
+    name: Transcript Link
+    definition: Link(s) to an external web resource providing a transcription of the
+      video
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Transcript-Link'
+    datatype: Qualified Link structure (0..unbounded)
+    XMPid: Iptc4xmpExt:TranscriptLink
+    etXMP: XMP-iptcExt:TranscriptLink/QualifiedLink/array
+  Visual-Colour:
+    name: Visual Colour
+    definition: The visual colouring of the video.
+    ugtopic: describing a/v content
+    sortorder: ''
+    specidx: '#Visual-Colour'
+    datatype: 'Text (0..1)
+
+      Enumeration:
+
+      - black and white'
+    propoccurrence: 'monochrome
+
+      - colour'
+    XMPid: Iptc4xmpExt:VisualColour
+    etXMP: XMP-iptcExt:VisualColor#
+  Contributor:
+    name: Contributor
+    definition: Party or parties (person or organisation) which contributed to the
+      video, refinement by the role attribute.
+    ugtopic: rights
+    sortorder: core150
+    specidx: '#Contributor'
+    datatype: Entity with role structure (0..unbounded)
+    XMPid: Iptc4xmpExt:Contributor
+    etXMP: XMP-iptcExt:Contributor/EntityWRole/array
+  Copyright-Notice-:
+    name: 'Copyright Notice '
+    definition: Any textual notice necessary by legal needs or common use to indicate
+      the current owner of the copyright of this media resource
+    ugtopic: rights
+    sortorder: core160
+    specidx: '#Copyright-Notice-'
+    datatype: Text + language tag (0..1)
+    XMPid: dc:rights
+    etXMP: XMP-dc:Rights
+  Copyright-Year:
+    name: Copyright Year
+    definition: Year of origin of the video, usually appearing in the copyright notice
+      as a numeric value
+    ugtopic: rights
+    sortorder: core180
+    specidx: '#Copyright-Year'
+    datatype: Number
+    propoccurrence: integer (0..1)
+    XMPid: Iptc4xmpExt:CopyrightYear
+    etXMP: XMP-iptcExt:CopyrightYear/integer/
+  Creator:
+    name: Creator
+    definition: 'Party or parties (person or organisation) which created the video,
+      refinement by the role attribute. '
+    ugtopic: rights
+    sortorder: core130
+    specidx: '#Creator'
+    datatype: Entity with role structure (0..unbounded)
+    XMPid: Iptc4xmpExt:Creator
+    etXMP: XMP-iptcExt:Creator/EntityWRole/array
+  Credit-Line:
+    name: Credit Line
+    definition: Credit to person(s) and/or organisation(s) required by the supplier
+      of the video (clip) to be used when published.
+    ugtopic: rights
+    sortorder: core140
+    specidx: '#Credit-Line'
+    datatype: Text (0..1)
+    XMPid: photoshop:Credit
+    etXMP: XMP-photoshop:Credit
+  Data-Mining:
+    name: Data Mining
+    definition: Data mining prohibition or permission, optionally with constraints.
+    ugtopic: rights
+    sortorder: core190
+    specidx: '#Data-Mining'
+    datatype: PLUS CV Term
+    propoccurrence: URI
+    XMPid: plus:DataMining
+    etXMP: XMP-plus:DataMining
+  Other-Constraints:
+    name: Other Constraints
+    definition: Additional constraints on the use of the asset.
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Other-Constraints'
+    datatype: Text + language tag (0..1)
+    XMPid: plus:OtherConstraints
+  Licensor-:
+    name: 'Licensor '
+    definition: Company or person to  be contacted for licensing
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Licensor-'
+    datatype: Entity structure (0..1)
+    XMPid: plus:Licensor
+    etXMP: XMP-plus:Licensor/PlusEntityDetails/array
+  Model-Release-Document:
+    name: Model Release Document
+    definition: Identifier(s) of a Model Release document.
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Model-Release-Document'
+    datatype: Text (0..unbounded)
+    XMPid: plus:ModelReleaseID
+    etXMP: XMP-plus:ModelReleaseID//array
+  Model-Release-Status:
+    name: Model Release Status
+    definition: Summarises the availability and scope of model releases authorizing
+      usage of the likenesses of persons appearing in the video
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Model-Release-Status'
+    datatype: PLUS CV Term
+    propoccurrence: URI
+    XMPid: plus:ModelReleaseStatus
+    etXMP: XMP-plus:ModelReleaseStatus
+  Property-Release-Document:
+    name: Property Release Document
+    definition: Identifier(s) of a Property Release document.
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Property-Release-Document'
+    datatype: Text (0..unbounded)
+    XMPid: plus:PropertyReleaseID
+    etXMP: XMP-plus:PropertyReleaseID//array
+  Property-Release-Status:
+    name: Property Release Status
+    definition: Summarises the availability and scope of property releases authorising
+      usage of the properties appearing in the photograph.
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Property-Release-Status'
+    datatype: PLUS CV Term
+    propoccurrence: URI
+    XMPid: plus:PropertyReleaseStatus
+    etXMP: XMP-plus:PropertyReleaseStatus
+  Rights-Usage-Terms:
+    name: Rights Usage Terms
+    definition: The licensing parameters of the video expressed in free-text.
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Rights-Usage-Terms'
+    datatype: Text (0..1)
+    XMPid: xmpRights:UsageTerms
+    etXMP: XMP-xmpRights:UsageTerms
+  Embedded-Encoded-Rights-Expression:
+    name: Embedded Encoded Rights Expression
+    definition: Structure covering the assertion of rights, the granting of licenses
+      and both in human and a machine readable ways (including restrictions, embargoes,
+      duties ...)
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Embedded-Encoded-Rights-Expression'
+    datatype: Embedded Encoded Rights Expression structure (0..unbounded)
+    XMPid: Iptc4xmpExt:EmbdEncRightsExpr
+    etXMP: XMP-iptcExt:EmbdEncRightsExpr/EEREDetails/array
+  Linked-Encoded-Rights-Expression:
+    name: Linked Encoded Rights Expression
+    definition: Structure covering the assertion of rights, the granting of licenses
+      and both in human and a machine readable ways (including restrictions, embargoes,
+      duties ...)
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Linked-Encoded-Rights-Expression'
+    datatype: Linked Encoded Rights Expression structure (0..unbounded)
+    XMPid: Iptc4xmpExt:LinkedEncRightsExpr
+    etXMP: XMP-iptcExt:LinkedEncRightsExpr/LEREDetails/array
+  Copyright-Owner-:
+    name: 'Copyright Owner '
+    definition: Data identifying the individual or organisation owning the rights
+      for this media resource which could be the video as a whole or a clip in a video.
+      The optional role attribute may indicate which facet of rights is covered by
+      this entity.
+    ugtopic: rights
+    sortorder: core170
+    specidx: '#Copyright-Owner-'
+    datatype: Entity with role (0..unbounded)
+    XMPid: plus:CopyrightOwner
+    etXMP: XMP-plus:CopyrightOwner/EntityWRole/array
+  Supplier-:
+    name: 'Supplier '
+    definition: Supplier of this copy of the media resource
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Supplier-'
+    datatype: Entity structure (0..1)
+    XMPid: plus:ImageSupplier
+    etXMP: XMP-plus:ImageSupplier/PlusEntityDetails
+  Source-Supply-Chain:
+    name: Source (Supply Chain)
+    definition: Person, party or system that has a role in the content supply chain.
+    ugtopic: rights
+    sortorder: ''
+    specidx: '#Source-Supply-Chain'
+    datatype: Text (0..1)
+    XMPid: photoshop:Source
+    etXMP: XMP-iptcExt:SupplyChainSource/Entity/array
+  Audio-Bitrate:
+    name: Audio Bitrate
+    definition: 'Bit rate of the audio data depending on the Video Bit Rate Type:
+      if fixed the fixed rate, if variable the maximum rate. The unit is bits per
+      second.'
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Audio-Bitrate'
+    datatype: Number (0..1)
+    XMPid: Iptc4xmpExt:audioBitRate
+    etXMP: XMP-iptcExt:AudioBitRate/integer
+  Audio-Bitrate-Type:
+    name: Audio Bitrate Type
+    definition: Indicates if the bitrate of the audio data is fixed or variable
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Audio-Bitrate-Type'
+    datatype: 'Text (0..1)
+
+      Enumeration
+
+      - fixed
+
+      - variable'
+    XMPid: Iptc4xmpExt:audioBitRateMode
+    etXMP: XMP-iptcExt:AudioBitRateMode#
+  Audio-Bits-per-Sample:
+    name: Audio Bits per Sample
+    definition: Number of bits used for an audio sample
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Audio-Bits-per-Sample'
+    datatype: Number (0..1)
+    XMPid: Iptc4xmpExt:audioBitsPerSample
+    etXMP: XMP-iptcExt:AudioBitsPerSample/integer
+  Audio-Channel-Layout:
+    name: Audio Channel Layout
+    definition: Term indicating the channel layout
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Audio-Channel-Layout'
+    datatype: Text (0..1)
+    XMPid: xmpDM:audioChannelType
+    etXMP: XMP-xmpDM:AudioChannelType#
+  Audio-Channels:
+    name: Audio Channels
+    definition: Number of used audio channels
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Audio-Channels'
+    datatype: Number (0..1)
+    XMPid: Iptc4xmpExt:audioChannelCount
+    etXMP: XMP-iptcExt:AudioChannelCount/integer
+  Audio-Coding:
+    name: Audio Coding
+    definition: Machine readable code and a human readable term for the used audio
+      coding
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Audio-Coding'
+    datatype: Entity structure (0..1)
+    XMPid: xmpDM:audioCompressor
+    etXMP: XMP-xmpDM:AudioCompressor
+  Audio-Sample-Rate:
+    name: Audio Sample Rate
+    definition: Rate used for sampling the audio
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Audio-Sample-Rate'
+    datatype: Number (0..1)
+    XMPid: xmpDM:audioSampleRate
+    etXMP: XMP-xmpDM:AudioSampleRate/integer
+  Display-Aspect-Ratio:
+    name: Display Aspect Ratio
+    definition: Ratio of width and height of the displayed image. (Width and height
+      do not require to be in pixels.)
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Display-Aspect-Ratio'
+    datatype: Text (0..1)
+    XMPid: Iptc4xmpExt:videoDisplayAspectRatio
+    etXMP: XMP-iptcExt:VideoDisplayAspectRatio/decimal
+  Editorial-Duration:
+    name: Editorial Duration
+    definition: Duration of the video content proposed for editorial use
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Editorial-Duration'
+    datatype: Video Time structure (0..unbounded)
+    XMPid: xmpDM:markers[xmpDM:type= "ivqu:editorialDuration"] /xmpDM:startTime +
+      /xmpDM:duration
+    etXMP: NA
+  Editorial-Duration-End:
+    name: Editorial Duration End
+    definition: The point in time and frames the content proposed for editorial use
+      ends
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Editorial-Duration-End'
+    datatype: Video Time structure (0..unbounded)
+    XMPid: xmpDM:markers[xmpDM:type= "ivqu:editorialDurationEnd"] /xmpDM:startTime
+    etXMP: NA
+  Editorial-Duration-Start:
+    name: Editorial Duration Start
+    definition: The point in time and frames the content proposed for editorial use
+      starts
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Editorial-Duration-Start'
+    datatype: Video Time structure (0..unbounded)
+    XMPid: xmpDM:markers[xmpDM:type= "ivqu:editorialDurationStart"] /xmpDM:startTime
+    etXMP: NA
+  File-Bitrate:
+    name: File Bitrate
+    definition: The total bit rate of the all media streams in this file.
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#File-Bitrate'
+    datatype: Number (0..1)
+    XMPid: xmpDM:fileDataRate
+    etXMP: XMP-xmpDM:FileDataRate/decimal
+  File-Duration:
+    name: File Duration
+    definition: Duration of the overall video (from the first to the last frame)
+    ugtopic: technical
+    sortorder: core200
+    specidx: '#File-Duration'
+    datatype: Video Time structure (0..1)
+    XMPid: xmpDM:duration
+    etXMP: XMP-xmpDM:Duration/Time
+  File-Format:
+    name: File Format
+    definition: Format of the file containing the video data.
+    ugtopic: technical
+    sortorder: core210
+    specidx: '#File-Format'
+    datatype: Entity structure (0..1)
+    XMPid: Iptc4xmpExt:ContainerFormat
+    etXMP: XMP-iptcExt:ContainerFormat/Entity
+  Frame-Size:
+    name: Frame Size
+    definition: Size of the video frame in pixels
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Frame-Size'
+    datatype: Frame Size structure (0..1)
+    XMPid: xmpDM:videoFrameSize
+    etXMP: XMP-xmpDM:VideoFrameSize/FrameSize
+  Media-Type:
+    name: Media Type
+    definition: IANA Media Type of the video.
+    ugtopic: technical
+    sortorder: core220
+    specidx: '#Media-Type'
+    datatype: Text (0..1)
+    XMPid: dc:format
+    etXMP: XMP-dc:Format
+  Orientation:
+    name: Orientation
+    definition: Orientation of the visual content of the video as defined by TIFF.
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Orientation'
+    datatype: Number (0..1) (TIFF 6.0 orientation - with a user guideline ("no flips"))
+    XMPid: tiff:orientation
+    etXMP: XMP-tiff:Orientation#
+  Signal-Aspect-Ratio:
+    name: Signal Aspect Ratio
+    definition: Ratio of width and height in pixels of a frame
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Signal-Aspect-Ratio'
+    datatype: Text (0..1)
+    XMPid: xmpDM:videoPixelAspectRatio
+    etXMP: XMP-xmpDM:VideoPixelAspectRatio/decimal
+  Signal-Format:
+    name: Signal Format
+    definition: 'Combined term including the size of the frame, interlaced/progressive,
+      framerate '
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Signal-Format'
+    datatype: Text (0..1)
+    XMPid: xmpDM:videoFieldOrder
+    etXMP: XMP-xmpDM:VideoFieldOrder#
+  Stream-ready:
+    name: Stream-ready
+    definition: Indicates if this video can be used for streaming by the rule of having
+      the key technical data of the video at the start rather than end of the file
+      and that the wrapper and essense format are suitable for streaming
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Stream-ready'
+    datatype: 'Text (0..1)
+
+      Enumeration:
+
+      - true
+
+      - false
+
+      - unknown'
+    XMPid: Iptc4xmpExt:StreamReady
+    etXMP: XMP-iptcExt:StreamReady#
+  Video-Bitrate:
+    name: Video Bitrate
+    definition: 'Bit rate of the video data depending on the Video Bit Rate Type:
+      if fixed the fixed rate, if variable the maximum rate. The unit is bits per
+      second.'
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Video-Bitrate'
+    datatype: Number (0..1)
+    XMPid: Iptc4xmpExt:videoBitRate
+    etXMP: XMP-iptcExt:VideoBitRate/integer
+  Video-Bitrate-Type:
+    name: Video Bitrate Type
+    definition: Indicates if the bitrate of the video data is fixed or variable
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Video-Bitrate-Type'
+    datatype: 'Text (0..1)
+
+      Enumeration
+
+      - fixed
+
+      - variable'
+    XMPid: Iptc4xmpExt:videoBitRateMode
+    etXMP: XMP-iptcExt:VideoBitRateMode#
+  Video-Coding:
+    name: Video Coding
+    definition: Machine readable code and a human readable term for the used video
+      coding
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Video-Coding'
+    datatype: Entity structure (0..1)
+    XMPid: xmpDM:videoCompressor
+    etXMP: XMP-xmpDM:VideoCompressor
+  Video-Frame-Rate:
+    name: Video Frame Rate
+    definition: Used frame rate
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Video-Frame-Rate'
+    datatype: Number (0..1)
+    XMPid: xmpDM:videoFrameRate
+    etXMP: XMP-xmpDM:VideoFrameRate/decimal
+  Video-Profile:
+    name: Video Profile
+    definition: Name of the used video profile as defined by the maker of the encoding
+      standard.
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Video-Profile'
+    datatype: Text (0..1)
+    XMPid: Iptc4xmpExt:videoEncodingProfile
+    etXMP: XMP-iptcExt:VideoEncodingProfile
+  Video-Streams-Count:
+    name: Video Streams Count
+    definition: Count of video streams in a video file.
+    ugtopic: technical
+    sortorder: ''
+    specidx: '#Video-Streams-Count'
+    datatype: Number (0..1)
+    XMPid: Iptc4xmpExt:videoStreamsCount
+    etXMP: XMP-iptcExt:VideoStreamsCount/integer
+  Markers:
+    name: Markers
+    definition: A marker describes a location in an audio or video sequence. It is
+      used to identify for which part of the video (a clip of the video as a whole)
+      a set of IPTC Video Metadata properties is used.
+    ugtopic: tool
+    sortorder: ''
+    specidx: '#Markers'
+    datatype: XMP specific type
+    XMPid: xmpDM:markers
+    etXMP: NA
+vmh_struct:
+  Concept:
+    Identifier:
+      name: Identifier
+      definition: Globally unique identifier of the concept
+      sortorder: ''
+      specidx: '#Identifier'
+      datatype: Text
+      propoccurrence: URI (0..unbounded)
+      XMPid: xmp:Identifier
+      etXMP: Identifier
+    Name:
+      name: Name
+      definition: Full name of the concept
+      sortorder: ''
+      specidx: '#Name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:Name
+      etXMP: Name
+  Concept-with-role:
+    Identifier:
+      name: Identifier
+      definition: Globally unique identifier of the concept
+      sortorder: ''
+      specidx: '#Identifier'
+      datatype: Text
+      propoccurrence: URI (0..unbounded)
+      XMPid: xmp:Identifier
+      etXMP: Identifier
+    Name:
+      name: Name
+      definition: Full name of the concept
+      sortorder: ''
+      specidx: '#Name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:Name
+      etXMP: Name
+    Role:
+      name: Role
+      definition: Identifier of the role the concept has in the context of the metadata
+        property
+      sortorder: ''
+      specidx: '#Role'
+      datatype: URI (0..unbounded)
+      XMPid: Iptc4xmpExt:Role
+      etXMP: Role
+  CV-Term:
+    CV-Term-CV-ID:
+      name: CV-Term CV ID
+      definition: Globally unique identifier of the Controlled Vocabulary the term
+        is from.
+      sortorder: ''
+      specidx: '#CV-Term-CV-ID'
+      datatype: Text
+      propoccurrence: URI (0..1)
+      XMPid: Iptc4xmpExt:CvId
+      etXMP: CvId
+    CV-Term-ID:
+      name: CV-Term ID
+      definition: Globally unique identifier of the term from a Controlled Vocabulary.
+      sortorder: ''
+      specidx: '#CV-Term-ID'
+      datatype: Text
+      propoccurrence: URI (1)
+      XMPid: Iptc4xmpExt:CvTermId
+      etXMP: CvTermId
+    CV-Term-name:
+      name: CV-Term name
+      definition: Natural language name of the term from a Controlled Vocabulary.
+      sortorder: ''
+      specidx: '#CV-Term-name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:CvTermName
+      etXMP: CvTermName
+    Refined-'aboutness'-of-the-CV-Term:
+      name: Refined 'aboutness' of the CV-Term
+      definition: Refinement of the 'about' relationship of the term with the content.
+      sortorder: ''
+      specidx: '#Refined-''aboutness''-of-the-CV-Term'
+      datatype: Text
+      propoccurrence: URI (0..1)
+      XMPid: Iptc4xmpExt:CvTermRefinedAbout
+      etXMP: CvTermRefinedAbout
+  Device:
+    Manufacturer:
+      name: Manufacturer
+      definition: Name of the manufacturer of the device
+      sortorder: ''
+      specidx: '#Manufacturer'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:Manufacturer
+      etXMP: Manufacturer
+    Model-Name:
+      name: Model Name
+      definition: Name of the device model
+      sortorder: ''
+      specidx: '#Model-Name'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:ModelName
+      etXMP: ModelName
+    Serial-Number:
+      name: Serial Number
+      definition: Serial number, assigned by manufacturer
+      sortorder: ''
+      specidx: '#Serial-Number'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:SerialNumber
+      etXMP: SerialNumber
+    Attached-Lens-Description:
+      name: Attached Lens Description
+      definition: Short description of the lens used with the device at the time of
+        the recording
+      sortorder: ''
+      specidx: '#Attached-Lens-Description'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:AttLensDescription
+      etXMP: AttLensDescription
+    Owner´s-Device-ID:
+      name: Owner´s Device ID
+      definition: Identifier assigned by the owner of the device
+      sortorder: ''
+      specidx: '#Owner´s-Device-ID'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:OwnersDeviceId
+      etXMP: OwnersDeviceId
+  Embedded-Encoded-Rights-Expression:
+    Rights-Expression-Language-ID:
+      name: Rights Expression Language ID
+      definition: Identifier of the rights expression language used by the rights
+        expression.
+      sortorder: ''
+      specidx: '#Rights-Expression-Language-ID'
+      datatype: Text
+      propoccurrence: URI (1)
+      XMPid: Iptc4xmpExt:RightsExprLangId
+      etXMP: RightsExprLangId
+    Encoding-type:
+      name: Encoding type
+      definition: Encoding type of the rights expression, identified by an IANA Media
+        Type.
+      sortorder: ''
+      specidx: '#Encoding-type'
+      datatype: Text (1)
+      XMPid: Iptc4xmpExt:RightsExprEncType
+      etXMP: RightsExprEncType
+    Encoded-Rights-Expression:
+      name: Encoded Rights Expression
+      definition: Embedded serialized rights expression using a rights expression
+        language which is encoded as a string.
+      sortorder: ''
+      specidx: '#Encoded-Rights-Expression'
+      datatype: Text (1)
+      XMPid: Iptc4xmpExt:EncRightsExpr
+      etXMP: EncRightsExpr
+  Entity:
+    Identifier:
+      name: Identifier
+      definition: Globally unique identifier of the entity
+      sortorder: ''
+      specidx: '#Identifier'
+      datatype: Text
+      propoccurrence: URI (0..unbounded)
+      XMPid: xmp:Identifier
+      etXMP: Identifier
+    Name:
+      name: Name
+      definition: Full name of the entity
+      sortorder: ''
+      specidx: '#Name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:Name
+      etXMP: Name
+  Entity-with-role:
+    Identifier:
+      name: Identifier
+      definition: Globally unique identifier of the entity
+      sortorder: ''
+      specidx: '#Identifier'
+      datatype: Text
+      propoccurrence: URI (0..unbounded)
+      XMPid: xmp:Identifier
+      etXMP: Identifier
+    Name:
+      name: Name
+      definition: Full name of the entity
+      sortorder: ''
+      specidx: '#Name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:Name
+      etXMP: Name
+    Role:
+      name: Role
+      definition: Identifier of the role the entity has in the context of the metadata
+        property
+      sortorder: ''
+      specidx: '#Role'
+      datatype: Text (0..unbounded)
+      XMPid: Iptc4xmpExt:Role
+      etXMP: Role
+  Episode/Season:
+    Name:
+      name: Name
+      definition: Name of the episode or season of a series
+      sortorder: ''
+      specidx: '#Name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:Name
+      etXMP: Name
+    Number:
+      name: Number
+      definition: Number of the episode or season of a series
+      sortorder: ''
+      specidx: '#Number'
+      datatype: Integer (0..1)
+      XMPid: Iptc4xmpExt:Number
+      etXMP: Number
+    Identifier:
+      name: Identifier
+      definition: Identifier of the episode or season of a series
+      sortorder: ''
+      specidx: '#Identifier'
+      datatype: URI (0..1)
+      XMPid: Iptc4xmpExt:Identifier
+      etXMP: Identifier
+  Frame-Size:
+    Width:
+      name: Width
+      definition: Width of the video frame in pixels
+      sortorder: ''
+      specidx: '#Width'
+      datatype: Number (1)
+      XMPid: stDim:w
+      etXMP: W/decimal
+    Height:
+      name: Height
+      definition: Height of the video frame in pixels
+      sortorder: ''
+      specidx: '#Height'
+      datatype: Number (1)
+      XMPid: stDim:h
+      etXMP: H/decimal
+    Measure-Unit:
+      name: Measure Unit
+      definition: Units of width and height values, fixed value "pixels"
+      sortorder: ''
+      specidx: '#Measure-Unit'
+      datatype: Text(1)
+      XMPid: stDim:unit
+      etXMP: Unit
+  Linked-Encoded-Rights-Expression:
+    Rights-Expression-Language-ID:
+      name: Rights Expression Language ID
+      definition: Identifier of the rights expression language used by the rights
+        expression.
+      sortorder: ''
+      specidx: '#Rights-Expression-Language-ID'
+      datatype: Text
+      propoccurrence: URI (1)
+      XMPid: Iptc4xmpExt:RightsExprLangId
+      etXMP: RightsExprLangId
+    Encoding-type:
+      name: Encoding type
+      definition: Encoding type of the rights expression, identified by an IANA Media
+        Type.
+      sortorder: ''
+      specidx: '#Encoding-type'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:RightsExprEncType
+      etXMP: RightsExprEncType
+    Link-to-Encoded-Rights-Expression:
+      name: Link to Encoded Rights Expression
+      definition: Link to a rights expression using a rights expression language.
+      sortorder: ''
+      specidx: '#Link-to-Encoded-Rights-Expression'
+      datatype: URL (1)
+      XMPid: Iptc4xmpExt:LinkedRightsExpr
+      etXMP: LinkedRightsExpr
+  Linked-Image:
+    Image-Link:
+      name: Image Link
+      definition: Link URL locating the image resource
+      sortorder: ''
+      specidx: '#Image-Link'
+      datatype: URL (1)
+      XMPid: Iptc4xmpExt:Link
+      etXMP: Link
+    Image-Qualifier:
+      name: Image Qualifier
+      definition: Qualifier of the relationship of the image with the video
+      sortorder: ''
+      specidx: '#Image-Qualifier'
+      datatype: URI (0..unbounded)
+      XMPid: Iptc4xmpExt:LinkQualifier
+      etXMP: LinkQualifier
+    Image-Role:
+      name: Image Role
+      definition: Role of this image in the context of the video
+      sortorder: ''
+      specidx: '#Image-Role'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:ImageRole
+      etXMP: ImageRole
+    Media-Type:
+      name: Media Type
+      definition: IANA Media (MIME) Type
+      sortorder: ''
+      specidx: '#Media-Type'
+      datatype: Text (0..1)
+      XMPid: dc:format
+      etXMP: Format
+    Image-Width:
+      name: Image Width
+      definition: Width of the image, in pixels
+      sortorder: ''
+      specidx: '#Image-Width'
+      datatype: Integer (0..1)
+      XMPid: Iptc4xmpExt:WidthPixels
+      etXMP: WidthPixels
+    Image-Height:
+      name: Image Height
+      definition: Height of the image, in pixels
+      sortorder: ''
+      specidx: '#Image-Height'
+      datatype: Integer (0..1)
+      XMPid: Iptc4xmpExt:HeightPixels
+      etXMP: HeightPixels
+    Used-Video-Frame:
+      name: Used Video Frame
+      definition: 'Frame of the video used for this still image.
+
+        '
+      sortorder: ''
+      specidx: '#Used-Video-Frame'
+      datatype: Video Time structure (0..1)
+      XMPid: Iptc4xmpExt:UsedVideoFrame
+      etXMP: VideoTime
+  Location:
+    Identifier:
+      name: Identifier
+      definition: Globally unique identifier of the location
+      sortorder: ''
+      specidx: '#Identifier'
+      datatype: Text
+      propoccurrence: URI (0..unbounded)
+      XMPid: xmp:Identifier
+      etXMP: LocationId
+    Name:
+      name: Name
+      definition: Full name of the location
+      sortorder: ''
+      specidx: '#Name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:LocationName
+      etXMP: Name
+    Sublocation-name:
+      name: Sublocation name
+      definition: Name of a sub location the Location is located in
+      sortorder: ''
+      specidx: '#Sublocation-name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:Sublocation
+      etXMP: Sublocation
+    City-name:
+      name: City name
+      definition: Name of the city the Location is located in
+      sortorder: ''
+      specidx: '#City-name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:City
+      etXMP: City
+    State/Province-name:
+      name: State/Province name
+      definition: Name of the state or province the Location is located in
+      sortorder: ''
+      specidx: '#State/Province-name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:ProvinceState
+      etXMP: ProvinceState
+    Country-name:
+      name: Country name
+      definition: Name of the country the Location is located in
+      sortorder: ''
+      specidx: '#Country-name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:CountryName
+      etXMP: CountryName
+    Country-ISO-code:
+      name: Country ISO code
+      definition: ISO code of the country the Location is located in
+      sortorder: ''
+      specidx: '#Country-ISO-code'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:CountryCode
+      etXMP: CountryCode
+    World-region-name:
+      name: World region name
+      definition: Name of the world region the Location is located in
+      sortorder: ''
+      specidx: '#World-region-name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:WorldRegion
+      etXMP: WorldRegion
+    GPS-Longitude:
+      name: GPS-Longitude
+      definition: Longitude of a WGS84 based position of this Location
+      sortorder: ''
+      specidx: '#GPS-Longitude'
+      datatype: Number
+      propoccurrence: decimal (0..1)
+      XMPid: exif:GPSLongitude
+      etXMP: NA
+    GPS-Latitude:
+      name: GPS-Latitude
+      definition: Latitude of a WGS84 based position of this Location
+      sortorder: ''
+      specidx: '#GPS-Latitude'
+      datatype: Number
+      propoccurrence: decimal (0..1)
+      XMPid: exif:GPSLatitude
+      etXMP: NA
+    GPS-Altitude:
+      name: GPS-Altitude
+      definition: Altitude in meters of a WGS84 based position of this Location
+      sortorder: ''
+      specidx: '#GPS-Altitude'
+      datatype: Number
+      propoccurrence: decimal (0..1)
+      XMPid: exif:GPSAltitude
+      etXMP: NA
+  Person-Details:
+    Identifier:
+      name: Identifier
+      definition: Globally unique identifier of the person
+      sortorder: ''
+      specidx: '#Identifier'
+      datatype: Text
+      propoccurrence: URI (0..unbounded)
+      XMPid: Iptc4xmpExt:PersonId
+      etXMP: PersonId
+    Name:
+      name: Name
+      definition: Name of the person
+      sortorder: ''
+      specidx: '#Name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:PersonName
+      etXMP: PersonName
+    Description:
+      name: Description
+      definition: A textual description of the person
+      sortorder: ''
+      specidx: '#Description'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:PersonDescription
+      etXMP: PersonDescription
+    Characteristics:
+      name: Characteristics
+      definition: A property or trait of the person
+      sortorder: ''
+      specidx: '#Characteristics'
+      datatype: Concept structure (0..unbounded)
+      XMPid: Iptc4xmpExt:PersonCharacteristic
+      etXMP: PersonCharacteristic/CVTermDetails/array
+  Product-with-GTIN:
+    GTIN:
+      name: GTIN
+      definition: A 14 digit GTIN (Global Trade Item Number) of the product (GTIN-8
+        to GTIN-14 codes are used).
+      sortorder: ''
+      specidx: '#GTIN'
+      datatype: Text (1)
+      XMPid: Iptc4xmpExt:ProductGTIN
+      etXMP: ProductGTIN
+    Name:
+      name: Name
+      definition: Name of the product.
+      sortorder: ''
+      specidx: '#Name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:ProductName
+      etXMP: ProductName
+    Description:
+      name: Description
+      definition: A textual description of the product.
+      sortorder: ''
+      specidx: '#Description'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:ProductDescription
+      etXMP: ProductDescription
+  Publication-Event:
+    Publication-Date:
+      name: Publication Date
+      definition: Date and optionally the time of publishing the video
+      sortorder: ''
+      specidx: '#Publication-Date'
+      datatype: Date (1)
+      XMPid: Iptc4xmpExt:Date
+      etXMP: Date/date-time
+    Publication-Event-Name:
+      name: Publication Event Name
+      definition: Name of the event for publishing this video.
+      sortorder: ''
+      specidx: '#Publication-Event-Name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:Name
+      etXMP: Name
+    Publication-Event-Identifier:
+      name: Publication Event Identifier
+      definition: Identifier of the event for publishing this video
+      sortorder: ''
+      specidx: '#Publication-Event-Identifier'
+      datatype: URI (0..1)
+      XMPid: Iptc4xmpExt:Identifier
+      etXMP: Identifier
+  Qualified-Link:
+    Link:
+      name: Link
+      definition: URL of  the link
+      sortorder: ''
+      specidx: '#Link'
+      datatype: URL (1)
+      XMPid: Iptc4xmpExt:Link
+      etXMP: Link
+    Qualifier:
+      name: Qualifier
+      definition: Term qualifying the use of the link
+      sortorder: ''
+      specidx: '#Qualifier'
+      datatype: URI (0..1)
+      XMPid: Iptc4xmpExt:LinkQualifier
+      etXMP: LinkQualifier
+  Qualified-Link-with-Language:
+    Link:
+      name: Link
+      definition: URL of  the link
+      sortorder: ''
+      specidx: '#Link'
+      datatype: URL (1)
+      XMPid: Iptc4xmpExt:Link
+      etXMP: Link
+    Qualifier:
+      name: Qualifier
+      definition: Term qualifying the use of the link
+      sortorder: ''
+      specidx: '#Qualifier'
+      datatype: URI (0..1)
+      XMPid: Iptc4xmpExt:LinkQualifier
+      etXMP: LinkQualifier
+    Language:
+      name: Language
+      definition: Language of the content at the link location
+      sortorder: ''
+      specidx: '#Language'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:LinkLanguage
+      etXMP: LinkLanguage
+  Rating:
+    Rating-Value:
+      name: Rating Value
+      definition: Rating value as issued by the rating source
+      sortorder: ''
+      specidx: '#Rating-Value'
+      datatype: Text (1)
+      XMPid: Iptc4xmpExt:RatingValue
+      etXMP: RatingValue
+    Rating-Source-Link:
+      name: Rating Source Link
+      definition: Link to the site and optionally the page of the party which has
+        issued the rating value, linked resource should explain the rating rules.
+      sortorder: ''
+      specidx: '#Rating-Source-Link'
+      datatype: URL (1)
+      XMPid: Iptc4xmpExt:RatingSourceLink
+      etXMP: RatingSourceLink
+    Rating-Scale-Min-Value:
+      name: Rating Scale Min Value
+      definition: The value of the rating scale used for the lowest/worst rating
+      sortorder: ''
+      specidx: '#Rating-Scale-Min-Value'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:RatingScaleMinValue
+      etXMP: RatingScaleMinValue
+    Rating-Scale-Max-Value:
+      name: Rating Scale Max Value
+      definition: The value of the rating scale used for the highest/best rating
+      sortorder: ''
+      specidx: '#Rating-Scale-Max-Value'
+      datatype: Text (0..1)
+      XMPid: Iptc4xmpExt:RatingScaleMaxValue
+      etXMP: RatingScaleMaxValue
+    Rating-Value-Logo:
+      name: Rating Value Logo
+      definition: Visualisation of the rating value referenced by a link
+      sortorder: ''
+      specidx: '#Rating-Value-Logo'
+      datatype: URL (0..1)
+      XMPid: Iptc4xmpExt:RatingValueLogoLink
+      etXMP: RatingValueLogoLink
+    Rating-Region:
+      name: Rating Region
+      definition: Geopolitical region to which this rating applies.
+      sortorder: ''
+      specidx: '#Rating-Region'
+      datatype: Location Entity structure (0..unbounded)
+      XMPid: Iptc4xmpExt:RatingRegion
+      etXMP: RatingRegion/LocationDetails/array
+  Registry-Entry:
+    Asset-Identifier:
+      name: Asset Identifier
+      definition: Unique identifier of the video as issued by a registry
+      sortorder: ''
+      specidx: '#Asset-Identifier'
+      datatype: 'Text (preferred: URI) (1)'
+      XMPid: Iptc4xmpExt:RegItemId
+      etXMP: RegItemId
+    Registry-Identifier:
+      name: Registry Identifier
+      definition: An identifier for the registry which issued the identifier of the
+        video.
+      sortorder: ''
+      specidx: '#Registry-Identifier'
+      datatype: 'Text (preferred: URI) (1)'
+      XMPid: Iptc4xmpExt:RegOrgId
+      etXMP: RegOrgId
+    Role:
+      name: Role
+      definition: An identifier of the reason and/or purpose for this Registry Entry.
+      sortorder: ''
+      specidx: '#Role'
+      datatype: Text
+      propoccurrence: URI (0..1)
+      XMPid: Iptc4xmpExt:RegEntryRole
+      etXMP: RegEntryRole
+  Series:
+    Series-name:
+      name: Series name
+      definition: Name of the series
+      sortorder: ''
+      specidx: '#Series-name'
+      datatype: Text + language tag (0..1)
+      XMPid: Iptc4xmpExt:Name
+      etXMP: Name
+    Series-identifier:
+      name: Series identifier
+      definition: Identifier for the series
+      sortorder: ''
+      specidx: '#Series-identifier'
+      datatype: URI (0..1)
+      XMPid: Iptc4xmpExt:Identifier
+      etXMP: Identifier
+  Temporal-Coverage:
+    From-Date:
+      name: From Date
+      definition: Optionally truncated date when the temporal coverage starts
+      sortorder: ''
+      specidx: '#From-Date'
+      datatype: Date(1)
+      XMPid: Iptc4xmpExt:tempCoverageFrom
+      etXMP: TempCoverageFrom/date-time
+    To-Date:
+      name: To Date
+      definition: Optionally truncated date when the temporal coverage ends
+      sortorder: ''
+      specidx: '#To-Date'
+      datatype: Date(1)
+      XMPid: Iptc4xmpExt:tempCoverageTo
+      etXMP: TempCoverageTo/date-time
+  Text-with-Region-Delimiter:
+    Text:
+      name: Text
+      definition: Text or textual data
+      sortorder: ''
+      specidx: '#Text'
+      datatype: Text (1)
+      XMPid: Iptc4xmpExt:RegionText
+      etXMP: RegionText
+    Measure-Type:
+      name: Measure Type
+      definition: How the measures of the rectangle are expressed
+      sortorder: ''
+      specidx: '#Measure-Type'
+      datatype: 'Text (0..1) - enumeration
+
+        - absolutePixels
+
+        - ratio'
+      XMPid: Iptc4xmpExt:Region/stArea:unit
+      etXMP: Unit
+    Rectangle-upper-left-X:
+      name: Rectangle, upper left X
+      definition: Horizontal axis value of the upper left corner of the rectange
+      sortorder: ''
+      specidx: '#Rectangle-upper-left-X'
+      datatype: Decimal (0..1)
+      XMPid: Iptc4xmpExt:Region/stArea:x
+      etXMP: X
+    Rectangle-upper-left-Y:
+      name: Rectangle, upper left Y
+      definition: Vertical axis value of the upper left corner of the rectange
+      sortorder: ''
+      specidx: '#Rectangle-upper-left-Y'
+      datatype: Decimal (0..1)
+      XMPid: Iptc4xmpExt:Region/stArea:y
+      etXMP: Y
+    Rectangle-horizontal-size:
+      name: Rectangle, horizontal size
+      definition: Horizontal width of the rectangle
+      sortorder: ''
+      specidx: '#Rectangle-horizontal-size'
+      datatype: Decimal (0..1)
+      XMPid: Iptc4xmpExt:Region/stArea:w
+      etXMP: W
+    Rectangle-vertical-size:
+      name: Rectangle, vertical size
+      definition: Vertical height of the rectangle
+      sortorder: ''
+      specidx: '#Rectangle-vertical-size'
+      datatype: Decimal (0..1)
+      XMPid: Iptc4xmpExt:Region/stArea:h
+      etXMP: H
+  Video-Time:
+    Time-Format:
+      name: Time Format
+      definition: Identifier of the time format. For time code formats following SMPTE
+        specifications.
+      sortorder: ''
+      specidx: '#Time-Format'
+      datatype: 'Text value from CV (1)
+
+        Enumeration:
+
+        - normalPlayTime
+
+        - smpteTC24
+
+        - smpteTC25
+
+        - smpteTC2997
+
+        - smpteTC2997drop
+
+        - smpteTC30
+
+        - smpteTC50
+
+        - smpteTC5994
+
+        - smpteTC5994drop
+
+        - smpteTC60
+
+        - smpteTC23976'
+      XMPid: xmpDM:timeFormat
+      etXMP: TimeFormat#
+    Time-Value:
+      name: Time Value
+      definition: Formated string including hours, minutes, seconds, fractions of
+        seconds or frames, depending on the Time Format
+      sortorder: ''
+      specidx: '#Time-Value'
+      datatype: Text (1)
+      XMPid: xmpDM:timeValue
+      etXMP: TimeValue
+  PLUS-basic-entity-structure:
+    Identifier:
+      name: Identifier
+      definition: Globally unique identifier of the entity
+      sortorder: ''
+      specidx: '#Identifier'
+      datatype: Text (0..1)
+      etXMP: ID
+    Name:
+      name: Name
+      definition: Full name of the entity
+      sortorder: ''
+      specidx: '#Name'
+      datatype: Text (0..1)
+      etXMP: Name
+  Artwork-or-Object-in-the-Image:
+    Circa-Date-Created:
+      name: Circa Date Created
+      definition: Approximate date or range of dates associated with the creation
+        and production of an artwork or object or its components.
+      sortorder: ''
+      specidx: '#Circa-Date-Created'
+      datatype: Text (0..1)
+      etXMP: AOCircaDateCreated
+    Content-Description:
+      name: Content Description
+      definition: A textual description of the content depicted in the artwork or
+        object.
+      sortorder: ''
+      specidx: '#Content-Description'
+      datatype: Text (0..1)
+      etXMP: AOContentDescription
+    Contribution-Description:
+      name: Contribution Description
+      definition: A textual description about a contribution made to an artwork or
+        an object.
+      sortorder: ''
+      specidx: '#Contribution-Description'
+      datatype: Text (0..1)
+      etXMP: AOContributionDescription
+    Copyright-Notice:
+      name: Copyright Notice
+      definition: Contains any necessary copyright notice for claiming the intellectual
+        property for artwork or an object in the image and should identify the current
+        owner of the copyright of this  work with associated intellectual property
+        rights.
+      sortorder: ''
+      specidx: '#Copyright-Notice'
+      datatype: Text (0..1)
+      etXMP: AOCopyrightNotice
+    Creator:
+      name: Creator
+      definition: Contains the name of the artist who has created artwork or an object
+        in the  image. In cases where the artist could or should not be identified
+        the name of a company or organisation may be appropriate.
+      sortorder: ''
+      specidx: '#Creator'
+      datatype: Text (0..unbounded)
+      etXMP: AOCreator//array
+    Creator-ID:
+      name: Creator ID
+      definition: Globally unique identifier for the creator of artwork or object.
+      sortorder: ''
+      specidx: '#Creator-ID'
+      datatype: URL (0..unbounded)
+      etXMP: AOCreatorId//array
+    Current-Copyright-Owner-ID:
+      name: Current Copyright Owner ID
+      definition: Globally unique identifier for the current owner of the copyright
+        of the artwork or object.
+      sortorder: ''
+      specidx: '#Current-Copyright-Owner-ID'
+      datatype: URI (0..1)
+      etXMP: AOCurrentCopyrightOwnerId
+    Current-Copyright-Owner-Name:
+      name: Current Copyright Owner Name
+      definition: Name of the current owner of the copyright of the artwork or object.
+      sortorder: ''
+      specidx: '#Current-Copyright-Owner-Name'
+      datatype: Text (0..1)
+      etXMP: AOCurrentCopyrightOwnerName
+    Current-Licensor-ID:
+      name: Current Licensor ID
+      definition: Globally unique identifier for the current licensor of the artwork
+        or object.
+      sortorder: ''
+      specidx: '#Current-Licensor-ID'
+      datatype: URI (0..1)
+      etXMP: AOCurrentLicensorId
+    Current-Licensor-Name:
+      name: Current Licensor Name
+      definition: Name of the current licensor of the artwork or object.
+      sortorder: ''
+      specidx: '#Current-Licensor-Name'
+      datatype: Text (0..1)
+      etXMP: AOCurrentLicensorName
+    Date-Created:
+      name: Date Created
+      definition: Designates the date and optionally the time the artwork or object
+        in the image was created. This relates to artwork or objects with associated
+        intellectual property rights.
+      sortorder: ''
+      specidx: '#Date-Created'
+      datatype: 'DateTime (preferred: truncated DateTime)  (0..1)'
+      etXMP: AODateCreated/date-time/
+    Physical-Description:
+      name: Physical Description
+      definition: A textual description of the physical characteristics of the artwork
+        or object, without reference to the content depicted.
+      sortorder: ''
+      specidx: '#Physical-Description'
+      datatype: Text (0..1)
+      etXMP: AOPhysicalDescription
+    Source:
+      name: Source
+      definition: The organisation or body holding and registering the artwork or
+        object in the image for inventory purposes.
+      sortorder: ''
+      specidx: '#Source'
+      datatype: Text (0..1)
+      etXMP: AOSource
+    Source-Inventory-Number:
+      name: Source Inventory Number
+      definition: The inventory number issued by the organisation or body holding
+        and registering the artwork or object in the image.
+      sortorder: ''
+      specidx: '#Source-Inventory-Number'
+      datatype: Text (0..1)
+      etXMP: AOSourceInvNo
+    Source-Inventory-URL:
+      name: Source Inventory URL
+      definition: URL reference to the metadata record of the inventory maintained
+        by the Source.
+      sortorder: ''
+      specidx: '#Source-Inventory-URL'
+      datatype: URL (0..1)
+      etXMP: AOSourceInvURL
+    Style-Period:
+      name: Style Period
+      definition: The style, historical or artistic period, movement, group, or school
+        whose characteristics are represented in the artwork or object.
+      sortorder: ''
+      specidx: '#Style-Period'
+      datatype: Text (0..unbounded)
+      etXMP: AOStylePeriod//array
