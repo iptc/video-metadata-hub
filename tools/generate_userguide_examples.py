@@ -85,7 +85,7 @@ def generate_userguide_examples(version=None, output_dir=None):
     # Determine output directory
     if output_dir is None:
         base_dir = os.path.dirname(os.path.dirname(__file__))
-        output_dir = os.path.join(base_dir, 'video-metadata-guidelines', '_includes')
+        output_dir = os.path.join(base_dir, 'user-guide', '_includes')
     
     os.makedirs(output_dir, exist_ok=True)
     
@@ -132,7 +132,7 @@ def main():
     )
     parser.add_argument(
         '--output-dir',
-        help='Output directory (default: ../video-metadata-guidelines/_includes/)'
+        help='Output directory (default: ../user-guide/_includes/)'
     )
     
     args = parser.parse_args()

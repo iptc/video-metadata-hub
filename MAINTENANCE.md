@@ -56,11 +56,11 @@ This generates both **specification** and **user guide** artifacts:
 - All mapping pages (XMP, JSON, ExifTool, etc.)
 - Example videos with metadata
 
-**User guide artifacts** (`video-metadata-guidelines/_includes/` directory):
+**User guide artifacts** (`user-guide/_includes/` directory):
 - `properties.adoc` - Properties documentation
 - `structures.adoc` - Property structures documentation
 - 6 example files for different use cases
-- Final HTML user guide (`video-metadata-guidelines/index.html`)
+- Final HTML user guide (`user-guide/index.html`)
 
 You can also generate artifacts separately:
 ```bash

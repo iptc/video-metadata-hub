@@ -45,4 +45,4 @@ The `examples` folder provides small video files with embedded IPTC Video Metada
   - `build_userguide.sh` - Generate user guide artifacts only
 - **Output**: 
   - `specification/` - Generated specification artifacts
-  - `video-metadata-guidelines/` - User guide (AsciiDoc and HTML)
+  - `user-guide/` - User guide (AsciiDoc and HTML)

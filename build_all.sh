@@ -55,7 +55,8 @@ echo "========================================="
 echo ""
 echo "Generated artifacts:"
 echo "  - Specification: specification/"
-echo "  - User Guide: video-metadata-guidelines/index.html"
+echo "  - User Guide: user-guide/index.html"
 echo ""
+
 
 

@@ -96,7 +96,7 @@ echo ""
 
 # Generate HTML from AsciiDoc
 echo "Generating HTML from AsciiDoc..."
-cd "$SCRIPT_DIR/video-metadata-guidelines"
+cd "$SCRIPT_DIR/user-guide"
 if [ -f "asciidoctor-to-html.sh" ]; then
     ./asciidoctor-to-html.sh
     if [ $? -eq 0 ]; then

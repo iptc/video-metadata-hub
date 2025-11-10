@@ -52,9 +52,9 @@ def generate_userguide_properties(version=None, output_file=None):
     
     # Write output
     if output_file is None:
-        # Default to video-metadata-guidelines/_includes/properties.adoc
+        # Default to user-guide/_includes/properties.adoc
         base_dir = os.path.dirname(os.path.dirname(__file__))
-        output_file = os.path.join(base_dir, 'video-metadata-guidelines', '_includes', 'properties.adoc')
+        output_file = os.path.join(base_dir, 'user-guide', '_includes', 'properties.adoc')
     
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
@@ -75,7 +75,7 @@ def main():
     )
     parser.add_argument(
         '--output',
-        help='Output file path (default: ../video-metadata-guidelines/_includes/properties.adoc)'
+        help='Output file path (default: ../user-guide/_includes/properties.adoc)'
     )
     
     args = parser.parse_args()
