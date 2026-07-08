@@ -381,47 +381,47 @@ def build_examples_table(values: List[List], version_config: Dict, example_colum
         List of category dicts with example properties
     """
     cols = version_config['column_indices']
-    category_id = ''
-    exampleprops = []
-    property_category = {}
+    # Accumulate by category id so the output has one block per category,
+    # even if the sheet's rows interleave categories (which the Use Case
+    # Examples tab does).
+    categories_by_id: Dict[str, Dict] = {}
+    category_order: List[str] = []
 
     for row in values:
         if len(row) <= cols['property_name']:
             continue
 
-        # Check for new category
-        if row[cols['category']] != category_id:
-            category_id = row[cols['category']]
-            if property_category:
-                exampleprops.append(property_category)
-            property_category = {
-                'id': category_id,
-                'name': CATEGORY_MAPPING.get(category_id, category_id),
-                'properties': []
-            }
+        category_id = row[cols['category']] if len(row) > cols['category'] else ''
+        # Skip rows with a blank category cell - they would otherwise
+        # produce an empty '==== ' heading in the AsciiDoc output which
+        # asciidoctor mis-parses as an example-block delimiter.
+        if not category_id:
+            continue
 
         # Get example value
         example_data = row[example_column] if len(row) > example_column else ''
         if not example_data:
             continue  # Skip properties with no example
 
+        if category_id not in categories_by_id:
+            categories_by_id[category_id] = {
+                'id': category_id,
+                'name': CATEGORY_MAPPING.get(category_id, category_id),
+                'properties': [],
+            }
+            category_order.append(category_id)
+
         prop_data = {
             'anchor': linkid + 'example' + text_to_anchor(row[cols['property_name']]),
             'name': row[cols['property_name']],
-            'example_value': example_data
+            'example_value': example_data,
         }
-
-        # Add notes if present
         if len(row) > notes_column and row[notes_column]:
             prop_data['notes'] = row[notes_column]
 
-        property_category['properties'].append(prop_data)
+        categories_by_id[category_id]['properties'].append(prop_data)
 
-    # Add last category
-    if category_id and property_category:
-        exampleprops.append(property_category)
-
-    return exampleprops
+    return [categories_by_id[cid] for cid in category_order]
 
 
 if __name__ == '__main__':

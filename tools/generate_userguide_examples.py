@@ -12,47 +12,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from lib.version_loader import get_version_config, list_available_versions
 from lib.credentials import get_credentials
 from lib.vmhub_data import load_examples_data, build_examples_table
-
-
-# Example use cases with their column configurations
-EXAMPLE_USE_CASES = [
-    {
-        'name': 'enterprise-advertising-production',
-        'range': 'Examples!A3:M99',
-        'example_column': 11,
-        'notes_column': 12
-    },
-    {
-        'name': 'glam',
-        'range': 'Examples!A3:P99',
-        'example_column': 14,
-        'notes_column': 15
-    },
-    {
-        'name': 'stock',
-        'range': 'Examples!A3:S99',
-        'example_column': 17,
-        'notes_column': 18
-    },
-    {
-        'name': 'long-form-production',
-        'range': 'Examples!A3:V99',
-        'example_column': 20,
-        'notes_column': 21
-    },
-    {
-        'name': 'broadcast-media-management',
-        'range': 'Examples!A3:Y99',
-        'example_column': 23,
-        'notes_column': 24
-    },
-    {
-        'name': 'news-agency',
-        'range': 'Examples!A3:AB99',
-        'example_column': 26,
-        'notes_column': 27
-    }
-]
+from lib.use_cases import load_use_cases, get_examples_base_url
 
 
 def generate_userguide_examples(version=None, output_dir=None):
@@ -90,35 +50,53 @@ def generate_userguide_examples(version=None, output_dir=None):
     os.makedirs(output_dir, exist_ok=True)
     
     generated_files = []
-    
+
+    base_url = get_examples_base_url()
+    version_clean = version.replace('.', '')
+
     # Generate each use case example file
-    for use_case in EXAMPLE_USE_CASES:
+    for use_case in load_use_cases():
         print(f"\nGenerating {use_case['name']} example...")
-        
+
         # Load examples data for this use case
         values = load_examples_data(version_config, credentials, use_case['range'])
-        
+
         # Build examples table
         linkid = f"{use_case['name']}-example"
         exampleprops = build_examples_table(
-            values, 
+            values,
             version_config,
             use_case['example_column'],
             use_case['notes_column'],
             linkid
         )
-        
-        # Render template
-        output = template.render(exampleprops=exampleprops)
-        
+
+        # Download link for the published example file. Filename mirrors
+        # the convention used by generate_example_videos.py:
+        #   IPTC-VMHub-RefVideo-Rec<ver_clean>-<use_case>.<ext>
+        source_ext = os.path.splitext(use_case['source_file'])[1] or '.mp4'
+        download_filename = (
+            f"IPTC-VMHub-RefVideo-Rec{version_clean}-{use_case['name']}{source_ext}"
+        )
+        download_url = base_url + download_filename
+
+        # Render template (now self-contained: heading, credit, thumbnail,
+        # download link, then the property table)
+        output = template.render(
+            use_case=use_case,
+            exampleprops=exampleprops,
+            download_url=download_url,
+            download_filename=download_filename,
+        )
+
         # Write output
         output_file = os.path.join(output_dir, f"{use_case['name']}-example.adoc")
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(output)
-        
+
         print(f"✓ Generated: {output_file}")
         generated_files.append(output_file)
-    
+
     return generated_files
 
 

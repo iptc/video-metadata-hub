@@ -1,3 +1,9 @@
+=== News Agency example
+
+image:na_example.jpg[Thumbnail for News Agency example footage]
+
+Download the example file with embedded metadata: https://iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec17-news-agency.mp4[IPTC-VMHub-RefVideo-Rec17-news-agency.mp4]
+
 
 ==== Administrative fields
 [%autowidth,options="header"]
@@ -71,7 +77,7 @@ a|A President Issues NASA's First Historic Challenge
 a|president,kennedy,NASA,Moon,Space,Space Race,Congress
 
 
-|[[news-agency-exampleexampleLanguage-Version]]Language Version
+|[[news-agency-exampleexampleLanguage]]Language
 a|EN
 
 
@@ -110,8 +116,8 @@ a|1961
 a|NASA
 
 
-|[[news-agency-exampleexampleCopyright-Owner]]Copyright Owner
-a|NASA; public domain
+|[[news-agency-exampleexampleCopyright-Owner-]]Copyright Owner 
+a|NASA
 
 
 |===
@@ -146,7 +152,7 @@ a|44100
 
 
 |[[news-agency-exampleexampleDisplay-Aspect-Ratio]]Display Aspect Ratio
-a|16:9
+a|1.777777778
 
 
 |[[news-agency-exampleexampleEditorial-Duration]]Editorial Duration
@@ -162,7 +168,7 @@ a|MP4
 
 
 |[[news-agency-exampleexampleFrame-Size]]Frame Size
-a|640x360
+a|W=640; H=360; Unit=pixel
 
 
 |[[news-agency-exampleexampleMedia-Type]]Media Type
@@ -170,26 +176,7 @@ a|video/mp4
 
 
 |[[news-agency-exampleexampleSignal-Aspect-Ratio]]Signal Aspect Ratio
-a|16:9
-
-
-|[[news-agency-exampleexampleStream-ready]]Stream-ready
-a|TRUE
-
-
-|[[news-agency-exampleexampleVideo-Coding]]Video Coding
-a|H.264
-
-
-|[[news-agency-exampleexampleVideo-Frame-Rate]]Video Frame Rate
-a|29.97
-
-
-|[[news-agency-exampleexampleVideo-Streams-Count]]Video Streams Count
 a|1
 
 
 |===
-
-
-

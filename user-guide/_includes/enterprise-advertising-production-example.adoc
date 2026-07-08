@@ -1,3 +1,11 @@
+=== Enterprise Advertising Production example
+
+Thanks to Allison Sullivan of MGM Resorts for providing the example footage.
+
+image:eap_example.jpg[Thumbnail for Enterprise Advertising Production example footage]
+
+Download the example file with embedded metadata: https://iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec17-enterprise-advertising-production.mp4[IPTC-VMHub-RefVideo-Rec17-enterprise-advertising-production.mp4]
+
 
 ==== Administrative fields
 [%autowidth,options="header"]
@@ -56,7 +64,7 @@ a|Bellagio, Las Vegas
 
 
 |[[enterprise-advertising-production-exampleexampleObject-Shown]]Object Shown
-a|Fountains of Bellagio
+a|AOTitle=Fountains of Bellagio
 
 
 |[[enterprise-advertising-production-exampleexampleShown-Event]]Shown Event
@@ -103,13 +111,10 @@ a|MGM Resorts International Operations Inc.
 
 
 |[[enterprise-advertising-production-exampleexampleLinked-Encoded-Rights-Expression]]Linked Encoded Rights Expression
-a|https://creativecommons.org/licenses/by-nc-nd/4.0/
+a|LinkedRightsExpr=https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 
-_Alison to confirm internally whether CC-BY-NC-ND is appropriate_
-
-
-|[[enterprise-advertising-production-exampleexampleCopyright-Owner]]Copyright Owner
+|[[enterprise-advertising-production-exampleexampleCopyright-Owner-]]Copyright Owner 
 a|MGM Resorts International Operations Inc.
 
 
@@ -156,7 +161,7 @@ _48kHz (Q for schema: should we have Hz with big numbers? or strings with any co
 
 
 |[[enterprise-advertising-production-exampleexampleDisplay-Aspect-Ratio]]Display Aspect Ratio
-a|16:9
+a|1.777777778
 
 
 |[[enterprise-advertising-production-exampleexampleEditorial-Duration]]Editorial Duration
@@ -172,7 +177,7 @@ a|MP4
 
 
 |[[enterprise-advertising-production-exampleexampleFrame-Size]]Frame Size
-a|1920x1080
+a|W=1920; H=1080; Unit=pixel
 
 
 |[[enterprise-advertising-production-exampleexampleMedia-Type]]Media Type
@@ -180,34 +185,11 @@ a|video/mp4
 
 
 |[[enterprise-advertising-production-exampleexampleSignal-Aspect-Ratio]]Signal Aspect Ratio
-a|16:9
+a|1
 
 
 |[[enterprise-advertising-production-exampleexampleSignal-Format]]Signal Format
 a|ITU-R BT.709
 
 
-|[[enterprise-advertising-production-exampleexampleStream-ready]]Stream-ready
-a|TRUE
-
-
-|[[enterprise-advertising-production-exampleexampleVideo-Bitrate]]Video Bitrate
-a|10000000
-
-
-|[[enterprise-advertising-production-exampleexampleVideo-Coding]]Video Coding
-a|H.264
-
-
-|[[enterprise-advertising-production-exampleexampleVideo-Frame-Rate]]Video Frame Rate
-a|29.97
-
-
-|[[enterprise-advertising-production-exampleexampleVideo-Streams-Count]]Video Streams Count
-a|1
-
-
 |===
-
-
-

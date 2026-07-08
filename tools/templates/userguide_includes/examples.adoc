@@ -1,3 +1,11 @@
+=== {{ use_case.display_name }} example
+{% if use_case.credit %}
+{{ use_case.credit }}
+{% endif %}
+image:{{ use_case.thumbnail }}[Thumbnail for {{ use_case.display_name }} example footage]
+
+Download the example file with embedded metadata: {{ download_url }}[{{ download_filename }}]
+
 {% for category in exampleprops %}
 ==== {{ category.name }}
 [%autowidth,options="header"]
@@ -13,6 +21,3 @@ _{{ property.notes }}_
 {% endfor %}
 |===
 {% endfor %}
-
-
-

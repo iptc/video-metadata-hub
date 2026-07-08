@@ -1,0 +1,100 @@
+[
+  {
+    "XMP-photoshop:DateCreated": "2020-04-28",
+    "XMP-xmp:ModifyDate": "2021-01-21",
+    "XMP-xmpDM:ReleaseDate": "2020-12-10",
+    "XMP-iptcExt:MetadataAuthority": {
+      "Name": "MGM Resorts International Operations Inc."
+    },
+    "XMP-iptcExt:StorylineIdentifier": [
+      "Las Vegas Properties",
+      "Bellagio"
+    ],
+    "XMP-iptcExt:ParentID": "5588593",
+    "XMP-dc:Identifier": "106271516",
+    "XMP-xmpMM:VersionID": "v.2",
+    "XMP-dc:Subject": [
+      "Video; Fountains of Bellagio; Attractions; Entertainment & Attractions; Fountains; Drone; Drone Footage; Night; Exterior; Aerial; Architecture; Drone Footage - Night; Aerial View; Aircraft Point of View; Building - Exterior"
+    ],
+    "XMP-iptcExt:LocationCreated": [
+      {
+        "LocationName": "Bellagio, Las Vegas"
+      }
+    ],
+    "XMP-iptcExt:LocationShown": [
+      {
+        "LocationName": "Bellagio, Las Vegas"
+      }
+    ],
+    "XMP-iptcExt:ArtworkOrObject": [
+      {
+        "AOTitle": "Fountains of Bellagio"
+      }
+    ],
+    "XMP-iptcExt:ShownEvent": [
+      {
+        "Name": "Aerial, exterior, night"
+      }
+    ],
+    "XMP-dc:Title": "BEL106271516",
+    "XMP-iptcExt:VisualColor#": "Color",
+    "XMP-iptcExt:Contributor": [
+      {
+        "Name": "Mark Ott"
+      }
+    ],
+    "XMP-dc:Rights": "MGM Resorts International Operations Inc.",
+    "XMP-iptcExt:CopyrightYear": "2020",
+    "XMP-iptcExt:Creator": [
+      {
+        "Name": "Mark Ott"
+      }
+    ],
+    "XMP-photoshop:Credit": [
+      "Mark Ott",
+      "808 Post"
+    ],
+    "XMP-plus:Licensor": [
+      {
+        "LicensorName": "MGM Resorts International Operations Inc."
+      }
+    ],
+    "XMP-iptcExt:LinkedEncRightsExpr": [
+      {
+        "LinkedRightsExpr": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      }
+    ],
+    "XMP-plus:CopyrightOwner": [
+      {
+        "CopyrightOwnerName": "MGM Resorts International Operations Inc."
+      }
+    ],
+    "XMP-plus:ImageSupplier": {
+      "ImageSupplierName": "808 Post"
+    },
+    "XMP-iptcExt:SupplyChainSource": [
+      {
+        "Name": "Mark Ott"
+      }
+    ],
+    "XMP-iptcExt:AudioBitrate": "317000",
+    "XMP-iptcExt:AudioBitsPerSample": "32",
+    "XMP-xmpDM:AudioChannelType#": "Stereo",
+    "XMP-iptcExt:AudioChannelCount": "2",
+    "XMP-xmpDM:AudioCompressor": "AAC",
+    "XMP-xmpDM:AudioSampleRate": "48000",
+    "XMP-iptcExt:VideoDisplayAspectRatio": "1.777777778",
+    "XMP-xmpDM:FileDataRate": "10300000",
+    "XMP-iptcExt:ContainerFormat": {
+      "Name": "MP4"
+    },
+    "XMP-xmpDM:VideoFrameSize": {
+      "W": "1920",
+      "H": "1080",
+      "Unit": "pixel"
+    },
+    "XMP-dc:Format": "video/mp4",
+    "XMP-xmpDM:VideoPixelAspectRatio": "1",
+    "XMP-xmpDM:VideoFieldOrder#": "ITU-R BT.709"
+  }
+]

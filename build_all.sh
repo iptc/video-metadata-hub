@@ -6,7 +6,7 @@
 # Usage: ./build_all.sh [version]
 #   version: Optional VMHub version (e.g., 1.7). Uses default if not specified.
 #
-# Generates both specification and user guide artifacts
+# Generates specification, example media, and user guide artifacts
 
 set -e  # Exit on error
 
@@ -40,6 +40,15 @@ if [ $? -ne 0 ]; then
 fi
 echo ""
 
+# Build example media files
+echo -e "${BLUE}==== Building Example Media Files ====${NC}"
+./build_examples.sh $VERSION
+if [ $? -ne 0 ]; then
+    echo -e "${RED}✗ Example media build failed${NC}"
+    exit 1
+fi
+echo ""
+
 # Build user guide artifacts
 echo -e "${BLUE}==== Building User Guide Artifacts ====${NC}"
 ./build_userguide.sh $VERSION
@@ -55,8 +64,11 @@ echo "========================================="
 echo ""
 echo "Generated artifacts:"
 echo "  - Specification: specification/"
+echo "  - Example media: examples/"
 echo "  - User Guide: user-guide/index.html"
 echo ""
+
+
 
 
 

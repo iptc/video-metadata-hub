@@ -1,10 +1,10 @@
-{% for structure in structures %}[[{{ structure.anchor }}]]
+{% for structure in structures %}[[struct_{{ structure.anchor }}]]
 === {{ structure.name }}
 {% if structure.used_in %}
 Used in: {{ structure.used_in | join(', ') }}
 {% endif %}
 {% for property in structure.properties %}
-[[{{ property.anchor }}]]
+[[{{ structure.anchor }}_{{ property.anchor }}]]
 ==== {{ property.name }}
 [width=95%]
 [cols="25h,75"]
@@ -19,6 +19,8 @@ Used in: {{ structure.used_in | join(', ') }}
 |===
 {% endfor %}
 {% endfor %}
+
+
 
 
 

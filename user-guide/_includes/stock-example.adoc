@@ -1,3 +1,11 @@
+=== Stock Footage example
+
+Thanks to Mark Milstein of Microstocksolutions for providing the example footage.
+
+image:sf_example.jpg[Thumbnail for Stock Footage example footage]
+
+Download the example file with embedded metadata: https://iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec17-stock.mp4[IPTC-VMHub-RefVideo-Rec17-stock.mp4]
+
 
 ==== Administrative fields
 [%autowidth,options="header"]
@@ -45,7 +53,7 @@ a|{ "manufacturer": "Panasonic", "modelName": "HC-X1"}
 
 
 |[[stock-exampleexampleRegistry-Entry]]Registry Entry
-a|VRMETA_101010
+a|RegItemId=VRMETA_101010; RegOrgId=VRMETA
 
 
 |[[stock-exampleexampleStyle-Period]]Style Period
@@ -53,7 +61,7 @@ a|Drone footage
 
 
 |[[stock-exampleexampleTemporal-Coverage]]Temporal Coverage
-a|{ "tempCoverageFrom": "2020", "tempCoverageTo": "2020" }
+a|TempCoverageFrom=2020; TempCoverageTo=2020
 
 
 |[[stock-exampleexampleParent-Video-Identifier]]Parent Video Identifier
@@ -84,7 +92,7 @@ a|Budapest
 
 
 |[[stock-exampleexampleObject-Shown]]Object Shown
-a|Container port
+a|Title=Container port
 
 
 |[[stock-exampleexampleShot-Type]]Shot Type
@@ -138,6 +146,3 @@ a|N/A
 
 
 |===
-
-
-

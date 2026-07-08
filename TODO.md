@@ -82,7 +82,7 @@ This document tracks remaining work for the VMHub artifact generation system.
 
 ### 2. Adobe Custom Metadata Panel Generators
 
-**Goal:** Generate Adobe Premiere/After Effects custom metadata panel configurations
+**Goal:** Generate Adobe Premiere Pro custom metadata panel configurations
 
 **Status:** ⏳ Not Started
 
@@ -541,6 +541,29 @@ for example_file in examples:
 ---
 
 ## 📝 Notes
+
+### Spec vs ExifTool discrepancies
+
+Properties where the VMHub spec and ExifTool's serialisation differ.
+Useful context when discussing future spec revisions or filing ExifTool
+patches. The code-side workarounds live in `tools/lib/exiftool_tags.py`.
+
+- **VideoDisplayAspectRatio**, **VideoPixelAspectRatio**: VMHub previously
+  typed these as String (e.g. `"16:9"`). ExifTool implements them as
+  decimal (`iptcExt`) / Rational struct (`xmpDM`). Spec updated to decimal
+  to match implementation reality.
+- **MetadataAuthority** (`XMP-iptcExt`): defined in the IPTC spec but not
+  yet implemented in ExifTool. Listed in `EXIFTOOL_UNSUPPORTED_TAGS` in
+  `tools/lib/exiftool_tags.py` so `generate_example_videos.py` skips it
+  cleanly with a clear reason in the run summary. Re-check on each
+  ExifTool release and remove from the set when support lands.
+- **PLUS struct field naming**: PLUS structures flatten field names with
+  the parent tag's local name as prefix (e.g. `CopyrightOwnerName` inside
+  `XMP-plus:CopyrightOwner`), while IPTC Extension structures using the
+  same logical struct type (e.g. `EntityWRole` inside `XMP-iptcExt:Creator`)
+  use bare field names (`Name`). Handled via the
+  `STRUCT_FIELD_OVERRIDES` table in `tools/lib/exiftool_tags.py`; add
+  entries there when new PLUS-namespaced struct tags surface.
 
 ### Version 1.8 Preparation
 

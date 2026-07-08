@@ -217,7 +217,7 @@
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc">contentCreated ?</td>
+                <td class="bgdcolIptc">contentCreated</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2: contentMeta/contentMetaExtProperty[@rel=&#34;entityprop:circaDateCreated&#34;]/@value</td>
                 
@@ -388,7 +388,7 @@
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc">-</td>
+                <td class="bgdcolIptc">digitalSourceType</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2: contentMeta/digitalSourceType</td>
                 
@@ -732,7 +732,7 @@ contentMeta/rating</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">pubStatus</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 itemMeta/signal/@uri=&#34;.../readyForRelease&#34;</td>
@@ -802,7 +802,7 @@ itemMeta/itemMetaExtProperty[@rel=&#34;xxx:recDevice]</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">altIds</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/altId....
@@ -1078,7 +1078,7 @@ OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Seri
                 
                 <td class="bgdcolIptc">DescriptionMetadata/PublicIdentifier OR MediaInformation/MediaIdentification/EntityIdentifier</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">altIds[@role=&#34;altidrole::vmhVideoId&#34;]</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/altId[@role=&#34;altidrole:vmhVideoId&#34;]</td>
@@ -1152,7 +1152,7 @@ source entity and more.</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">version</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/altId[@role=&#34;altidrole:vmhVideoId&#34;]/@version</td>
@@ -1290,7 +1290,7 @@ itemMeta/signal/@uri</td>
                 
                 <td class="bgdcolIptc">CreationInformation/Classification/Subject</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">subjects</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/subject</td>
@@ -1360,7 +1360,7 @@ contentMeta/description[@role=&#34;drol:displayedData&#34;]</td>
                 
                 <td class="bgdcolIptc">CreationInformation/Creation/Abstract</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">descriptions[0]/value</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2: 
 contentMeta/description[@role=&#34;drol:caption&#34; {or a similar one}]
@@ -1398,7 +1398,7 @@ contentMeta/description[@role=&#34;drol:caption&#34; {or a similar one}]
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">edNote could map to this if appropriate</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMGL2:
 contentSet/description[@role=&#34;drole:dopesheet&#34;]</td>
@@ -1503,7 +1503,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">organisations</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/subject[@type=&#34;cpnat:organisation&#34;]</td>
@@ -1539,7 +1539,7 @@ XMP-iptcExt:OrganisationInImageCode</td>
                 
                 <td class="bgdcolIptc">CreationInformation/Classification/Genre</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">genres</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/genre</td>
@@ -1574,7 +1574,7 @@ contentMeta/genre</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">headlines[0]/value</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/headline</td>
@@ -1630,7 +1630,7 @@ contentMeta/keyword</td>
             
             <tr>
                 <td class="bgdcolIptc">describing a/v content</td>
-                <td class="bgdcolIptc">Language Version</td>
+                <td class="bgdcolIptc">Language</td>
                 <td class="bgdcolIptc">Language version of the video</td>
                 <td class="bgdcolIptc">dc:language</td>
                 <td class="bgdcolIptc">language</td>
@@ -1644,7 +1644,7 @@ contentMeta/keyword</td>
                 
                 <td class="bgdcolIptc">CreationInformation/Classification/Language</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">language</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/language</td>
@@ -1714,7 +1714,7 @@ contentMeta/located</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">located,places</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/subject[@type=&#34;cpnat:POI&#34;]</td>
@@ -1823,7 +1823,7 @@ contentMeta/subject[@type=&#34;cpnat:person&#34;]
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">people</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/subject[@type=&#34;cpnat:person&#34;]</td>
@@ -1861,7 +1861,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">objects</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/subject[@type=&#34;&#34;cpnat:object&#34;&#34;]/...
@@ -1932,7 +1932,7 @@ contentMeta/genre/@uri=&#34;...shot type vocab ...&#34;</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">events</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/subject[@type=&#34;cpnat:event&#34;]</td>
@@ -2036,7 +2036,7 @@ contentMeta/icon[@href]</td>
                 
                 <td class="bgdcolIptc">CreationInformation/Creation/Title</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">title</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 itemMeta/title</td>
@@ -2176,7 +2176,7 @@ contentSet/....[@colourindicator=&#34;...value...&#34;]</td>
                 
                 <td class="bgdcolIptc">CreationInformation/Creation/Creator</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">infoSources</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/contributor[@role=&#34;...&#34;]</td>
@@ -2212,7 +2212,7 @@ contentMeta/contributor[@role=&#34;...&#34;]</td>
                 
                 <td class="bgdcolIptc">CreationInformation/Creation/CopyrightString</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">copyrightNotice</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 rightsInfo/copyrightNotice</td>
@@ -2285,7 +2285,7 @@ com.apple.quicktime.director</td>
                 
                 <td class="bgdcolIptc">CreationInformation/Creation/Creator</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">by</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentMeta/creator[@role=&#34;...&#34;]</td>
@@ -2389,7 +2389,7 @@ contentMeta/creditline</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">This could be used for &#34;embargoed&#34; and &#34;expires&#34; if appropriate</td>
                 
                 <td class="bgdcolIptc"></td>
                 
@@ -2634,7 +2634,7 @@ rightsInfo/usageTerms</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">rightsInfo/encodedRights</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 see details in the EERE structure section
@@ -2671,7 +2671,7 @@ see details in the LERE structure section</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">rightsInfo/linkedRights</td>
                 
                 <td class="bgdcolIptc"></td>
                 
@@ -2705,7 +2705,7 @@ see details in the LERE structure section</td>
                 
                 <td class="bgdcolIptc">UsageInformation/Availability/Dissemination/Disseminator or CreationInformation/Creation/Creator[@role=&#39;publisher&#39;]</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">copyrightHolder</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 rightsInfo/CopyrightHolder/@uri (for the VMD Id) + /name (for the VMD name)</td>
@@ -3058,7 +3058,7 @@ contentSet/remoteContent/@audiosamplerate</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">renditions/[]/aspectRatio</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentSet/remoteContent/@videoaspectratio</td>
@@ -3200,7 +3200,7 @@ partMeta/timeDelim/@start
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">renditions/[]/bitrate</td>
                 
                 <td class="bgdcolIptc">---</td>
                 
@@ -3269,7 +3269,7 @@ contentSet/remoteContent/@duration</td>
                 
                 <td class="bgdcolIptc">MediaInformation/MediaProfile/MediaFormat/FileFormat</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">renditions/[]/format</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentSet/remoteContent/@formaturi</td>
@@ -3583,7 +3583,7 @@ contentSet/remoteContent/@videovbr</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">renditions/[]/videoCodec</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentSet/remoteContent/@videocodecuri</td>
@@ -3618,7 +3618,7 @@ contentSet/remoteContent/@videocodecuri</td>
                 
                 <td class="bgdcolIptc">MediaInformation/MediaProfile/MediaFormat/VisualCoding/Format</td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">renditions/[]/frameRate</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 contentSet/remoteContent/@videoframerate</td>
@@ -3825,7 +3825,7 @@ partMeta</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">&lt;concept&gt;/uri</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 PROPERTY/@uri</td>
@@ -3860,7 +3860,7 @@ PROPERTY/@uri</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">&lt;concept&gt;/name</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 PROPERTY/name</td>
@@ -3929,7 +3929,7 @@ PROPERTY/name</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">&lt;concept&gt;/uri</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 PROPERTY/@uri</td>
@@ -3964,7 +3964,7 @@ PROPERTY/@uri</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">&lt;concept&gt;/name</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 PROPERTY/name</td>
@@ -3999,7 +3999,7 @@ PROPERTY/name</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">&lt;concept&gt;/rel</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 PROPERTY/@role</td>
@@ -4106,7 +4106,7 @@ property/@qcode</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">&lt;concept&gt;/uri</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 a concept&#39;s identifier: @uri or @qcode
@@ -4142,7 +4142,7 @@ property/@uri or property/@qcode</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">&lt;concept&gt;/name</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 a concept&#39;s &lt;name&gt;
@@ -4178,7 +4178,7 @@ property/name</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">&lt;concept&gt;/rel</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 if available by a property: @role
@@ -4452,7 +4452,7 @@ property/@role</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">rightsInfo/langId</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 rightsInfo/link[@rel=&#34;rightsprop:linkedEncRightExpr&#34;]/@formaturi</td>
@@ -4522,7 +4522,7 @@ rightsInfo/link[@rel=&#34;rightsprop:linkedEncRightsExpr&#34;]/ @contenttype</td
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">rightsInfo/encodedRights</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 rightsInfo/rightsExpressionXML or rightsInfo/rightsExpressionData
@@ -5113,7 +5113,7 @@ PROPERTY/@height</td>
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">rightsInfo/langId</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 rightsInfo/link[@rel=&#34;rightsprop:linkedEncRightExpr&#34;]/@formaturi</td>
@@ -5183,7 +5183,7 @@ rightsInfo/link[@rel=&#34;rightsprop:linkedEncRightsExpr&#34;]/ @contenttype</td
                 
                 <td class="bgdcolIptc"></td>
                 
-                <td class="bgdcolIptc"></td>
+                <td class="bgdcolIptc">rightsInfo/linkedRights</td>
                 
                 <td class="bgdcolIptc">VMD &lt;--&gt; NMLG2:
 rightsInfo/link[@rel=&#34;rightsprop:linkedEncRightExpr&#34;]/@href</td>

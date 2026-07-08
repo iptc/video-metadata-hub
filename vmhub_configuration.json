@@ -12,7 +12,7 @@
         "properties": "PropertiesRec 1.7!A3:W",
         "structures": "PropertiesRec 1.7!A109:W236",
         "mappings": "MappingsRec 1.7!A6:V",
-        "examples": "Examples!A3:AB99",
+        "examples": "'Use Case Examples'!A3:AB99",
         "errata": "PropErrata!A3:E"
       },
       "column_indices": {
@@ -31,7 +31,8 @@
         "xmp_prop": 12,
         "xmp_type": 14,
         "json_prop": 16,
-        "json_type": 18
+        "json_type": 18,
+        "exiftool_tag": 20
       },
       "row_ranges": {
         "first_property_row": 0,

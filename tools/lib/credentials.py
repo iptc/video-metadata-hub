@@ -7,6 +7,7 @@ Handles authentication for Google Sheets API access
 
 import os
 from google.auth.transport.requests import Request
+from google.auth.exceptions import RefreshError
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.errors import HttpError
@@ -69,14 +70,29 @@ def get_credentials():
     
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
+        refreshed = False
         if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
+            try:
+                creds.refresh(Request())
+                refreshed = True
+            except RefreshError as e:
+                # Refresh token was revoked or expired (common with OAuth
+                # clients in "Testing" status, where refresh tokens expire
+                # after 7 days). Fall through to the interactive flow.
+                print(f"⚠ Stored refresh token rejected by Google ({e}).")
+                print(f"  Discarding {token_path} and re-authenticating...")
+                try:
+                    os.remove(token_path)
+                except OSError:
+                    pass
+                creds = None
+
+        if not refreshed and not (creds and creds.valid):
             client_secret_path = get_client_secret_path()
             flow = InstalledAppFlow.from_client_secrets_file(
                 client_secret_path, scopes=SCOPES)
             creds = flow.run_local_server(port=0)
-        
+
         # Save the credentials for the next run
         with open(token_path, 'w') as token:
             token.write(creds.to_json())

@@ -1,8 +1,66 @@
+=== Broadcast Media Management example
+
+image:bmm_example.jpg[Thumbnail for Broadcast Media Management example footage]
+
+Download the example file with embedded metadata: https://iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec17-broadcast-media-management.mp4[IPTC-VMHub-RefVideo-Rec17-broadcast-media-management.mp4]
+
 
 ==== Administrative fields
 [%autowidth,options="header"]
 |===
 |Property name|Example value
+
+|[[broadcast-media-management-exampleexampleCirca-Date-Created]]Circa Date Created
+a|1960
+
+
+|[[broadcast-media-management-exampleexampleDate-Created]]Date Created
+a|1960
+
+
+|[[broadcast-media-management-exampleexampleDate-Released]]Date Released
+a|1960-10-29
+
+
+|[[broadcast-media-management-exampleexampleEpisode]]Episode
+a|"The Abduction"; Season 2 Episode 8
+
+
+|[[broadcast-media-management-exampleexampleExternal-Metadata-URL]]External Metadata URL
+a|https://archive.org/details/Bonanza_-_The_Abduction
+
+
+|[[broadcast-media-management-exampleexampleMetadata-Edit-Date]]Metadata Edit Date
+a|2009-10-11
+
+
+|[[broadcast-media-management-exampleexampleMetadata-Editor]]Metadata Editor
+a|Archive.org
+
+
+|[[broadcast-media-management-exampleexamplePublication-Event]]Publication Event
+a|NBC, 29-Oct-60
+
+
+|[[broadcast-media-management-exampleexampleReady-for-Release]]Ready for Release
+a|Yes
+
+
+|[[broadcast-media-management-exampleexampleSeason]]Season
+a|2
+
+
+|[[broadcast-media-management-exampleexampleSeries]]Series
+a|Bonanza
+
+
+|[[broadcast-media-management-exampleexampleStyle-Period]]Style Period
+a|1860s
+
+
+|[[broadcast-media-management-exampleexampleTemporal-Coverage]]Temporal Coverage
+a|TempCoverageFrom=1860; TempCoverageTo=1869
+
 
 |===
 
@@ -11,6 +69,38 @@
 |===
 |Property name|Example value
 
+|[[broadcast-media-management-exampleexampleDescription]]Description
+a|When Joe brings the daughter of a local tycoon to the carnival, she goes missing. Will they find her before it's too late?
+
+
+|[[broadcast-media-management-exampleexampleGenre]]Genre
+a|Western
+
+
+|[[broadcast-media-management-exampleexampleKeywords]]Keywords
+a|Westerns, Classic TV, Classic Television
+
+
+|[[broadcast-media-management-exampleexampleLanguage]]Language
+a|English
+
+
+|[[broadcast-media-management-exampleexampleLocation-Shot]]Location Shot
+a|Paramount Ranch, Agoura Hills, CA, USA
+
+
+|[[broadcast-media-management-exampleexampleLocation-Shown]]Location Shown
+a|Virginia City, Nevada
+
+
+|[[broadcast-media-management-exampleexampleTitle]]Title
+a|The Abduction - Bonanza S2E8
+
+
+|[[broadcast-media-management-exampleexampleVisual-Colour]]Visual Colour
+a|Color 
+
+
 |===
 
 ==== Rights fields
@@ -18,14 +108,28 @@
 |===
 |Property name|Example value
 
+|[[broadcast-media-management-exampleexampleCopyright-Notice-]]Copyright Notice 
+a|Public Domain
+
+
+|[[broadcast-media-management-exampleexampleCopyright-Year]]Copyright Year
+a|1960
+
+
+|[[broadcast-media-management-exampleexampleCreator]]Creator
+a|NBC Productions
+
+
+|[[broadcast-media-management-exampleexampleCredit-Line]]Credit Line
+a|NBC Productions
+
+
+|[[broadcast-media-management-exampleexampleCopyright-Owner-]]Copyright Owner 
+a|Public Domain
+
+
+|[[broadcast-media-management-exampleexampleSupplier-]]Supplier 
+a|Archive.org
+
+
 |===
-
-==== Technical fields
-[%autowidth,options="header"]
-|===
-|Property name|Example value
-
-|===
-
-
-

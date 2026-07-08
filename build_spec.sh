@@ -94,6 +94,36 @@ else
 fi
 echo ""
 
+# Generate tech reference files
+echo "Generating tech reference files..."
+python3 generate_techreference.py $VERSION_ARG
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}✓ Tech reference files generated${NC}"
+else
+    echo -e "${RED}✗ Failed to generate tech reference${NC}"
+    exit 1
+fi
+echo ""
+
+# Generate Adobe custom metadata panels
+echo "Generating Adobe custom metadata panels..."
+python3 generate_custom_panel.py $VERSION_ARG --panel-type core
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}✓ Adobe core panel generated${NC}"
+else
+    echo -e "${RED}✗ Failed to generate Adobe core panel${NC}"
+    exit 1
+fi
+
+python3 generate_custom_panel.py $VERSION_ARG --panel-type full
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}✓ Adobe full panel generated${NC}"
+else
+    echo -e "${RED}✗ Failed to generate Adobe full panel${NC}"
+    exit 1
+fi
+echo ""
+
 echo "========================================="
 echo -e "${GREEN}✓ All spec artifacts generated successfully!${NC}"
 echo "========================================="

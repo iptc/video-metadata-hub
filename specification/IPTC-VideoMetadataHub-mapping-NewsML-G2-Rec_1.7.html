@@ -88,7 +88,7 @@
                 <td class="bgdcolIptc">Iptc4xmpExt:CircaDateCreated</td>
                 <td class="bgdcolIptc">circaDateCreated</td>
                 <td class="bgdcolIptc">date/@typeDefinition=&#34;ivqu:circaDateCreated&#34; or @typeLabel=&#34;Circa Date Created&#34;/alternative/@period=&#34;...value...&#34;</td>
-                <td class="bgdcolNoniptc">contentCreated ?</td>
+                <td class="bgdcolNoniptc">contentCreated</td>
             </tr>
             
             <tr>
@@ -139,7 +139,7 @@
                 <td class="bgdcolIptc">Iptc4xmpExt:DigitalSourceType</td>
                 <td class="bgdcolIptc">digitalSourceType</td>
                 <td class="bgdcolIptc"></td>
-                <td class="bgdcolNoniptc">-</td>
+                <td class="bgdcolNoniptc">digitalSourceType</td>
             </tr>
             
             <tr>
@@ -240,7 +240,7 @@ OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Epis
                 <td class="bgdcolIptc">Iptc4xmpExt:ReleaseReady</td>
                 <td class="bgdcolIptc">releaseReady</td>
                 <td class="bgdcolIptc">format/technicalAttributeBoolean/@typeLink=&#34;ivqu:readyForRelease&#34; or @typeLabel=&#34;Ready For Release&#34;</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">pubStatus</td>
             </tr>
             
             <tr>
@@ -260,7 +260,7 @@ OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Epis
                 <td class="bgdcolIptc">Iptc4xmpExt:RegistryId</td>
                 <td class="bgdcolIptc">registryEntries</td>
                 <td class="bgdcolIptc">identifier + typeLink=&#34;ivqu:registryEntry&#34;/dc:identifier + attributor or typeLabel=&#34;Registry Entry&#34; -&gt; ebucore identifier structure to specify the entity, etc.</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">altIds</td>
             </tr>
             
             <tr>
@@ -342,7 +342,7 @@ OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Seri
                 <td class="bgdcolIptc">dc:identifier</td>
                 <td class="bgdcolIptc">identifier</td>
                 <td class="bgdcolIptc">identifier + typeLink=&#34;ivqu:mediaId&#34;/dc:identifier or typeLabel=&#34;Media Id&#34; and identifier structure to identify the source entity and more.</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">altIds[@role=&#34;altidrole::vmhVideoId&#34;]</td>
             </tr>
             
             <tr>
@@ -365,7 +365,7 @@ OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Seri
                 <td class="bgdcolIptc">version/@typeLink=&#34;ivqu:mediaId&#34; or @typeLabel=&#34;media Id&#34;/&#34;...value&#34; or identifier + typeLink=&#34;ivqu:videoRendition&#34;/dc:identifier or 
 typeLabel=&#34;Video Rendition&#34; and identifier structure to identify the 
 source entity and more.</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">version</td>
             </tr>
             
             <tr>
@@ -405,7 +405,7 @@ source entity and more.</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:AboutCvTerm</td>
                 <td class="bgdcolIptc">aboutCvTerms</td>
                 <td class="bgdcolIptc">subject/subjectCode, subjectDefinition and/or subject/dc:subject (free text) and possibly a typeLink and/or typeLabel to define a type of subject at a lower level of granularity. This is also possible using the topic and theme elements of EBUCore.</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">subjects</td>
             </tr>
             
             <tr>
@@ -425,7 +425,7 @@ source entity and more.</td>
                 <td class="bgdcolIptc">dc:description</td>
                 <td class="bgdcolIptc">description</td>
                 <td class="bgdcolIptc">description/dc:description plus typeLink or/and typeLabel for defining a type of description as appropriate</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">descriptions[0]/value</td>
             </tr>
             
             <tr>
@@ -435,7 +435,7 @@ source entity and more.</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:Dopesheet</td>
                 <td class="bgdcolIptc">dopesheet</td>
                 <td class="bgdcolIptc">description + typeLink=&#34;ivqu:dopesheet&#34; or typeLabel=&#34;Dopesheet&#34;/dc:description</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">edNote could map to this if appropriate</td>
             </tr>
             
             <tr>
@@ -466,7 +466,7 @@ source entity and more.</td>
 Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">featuredOrganisations</td>
                 <td class="bgdcolIptc">contributor/@typeLink=&#34;ivqu:featuredOrganisation&#34; or typeLabel=&#34;Featured Organisation&#34;/organisationDetails/organisationName or ebucore entity structure from more details and options</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">organisations</td>
             </tr>
             
             <tr>
@@ -476,7 +476,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:Genre</td>
                 <td class="bgdcolIptc">genres</td>
                 <td class="bgdcolIptc">type/genre(@typeLink and @typeLabel with values from taxonomies</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">genres</td>
             </tr>
             
             <tr>
@@ -486,7 +486,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:Headline</td>
                 <td class="bgdcolIptc">headline</td>
                 <td class="bgdcolIptc">description/@typeLink=&#34;ivqu:headline&#34; and @typeLabel=&#34;Headline&#34;/dc:description</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">headlines[0]/value</td>
             </tr>
             
             <tr>
@@ -501,12 +501,12 @@ Iptc4xmpExt:OrganisationInImageCode</td>
             
             <tr>
                 <td class="bgdcolIptc">describing a/v content</td>
-                <td class="bgdcolIptc">Language Version</td>
+                <td class="bgdcolIptc">Language</td>
                 <td class="bgdcolIptc">Language version of the video</td>
                 <td class="bgdcolIptc">dc:language</td>
                 <td class="bgdcolIptc">language</td>
                 <td class="bgdcolIptc">language/@typeLink=&#34;ivqu:languageVersion&#34; or @typeLabel=&#34;Language Version&#34;/dc:language</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">language</td>
             </tr>
             
             <tr>
@@ -526,7 +526,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:LocationShown</td>
                 <td class="bgdcolIptc">locationsShown</td>
                 <td class="bgdcolIptc">coverage/spatial/location/@typeLink=&#34;ivqu:locationShown&#34; or @typeLabel=&#34;Location Shown&#34;/name or use ebucore location structure for more granularity</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">located,places</td>
             </tr>
             
             <tr>
@@ -559,7 +559,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">personsShown
 </td>
                 <td class="bgdcolIptc">contributor/@typeLink=&#34;ivqu:personShown&#34; or typeLabel=&#34;Person Shown&#34;/organisationDetails/organisationName or ebucore entity structure from more details and options. For timed identification use part/contributor</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">people</td>
             </tr>
             
             <tr>
@@ -571,7 +571,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
 </td>
                 <td class="bgdcolIptc">subject + typeLink=&#34;ivqu:productShown&#34;/subjectCode + subjectDefinition
 OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">objects</td>
             </tr>
             
             <tr>
@@ -591,7 +591,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:EventExt</td>
                 <td class="bgdcolIptc">shownEvents</td>
                 <td class="bgdcolIptc">Event/name or more using the ebucore event structure</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">events</td>
             </tr>
             
             <tr>
@@ -621,7 +621,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">dc:title</td>
                 <td class="bgdcolIptc">title</td>
                 <td class="bgdcolIptc">title/dc:title</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">title</td>
             </tr>
             
             <tr>
@@ -661,7 +661,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:Contributor</td>
                 <td class="bgdcolIptc">contributors</td>
                 <td class="bgdcolIptc">contributor/role for contributors and ebucore entity structure for more granularity</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">infoSources</td>
             </tr>
             
             <tr>
@@ -672,7 +672,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">copyrightNotice
 </td>
                 <td class="bgdcolIptc">rights/copyrightStatement</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">copyrightNotice</td>
             </tr>
             
             <tr>
@@ -693,7 +693,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">creators</td>
                 <td class="bgdcolIptc">creator/role for creators
 OR contributor/role for creators and ebucore entity structure for more granularity</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">by</td>
             </tr>
             
             <tr>
@@ -723,7 +723,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">XMP-plus:OtherConstraints</td>
                 <td class="bgdcolIptc">otherConstraints</td>
                 <td class="bgdcolIptc"></td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">This could be used for &#34;embargoed&#34; and &#34;expires&#34; if appropriate</td>
             </tr>
             
             <tr>
@@ -794,7 +794,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:EmbdEncRightsExpr</td>
                 <td class="bgdcolIptc">embdEncRightsExpr</td>
                 <td class="bgdcolIptc">rights/@typeLink=&#34;ivqu:extRights&#34; or @typeLabel=&#34;Rights and Licensing Terms&#34;/dc:rights</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">rightsInfo/encodedRights</td>
             </tr>
             
             <tr>
@@ -804,7 +804,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:LinkedEncRightsExpr</td>
                 <td class="bgdcolIptc">linkedEncRightsExpr</td>
                 <td class="bgdcolIptc">rights/@typeLink=&#34;ivqu:extRights&#34; or @typeLabel=&#34;Rights and Licensing Terms&#34;/rightsLink</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">rightsInfo/linkedRights</td>
             </tr>
             
             <tr>
@@ -814,7 +814,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">plus:CopyrightOwner</td>
                 <td class="bgdcolIptc">copyrightOwners</td>
                 <td class="bgdcolIptc">rights/rightsHolder/@typeLink=&#34;ivqu:copyrightOwner&#34; or @typeLabel=&#34;Copyright Owner&#34; -&gt; see ebucore entity structure for person or organisation</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">copyrightHolder</td>
             </tr>
             
             <tr>
@@ -917,7 +917,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:videoDisplayAspectRatio</td>
                 <td class="bgdcolIptc">videoDisplayAspectRatio</td>
                 <td class="bgdcolIptc">aspectRatio/@typeLink=&#34;ivqu:displayAspectRatio&#34; or @typeLabel=&#34;&#34;Display Aspect Ratio&#34; / factorNumerator and factorDenominator for e.g. 16/9 or 16:9...</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">renditions/[]/aspectRatio</td>
             </tr>
             
             <tr>
@@ -958,7 +958,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:fileDataRate</td>
                 <td class="bgdcolIptc">fileBitrate</td>
                 <td class="bgdcolIptc">format/overallBitRate</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">renditions/[]/bitrate</td>
             </tr>
             
             <tr>
@@ -978,7 +978,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:ContainerFormat</td>
                 <td class="bgdcolIptc">fileFormat</td>
                 <td class="bgdcolIptc">format/containerformat/containerEncoding (@typeLabel, @typeLabel for taxonomies or free text) and more using the containerFormat structure for more granularity</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">renditions/[]/format</td>
             </tr>
             
             <tr>
@@ -1069,7 +1069,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:videoCompressor</td>
                 <td class="bgdcolIptc">videoCoding</td>
                 <td class="bgdcolIptc">format/videoFormat/encoding</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">renditions/[]/videoCodec</td>
             </tr>
             
             <tr>
@@ -1079,7 +1079,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:videoFrameRate</td>
                 <td class="bgdcolIptc">videoFrameRate</td>
                 <td class="bgdcolIptc">format/videoFormat/frameRate</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">renditions/[]/frameRate</td>
             </tr>
             
             <tr>
@@ -1140,7 +1140,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmp:identifier</td>
                 <td class="bgdcolIptc">identifiers</td>
                 <td class="bgdcolIptc">entityId or contactId or organisationId, otherwsie each class in EBUCore has its own ID. For concepts, the ID is part of the termID/URI</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">&lt;concept&gt;/uri</td>
             </tr>
             
             <tr>
@@ -1150,7 +1150,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:Name</td>
                 <td class="bgdcolIptc">name</td>
                 <td class="bgdcolIptc">contactDetails/Name or /givenName+ /familyName or organisationName or simialr for other classes or typeLabel for taxonomies</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">&lt;concept&gt;/name</td>
             </tr>
             
             <tr style="background-color: #00cccc;">
@@ -1170,7 +1170,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmp:identifier</td>
                 <td class="bgdcolIptc">identifiers</td>
                 <td class="bgdcolIptc">entityId or contactId or organisationId</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">&lt;concept&gt;/uri</td>
             </tr>
             
             <tr>
@@ -1180,7 +1180,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:Name</td>
                 <td class="bgdcolIptc">name</td>
                 <td class="bgdcolIptc">contactDetails/Name or /givenName+ /familyName or organisation/organisationName</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">&lt;concept&gt;/name</td>
             </tr>
             
             <tr>
@@ -1190,7 +1190,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:Role</td>
                 <td class="bgdcolIptc">role</td>
                 <td class="bgdcolIptc">role</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">&lt;concept&gt;/rel</td>
             </tr>
             
             <tr style="background-color: #00cccc;">
@@ -1222,7 +1222,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">cvTermId
 </td>
                 <td class="bgdcolIptc">ebucore:typeLink</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">&lt;concept&gt;/uri</td>
             </tr>
             
             <tr>
@@ -1232,7 +1232,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:CvTermName</td>
                 <td class="bgdcolIptc">cvTermName</td>
                 <td class="bgdcolIptc">ebucore:typeLabel</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">&lt;concept&gt;/name</td>
             </tr>
             
             <tr>
@@ -1242,7 +1242,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:CvTermRefinedAbout</td>
                 <td class="bgdcolIptc">cvTermRefinedAbout</td>
                 <td class="bgdcolIptc">In ebucore, this is logically and contextually  defined by the relation for which a controlled term is used</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">&lt;concept&gt;/rel</td>
             </tr>
             
             <tr style="background-color: #00cccc;">
@@ -1322,7 +1322,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:RightsExprLangId</td>
                 <td class="bgdcolIptc">rightsExprLangId</td>
                 <td class="bgdcolIptc">rights/rightsID</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">rightsInfo/langId</td>
             </tr>
             
             <tr>
@@ -1342,7 +1342,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:EncRightsExpr</td>
                 <td class="bgdcolIptc">encRightsExpr</td>
                 <td class="bgdcolIptc">rights/dc:rights or rights/rightsLink</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">rightsInfo/encodedRights</td>
             </tr>
             
             <tr style="background-color: #00cccc;">
@@ -1514,7 +1514,7 @@ OR dc:alternative + type or similar use with alternative/dc:alternative  - also 
                 <td class="bgdcolIptc">Iptc4xmpExt:RightsExprLangId</td>
                 <td class="bgdcolIptc">rightsExprLangId</td>
                 <td class="bgdcolIptc">rights/@rightsID</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">rightsInfo/langId</td>
             </tr>
             
             <tr>
@@ -1534,7 +1534,7 @@ OR dc:alternative + type or similar use with alternative/dc:alternative  - also 
                 <td class="bgdcolIptc">Iptc4xmpExt:RightsExprLangId</td>
                 <td class="bgdcolIptc">linkedRightsExpr</td>
                 <td class="bgdcolIptc">rights/rightsLink</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">rightsInfo/linkedRights</td>
             </tr>
             
             <tr style="background-color: #00cccc;">

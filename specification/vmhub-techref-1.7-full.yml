@@ -1,6 +1,6 @@
 documentation_available_at: https://iptc.org/std/photometadata/documentation/techreference
 release_comment: IPTC Video Metadata Hub version 1.7
-release_timestamp: '2025-11-10T10:20:11Z'
+release_timestamp: '2026-07-08T13:43:56Z'
 vmh_top:
   AI-System-Used:
     name: AI System Used
@@ -279,7 +279,7 @@ vmh_top:
     datatype: Text
     propoccurrence: URI (0..1)
     XMPid: Iptc4xmpExt:parentId
-    etXMP: XMP-iptcExt:ParentId
+    etXMP: XMP-iptcExt:ParentID
   Video-Identifier:
     name: Video Identifier
     definition: Globally unambiguous identifier of the video regardless of renditions,
@@ -769,7 +769,7 @@ vmh_top:
     specidx: '#Audio-Bitrate'
     datatype: Number (0..1)
     XMPid: Iptc4xmpExt:audioBitRate
-    etXMP: XMP-iptcExt:AudioBitRate/integer
+    etXMP: XMP-iptcExt:AudioBitrate/integer
   Audio-Bitrate-Type:
     name: Audio Bitrate Type
     definition: Indicates if the bitrate of the audio data is fixed or variable
@@ -784,7 +784,7 @@ vmh_top:
 
       - variable'
     XMPid: Iptc4xmpExt:audioBitRateMode
-    etXMP: XMP-iptcExt:AudioBitRateMode#
+    etXMP: XMP-iptcExt:AudioBitrateMode#
   Audio-Bits-per-Sample:
     name: Audio Bits per Sample
     definition: Number of bits used for an audio sample

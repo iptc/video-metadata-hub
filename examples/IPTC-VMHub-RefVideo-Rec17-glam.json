@@ -1,0 +1,85 @@
+[
+  {
+    "XMP-iptcExt:CircaDateCreated": "1990s",
+    "XMP-iptcExt:Episode": {
+      "Name": "https://wellcomelibrary.org/item/b16766246"
+    },
+    "XMP-iptcExt:ExternalMetadataLink": [
+      "https://wellcomelibrary.org/data/b16766246"
+    ],
+    "XMP-iptcExt:MetadataAuthority": {
+      "Name": "Wellcome Library"
+    },
+    "XMP-iptcExt:ReleaseReady": "Yes",
+    "XMP-dc:Identifier": "b16766246",
+    "XMP-iptcExt:AboutCvTerm": {
+      "CvTermName": "Public health"
+    },
+    "XMP-dc:Description": "A television advertisement asking people to register for a Donor Card in order to donate organs after death.",
+    "XMP-iptcExt:DopesheetLink": {
+      "Link": "https://wellcomelibrary.org/data/b16766246"
+    },
+    "XMP-iptcExt:Genre": {
+      "CvTermName": "Public information"
+    },
+    "XMP-iptcExt:Headline": "A television advertisement asking people to register for a Donor Card in order to donate organs after death.",
+    "XMP-dc:Subject": [
+      "Organ procurement",
+      "Public health",
+      "Medical sciences",
+      "Organ transplantation",
+      "Health education",
+      "Health policy",
+      "Health services"
+    ],
+    "XMP-dc:Language": "En",
+    "XMP-iptcExt:SnapshotLink": "https://wellcomelibrary.org/posterimages/b16766246/poster",
+    "XMP-dc:Title": "Donor card gift commercial from the Wellcome Trust archive",
+    "XMP-iptcExt:Contributor": [
+      {
+        "Name": "This video was made from material preserved by the BFI National Archive."
+      }
+    ],
+    "XMP-dc:Rights": [
+      "Crown copyright",
+      "managed by BFI; CC-BY-NC"
+    ],
+    "XMP-iptcExt:Creator": [
+      {
+        "Name": "This video was made from material preserved by the BFI National Archive."
+      }
+    ],
+    "XMP-photoshop:Credit": "Wellcome Library",
+    "XMP-plus:Licensor": [
+      {
+        "LicensorName": "Wellcome Library"
+      }
+    ],
+    "XMP-plus:CopyrightOwner": [
+      {
+        "CopyrightOwnerName": "Wellcome Library"
+      }
+    ],
+    "XMP-plus:ImageSupplier": {
+      "ImageSupplierName": "Wellcome Library"
+    },
+    "XMP-iptcExt:AudioBitsPerSample": "32",
+    "XMP-xmpDM:AudioChannelType#": "Stereo",
+    "XMP-iptcExt:AudioChannelCount": "2",
+    "XMP-xmpDM:AudioCompressor": "AAC",
+    "XMP-xmpDM:AudioSampleRate": "44100",
+    "XMP-iptcExt:VideoDisplayAspectRatio": "1.25",
+    "XMP-xmpDM:FileDataRate": "2300000",
+    "XMP-iptcExt:ContainerFormat": {
+      "Name": "MP4"
+    },
+    "XMP-xmpDM:VideoFrameSize": {
+      "W": "768",
+      "H": "576",
+      "Unit": "pixel"
+    },
+    "XMP-dc:Format": "video/mp4",
+    "XMP-xmpDM:VideoPixelAspectRatio": "1",
+    "XMP-xmpDM:VideoFieldOrder#": "ITU-R BT.601"
+  }
+]

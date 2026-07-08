@@ -1,3 +1,9 @@
+=== Galleries, Libraries, Archives, Museums example
+
+image:glam_example.jpg[Thumbnail for Galleries, Libraries, Archives, Museums example footage]
+
+Download the example file with embedded metadata: https://iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec17-glam.mp4[IPTC-VMHub-RefVideo-Rec17-glam.mp4]
+
 
 ==== Administrative fields
 [%autowidth,options="header"]
@@ -6,10 +12,6 @@
 
 |[[glam-exampleexampleCirca-Date-Created]]Circa Date Created
 a|1990s
-
-
-|[[glam-exampleexampleDate-Modified]]Date Modified
-a|No
 
 
 |[[glam-exampleexampleEpisode]]Episode
@@ -63,16 +65,16 @@ a|A television advertisement asking people to register for a Donor Card in order
 a|Organ procurement, Public health, Medical sciences, Organ transplantation, Health education, Health policy, Health services 
 
 
-|[[glam-exampleexampleLanguage-Version]]Language Version
+|[[glam-exampleexampleLanguage]]Language
 a|En
 
 
 |[[glam-exampleexampleSnapshot-Link]]Snapshot Link
-a|https://wellcomelibrary.org/posterimages/b16766246/poster
+a|Link=https://wellcomelibrary.org/posterimages/b16766246/poster
 
 
 |[[glam-exampleexampleTitle]]Title
-a|Donor card gift (commercial).
+a|Donor card gift commercial from the Wellcome Trust archive
 
 
 |===
@@ -102,7 +104,7 @@ a|Wellcome Library
 a|Wellcome Library
 
 
-|[[glam-exampleexampleCopyright-Owner]]Copyright Owner
+|[[glam-exampleexampleCopyright-Owner-]]Copyright Owner 
 a|Wellcome Library
 
 
@@ -141,7 +143,7 @@ _48kHz (Q for schema: should we have Hz with big numbers? or strings with any co
 
 
 |[[glam-exampleexampleDisplay-Aspect-Ratio]]Display Aspect Ratio
-a|5x4
+a|1.25
 
 
 |[[glam-exampleexampleFile-Bitrate]]File Bitrate
@@ -153,7 +155,7 @@ a|MP4
 
 
 |[[glam-exampleexampleFrame-Size]]Frame Size
-a|768x576
+a|W=768; H=576; Unit=pixel
 
 
 |[[glam-exampleexampleMedia-Type]]Media Type
@@ -161,34 +163,11 @@ a|video/mp4
 
 
 |[[glam-exampleexampleSignal-Aspect-Ratio]]Signal Aspect Ratio
-a|5:4
+a|1
 
 
 |[[glam-exampleexampleSignal-Format]]Signal Format
 a|ITU-R BT.601
 
 
-|[[glam-exampleexampleStream-ready]]Stream-ready
-a|TRUE
-
-
-|[[glam-exampleexampleVideo-Bitrate]]Video Bitrate
-a|2000000
-
-
-|[[glam-exampleexampleVideo-Coding]]Video Coding
-a|H.264
-
-
-|[[glam-exampleexampleVideo-Frame-Rate]]Video Frame Rate
-a|30
-
-
-|[[glam-exampleexampleVideo-Streams-Count]]Video Streams Count
-a|1
-
-
 |===
-
-
-

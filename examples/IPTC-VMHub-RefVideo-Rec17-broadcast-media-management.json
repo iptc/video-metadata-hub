@@ -1,0 +1,73 @@
+[
+  {
+    "XMP-iptcExt:CircaDateCreated": "1960",
+    "XMP-photoshop:DateCreated": "1960",
+    "XMP-xmpDM:ReleaseDate": "1960-10-29",
+    "XMP-iptcExt:Episode": {
+      "Name": "\"The Abduction\"; Season 2 Episode 8"
+    },
+    "XMP-iptcExt:ExternalMetadataLink": [
+      "https://archive.org/details/Bonanza_-_The_Abduction"
+    ],
+    "XMP-iptcExt:MetadataLastEdited": "2009-10-11",
+    "XMP-iptcExt:MetadataLastEditor": {
+      "Name": "Archive.org"
+    },
+    "XMP-iptcExt:PublicationEvent": {
+      "Name": "NBC, 29-Oct-60"
+    },
+    "XMP-iptcExt:ReleaseReady": "Yes",
+    "XMP-iptcExt:Season": {
+      "Name": "2"
+    },
+    "XMP-iptcExt:Series": {
+      "Name": "Bonanza"
+    },
+    "XMP-iptcExt:ArtworkStylePeriod": "1860s",
+    "XMP-iptcExt:TemporalCoverage": {
+      "TempCoverageFrom": "1860",
+      "TempCoverageTo": "1869"
+    },
+    "XMP-dc:Description": [
+      "When Joe brings the daughter of a local tycoon to the carnival",
+      "she goes missing. Will they find her before it's too late?"
+    ],
+    "XMP-iptcExt:Genre": {
+      "CvTermName": "Western"
+    },
+    "XMP-dc:Subject": [
+      "Westerns",
+      "Classic TV",
+      "Classic Television"
+    ],
+    "XMP-dc:Language": "English",
+    "XMP-iptcExt:LocationCreated": [
+      {
+        "LocationName": "Paramount Ranch, Agoura Hills, CA, USA"
+      }
+    ],
+    "XMP-iptcExt:LocationShown": [
+      {
+        "LocationName": "Virginia City, Nevada"
+      }
+    ],
+    "XMP-dc:Title": "The Abduction - Bonanza S2E8",
+    "XMP-iptcExt:VisualColor#": "Color",
+    "XMP-dc:Rights": "Public Domain",
+    "XMP-iptcExt:CopyrightYear": "1960",
+    "XMP-iptcExt:Creator": [
+      {
+        "Name": "NBC Productions"
+      }
+    ],
+    "XMP-photoshop:Credit": "NBC Productions",
+    "XMP-plus:CopyrightOwner": [
+      {
+        "CopyrightOwnerName": "Public Domain"
+      }
+    ],
+    "XMP-plus:ImageSupplier": {
+      "ImageSupplierName": "Archive.org"
+    }
+  }
+]
