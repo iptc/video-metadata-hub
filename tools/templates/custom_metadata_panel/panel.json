@@ -1,0 +1,28 @@
+[
+   {
+       "id": "{{ header_id }}",
+       "displayName": "{{ panel_title }}",
+       "type": "Divider",
+       "sectionLink": "{{ section_link }}",
+       "disabled": false,
+       "dependencies": []
+   }{% for category in categories %},
+   {
+      "dependencies" : [],
+      "disabled" : false,
+      "displayName" : "{{ category.display_name }}",
+      "id" : "{{ category.id }}",
+      "type" : "Divider"
+   }{% for property in category.properties %},
+   {{ property.json | safe }}{% endfor %}{% endfor %},
+   {               
+      "id": "{{ footer_id }}",
+      "displayName": "{{ footer_text }}",
+      "type": "Divider",
+      "disabled": false,
+      "dependencies": []
+   } 
+]
+
+
+

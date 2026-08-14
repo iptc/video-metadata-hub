@@ -1,0 +1,51 @@
+{
+  "default_version": "1.7",
+  "spreadsheet_id": "1TgfvHcsbGvJqmF0iUUnaL-RAdd1lbentmb2LhcM8SDk",
+  "versions": {
+    "1.7": {
+      "version": "1.7",
+      "approval_date": "16 October 2025",
+      "revision_date": "16 October 2025",
+      "copyright_year": "2025",
+      "header_appendix": "",
+      "google_sheet_tabs": {
+        "properties": "PropertiesRec 1.7!A3:W",
+        "structures": "PropertiesRec 1.7!A109:W236",
+        "mappings": "MappingsRec 1.7!A6:V",
+        "examples": "'Use Case Examples'!A3:AB99",
+        "errata": "PropErrata!A3:E"
+      },
+      "column_indices": {
+        "category": 0,
+        "category_modified_flag": 1,
+        "property_name": 2,
+        "property_name_modified_flag": 3,
+        "definition": 4,
+        "definition_modified_flag": 5,
+        "user_notes": 6,
+        "user_notes_modified_flag": 7,
+        "type_cardinality": 8,
+        "type_cardinality_modified_flag": 9,
+        "change_notes": 10,
+        "core_sort_order": 11,
+        "xmp_prop": 12,
+        "xmp_type": 14,
+        "json_prop": 16,
+        "json_type": 18,
+        "exiftool_tag": 20
+      },
+      "row_ranges": {
+        "first_property_row": 0,
+        "last_property_row": 104,
+        "first_structure_row": 107,
+        "last_structure_row": 239,
+        "mappings_first_property_row": 2,
+        "mappings_last_property_row": 215
+      },
+      "features": {
+        "has_core_sort_column": true,
+        "supports_custom_panel_core": true
+      }
+    }
+  }
+}

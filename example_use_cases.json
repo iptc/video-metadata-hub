@@ -1,0 +1,66 @@
+{
+  "_comment": "Shared configuration of the example use cases used by both generate_userguide_examples.py and generate_example_videos.py. Each use case maps to a column range in the Examples tab of the Google Sheet, plus a source media file in examples/ that the example video generator embeds metadata into, plus user-guide presentation fields (display_name, thumbnail in user-guide/images/, optional credit).",
+  "examples_base_url": "https://iptc.org/std/videometadatahub/examples/",
+  "use_cases": [
+    {
+      "name": "enterprise-advertising-production",
+      "display_name": "Enterprise Advertising Production",
+      "range": "'Use Case Examples'!A3:M99",
+      "example_column": 11,
+      "notes_column": 12,
+      "source_file": "bellagio-raw.mp4",
+      "thumbnail": "eap_example.jpg",
+      "credit": "Thanks to Allison Sullivan of MGM Resorts for providing the example footage."
+    },
+    {
+      "name": "glam",
+      "display_name": "Galleries, Libraries, Archives, Museums",
+      "range": "'Use Case Examples'!A3:P99",
+      "example_column": 14,
+      "notes_column": 15,
+      "source_file": "donor-raw.mp4",
+      "thumbnail": "glam_example.jpg",
+      "credit": null
+    },
+    {
+      "name": "stock",
+      "display_name": "Stock Footage",
+      "range": "'Use Case Examples'!A3:S99",
+      "example_column": 17,
+      "notes_column": 18,
+      "source_file": "container-raw.mp4",
+      "thumbnail": "sf_example.jpg",
+      "credit": "Thanks to Mark Milstein of Microstocksolutions for providing the example footage."
+    },
+    {
+      "name": "long-form-production",
+      "display_name": "Production Element",
+      "range": "'Use Case Examples'!A3:V99",
+      "example_column": 20,
+      "notes_column": 21,
+      "source_file": "soccer-raw.mp4",
+      "thumbnail": "lfp_example.jpg",
+      "credit": null
+    },
+    {
+      "name": "broadcast-media-management",
+      "display_name": "Broadcast Media Management",
+      "range": "'Use Case Examples'!A3:Y99",
+      "example_column": 23,
+      "notes_column": 24,
+      "source_file": "bonanza-raw.mp4",
+      "thumbnail": "bmm_example.jpg",
+      "credit": null
+    },
+    {
+      "name": "news-agency",
+      "display_name": "News Agency",
+      "range": "'Use Case Examples'!A3:AB99",
+      "example_column": 26,
+      "notes_column": 27,
+      "source_file": "kennedy-raw.mp4",
+      "thumbnail": "na_example.jpg",
+      "credit": null
+    }
+  ]
+}

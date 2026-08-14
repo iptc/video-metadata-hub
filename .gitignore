@@ -4,3 +4,5 @@ client_secret.json
 token.json
 token.pickle
 **.swp
+venv/
+*.pyc

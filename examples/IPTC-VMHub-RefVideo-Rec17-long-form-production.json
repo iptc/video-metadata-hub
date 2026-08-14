@@ -1,0 +1,19 @@
+[
+  {
+    "XMP-iptcExt:CircaDateCreated": "2020",
+    "XMP-photoshop:DateCreated": "2020-07-07",
+    "XMP-xmp:ModifyDate": "2023-09-19",
+    "XMP-iptcExt:DigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/digitalCapture",
+    "XMP-iptcExt:MetadataLastEdited": "2026-05-13",
+    "XMP-iptcExt:MetadataLastEditor": {
+      "Name": "IPTC VM Working Group"
+    },
+    "XMP-iptcExt:ReleaseReady": "No",
+    "XMP-iptcExt:RecDevice": {
+      "Manufacturer": "{ \"manufacturer\": \"Panasonic\", \"modelName\": \"HC-X1\"}"
+    },
+    "XMP-iptcExt:ArtworkStylePeriod": "Drone footage",
+    "XMP-dc:Identifier": "IPTC-Example-ProductionElement",
+    "XMP-dc:Title": "Soccer match"
+  }
+]

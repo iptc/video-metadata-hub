@@ -1,0 +1,1626 @@
+[[struct_Concept]]
+=== Concept Structure
+
+Used in: <<Content-Warning,Content Warning>>, <<Digital-Source-Type,Digital Source Type>>, <<Workflow-Tag,Workflow Tag>>, <<CV-Term-About-the-Content,CV Term About the Content>>, <<Shot-Type,Shot Type>>, <<Characteristics,Characteristics>>
+
+
+[[Concept_Identifier]]
+==== Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Identifier*
+|Definition|Globally unique identifier of the concept
+
+|Type and cardinality|Text/URI (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|xmp:Identifier (Bag Text)
+|JSON ID and data type|identifiers (string/uri/array)
+|===
+
+[[Concept_Name]]
+==== Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Name*
+|Definition|Full name of the concept
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Name (Lang Alt)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[struct_Concept-with-role]]
+=== Concept with role Structure
+
+
+[[Concept-with-role_Identifier]]
+==== Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Identifier*
+|Definition|Globally unique identifier of the concept
+
+|Type and cardinality|Text/URI (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|xmp:Identifier (Bag Text)
+|JSON ID and data type|identifiers (string/uri/array)
+|===
+
+[[Concept-with-role_Name]]
+==== Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Name*
+|Definition|Full name of the concept
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Name (Lang Alt)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[Concept-with-role_Role]]
+==== Role
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Role*
+|Definition|Identifier of the role the concept has in the context of the metadata property
+
+|Type and cardinality|URI (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Role (Bag URI)
+|JSON ID and data type|role (string/uri/array)
+|===
+
+[[struct_CV-Term]]
+=== CV-Term Structure
+
+Used in: <<Genre,Genre>>
+
+
+[[CV-Term_CV-Term-CV-ID]]
+==== CV-Term CV ID
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*CV-Term CV ID*
+|Definition|Globally unique identifier of the Controlled Vocabulary the term is from.
+
+|Type and cardinality|Text/URI (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:CvId (URI)
+|JSON ID and data type|cvId
+ (string/uri/)
+|===
+
+[[CV-Term_CV-Term-ID]]
+==== CV-Term ID
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*CV-Term ID*
+|Definition|Globally unique identifier of the term from a Controlled Vocabulary.
+
+|Type and cardinality|Text/URI (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:CvTermId (URI)
+|JSON ID and data type|cvTermId
+ (string/uri/-MANDATORY)
+|===
+
+[[CV-Term_CV-Term-name]]
+==== CV-Term name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*CV-Term name*
+|Definition|Natural language name of the term from a Controlled Vocabulary.
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:CvTermName (LangAlt)
+|JSON ID and data type|cvTermName (object/AltLang/)
+|===
+
+[[CV-Term_Refined-'aboutness'-of-the-CV-Term]]
+==== Refined 'aboutness' of the CV-Term
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Refined 'aboutness' of the CV-Term*
+|Definition|Refinement of the 'about' relationship of the term with the content.
+|Notes|E.g. an identifier for "shown emotion" could be used to indicate that the CV-Term covers this facet.
+|Type and cardinality|Text/URI (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:CvTermRefinedAbout (URI)
+|JSON ID and data type|cvTermRefinedAbout (string/uri/)
+|===
+
+[[struct_Device]]
+=== Device Structure
+
+Used in: <<Recording-Device,Recording Device>>
+
+
+[[Device_Manufacturer]]
+==== Manufacturer
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Manufacturer*
+|Definition|Name of the manufacturer of the device
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.2
+|XMP ID and data type|Iptc4xmpExt:Manufacturer (Text)
+|JSON ID and data type|manufacturer (string//)
+|===
+
+[[Device_Model-Name]]
+==== Model Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Model Name*
+|Definition|Name of the device model
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.2
+|XMP ID and data type|Iptc4xmpExt:ModelName (Text)
+|JSON ID and data type|modelName (string//)
+|===
+
+[[Device_Serial-Number]]
+==== Serial Number
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Serial Number*
+|Definition|Serial number, assigned by manufacturer
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.2
+|XMP ID and data type|Iptc4xmpExt:SerialNumber (Text)
+|JSON ID and data type|serialNumber (string//)
+|===
+
+[[Device_Attached-Lens-Description]]
+==== Attached Lens Description
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Attached Lens Description*
+|Definition|Short description of the lens used with the device at the time of the recording
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.2
+|XMP ID and data type|Iptc4xmpExt:AttLensDescription (Text)
+|JSON ID and data type|attLensDescription (string//)
+|===
+
+[[Device_Owner´s-Device-ID]]
+==== Owner´s Device ID
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Owner´s Device ID*
+|Definition|Identifier assigned by the owner of the device
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.2
+|XMP ID and data type|Iptc4xmpExt:OwnersDeviceId (Text)
+|JSON ID and data type|ownerDeviceId (string//)
+|===
+
+[[struct_Embedded-Encoded-Rights-Expression]]
+=== Embedded Encoded Rights Expression Structure
+
+Used in: <<Embedded-Encoded-Rights-Expression,Embedded Encoded Rights Expression>>
+
+
+[[Embedded-Encoded-Rights-Expression_Rights-Expression-Language-ID]]
+==== Rights Expression Language ID
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rights Expression Language ID*
+|Definition|Identifier of the rights expression language used by the rights expression.
+
+|Type and cardinality|Text/URI (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RightsExprLangId (URI)
+|JSON ID and data type|rightsExprLangId (string/uri/-MANDATORY)
+|===
+
+[[Embedded-Encoded-Rights-Expression_Encoding-type]]
+==== Encoding type
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Encoding type*
+|Definition|Encoding type of the rights expression, identified by an IANA Media Type.
+
+|Type and cardinality|Text (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RightsExprEncType (MIMEtype)
+|JSON ID and data type|rightsExprEncType (string//-MANDATORY)
+|===
+
+[[Embedded-Encoded-Rights-Expression_Encoded-Rights-Expression]]
+==== Encoded Rights Expression
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Encoded Rights Expression*
+|Definition|Embedded serialized rights expression using a rights expression language which is encoded as a string.
+
+|Type and cardinality|Text (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:EncRightsExpr (Text)
+|JSON ID and data type|encRightsExpr (string//-MANDATORY)
+|===
+
+[[struct_Entity]]
+=== Entity Structure
+
+Used in: <<Metadata-Editor,Metadata Editor>>, <<Metadata-Authority,Metadata Authority>>, <<Featured-Organisation,Featured Organisation>>, <<Object-Shown,Object Shown>>, <<Person-Heard,Person Heard>>, <<Person-Shown,Person Shown>>, <<Shown-Event,Shown Event>>, <<Licensor-,Licensor >>, <<Supplier-,Supplier >>, <<Audio-Coding,Audio Coding>>, <<File-Format,File Format>>, <<Video-Coding,Video Coding>>
+
+
+[[Entity_Identifier]]
+==== Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Identifier*
+|Definition|Globally unique identifier of the entity
+
+|Type and cardinality|Text/URI (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|xmp:Identifier (Bag Text)
+|JSON ID and data type|identifiers (string/uri/array)
+|===
+
+[[Entity_Name]]
+==== Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Name*
+|Definition|Full name of the entity
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Name (Lang Alt)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[struct_Entity-with-role]]
+=== Entity with role Structure
+
+Used in: <<Planning-Reference,Planning Reference>>, <<Contributor,Contributor>>, <<Creator,Creator>>
+
+
+[[Entity-with-role_Identifier]]
+==== Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Identifier*
+|Definition|Globally unique identifier of the entity
+
+|Type and cardinality|Text/URI (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|xmp:Identifier (Bag Text)
+|JSON ID and data type|identifiers (string/uri/array)
+|===
+
+[[Entity-with-role_Name]]
+==== Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Name*
+|Definition|Full name of the entity
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Name (Lang Alt)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[Entity-with-role_Role]]
+==== Role
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Role*
+|Definition|Identifier of the role the entity has in the context of the metadata property
+
+|Type and cardinality|Text (0..unbounded)
+|Change history|Changed 1.4
+|XMP ID and data type|Iptc4xmpExt:Role (Bag Text)
+|JSON ID and data type|role (string//array)
+|===
+
+[[struct_Episode/Season]]
+=== Episode/Season Structure
+
+Used in: <<Episode,Episode>>, <<Season,Season>>
+
+
+[[Episode/Season_Name]]
+==== Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Name*
+|Definition|Name of the episode or season of a series
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Name (Text)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[Episode/Season_Number]]
+==== Number
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Number*
+|Definition|Number of the episode or season of a series
+
+|Type and cardinality|Integer (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Number (Text)
+|JSON ID and data type|number (number//)
+|===
+
+[[Episode/Season_Identifier]]
+==== Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Identifier*
+|Definition|Identifier of the episode or season of a series
+
+|Type and cardinality|URI (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Identifier (URI)
+|JSON ID and data type|identifier (string/uri/)
+|===
+
+[[struct_Frame-Size]]
+=== Frame Size Structure
+
+Used in: <<Frame-Size,Frame Size>>
+
+
+[[Frame-Size_Width]]
+==== Width
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Width*
+|Definition|Width of the video frame in pixels
+
+|Type and cardinality|Number (1)
+|Change history|New 1.0
+|XMP ID and data type|stDim:w (integer)
+|JSON ID and data type|widthPixels (number//)
+|===
+
+[[Frame-Size_Height]]
+==== Height
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Height*
+|Definition|Height of the video frame in pixels
+
+|Type and cardinality|Number (1)
+|Change history|New 1.0
+|XMP ID and data type|stDim:h (integer)
+|JSON ID and data type|heightPixels (number//)
+|===
+
+[[Frame-Size_Measure-Unit]]
+==== Measure Unit
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Measure Unit*
+|Definition|Units of width and height values, fixed value "pixels"
+
+|Type and cardinality|Text(1)
+|Change history|New 1.0
+|XMP ID and data type|stDim:unit (Text)
+|JSON ID and data type|unitPixels (string//)
+|===
+
+[[struct_Linked-Encoded-Rights-Expression]]
+=== Linked Encoded Rights Expression Structure
+
+Used in: <<Linked-Encoded-Rights-Expression,Linked Encoded Rights Expression>>
+
+
+[[Linked-Encoded-Rights-Expression_Rights-Expression-Language-ID]]
+==== Rights Expression Language ID
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rights Expression Language ID*
+|Definition|Identifier of the rights expression language used by the rights expression.
+
+|Type and cardinality|Text/URI (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RightsExprLangId (URI)
+|JSON ID and data type|rightsExprLangId (string/uri/-MANDATORY)
+|===
+
+[[Linked-Encoded-Rights-Expression_Encoding-type]]
+==== Encoding type
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Encoding type*
+|Definition|Encoding type of the rights expression, identified by an IANA Media Type.
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RightsExprEncType (MIMEtype)
+|JSON ID and data type|rightsExprEncType (string//-MANDATORY)
+|===
+
+[[Linked-Encoded-Rights-Expression_Link-to-Encoded-Rights-Expression]]
+==== Link to Encoded Rights Expression
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Link to Encoded Rights Expression*
+|Definition|Link to a rights expression using a rights expression language.
+
+|Type and cardinality|URL (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:LinkedRightsExpr (Text/URL)
+|JSON ID and data type|linkedRightsExpr (string/uri/-MANDATORY)
+|===
+
+[[struct_Linked-Image]]
+=== Linked Image Structure
+
+Used in: <<Snapshot-Link,Snapshot Link>>
+
+
+[[Linked-Image_Image-Link]]
+==== Image Link
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Image Link*
+|Definition|Link URL locating the image resource
+
+|Type and cardinality|URL (1)
+|Change history|New 1.1
+|XMP ID and data type|Iptc4xmpExt:Link (URL)
+|JSON ID and data type|link (string/uri/)
+|===
+
+[[Linked-Image_Image-Qualifier]]
+==== Image Qualifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Image Qualifier*
+|Definition|Qualifier of the relationship of the image with the video
+
+|Type and cardinality|URI (0..unbounded)
+|Change history|New 1.1
+|XMP ID and data type|Iptc4xmpExt:LinkQualifier (Bag URI)
+|JSON ID and data type|linkQualifiers (string/uri/array)
+|===
+
+[[Linked-Image_Image-Role]]
+==== Image Role
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Image Role*
+|Definition|Role of this image in the context of the video
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.1
+|XMP ID and data type|Iptc4xmpExt:ImageRole (Text)
+|JSON ID and data type|role (string//)
+|===
+
+[[Linked-Image_Media-Type]]
+==== Media Type
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Media Type*
+|Definition|IANA Media (MIME) Type
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.1
+|XMP ID and data type|dc:format (N/A)
+|JSON ID and data type|mediaType (string//)
+|===
+
+[[Linked-Image_Image-Width]]
+==== Image Width
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Image Width*
+|Definition|Width of the image, in pixels
+
+|Type and cardinality|Integer (0..1)
+|Change history|New 1.1
+|XMP ID and data type|Iptc4xmpExt:WidthPixels (integer)
+|JSON ID and data type|widthPixels (number//)
+|===
+
+[[Linked-Image_Image-Height]]
+==== Image Height
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Image Height*
+|Definition|Height of the image, in pixels
+
+|Type and cardinality|Integer (0..1)
+|Change history|New 1.1
+|XMP ID and data type|Iptc4xmpExt:HeightPixels (integer)
+|JSON ID and data type|heightPixels (number//)
+|===
+
+[[Linked-Image_Used-Video-Frame]]
+==== Used Video Frame
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Used Video Frame*
+|Definition|Frame of the video used for this still image.
+
+
+|Type and cardinality|Video Time structure (0..1)
+|Change history|New 1.1
+|XMP ID and data type|Iptc4xmpExt:UsedVideoFrame (Video Time)
+|JSON ID and data type|usedVideoFrame (object/VideoTime/)
+|===
+
+[[struct_Location]]
+=== Location Structure
+
+Used in: <<Location-Shot,Location Shot>>, <<Location-Shown,Location Shown>>
+
+
+[[Location_Identifier]]
+==== Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Identifier*
+|Definition|Globally unique identifier of the location
+
+|Type and cardinality|Text/URI (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|xmp:Identifier (Bag Text)
+|JSON ID and data type|identifiers (string/uri/array)
+|===
+
+[[Location_Name]]
+==== Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Name*
+|Definition|Full name of the location
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:LocationName (Lang Alt)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[Location_Sublocation-name]]
+==== Sublocation name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Sublocation name*
+|Definition|Name of a sub location the Location is located in
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Sublocation (Text)
+|JSON ID and data type|sublocation
+ (object/AltLang/)
+|===
+
+[[Location_City-name]]
+==== City name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*City name*
+|Definition|Name of the city the Location is located in
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:City (Text)
+|JSON ID and data type|city (object/AltLang/)
+|===
+
+[[Location_State/Province-name]]
+==== State/Province name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*State/Province name*
+|Definition|Name of the state or province the Location is located in
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:ProvinceState (Text)
+|JSON ID and data type|provinceState (object/AltLang/)
+|===
+
+[[Location_Country-name]]
+==== Country name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Country name*
+|Definition|Name of the country the Location is located in
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:CountryName (Text)
+|JSON ID and data type|countryName
+ (object/AltLang/)
+|===
+
+[[Location_Country-ISO-code]]
+==== Country ISO code
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Country ISO code*
+|Definition|ISO code of the country the Location is located in
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:CountryCode (Text)
+|JSON ID and data type|countryCode (string//)
+|===
+
+[[Location_World-region-name]]
+==== World region name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*World region name*
+|Definition|Name of the world region the Location is located in
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:WorldRegion (Text)
+|JSON ID and data type|worldRegion (object/AltLang/)
+|===
+
+[[Location_GPS-Longitude]]
+==== GPS-Longitude
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*GPS-Longitude*
+|Definition|Longitude of a WGS84 based position of this Location
+
+|Type and cardinality|Number/decimal (0..1)
+|Change history|New 1.0
+|XMP ID and data type|exif:GPSLongitude (Exif GPSCoordinate)
+|JSON ID and data type|gpsLongitude (number//)
+|===
+
+[[Location_GPS-Latitude]]
+==== GPS-Latitude
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*GPS-Latitude*
+|Definition|Latitude of a WGS84 based position of this Location
+
+|Type and cardinality|Number/decimal (0..1)
+|Change history|New 1.0
+|XMP ID and data type|exif:GPSLatitude (Exif GPSCoordinate)
+|JSON ID and data type|gpsLatitude (number//)
+|===
+
+[[Location_GPS-Altitude]]
+==== GPS-Altitude
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*GPS-Altitude*
+|Definition|Altitude in meters of a WGS84 based position of this Location
+
+|Type and cardinality|Number/decimal (0..1)
+|Change history|New 1.0
+|XMP ID and data type|exif:GPSAltitude (Exif Rational)
+|JSON ID and data type|gpsAltitude (number//)
+|===
+
+[[struct_Person-Details]]
+=== Person Details Structure
+
+
+[[Person-Details_Identifier]]
+==== Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Identifier*
+|Definition|Globally unique identifier of the person
+
+|Type and cardinality|Text/URI (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:PersonId (Bag URI)
+|JSON ID and data type|identifiers (string/uri/array)
+|===
+
+[[Person-Details_Name]]
+==== Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Name*
+|Definition|Name of the person
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:PersonName (Lang Alt)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[Person-Details_Description]]
+==== Description
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Description*
+|Definition|A textual description of the person
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:PersonDescription (Lang Alt)
+|JSON ID and data type|description (object/AltLang/)
+|===
+
+[[Person-Details_Characteristics]]
+==== Characteristics
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Characteristics*
+|Definition|A property or trait of the person
+
+|Type and cardinality|Concept structure (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:PersonCharacteristic (Bag CV-Term structure)
+|JSON ID and data type|characteristics (CvTerm//array)
+|===
+
+[[struct_Product-with-GTIN]]
+=== Product with GTIN Structure
+
+Used in: <<Product-Shown,Product Shown>>
+
+
+[[Product-with-GTIN_GTIN]]
+==== GTIN
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*GTIN*
+|Definition|A 14 digit GTIN (Global Trade Item Number) of the product (GTIN-8 to GTIN-14 codes are used).
+
+|Type and cardinality|Text (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:ProductGTIN (Text)
+|JSON ID and data type|gtin (string//-MANDATORY)
+|===
+
+[[Product-with-GTIN_Name]]
+==== Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Name*
+|Definition|Name of the product.
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:ProductName (Lang Alt)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[Product-with-GTIN_Description]]
+==== Description
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Description*
+|Definition|A textual description of the product.
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:ProductDescription (Lang Alt)
+|JSON ID and data type|description (object/AltLang/)
+|===
+
+[[struct_Publication-Event]]
+=== Publication Event Structure
+
+Used in: <<Publication-Event,Publication Event>>
+
+
+[[Publication-Event_Publication-Date]]
+==== Publication Date
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Publication Date*
+|Definition|Date and optionally the time of publishing the video
+
+|Type and cardinality|Date (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Date (Date)
+|JSON ID and data type|date (string/date-time/-MANDATORY)
+|===
+
+[[Publication-Event_Publication-Event-Name]]
+==== Publication Event Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Publication Event Name*
+|Definition|Name of the event for publishing this video.
+|Notes|The name may include the broadcasting company, the country, if this is a (regional) first publication etc
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Name (Text)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[Publication-Event_Publication-Event-Identifier]]
+==== Publication Event Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Publication Event Identifier*
+|Definition|Identifier of the event for publishing this video
+
+|Type and cardinality|URI (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Identifier (URI)
+|JSON ID and data type|identifier (string/uri/)
+|===
+
+[[struct_Qualified-Link]]
+=== Qualified Link Structure
+
+Used in: <<Dopesheet-Link,Dopesheet Link>>, <<Transcript-Link,Transcript Link>>
+
+
+[[Qualified-Link_Link]]
+==== Link
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Link*
+|Definition|URL of  the link
+
+|Type and cardinality|URL (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Link (URL)
+|JSON ID and data type|link (string/uri/)
+|===
+
+[[Qualified-Link_Qualifier]]
+==== Qualifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Qualifier*
+|Definition|Term qualifying the use of the link
+
+|Type and cardinality|URI (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:LinkQualifier (URI)
+|JSON ID and data type|linkQualifier (string/uri/)
+|===
+
+[[struct_Qualified-Link-with-Language]]
+=== Qualified Link with Language Structure
+
+Used in: <<Timed-Text-Link,Timed Text Link>>
+
+
+[[Qualified-Link-with-Language_Link]]
+==== Link
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Link*
+|Definition|URL of  the link
+
+|Type and cardinality|URL (1)
+|Change history|New 1.4
+|XMP ID and data type|Iptc4xmpExt:Link (URL)
+|JSON ID and data type|link (string/uri/)
+|===
+
+[[Qualified-Link-with-Language_Qualifier]]
+==== Qualifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Qualifier*
+|Definition|Term qualifying the use of the link
+
+|Type and cardinality|URI (0..1)
+|Change history|New 1.4
+|XMP ID and data type|Iptc4xmpExt:LinkQualifier (URI)
+|JSON ID and data type|linkQualifier (string/uri/)
+|===
+
+[[Qualified-Link-with-Language_Language]]
+==== Language
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Language*
+|Definition|Language of the content at the link location
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.4
+|XMP ID and data type|Iptc4xmpExt:LinkLanguage (Text)
+|JSON ID and data type|linkLanguage (string//)
+|===
+
+[[struct_Rating]]
+=== Rating Structure
+
+Used in: <<Rating,Rating>>, <<Review-Rating,Review Rating>>, <<Workflow-Rating,Workflow Rating>>
+
+
+[[Rating_Rating-Value]]
+==== Rating Value
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rating Value*
+|Definition|Rating value as issued by the rating source
+
+|Type and cardinality|Text (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RatingValue (Text)
+|JSON ID and data type|ratingValue (string//-MANDATORY)
+|===
+
+[[Rating_Rating-Source-Link]]
+==== Rating Source Link
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rating Source Link*
+|Definition|Link to the site and optionally the page of the party which has issued the rating value, linked resource should explain the rating rules.
+
+|Type and cardinality|URL (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RatingSourceLink (Text (URI))
+|JSON ID and data type|ratingSourceLink (string/uri/-MANDATORY)
+|===
+
+[[Rating_Rating-Scale-Min-Value]]
+==== Rating Scale Min Value
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rating Scale Min Value*
+|Definition|The value of the rating scale used for the lowest/worst rating
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RatingScaleMinValue (Text)
+|JSON ID and data type|ratingScaleMinValue (string//)
+|===
+
+[[Rating_Rating-Scale-Max-Value]]
+==== Rating Scale Max Value
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rating Scale Max Value*
+|Definition|The value of the rating scale used for the highest/best rating
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RatingScaleMaxValue (Text)
+|JSON ID and data type|ratingScaleMaxValue (string//)
+|===
+
+[[Rating_Rating-Value-Logo]]
+==== Rating Value Logo
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rating Value Logo*
+|Definition|Visualisation of the rating value referenced by a link
+
+|Type and cardinality|URL (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RatingValueLogoLink (Text (URL))
+|JSON ID and data type|ratingValueLogoLink
+ (string/uri/)
+|===
+
+[[Rating_Rating-Region]]
+==== Rating Region
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rating Region*
+|Definition|Geopolitical region to which this rating applies.
+
+|Type and cardinality|Location Entity structure (0..unbounded)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RatingRegion (Bag Location structure)
+|JSON ID and data type|ratingRegions (object/Location/array)
+|===
+
+[[struct_Registry-Entry]]
+=== Registry Entry Structure
+
+Used in: <<Registry-Entry,Registry Entry>>
+
+
+[[Registry-Entry_Asset-Identifier]]
+==== Asset Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Asset Identifier*
+|Definition|Unique identifier of the video as issued by a registry
+|Notes|This value shall not be changed after being applied.
+|Type and cardinality|Text (preferred: URI) (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RegItemId (Text)
+|JSON ID and data type|assetIdentifier (string//-MANDATORY)
+|===
+
+[[Registry-Entry_Registry-Identifier]]
+==== Registry Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Registry Identifier*
+|Definition|An identifier for the registry which issued the identifier of the video.
+
+|Type and cardinality|Text (preferred: URI) (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RegOrgId (Text)
+|JSON ID and data type|registryIdentifier (string/uri/-MANDATORY)
+|===
+
+[[Registry-Entry_Role]]
+==== Role
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Role*
+|Definition|An identifier of the reason and/or purpose for this Registry Entry.
+|Notes|Could indicated e.g. "Id of the previous supplier", "Id of the original copyright owner", "Id used by the archive", etc
+|Type and cardinality|Text/URI (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RegEntryRole (Text)
+|JSON ID and data type|role (string/uri/)
+|===
+
+[[struct_Series]]
+=== Series Structure
+
+Used in: <<Series,Series>>
+
+
+[[Series_Series-name]]
+==== Series name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Series name*
+|Definition|Name of the series
+
+|Type and cardinality|Text + language tag (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Name (Text)
+|JSON ID and data type|name (object/AltLang/)
+|===
+
+[[Series_Series-identifier]]
+==== Series identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Series identifier*
+|Definition|Identifier for the series
+
+|Type and cardinality|URI (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Identifier (URI)
+|JSON ID and data type|identifier (string/uri/)
+|===
+
+[[struct_Temporal-Coverage]]
+=== Temporal Coverage Structure
+
+Used in: <<Temporal-Coverage,Temporal Coverage>>
+
+
+[[Temporal-Coverage_From-Date]]
+==== From Date
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*From Date*
+|Definition|Optionally truncated date when the temporal coverage starts
+|Notes|Truncated date means: the date value can be year + month + day OR year + month OR year only
+|Type and cardinality|Date(1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:tempCoverageFrom (Date)
+|JSON ID and data type|tempCoverageFrom
+ (string/date-time/)
+|===
+
+[[Temporal-Coverage_To-Date]]
+==== To Date
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*To Date*
+|Definition|Optionally truncated date when the temporal coverage ends
+
+|Type and cardinality|Date(1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:tempCoverageTo (Date)
+|JSON ID and data type|tempCoverageTo (string/date-time/)
+|===
+
+[[struct_Text-with-Region-Delimiter]]
+=== Text with Region Delimiter Structure
+
+Used in: <<Data-Displayed-on-Screen,Data Displayed on Screen>>
+
+
+[[Text-with-Region-Delimiter_Text]]
+==== Text
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Text*
+|Definition|Text or textual data
+
+|Type and cardinality|Text (1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:RegionText (Text)
+|JSON ID and data type|regionText (string//-MANDATORY)
+|===
+
+[[Text-with-Region-Delimiter_Measure-Type]]
+==== Measure Type
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Measure Type*
+|Definition|How the measures of the rectangle are expressed
+|Notes|Absolute pixels: measured from the upper left corner of the frame
+Ratio: percentage of the width or height, reference point upper left corner of the frame
+|Type and cardinality|Text (0..1) - enumeration
+- absolutePixels
+- ratio
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Region/stArea:unit (Closed Choice:
+- pixel
+- normalized {=ratio})
+|JSON ID and data type|measureType (string//enum)
+|===
+
+[[Text-with-Region-Delimiter_Rectangle-upper-left-X]]
+==== Rectangle, upper left X
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rectangle, upper left X*
+|Definition|Horizontal axis value of the upper left corner of the rectange
+
+|Type and cardinality|Decimal (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Region/stArea:x (Real)
+|JSON ID and data type|regionAreaX (number//)
+|===
+
+[[Text-with-Region-Delimiter_Rectangle-upper-left-Y]]
+==== Rectangle, upper left Y
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rectangle, upper left Y*
+|Definition|Vertical axis value of the upper left corner of the rectange
+
+|Type and cardinality|Decimal (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Region/stArea:y (Real)
+|JSON ID and data type|regionAreaY (number//)
+|===
+
+[[Text-with-Region-Delimiter_Rectangle-horizontal-size]]
+==== Rectangle, horizontal size
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rectangle, horizontal size*
+|Definition|Horizontal width of the rectangle
+
+|Type and cardinality|Decimal (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Region/stArea:w (Real)
+|JSON ID and data type|regionAreaWidth (number//)
+|===
+
+[[Text-with-Region-Delimiter_Rectangle-vertical-size]]
+==== Rectangle, vertical size
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Rectangle, vertical size*
+|Definition|Vertical height of the rectangle
+
+|Type and cardinality|Decimal (0..1)
+|Change history|New 1.0
+|XMP ID and data type|Iptc4xmpExt:Region/stArea:h (Real)
+|JSON ID and data type|regionAreaHeight (number//)
+|===
+
+[[struct_Video-Time]]
+=== Video Time Structure
+
+Used in: <<Editorial-Duration,Editorial Duration>>, <<Editorial-Duration-End,Editorial Duration End>>, <<Editorial-Duration-Start,Editorial Duration Start>>, <<File-Duration,File Duration>>, <<Used-Video-Frame,Used Video Frame>>
+
+
+[[Video-Time_Time-Format]]
+==== Time Format
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Time Format*
+|Definition|Identifier of the time format. For time code formats following SMPTE specifications.
+
+|Type and cardinality|Text value from CV (1)
+Enumeration:
+- normalPlayTime
+- smpteTC24
+- smpteTC25
+- smpteTC2997
+- smpteTC2997drop
+- smpteTC30
+- smpteTC50
+- smpteTC5994
+- smpteTC5994drop
+- smpteTC60
+- smpteTC23976
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:timeFormat (Closed choice Text
+24Timecode
+25Timecode
+2997DropTimecode
+2997NonDropTimecode
+30Timecode
+50Timecode
+5994DropTimecode
+5994NonDropTimecode
+60Timecode
+23976Timecode)
+|JSON ID and data type|timeFormat (string//enum-MANDATORY)
+|===
+
+[[Video-Time_Time-Value]]
+==== Time Value
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Time Value*
+|Definition|Formated string including hours, minutes, seconds, fractions of seconds or frames, depending on the Time Format
+
+|Type and cardinality|Text (1)
+|Change history|New 1.0
+|XMP ID and data type|xmpDM:timeValue (Text)
+|JSON ID and data type|timeValue (string//-MANDATORY)
+|===
+
+[[struct_PLUS-basic-entity-structure]]
+=== PLUS basic entity structure Structure
+
+
+[[PLUS-basic-entity-structure_Identifier]]
+==== Identifier
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Identifier*
+|Definition|Globally unique identifier of the entity
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|identifier (string//)
+|===
+
+[[PLUS-basic-entity-structure_Name]]
+==== Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Name*
+|Definition|Full name of the entity
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|name (string//)
+|===
+
+[[struct_Artwork-or-Object-in-the-Image]]
+=== Artwork or Object in the Image Structure
+
+
+[[Artwork-or-Object-in-the-Image_Circa-Date-Created]]
+==== Circa Date Created
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Circa Date Created*
+|Definition|Approximate date or range of dates associated with the creation and production of an artwork or object or its components.
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|circaDateCreated (string//)
+|===
+
+[[Artwork-or-Object-in-the-Image_Content-Description]]
+==== Content Description
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Content Description*
+|Definition|A textual description of the content depicted in the artwork or object.
+|Notes|
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|contentDescription (object/AltLang/)
+|===
+
+[[Artwork-or-Object-in-the-Image_Contribution-Description]]
+==== Contribution Description
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Contribution Description*
+|Definition|A textual description about a contribution made to an artwork or an object.
+|Notes|Should include the type, date and location of contribution, and details about the contributor.
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|contributionDescription (object/AltLang/)
+|===
+
+[[Artwork-or-Object-in-the-Image_Copyright-Notice]]
+==== Copyright Notice
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Copyright Notice*
+|Definition|Contains any necessary copyright notice for claiming the intellectual property for artwork or an object in the image and should identify the current owner of the copyright of this  work with associated intellectual property rights.
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|copyrightNotice (object/AltLang/)
+|===
+
+[[Artwork-or-Object-in-the-Image_Creator]]
+==== Creator
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Creator*
+|Definition|Contains the name of the artist who has created artwork or an object in the  image. In cases where the artist could or should not be identified the name of a company or organisation may be appropriate.
+
+|Type and cardinality|Text (0..unbounded)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|creatorNames (string//array)
+|===
+
+[[Artwork-or-Object-in-the-Image_Creator-ID]]
+==== Creator ID
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Creator ID*
+|Definition|Globally unique identifier for the creator of artwork or object.
+|Notes|Add the IDs in the same sequence as the Creator names
+|Type and cardinality|URL (0..unbounded)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|creatorIdentifiers (string/uri/array
+)
+|===
+
+[[Artwork-or-Object-in-the-Image_Current-Copyright-Owner-ID]]
+==== Current Copyright Owner ID
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Current Copyright Owner ID*
+|Definition|Globally unique identifier for the current owner of the copyright of the artwork or object.
+
+|Type and cardinality|URI (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|currentCopyrightOwnerIdentifier (string/uri/)
+|===
+
+[[Artwork-or-Object-in-the-Image_Current-Copyright-Owner-Name]]
+==== Current Copyright Owner Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Current Copyright Owner Name*
+|Definition|Name of the current owner of the copyright of the artwork or object.
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|currentCopyrightOwnerName (string//)
+|===
+
+[[Artwork-or-Object-in-the-Image_Current-Licensor-ID]]
+==== Current Licensor ID
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Current Licensor ID*
+|Definition|Globally unique identifier for the current licensor of the artwork or object.
+
+|Type and cardinality|URI (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|currentLicensorIdentifier (string/uri/)
+|===
+
+[[Artwork-or-Object-in-the-Image_Current-Licensor-Name]]
+==== Current Licensor Name
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Current Licensor Name*
+|Definition|Name of the current licensor of the artwork or object.
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|currentLicensorName (string//)
+|===
+
+[[Artwork-or-Object-in-the-Image_Date-Created]]
+==== Date Created
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Date Created*
+|Definition|Designates the date and optionally the time the artwork or object in the image was created. This relates to artwork or objects with associated intellectual property rights.
+
+|Type and cardinality|DateTime (preferred: truncated DateTime)  (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|dateCreated (string/date-time/)
+|===
+
+[[Artwork-or-Object-in-the-Image_Physical-Description]]
+==== Physical Description
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Physical Description*
+|Definition|A textual description of the physical characteristics of the artwork or object, without reference to the content depicted.
+|Notes|Object type, materials-techniques and measurements may be described.
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|physicalDescription (object/AltLang/)
+|===
+
+[[Artwork-or-Object-in-the-Image_Source]]
+==== Source
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Source*
+|Definition|The organisation or body holding and registering the artwork or object in the image for inventory purposes.
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|source (string//)
+|===
+
+[[Artwork-or-Object-in-the-Image_Source-Inventory-Number]]
+==== Source Inventory Number
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Source Inventory Number*
+|Definition|The inventory number issued by the organisation or body holding and registering the artwork or object in the image.
+
+|Type and cardinality|Text (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|sourceInventoryNr (string//)
+|===
+
+[[Artwork-or-Object-in-the-Image_Source-Inventory-URL]]
+==== Source Inventory URL
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Source Inventory URL*
+|Definition|URL reference to the metadata record of the inventory maintained by the Source.
+
+|Type and cardinality|URL (0..1)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|sourceInventoryUrl (string/uri/)
+|===
+
+[[Artwork-or-Object-in-the-Image_Style-Period]]
+==== Style Period
+[width=95%]
+[cols="25h,75"]
+|===
+|Property name|*Style Period*
+|Definition|The style, historical or artistic period, movement, group, or school whose characteristics are represented in the artwork or object.
+|Notes|It is advised to take the terms from a Controlled Vocabulary.
+|Type and cardinality|Text (0..unbounded)
+|Change history|New 1.3
+|XMP ID and data type|N/A (N/A)
+|JSON ID and data type|stylePeriod (string//array
+)
+|===
+
+
+
+
+
+

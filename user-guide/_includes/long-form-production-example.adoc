@@ -1,0 +1,64 @@
+=== Production Element example
+
+image:lfp_example.jpg[Thumbnail for Production Element example footage]
+
+Download the example file with embedded metadata: https://iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec17-long-form-production.mp4[IPTC-VMHub-RefVideo-Rec17-long-form-production.mp4]
+
+
+==== Administrative fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[long-form-production-exampleexampleCirca-Date-Created]]Circa Date Created
+a|2020
+
+
+|[[long-form-production-exampleexampleDate-Created]]Date Created
+a|2020-07-07
+
+
+|[[long-form-production-exampleexampleDate-Modified]]Date Modified
+a|2023-09-19
+
+
+|[[long-form-production-exampleexampleDigital-Source-Type]]Digital Source Type
+a|http://cv.iptc.org/newscodes/digitalsourcetype/digitalCapture
+
+
+|[[long-form-production-exampleexampleMetadata-Edit-Date]]Metadata Edit Date
+a|2026-05-13
+
+
+|[[long-form-production-exampleexampleMetadata-Editor]]Metadata Editor
+a|IPTC VM Working Group
+
+
+|[[long-form-production-exampleexampleReady-for-Release]]Ready for Release
+a|No
+
+
+|[[long-form-production-exampleexampleRecording-Device]]Recording Device
+a|{ "manufacturer": "Panasonic", "modelName": "HC-X1"}
+
+
+|[[long-form-production-exampleexampleStyle-Period]]Style Period
+a|Drone footage
+
+
+|[[long-form-production-exampleexampleVideo-Identifier]]Video Identifier
+a|IPTC-Example-ProductionElement
+
+
+|===
+
+==== Fields describing audio/visual content
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[long-form-production-exampleexampleTitle]]Title
+a|Soccer match
+
+
+|===

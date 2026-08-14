@@ -1,0 +1,173 @@
+=== Galleries, Libraries, Archives, Museums example
+
+image:glam_example.jpg[Thumbnail for Galleries, Libraries, Archives, Museums example footage]
+
+Download the example file with embedded metadata: https://iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec17-glam.mp4[IPTC-VMHub-RefVideo-Rec17-glam.mp4]
+
+
+==== Administrative fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[glam-exampleexampleCirca-Date-Created]]Circa Date Created
+a|1990s
+
+
+|[[glam-exampleexampleEpisode]]Episode
+a|https://wellcomelibrary.org/item/b16766246
+
+
+|[[glam-exampleexampleExternal-Metadata-URL]]External Metadata URL
+a|https://wellcomelibrary.org/data/b16766246
+
+
+|[[glam-exampleexampleMetadata-Authority]]Metadata Authority
+a|Wellcome Library
+
+
+|[[glam-exampleexampleReady-for-Release]]Ready for Release
+a|Yes
+
+
+|[[glam-exampleexampleVideo-Identifier]]Video Identifier
+a|b16766246
+
+
+|===
+
+==== Fields describing audio/visual content
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[glam-exampleexampleCV-Term-About-the-Content]]CV Term About the Content
+a|Public health
+
+
+|[[glam-exampleexampleDescription]]Description
+a|A television advertisement asking people to register for a Donor Card in order to donate organs after death. 
+
+
+|[[glam-exampleexampleDopesheet-Link]]Dopesheet Link
+a|https://wellcomelibrary.org/data/b16766246
+
+
+|[[glam-exampleexampleGenre]]Genre
+a|Public information
+
+
+|[[glam-exampleexampleHeadline-]]Headline 
+a|A television advertisement asking people to register for a Donor Card in order to donate organs after death. 
+
+
+|[[glam-exampleexampleKeywords]]Keywords
+a|Organ procurement, Public health, Medical sciences, Organ transplantation, Health education, Health policy, Health services 
+
+
+|[[glam-exampleexampleLanguage]]Language
+a|En
+
+
+|[[glam-exampleexampleSnapshot-Link]]Snapshot Link
+a|Link=https://wellcomelibrary.org/posterimages/b16766246/poster
+
+
+|[[glam-exampleexampleTitle]]Title
+a|Donor card gift commercial from the Wellcome Trust archive
+
+
+|===
+
+==== Rights fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[glam-exampleexampleContributor]]Contributor
+a|This video was made from material preserved by the BFI National Archive.
+
+
+|[[glam-exampleexampleCopyright-Notice-]]Copyright Notice 
+a|Crown copyright, managed by BFI; CC-BY-NC
+
+
+|[[glam-exampleexampleCreator]]Creator
+a|This video was made from material preserved by the BFI National Archive.
+
+
+|[[glam-exampleexampleCredit-Line]]Credit Line
+a|Wellcome Library
+
+
+|[[glam-exampleexampleLicensor-]]Licensor 
+a|Wellcome Library
+
+
+|[[glam-exampleexampleCopyright-Owner-]]Copyright Owner 
+a|Wellcome Library
+
+
+|[[glam-exampleexampleSupplier-]]Supplier 
+a|Wellcome Library
+
+
+|===
+
+==== Technical fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[glam-exampleexampleAudio-Bits-per-Sample]]Audio Bits per Sample
+a|32
+
+
+|[[glam-exampleexampleAudio-Channel-Layout]]Audio Channel Layout
+a|Stereo
+
+
+|[[glam-exampleexampleAudio-Channels]]Audio Channels
+a|2
+
+
+|[[glam-exampleexampleAudio-Coding]]Audio Coding
+a|AAC
+
+
+|[[glam-exampleexampleAudio-Sample-Rate]]Audio Sample Rate
+a|44100
+
+
+_48kHz (Q for schema: should we have Hz with big numbers? or strings with any content? or floats representing kHz?)_
+
+
+|[[glam-exampleexampleDisplay-Aspect-Ratio]]Display Aspect Ratio
+a|1.25
+
+
+|[[glam-exampleexampleFile-Bitrate]]File Bitrate
+a|2300000
+
+
+|[[glam-exampleexampleFile-Format]]File Format
+a|MP4
+
+
+|[[glam-exampleexampleFrame-Size]]Frame Size
+a|W=768; H=576; Unit=pixel
+
+
+|[[glam-exampleexampleMedia-Type]]Media Type
+a|video/mp4
+
+
+|[[glam-exampleexampleSignal-Aspect-Ratio]]Signal Aspect Ratio
+a|1
+
+
+|[[glam-exampleexampleSignal-Format]]Signal Format
+a|ITU-R BT.601
+
+
+|===

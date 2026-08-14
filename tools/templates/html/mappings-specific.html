@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Metadata Hub Mapping</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="iptcspecs1.css">
+</head>
+<body>
+    <h1 class="pageheader">
+        <a href="https://iptc.org"><img src="https://iptc.org/download/resources/logos/iptc-gr_70x70.jpg" align="left" border="0"></a>
+        IPTC Video Metadata Hub - Recommendation {{ version }}{% if header_appendix %} {{ header_appendix }}{% endif %}/ Mapping VMHub - {{ mapping_heading }}
+    </h1>
+
+    <p class="note1">
+        Return to <a href="IPTC-VideoMetadataHub-mapping-Rec_{{ version }}.html">all recommended mappings of the Video Metadata Hub.</a>
+    </p>
+
+    <p class="note1">
+        See the <a href="IPTC-VideoMetadataHub-props-Rec_{{ version }}.html">specification of Video Metadata Hub properties</a>
+    </p>
+
+    <p class="note1">
+        Mapping recommended on {{ approval_date }}. Document revision as of {{ revision_date }}.
+    </p>
+
+    <p class="smallnote1">
+        Copyright © {{ copyright_year }}, <a href="https://iptc.org">IPTC</a> - all rights reserved. Published under the Creative Commons Attribution 4.0 license <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>
+    </p>
+
+    <p class="note1">
+        In this table the columns with a blue header are defined by the Video Metadata Hub, the column with the green header is defined by {{ mapping_heading }}
+    </p>
+
+    <p class="note1">
+        Note on the column headers:<br>
+        EBUcore: based on the EBU Core Metadata Standard.<br>
+        XMP: based on the ISO XMP standard.<br>
+        PVMD: a specification of JSON properties for Photo and Video MetaData by IPTC (aka phovidmd).
+    </p>
+
+    <table class="spec1 vmhmapping">
+        <thead>
+            <tr>
+                <th class="hdrcol1">Property Group</th>
+                <th class="hdrcol2">Property Name</th>
+                <th class="hdrcol3">Definition / Semantics</th>
+                <th class="hdrcol5">EBUcore</th>
+                <th class="hdrcol6">XMP</th>
+                <th class="hdrcol7">PVMD JSON</th>
+                <th class="hdrcolNoniptc">{{ mapping_heading }}</th>
+            </tr>
+            <tr>
+                <td class="hdrcol1"> </td>
+                <td class="hdrcol2"> </td>
+                <td class="hdrcol3"> </td>
+                <td class="hdrcolIptc">{% if find_more_url %}<a href="{{ find_more_url }}" target="_blank">Find more about it at ...</a>{% endif %}</td>
+                <td class="hdrcolIptc">{% if find_more_url %}<a href="{{ find_more_url }}" target="_blank">Find more about it at ...</a>{% endif %}</td>
+                <td class="hdrcolIptc">{% if find_more_url %}<a href="{{ find_more_url }}" target="_blank">Find more about it at ...</a>{% endif %}</td>
+                <td class="hdrcolNoniptc">{% if mapping_find_more_url %}<a href="{{ mapping_find_more_url }}" target="_blank">Find more about it at ...</a>{% endif %}</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in mapping_rows %}
+            <tr{% if row.is_structure_header %} style="background-color: #009999;"{% elif row.is_structure %} style="background-color: #00cccc;"{% endif %}>
+                <td class="bgdcolIptc">{{ row.property_group }}</td>
+                <td class="bgdcolIptc">{{ row.property_name }}</td>
+                <td class="bgdcolIptc">{{ row.definition }}</td>
+                <td class="bgdcolIptc">{{ row.ebucore }}</td>
+                <td class="bgdcolIptc">{{ row.xmp }}</td>
+                <td class="bgdcolIptc">{{ row.pvmd_json }}</td>
+                <td class="bgdcolNoniptc">{{ row.mapping_value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+

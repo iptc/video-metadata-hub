@@ -1,0 +1,182 @@
+=== News Agency example
+
+image:na_example.jpg[Thumbnail for News Agency example footage]
+
+Download the example file with embedded metadata: https://iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec17-news-agency.mp4[IPTC-VMHub-RefVideo-Rec17-news-agency.mp4]
+
+
+==== Administrative fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[news-agency-exampleexampleDate-Created]]Date Created
+a|1961-05-25
+
+
+|[[news-agency-exampleexampleDate-Released]]Date Released
+a|1961-05-25
+
+
+|[[news-agency-exampleexampleDigital-Source-Type]]Digital Source Type
+a|https://cv.iptc.org/newscodes/digitalsourcetype/negativeFilm
+
+
+|[[news-agency-exampleexampleExternal-Metadata-URL]]External Metadata URL
+a|https://www.nasa.gov/vision/space/features/jfk_speech.html
+
+
+|[[news-agency-exampleexampleFeed-Identifier]]Feed Identifier
+a|NASA Video
+
+
+|[[news-agency-exampleexampleMetadata-Authority]]Metadata Authority
+a|NASA
+
+
+|[[news-agency-exampleexampleRecording-Device]]Recording Device
+a|Unknown
+
+
+|===
+
+==== Fields describing audio/visual content
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[news-agency-exampleexampleAlt-Text-Accessibility]]Alt Text (Accessibility)
+a|President Kennedy speaks to Congress on May 25, 1961.
+
+
+|[[news-agency-exampleexampleCV-Term-About-the-Content]]CV Term About the Content
+a|?
+
+
+|[[news-agency-exampleexampleDescription]]Description
+a|In an address to Congress on "Urgent National Needs" on May 25, 1961, President John F. Kennedy called for America to send astronauts to the moon and return him safely to Earth before the end of the decade.
+
+
+|[[news-agency-exampleexampleExtended-Description-Accessibility]]Extended Description (Accessibility)
+a|In an address to Congress on "Urgent National Needs" on May 25, 1961, President John F. Kennedy called for America to send astronauts to the moon and return him safely to Earth before the end of the decade.
+
+
+|[[news-agency-exampleexampleFeatured-Organisation]]Featured Organisation
+a|NASA, US Government
+
+
+|[[news-agency-exampleexampleGenre]]Genre
+a|News
+
+
+|[[news-agency-exampleexampleHeadline-]]Headline 
+a|A President Issues NASA's First Historic Challenge
+
+
+|[[news-agency-exampleexampleKeywords]]Keywords
+a|president,kennedy,NASA,Moon,Space,Space Race,Congress
+
+
+|[[news-agency-exampleexampleLanguage]]Language
+a|EN
+
+
+|[[news-agency-exampleexampleLocation-Shot]]Location Shot
+a|Washington DC
+
+
+|[[news-agency-exampleexampleLocation-Shown]]Location Shown
+a|Washington DC
+
+
+|[[news-agency-exampleexamplePerson-Heard]]Person Heard
+a|President John F Kennedy
+
+
+|[[news-agency-exampleexamplePerson-Shown]]Person Shown
+a|President John F Kennedy
+
+
+|===
+
+==== Rights fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[news-agency-exampleexampleContributor]]Contributor
+a|NASA
+
+
+|[[news-agency-exampleexampleCopyright-Year]]Copyright Year
+a|1961
+
+
+|[[news-agency-exampleexampleCreator]]Creator
+a|NASA
+
+
+|[[news-agency-exampleexampleCopyright-Owner-]]Copyright Owner 
+a|NASA
+
+
+|===
+
+==== Technical fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[news-agency-exampleexampleAudio-Bitrate]]Audio Bitrate
+a|95000
+
+
+|[[news-agency-exampleexampleAudio-Bits-per-Sample]]Audio Bits per Sample
+a|32
+
+
+|[[news-agency-exampleexampleAudio-Channel-Layout]]Audio Channel Layout
+a|Stereo
+
+
+|[[news-agency-exampleexampleAudio-Channels]]Audio Channels
+a|2
+
+
+|[[news-agency-exampleexampleAudio-Coding]]Audio Coding
+a|AAC
+
+
+|[[news-agency-exampleexampleAudio-Sample-Rate]]Audio Sample Rate
+a|44100
+
+
+|[[news-agency-exampleexampleDisplay-Aspect-Ratio]]Display Aspect Ratio
+a|1.777777778
+
+
+|[[news-agency-exampleexampleEditorial-Duration]]Editorial Duration
+a|02:04
+
+
+|[[news-agency-exampleexampleFile-Bitrate]]File Bitrate
+a|379000
+
+
+|[[news-agency-exampleexampleFile-Format]]File Format
+a|MP4
+
+
+|[[news-agency-exampleexampleFrame-Size]]Frame Size
+a|W=640; H=360; Unit=pixel
+
+
+|[[news-agency-exampleexampleMedia-Type]]Media Type
+a|video/mp4
+
+
+|[[news-agency-exampleexampleSignal-Aspect-Ratio]]Signal Aspect Ratio
+a|1
+
+
+|===

@@ -1,0 +1,195 @@
+=== Enterprise Advertising Production example
+
+Thanks to Allison Sullivan of MGM Resorts for providing the example footage.
+
+image:eap_example.jpg[Thumbnail for Enterprise Advertising Production example footage]
+
+Download the example file with embedded metadata: https://iptc.org/std/videometadatahub/examples/IPTC-VMHub-RefVideo-Rec17-enterprise-advertising-production.mp4[IPTC-VMHub-RefVideo-Rec17-enterprise-advertising-production.mp4]
+
+
+==== Administrative fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[enterprise-advertising-production-exampleexampleDate-Created]]Date Created
+a|2020-04-28
+
+
+|[[enterprise-advertising-production-exampleexampleDate-Modified]]Date Modified
+a|2021-01-21
+
+
+|[[enterprise-advertising-production-exampleexampleDate-Released]]Date Released
+a|2020-12-10
+
+
+|[[enterprise-advertising-production-exampleexampleMetadata-Authority]]Metadata Authority
+a|MGM Resorts International Operations Inc.
+
+
+|[[enterprise-advertising-production-exampleexampleStoryline-Identifier]]Storyline Identifier
+a|Las Vegas Properties, Bellagio
+
+
+|[[enterprise-advertising-production-exampleexampleParent-Video-Identifier]]Parent Video Identifier
+a|5588593
+
+
+|[[enterprise-advertising-production-exampleexampleVideo-Identifier]]Video Identifier
+a|106271516
+
+
+|[[enterprise-advertising-production-exampleexampleVideo-Version]]Video Version
+a|v.2
+
+
+|===
+
+==== Fields describing audio/visual content
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[enterprise-advertising-production-exampleexampleKeywords]]Keywords
+a|Video; Fountains of Bellagio; Attractions; Entertainment & Attractions; Fountains; Drone; Drone Footage; Night; Exterior; Aerial; Architecture; Drone Footage - Night; Aerial View; Aircraft Point of View; Building - Exterior
+
+
+|[[enterprise-advertising-production-exampleexampleLocation-Shot]]Location Shot
+a|Bellagio, Las Vegas
+
+
+|[[enterprise-advertising-production-exampleexampleLocation-Shown]]Location Shown
+a|Bellagio, Las Vegas
+
+
+|[[enterprise-advertising-production-exampleexampleObject-Shown]]Object Shown
+a|AOTitle=Fountains of Bellagio
+
+
+|[[enterprise-advertising-production-exampleexampleShown-Event]]Shown Event
+a|Aerial, exterior, night
+
+
+|[[enterprise-advertising-production-exampleexampleTitle]]Title
+a|BEL106271516
+
+
+|[[enterprise-advertising-production-exampleexampleVisual-Colour]]Visual Colour
+a|Color
+
+
+|===
+
+==== Rights fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[enterprise-advertising-production-exampleexampleContributor]]Contributor
+a|Mark Ott
+
+
+|[[enterprise-advertising-production-exampleexampleCopyright-Notice-]]Copyright Notice 
+a|MGM Resorts International Operations Inc.
+
+
+|[[enterprise-advertising-production-exampleexampleCopyright-Year]]Copyright Year
+a|2020
+
+
+|[[enterprise-advertising-production-exampleexampleCreator]]Creator
+a|Mark Ott
+
+
+|[[enterprise-advertising-production-exampleexampleCredit-Line]]Credit Line
+a|Mark Ott, 808 Post
+
+
+|[[enterprise-advertising-production-exampleexampleLicensor-]]Licensor 
+a|MGM Resorts International Operations Inc.
+
+
+|[[enterprise-advertising-production-exampleexampleLinked-Encoded-Rights-Expression]]Linked Encoded Rights Expression
+a|LinkedRightsExpr=https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+
+|[[enterprise-advertising-production-exampleexampleCopyright-Owner-]]Copyright Owner 
+a|MGM Resorts International Operations Inc.
+
+
+|[[enterprise-advertising-production-exampleexampleSupplier-]]Supplier 
+a|808 Post
+
+
+|[[enterprise-advertising-production-exampleexampleSource-Supply-Chain]]Source (Supply Chain)
+a|Mark Ott
+
+
+|===
+
+==== Technical fields
+[%autowidth,options="header"]
+|===
+|Property name|Example value
+
+|[[enterprise-advertising-production-exampleexampleAudio-Bitrate]]Audio Bitrate
+a|317000
+
+
+|[[enterprise-advertising-production-exampleexampleAudio-Bits-per-Sample]]Audio Bits per Sample
+a|32
+
+
+|[[enterprise-advertising-production-exampleexampleAudio-Channel-Layout]]Audio Channel Layout
+a|Stereo
+
+
+|[[enterprise-advertising-production-exampleexampleAudio-Channels]]Audio Channels
+a|2
+
+
+|[[enterprise-advertising-production-exampleexampleAudio-Coding]]Audio Coding
+a|AAC
+
+
+|[[enterprise-advertising-production-exampleexampleAudio-Sample-Rate]]Audio Sample Rate
+a|48000
+
+
+_48kHz (Q for schema: should we have Hz with big numbers? or strings with any content? or floats representing kHz?)_
+
+
+|[[enterprise-advertising-production-exampleexampleDisplay-Aspect-Ratio]]Display Aspect Ratio
+a|1.777777778
+
+
+|[[enterprise-advertising-production-exampleexampleEditorial-Duration]]Editorial Duration
+a|4.53
+
+
+|[[enterprise-advertising-production-exampleexampleFile-Bitrate]]File Bitrate
+a|10300000
+
+
+|[[enterprise-advertising-production-exampleexampleFile-Format]]File Format
+a|MP4
+
+
+|[[enterprise-advertising-production-exampleexampleFrame-Size]]Frame Size
+a|W=1920; H=1080; Unit=pixel
+
+
+|[[enterprise-advertising-production-exampleexampleMedia-Type]]Media Type
+a|video/mp4
+
+
+|[[enterprise-advertising-production-exampleexampleSignal-Aspect-Ratio]]Signal Aspect Ratio
+a|1
+
+
+|[[enterprise-advertising-production-exampleexampleSignal-Format]]Signal Format
+a|ITU-R BT.709
+
+
+|===

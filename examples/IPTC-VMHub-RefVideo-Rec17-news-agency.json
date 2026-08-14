@@ -1,0 +1,110 @@
+[
+  {
+    "XMP-photoshop:DateCreated": "1961-05-25",
+    "XMP-xmpDM:ReleaseDate": "1961-05-25",
+    "XMP-iptcExt:DigitalSourceType": "https://cv.iptc.org/newscodes/digitalsourcetype/negativeFilm",
+    "XMP-iptcExt:ExternalMetadataLink": [
+      "https://www.nasa.gov/vision/space/features/jfk_speech.html"
+    ],
+    "XMP-iptcExt:FeedIdentifier": "NASA Video",
+    "XMP-iptcExt:MetadataAuthority": {
+      "Name": "NASA"
+    },
+    "XMP-iptcExt:RecDevice": {
+      "Manufacturer": "Unknown"
+    },
+    "XMP-iptcCore:AltTextAccessibility": [
+      "President Kennedy speaks to Congress on May 25",
+      "1961."
+    ],
+    "XMP-iptcExt:AboutCvTerm": {
+      "CvTermName": "?"
+    },
+    "XMP-dc:Description": [
+      "In an address to Congress on \"Urgent National Needs\" on May 25",
+      "1961",
+      "President John F. Kennedy called for America to send astronauts to the moon and return him safely to Earth before the end of the decade."
+    ],
+    "XMP-iptcCore:ExtDescrAccessibility": [
+      "In an address to Congress on \"Urgent National Needs\" on May 25",
+      "1961",
+      "President John F. Kennedy called for America to send astronauts to the moon and return him safely to Earth before the end of the decade."
+    ],
+    "XMP-iptcExt:OrganisationInImageName": [
+      "NASA",
+      "US Government"
+    ],
+    "XMP-iptcExt:OrganisationInImageCode": [
+      "NASA",
+      "US Government"
+    ],
+    "XMP-iptcExt:Genre": {
+      "CvTermName": "News"
+    },
+    "XMP-iptcExt:Headline": "A President Issues NASA's First Historic Challenge",
+    "XMP-dc:Subject": [
+      "president",
+      "kennedy",
+      "NASA",
+      "Moon",
+      "Space",
+      "Space Race",
+      "Congress"
+    ],
+    "XMP-dc:Language": "EN",
+    "XMP-iptcExt:LocationCreated": [
+      {
+        "LocationName": "Washington DC"
+      }
+    ],
+    "XMP-iptcExt:LocationShown": [
+      {
+        "LocationName": "Washington DC"
+      }
+    ],
+    "XMP-iptcExt:PersonHeard": [
+      {
+        "Name": "President John F Kennedy"
+      }
+    ],
+    "XMP-iptcExt:PersonInImageWDetails": [
+      {
+        "PersonName": "President John F Kennedy"
+      }
+    ],
+    "XMP-iptcExt:Contributor": [
+      {
+        "Name": "NASA"
+      }
+    ],
+    "XMP-iptcExt:CopyrightYear": "1961",
+    "XMP-iptcExt:Creator": [
+      {
+        "Name": "NASA"
+      }
+    ],
+    "XMP-plus:CopyrightOwner": [
+      {
+        "CopyrightOwnerName": "NASA"
+      }
+    ],
+    "XMP-iptcExt:AudioBitrate": "95000",
+    "XMP-iptcExt:AudioBitsPerSample": "32",
+    "XMP-xmpDM:AudioChannelType#": "Stereo",
+    "XMP-iptcExt:AudioChannelCount": "2",
+    "XMP-xmpDM:AudioCompressor": "AAC",
+    "XMP-xmpDM:AudioSampleRate": "44100",
+    "XMP-iptcExt:VideoDisplayAspectRatio": "1.777777778",
+    "XMP-xmpDM:FileDataRate": "379000",
+    "XMP-iptcExt:ContainerFormat": {
+      "Name": "MP4"
+    },
+    "XMP-xmpDM:VideoFrameSize": {
+      "W": "640",
+      "H": "360",
+      "Unit": "pixel"
+    },
+    "XMP-dc:Format": "video/mp4",
+    "XMP-xmpDM:VideoPixelAspectRatio": "1"
+  }
+]

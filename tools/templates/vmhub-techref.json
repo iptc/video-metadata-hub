@@ -1,0 +1,67 @@
+{
+    "documentation_available_at": "https://iptc.org/std/photometadata/documentation/techreference",
+    "release_comment": "IPTC Video Metadata Hub version 1.5",
+    "release_timestamp": "{{ timestamp }}",
+    "vmh_top": {
+    {% for property in properties %}
+        "{{ property.anchor }}": {
+            "name": "{{ property.name }}",
+            "definition": "{{ property.definition }}",
+            "ugtopic": "{{ property.category_id }}",
+            "sortorder": "{{ property.sort_order }}",
+            "specidx": "#{{ property.anchor }}",
+            {% if property.datatype %}
+            "datatype": "{{ property.datatype }}",
+            {% endif %}
+            {% if property.dataformat %}
+            "dataformat": "{{ property.dataformat }}",
+            {% endif %}
+            {% if property.occurrence %}
+            "propoccurrence": "{{ property.occurrence }}",
+            {% endif %}
+            {% if property.isrequired %}
+            "isrequired": "{% if property.isrequired == true %}1{% else %}0{% endif %}",
+            {% endif %}
+            "XMPid": "{{ property.xmp_id }}",
+            "etXMP": "{{ property.exiftool_id }}"
+        }{% if not loop.last %},
+        {% endif %}
+    {% endfor %}
+    },
+    "vmh_struct": {
+    {% for structure in structures %}
+        "{{ structure.anchor }}": {
+        {% for property in structure.properties %}
+            "{{ property.anchor }}": {
+                "name": "{{ property.name }}",
+                "definition": "{{ property.definition }}",
+                "sortorder": "{{ property.sort_order }}",
+                "specidx": "#{{ property.anchor }}",
+                {% if property.datatype %}
+                "datatype": "{{ property.datatype }}",
+                {% endif %}
+                {% if property.dataformat %}
+                "dataformat": "{{ property.dataformat }}",
+                {% endif %}
+                {% if property.occurrence %}
+                "propoccurrence": "{{ property.occurrence }}",
+                {% endif %}
+                {% if property.isrequired %}
+                "isrequired": "{% if property.isrequired == true %}1{% else %}0{% endif %}",
+                {% endif %}
+                "XMPid": "{{ property.xmp_id }}",
+                "etXMP": "{{ property.exiftool_id }}"
+            {% if loop.last %}
+            }
+            {% else %}
+            },
+            {% endif %}
+        {% endfor %}
+        {% if loop.last %}
+        }
+        {% else %}
+        },
+        {% endif %}
+    {% endfor %}
+    }
+}

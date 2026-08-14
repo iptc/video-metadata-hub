@@ -1,0 +1,81 @@
+[
+  {
+    "XMP-iptcExt:CircaDateCreated": "2020-09-18",
+    "XMP-photoshop:DateCreated": "2020-09-18",
+    "XMP-xmpDM:ReleaseDate": "2020-09-18",
+    "XMP-iptcExt:ExternalMetadataLink": [
+      "https://vrmeta.io/tag/77c59ef67926aa7ac3"
+    ],
+    "XMP-iptcExt:FeedIdentifier": "Mark Milstein",
+    "XMP-iptcExt:MetadataLastEdited": "2020-10-21",
+    "XMP-iptcExt:MetadataLastEditor": {
+      "Name": "IPTC VM Working Group"
+    },
+    "XMP-iptcExt:MetadataAuthority": {
+      "Name": "Mark Milstein"
+    },
+    "XMP-iptcExt:PublicationEvent": {
+      "Name": "IPTC VM Working Group Authentication Process"
+    },
+    "XMP-iptcExt:RecDevice": {
+      "Manufacturer": "{ \"manufacturer\": \"Panasonic\", \"modelName\": \"HC-X1\"}"
+    },
+    "XMP-iptcExt:RegistryId": [
+      {
+        "RegItemId": "VRMETA_101010",
+        "RegOrgId": "VRMETA"
+      }
+    ],
+    "XMP-iptcExt:ArtworkStylePeriod": "Drone footage",
+    "XMP-iptcExt:TemporalCoverage": {
+      "TempCoverageFrom": "2020",
+      "TempCoverageTo": "2020"
+    },
+    "XMP-iptcExt:ParentID": "VRMETA_100000",
+    "XMP-dc:Description": "An aerial view of the Budapest Container Port",
+    "XMP-dc:Subject": [
+      "container port",
+      "Budapest",
+      "Hungary",
+      "railroad",
+      "trucking",
+      "transportation",
+      "logistics",
+      "aerial view"
+    ],
+    "XMP-iptcExt:LocationCreated": [
+      {
+        "LocationName": "Budapest"
+      }
+    ],
+    "XMP-iptcExt:LocationShown": [
+      {
+        "LocationName": "Budapest"
+      }
+    ],
+    "XMP-iptcExt:ArtworkOrObject": [
+      {
+        "Title": "Container port"
+      }
+    ],
+    "XMP-iptcExt:VideoShotType": [
+      {
+        "Name": "Aerial, long shot"
+      }
+    ],
+    "XMP-dc:Title": "An aerial view of the Budapest Container Port",
+    "XMP-dc:Rights": "Copyright VRMETA",
+    "XMP-iptcExt:CopyrightYear": "2020",
+    "XMP-iptcExt:Creator": [
+      {
+        "Name": "Mark Millstein"
+      }
+    ],
+    "XMP-photoshop:Credit": "VRMETA",
+    "XMP-plus:Licensor": [
+      {
+        "LicensorName": "VRMETA"
+      }
+    ]
+  }
+]
