@@ -542,6 +542,30 @@ for example_file in examples:
 
 ## 📝 Notes
 
+### C2PA verification: configure c2patool trust anchors
+
+`build_c2pa.sh` produces signed copies in `examples/c2pa/` via the local
+IPTC C2PA signing service. Uploading those files to
+https://originverify.iptc.org/ verifies cleanly (Valid state, expected
+manifest + CAWG identity assertions, trusted signatures).
+
+Local verification with `c2patool` does NOT match that result: by
+default c2patool does not use the official C2PA trust list, so it
+reports both the manifest signature and the CAWG identity signature as
+`signingCredential.untrusted`, plus a `timeStamp.untrusted` informational
+for the Trufo Timestamp Service (2025). Overall state is still `Valid`
+so signing is not blocked, but the failure lines are noisy.
+
+To fix locally, point c2patool at:
+- The official C2PA trust list (for the manifest signature + timestamp
+  trust anchors).
+- IPTC's VNP list (for verifying identity assertions issued under
+  IPTC's identity certificate).
+
+Investigate `c2patool --trust-anchors`/config file options and, if
+useful, ship a small `tools/c2patool.config` in this repo so contributors
+get correct local verification out of the box.
+
 ### Spec vs ExifTool discrepancies
 
 Properties where the VMHub spec and ExifTool's serialisation differ.

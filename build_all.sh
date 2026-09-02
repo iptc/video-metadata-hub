@@ -49,6 +49,16 @@ if [ $? -ne 0 ]; then
 fi
 echo ""
 
+# C2PA-sign the example media (non-fatal: build_c2pa.sh exits 0 if the
+# local signer is unavailable, so a full build still completes).
+echo -e "${BLUE}==== C2PA-Signing Example Media ====${NC}"
+./build_c2pa.sh $VERSION
+if [ $? -ne 0 ]; then
+    echo -e "${RED}✗ C2PA signing failed${NC}"
+    exit 1
+fi
+echo ""
+
 # Build user guide artifacts
 echo -e "${BLUE}==== Building User Guide Artifacts ====${NC}"
 ./build_userguide.sh $VERSION
@@ -65,6 +75,7 @@ echo ""
 echo "Generated artifacts:"
 echo "  - Specification: specification/"
 echo "  - Example media: examples/"
+echo "  - C2PA-signed:   examples/c2pa/ (if signer was available)"
 echo "  - User Guide: user-guide/index.html"
 echo ""
 
