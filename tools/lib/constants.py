@@ -45,51 +45,58 @@ MAPPINGS = [
         'filenameid': 'MPEG7'
     },
     {
+        # New column M in MappingsRec 1.7 (work in progress).
+        'shortheading': 'ninjs',
+        'heading': 'ninjs',
+        'mappingsheetcolumn': 12,
+        'filenameid': 'ninjs'
+    },
+    {
         'shortheading': 'NewsML-G2',
         'heading': 'NewsML-G2',
-        'mappingsheetcolumn': 12,
+        'mappingsheetcolumn': 13,
         'filenameid': 'NewsML-G2'
     },
     {
         'shortheading': 'PB Core 2.1',
         'heading': 'PB Core 2.1',
-        'mappingsheetcolumn': 13,
+        'mappingsheetcolumn': 14,
         'filenameid': 'PBCore21'
     },
     {
         'shortheading': 'Schema.org',
         'heading': 'Schema.org',
-        'mappingsheetcolumn': 14,
+        'mappingsheetcolumn': 15,
         'filenameid': 'SchemaOrg'
     },
     {
         'shortheading': 'Sony Cameras',
         'heading': 'Sony XDCAM & Planning',
-        'mappingsheetcolumn': 15,
+        'mappingsheetcolumn': 16,
         'filenameid': 'SonyXDCAM'
     },
     {
         'shortheading': 'Panasonic Cameras',
         'heading': 'Panasonic/SMPTE P2',
-        'mappingsheetcolumn': 16,
+        'mappingsheetcolumn': 17,
         'filenameid': 'SMPTEP2'
     },
     {
         'shortheading': 'Canon Cameras',
         'heading': 'Canon VideoClip XML',
-        'mappingsheetcolumn': 17,
+        'mappingsheetcolumn': 18,
         'filenameid': 'CanonVClip'
     },
     {
         'shortheading': 'exiftool',
         'heading': 'exiftool field id',
-        'mappingsheetcolumn': 18,
+        'mappingsheetcolumn': 19,
         'filenameid': 'exiftool'
     },
     {
         'shortheading': 'EIDR Data Fields 2.0',
         'heading': ' EIDR Data Fields 2.0',
-        'mappingsheetcolumn': 19,
+        'mappingsheetcolumn': 20,
         'filenameid': 'EIDR'
     }
 ]

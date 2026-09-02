@@ -88,7 +88,7 @@
                 <td class="bgdcolIptc">Iptc4xmpExt:CircaDateCreated</td>
                 <td class="bgdcolIptc">circaDateCreated</td>
                 <td class="bgdcolIptc">date/@typeDefinition=&#34;ivqu:circaDateCreated&#34; or @typeLabel=&#34;Circa Date Created&#34;/alternative/@period=&#34;...value...&#34;</td>
-                <td class="bgdcolNoniptc">pbcoreAssetDate / dateType=created / annotation=approximate</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -108,7 +108,7 @@
                 <td class="bgdcolIptc">photoshop:DateCreated</td>
                 <td class="bgdcolIptc">dateCreated</td>
                 <td class="bgdcolIptc">date/created</td>
-                <td class="bgdcolNoniptc">pbcoreAssetDate / @dateType=created</td>
+                <td class="bgdcolNoniptc">http://schema.org/dateCreated</td>
             </tr>
             
             <tr>
@@ -119,7 +119,7 @@
                 <td class="bgdcolIptc">dateModified
 </td>
                 <td class="bgdcolIptc">date/modified</td>
-                <td class="bgdcolNoniptc">pbcoreAssetDate / @dateType=modified</td>
+                <td class="bgdcolNoniptc">http://schema.org/dateModified</td>
             </tr>
             
             <tr>
@@ -129,7 +129,7 @@
                 <td class="bgdcolIptc">xmpDM:releaseDate</td>
                 <td class="bgdcolIptc">dateReleased</td>
                 <td class="bgdcolIptc">date/released</td>
-                <td class="bgdcolNoniptc">pbcoreAssetDate / @dateType=released</td>
+                <td class="bgdcolNoniptc">http://schema.org/datePublished</td>
             </tr>
             
             <tr>
@@ -150,7 +150,7 @@
                 <td class="bgdcolIptc">episode</td>
                 <td class="bgdcolIptc">title/@typeLink=&#34;ivqu:episode&#34;/dc:title + type 
 OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Episode Title&#34;</td>
-                <td class="bgdcolNoniptc">pbcoreAssetType=Episode with @descriptionType=episode</td>
+                <td class="bgdcolNoniptc">http://schema.org/Episode</td>
             </tr>
             
             <tr>
@@ -160,7 +160,7 @@ OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Epis
                 <td class="bgdcolIptc">Iptc4xmpExt:ExternalMetadataLink</td>
                 <td class="bgdcolIptc">externalMetadataLinks</td>
                 <td class="bgdcolIptc">use relations and relatedInformationLinks for other AV resources or contacts/persons and organisations, events, etc.</td>
-                <td class="bgdcolNoniptc">pbcoreExtension / [multiple options, including EBUCore relatedInformationLink]</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -220,7 +220,7 @@ OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Epis
                 <td class="bgdcolIptc">Iptc4xmpExt:BroadcastDate</td>
                 <td class="bgdcolIptc">publicationEvents</td>
                 <td class="bgdcolIptc">publicationEvent/publicationDate</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">http://schema.org/releasedEvent</td>
             </tr>
             
             <tr>
@@ -230,7 +230,7 @@ OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Epis
                 <td class="bgdcolIptc">Iptc4xmpExt:Rating</td>
                 <td class="bgdcolIptc">ratings</td>
                 <td class="bgdcolIptc">audienceRating</td>
-                <td class="bgdcolNoniptc">pbcoreAudienceRating</td>
+                <td class="bgdcolNoniptc">http://schema.org/contentRating</td>
             </tr>
             
             <tr>
@@ -240,7 +240,7 @@ OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Epis
                 <td class="bgdcolIptc">Iptc4xmpExt:ReleaseReady</td>
                 <td class="bgdcolIptc">releaseReady</td>
                 <td class="bgdcolIptc">format/technicalAttributeBoolean/@typeLink=&#34;ivqu:readyForRelease&#34; or @typeLabel=&#34;Ready For Release&#34;</td>
-                <td class="bgdcolNoniptc">pbcoreInstantiationGenerations = Master OR pbcoreInstantiationGenerations = Release</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -260,7 +260,7 @@ OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Epis
                 <td class="bgdcolIptc">Iptc4xmpExt:RegistryId</td>
                 <td class="bgdcolIptc">registryEntries</td>
                 <td class="bgdcolIptc">identifier + typeLink=&#34;ivqu:registryEntry&#34;/dc:identifier + attributor or typeLabel=&#34;Registry Entry&#34; -&gt; ebucore identifier structure to specify the entity, etc.</td>
-                <td class="bgdcolNoniptc">instantiationIdentifier / @source=[registry]</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -281,7 +281,7 @@ OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Epis
                 <td class="bgdcolIptc">season</td>
                 <td class="bgdcolIptc">title + typeLink=&#34;ivqu:season&#34;/dc:title + type 
 OR dc:alternative +  typeLink=&#34;ivqu:season&#34; or for both typeLabel=&#34;Season Title&#34;</td>
-                <td class="bgdcolNoniptc">pbcoreAssetType=Season with @descriptionType=season</td>
+                <td class="bgdcolNoniptc">http://schema.org/CreativeWorkSeason</td>
             </tr>
             
             <tr>
@@ -292,7 +292,7 @@ OR dc:alternative +  typeLink=&#34;ivqu:season&#34; or for both typeLabel=&#34;S
                 <td class="bgdcolIptc">series</td>
                 <td class="bgdcolIptc">title/@typeLink=&#34;ivqu:series&#34;/dc:title + type 
 OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Series Title&#34;</td>
-                <td class="bgdcolNoniptc">pbcoreAssetType=Season with @descriptionType=series</td>
+                <td class="bgdcolNoniptc">http://schema.org/CreativeWorkSeries</td>
             </tr>
             
             <tr>
@@ -312,7 +312,7 @@ OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Seri
                 <td class="bgdcolIptc">Iptc4xmpExt:StylePeriod</td>
                 <td class="bgdcolIptc">stylePeriod</td>
                 <td class="bgdcolIptc">date/@typeDefinition=&#34;ivqu:stylePeriod&#34; or@ typeLabel=&#34;Style Period&#34;/alternative/@period=&#34;...value...&#34; + </td>
-                <td class="bgdcolNoniptc">pbcoreDescription / @descriptionType=style period  OR pbcoreCoverage @descriptionTypeSource=IPTC / @coverageType = temporal</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -322,7 +322,7 @@ OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Seri
                 <td class="bgdcolIptc">Iptc4xmpExt:TemporalCoverage</td>
                 <td class="bgdcolIptc">temporalCoverage</td>
                 <td class="bgdcolIptc">coverage/@typeLabel=&#34;Temporal Coverage or @typeLink=&#34;ivqu=&#34;temporalCoverage&#34;/dc:coverage or use ebucore coverage/temporal structure</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">http://schema.org/temporalCoverage</td>
             </tr>
             
             <tr>
@@ -342,7 +342,7 @@ OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Seri
                 <td class="bgdcolIptc">dc:identifier</td>
                 <td class="bgdcolIptc">identifier</td>
                 <td class="bgdcolIptc">identifier + typeLink=&#34;ivqu:mediaId&#34;/dc:identifier or typeLabel=&#34;Media Id&#34; and identifier structure to identify the source entity and more.</td>
-                <td class="bgdcolNoniptc">pbcoreIdentifier</td>
+                <td class="bgdcolNoniptc">http://schema.org/sameAs --&gt; ofType VideoObject</td>
             </tr>
             
             <tr>
@@ -352,7 +352,7 @@ OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Seri
                 <td class="bgdcolIptc">xmpMM:RenditionClass</td>
                 <td class="bgdcolIptc">rendition</td>
                 <td class="bgdcolIptc">identifier + typeLink=&#34;ivqu:videoRendition&#34;/dc:identifier or typeLabel=&#34;Video Rendition&#34; and identifier structure to identify the source entity and more.</td>
-                <td class="bgdcolNoniptc">instantiationIdentifier</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -365,7 +365,7 @@ OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Seri
                 <td class="bgdcolIptc">version/@typeLink=&#34;ivqu:mediaId&#34; or @typeLabel=&#34;media Id&#34;/&#34;...value&#34; or identifier + typeLink=&#34;ivqu:videoRendition&#34;/dc:identifier or 
 typeLabel=&#34;Video Rendition&#34; and identifier structure to identify the 
 source entity and more.</td>
-                <td class="bgdcolNoniptc">instantiationGenerations OR pbcoreDescription OR pbcoreAnnotation (depending on the type of version)</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -385,7 +385,7 @@ source entity and more.</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:WorkflowTag</td>
                 <td class="bgdcolIptc">workflowTag</td>
                 <td class="bgdcolIptc">type/@typeLink=&#34;ivqu:workflowTag&#34; or typeLabel=&#34;Workflow Tag&#34;/objectType/@typeLink or typeLabel with values from taxonomy or free text for typeLabel</td>
-                <td class="bgdcolNoniptc">instantiationGenerations</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -405,7 +405,7 @@ source entity and more.</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:AboutCvTerm</td>
                 <td class="bgdcolIptc">aboutCvTerms</td>
                 <td class="bgdcolIptc">subject/subjectCode, subjectDefinition and/or subject/dc:subject (free text) and possibly a typeLink and/or typeLabel to define a type of subject at a lower level of granularity. This is also possible using the topic and theme elements of EBUCore.</td>
-                <td class="bgdcolNoniptc">pbcoreSubject</td>
+                <td class="bgdcolNoniptc">http://schema.org/about</td>
             </tr>
             
             <tr>
@@ -415,7 +415,7 @@ source entity and more.</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:DataOnScreen</td>
                 <td class="bgdcolIptc">dataOnScreen</td>
                 <td class="bgdcolIptc">textLine + typeLink=&#34;ivqu:dataOnScreen&#34; or typeLabel=&#34;Data On Screen&#34;/text + timeStamp + textLinePosition</td>
-                <td class="bgdcolNoniptc">pbcoreDescription / @descriptionType=Data On Displayed On Screen @descriptionTypeSource=IPTC</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -425,7 +425,7 @@ source entity and more.</td>
                 <td class="bgdcolIptc">dc:description</td>
                 <td class="bgdcolIptc">description</td>
                 <td class="bgdcolIptc">description/dc:description plus typeLink or/and typeLabel for defining a type of description as appropriate</td>
-                <td class="bgdcolNoniptc">pbcoreDescription </td>
+                <td class="bgdcolNoniptc">http://schema.org/caption</td>
             </tr>
             
             <tr>
@@ -435,7 +435,7 @@ source entity and more.</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:Dopesheet</td>
                 <td class="bgdcolIptc">dopesheet</td>
                 <td class="bgdcolIptc">description + typeLink=&#34;ivqu:dopesheet&#34; or typeLabel=&#34;Dopesheet&#34;/dc:description</td>
-                <td class="bgdcolNoniptc">pbcoreDescription / @descriptionType=shotlist</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -466,7 +466,7 @@ source entity and more.</td>
 Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">featuredOrganisations</td>
                 <td class="bgdcolIptc">contributor/@typeLink=&#34;ivqu:featuredOrganisation&#34; or typeLabel=&#34;Featured Organisation&#34;/organisationDetails/organisationName or ebucore entity structure from more details and options</td>
-                <td class="bgdcolNoniptc">pbcoreSubject / @subjectType=featured organization @subjectTypeSource=IPTC</td>
+                <td class="bgdcolNoniptc">http://schema.org/about --&gt; ofType http://schema.org/Organization</td>
             </tr>
             
             <tr>
@@ -476,7 +476,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:Genre</td>
                 <td class="bgdcolIptc">genres</td>
                 <td class="bgdcolIptc">type/genre(@typeLink and @typeLabel with values from taxonomies</td>
-                <td class="bgdcolNoniptc">pbcoreGenre</td>
+                <td class="bgdcolNoniptc">http://schema.org/genre</td>
             </tr>
             
             <tr>
@@ -486,7 +486,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:Headline</td>
                 <td class="bgdcolIptc">headline</td>
                 <td class="bgdcolIptc">description/@typeLink=&#34;ivqu:headline&#34; and @typeLabel=&#34;Headline&#34;/dc:description</td>
-                <td class="bgdcolNoniptc">pbcoreDescription / @descriptionType=headline @descriptionTypeSource=IPTC</td>
+                <td class="bgdcolNoniptc">http://schema.org/headline</td>
             </tr>
             
             <tr>
@@ -496,7 +496,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">dc:subject</td>
                 <td class="bgdcolIptc">keywords</td>
                 <td class="bgdcolIptc">description/@typeLink=&#34;ivqu:keyword&#34; or @typeLabel=&#34;Keyword&#34;/dc:description</td>
-                <td class="bgdcolNoniptc">pbcoreSubject / @subjectType=keyword</td>
+                <td class="bgdcolNoniptc">http://schema.org/keywords</td>
             </tr>
             
             <tr>
@@ -506,7 +506,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">dc:language</td>
                 <td class="bgdcolIptc">language</td>
                 <td class="bgdcolIptc">language/@typeLink=&#34;ivqu:languageVersion&#34; or @typeLabel=&#34;Language Version&#34;/dc:language</td>
-                <td class="bgdcolNoniptc">instantiationLanguage</td>
+                <td class="bgdcolNoniptc">http://schema.org/inLanguage - use one of the language codes from the IETF BCP 47 standard.</td>
             </tr>
             
             <tr>
@@ -516,7 +516,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:LocationCreated</td>
                 <td class="bgdcolIptc">locationsCreated</td>
                 <td class="bgdcolIptc">coverage/spatial/location/@typeLink=&#34;ivqu:locationShot&#34; or @typeLabel=&#34;Location Shot&#34;/name or use ebucore location structure for more granularity</td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">http://schema.org/locationCreated</td>
             </tr>
             
             <tr>
@@ -526,7 +526,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:LocationShown</td>
                 <td class="bgdcolIptc">locationsShown</td>
                 <td class="bgdcolIptc">coverage/spatial/location/@typeLink=&#34;ivqu:locationShown&#34; or @typeLabel=&#34;Location Shown&#34;/name or use ebucore location structure for more granularity</td>
-                <td class="bgdcolNoniptc">pbcoreCoverage / @coverageType=spatial</td>
+                <td class="bgdcolNoniptc">http://schema.org/contentLocation</td>
             </tr>
             
             <tr>
@@ -537,7 +537,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">objectsShown
 </td>
                 <td class="bgdcolIptc">Artefact + timestamp + position</td>
-                <td class="bgdcolNoniptc">pbcoreSubject / @subjectType=object @subjectTypeSource=IPTC</td>
+                <td class="bgdcolNoniptc">http://schema.org/about --&gt; ofType http://schema.org/Thing</td>
             </tr>
             
             <tr>
@@ -548,7 +548,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">personsHeard
 </td>
                 <td class="bgdcolIptc">contributor/@typeLink=&#34;ivqu:personHeard&#34; or typeLabel=&#34;Person Heard&#34;/organisationDetails/organisationName or ebucore entity structure from more details and options. For timed identification use part/contributor</td>
-                <td class="bgdcolNoniptc">pbcoreSubject / @subjectType=person heard @subjectTypeSource=IPTC OR pbcoreContributor / contributorRole=person heard @source=IPTC</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -559,7 +559,8 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">personsShown
 </td>
                 <td class="bgdcolIptc">contributor/@typeLink=&#34;ivqu:personShown&#34; or typeLabel=&#34;Person Shown&#34;/organisationDetails/organisationName or ebucore entity structure from more details and options. For timed identification use part/contributor</td>
-                <td class="bgdcolNoniptc">pbcoreSubject / @subjectType=person shown @subjectTypeSource=IPTC OR pbcoreContributor / contributorRole=person shown @source=IPTC</td>
+                <td class="bgdcolNoniptc">http://schema.org/about --&gt; ofType http://schema.org/Person
+</td>
             </tr>
             
             <tr>
@@ -571,7 +572,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
 </td>
                 <td class="bgdcolIptc">subject + typeLink=&#34;ivqu:productShown&#34;/subjectCode + subjectDefinition
 OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
-                <td class="bgdcolNoniptc">pbcoreSubject / @subjectType=product @subjectTypeSource=IPTC</td>
+                <td class="bgdcolNoniptc">http://schema.org/about --&gt; ofType http://schema.org/Thing</td>
             </tr>
             
             <tr>
@@ -581,7 +582,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:VideoShotType</td>
                 <td class="bgdcolIptc">videoShotTypes</td>
                 <td class="bgdcolIptc">type/objectType or format/technicalAttributeString or type/objectType or format/technicalAttributeUri in association with ad-hoc taxonomy</td>
-                <td class="bgdcolNoniptc">pbcoreDescription / @descriptionType=Shot Type @descriptionTypeSource=IPTC</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -591,7 +592,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:EventExt</td>
                 <td class="bgdcolIptc">shownEvents</td>
                 <td class="bgdcolIptc">Event/name or more using the ebucore event structure</td>
-                <td class="bgdcolNoniptc">pbcoreSubject / @subjectType=event</td>
+                <td class="bgdcolNoniptc">http://schema.org/about --&gt; ofType http://schema.org/Event</td>
             </tr>
             
             <tr>
@@ -621,7 +622,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">dc:title</td>
                 <td class="bgdcolIptc">title</td>
                 <td class="bgdcolIptc">title/dc:title</td>
-                <td class="bgdcolNoniptc">pbcoreTitle</td>
+                <td class="bgdcolNoniptc">? http://schema.org/name</td>
             </tr>
             
             <tr>
@@ -631,7 +632,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:Transcript</td>
                 <td class="bgdcolIptc">transcript</td>
                 <td class="bgdcolIptc">description/@typeLink=&#34;ivqu:transcript&#34; or typeLabel=&#34;Transcript&#34;/dc:description or use textLine structure</td>
-                <td class="bgdcolNoniptc">pbcoreDescription / @descriptionType=Transcript</td>
+                <td class="bgdcolNoniptc">http://schema.org/transcript</td>
             </tr>
             
             <tr>
@@ -661,7 +662,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:Contributor</td>
                 <td class="bgdcolIptc">contributors</td>
                 <td class="bgdcolIptc">contributor/role for contributors and ebucore entity structure for more granularity</td>
-                <td class="bgdcolNoniptc">pbcoreContributor (with contributorRole)</td>
+                <td class="bgdcolNoniptc">http://schema.org/contributor</td>
             </tr>
             
             <tr>
@@ -672,7 +673,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">copyrightNotice
 </td>
                 <td class="bgdcolIptc">rights/copyrightStatement</td>
-                <td class="bgdcolNoniptc">pbcoreRightsSummary</td>
+                <td class="bgdcolNoniptc">http://schema.org/copyrightYear</td>
             </tr>
             
             <tr>
@@ -682,7 +683,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:CopyrightYear</td>
                 <td class="bgdcolIptc">copyrightYear</td>
                 <td class="bgdcolIptc">date/copyrighted</td>
-                <td class="bgdcolNoniptc">pbcoreRightsSummary OR use pbcoreRightsSummary/rightsEmbedded with specific XML from another standard</td>
+                <td class="bgdcolNoniptc">(Use http://schema.org/copyrightYear + http://schema.org/copyrightHolder)</td>
             </tr>
             
             <tr>
@@ -693,7 +694,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">creators</td>
                 <td class="bgdcolIptc">creator/role for creators
 OR contributor/role for creators and ebucore entity structure for more granularity</td>
-                <td class="bgdcolNoniptc">pbcoreCreator (with creatorRole)</td>
+                <td class="bgdcolNoniptc">http://schema.org/creator</td>
             </tr>
             
             <tr>
@@ -703,7 +704,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">photoshop:Credit</td>
                 <td class="bgdcolIptc">creditLine</td>
                 <td class="bgdcolIptc">rights/@typeLink=&#34;ivqu:creditline&#34; or @typeLabel=&#34;Credit Line&#34;/dc:rights or use ebucore contributor and granularity of the enty structure to build the credit list contributor by contributor and their respective roles.</td>
-                <td class="bgdcolNoniptc">pbcorePublisher / publisherRole=presenter</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -734,7 +735,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">licensor
 </td>
                 <td class="bgdcolIptc">rights/rightsHolder + role/@typeLink=&#34;ivqu:licensor&#34; or @typeLabel=&#34;Licensor&#34;</td>
-                <td class="bgdcolNoniptc">pbcorePublisher / publisherRole=Licensor @source=IPTC</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -744,7 +745,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">plus:ModelReleaseID</td>
                 <td class="bgdcolIptc">modelReleaseDocuments</td>
                 <td class="bgdcolIptc">rights/@typeLink=&#34;ivqu:modelRelease&#34; or @typeLabel=&#34;Model Release&#34;/dc:rights</td>
-                <td class="bgdcolNoniptc">pbcoreRightsSummary / rightsLink</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -754,7 +755,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">plus:ModelReleaseStatus</td>
                 <td class="bgdcolIptc">modelReleaseStatus</td>
                 <td class="bgdcolIptc">rights/@typeLink=&#34;ivqu:modelReleaseStatus&#34; or @typeLabel=&#34;Model Release Status&#34;/dc:rights</td>
-                <td class="bgdcolNoniptc">pbcoreRightsSummary OR use pbcoreRightsSummary/rightsEmbedded with specific XML from another standard</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -764,7 +765,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">plus:PropertyReleaseID</td>
                 <td class="bgdcolIptc">propertyReleaseDocuments</td>
                 <td class="bgdcolIptc">rights/@typeLink=&#34;ivqu:propertyReleaseDocument&#34; or @typeLabel=&#34;Property Release Document&#34;/dc:rights</td>
-                <td class="bgdcolNoniptc">pbcoreRightsSummary / rightsLink</td>
+                <td class="bgdcolNoniptc">Potentionally http://schema.org/license but defined as &#34;A license document that applies to this content, typically indicated by URL.&#34;</td>
             </tr>
             
             <tr>
@@ -774,7 +775,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">plus:PropertyReleaseStatus</td>
                 <td class="bgdcolIptc">propertyReleaseStatus</td>
                 <td class="bgdcolIptc">rights/@typeLink=&#34;ivqu:propertyReleaseStatus&#34; or @typeLabel=&#34;Property Release Status&#34;/dc:rights</td>
-                <td class="bgdcolNoniptc">pbcoreRightsSummary OR use pbcoreRightsSummary/rightsEmbedded with specific XML from another standard</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -794,7 +795,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:EmbdEncRightsExpr</td>
                 <td class="bgdcolIptc">embdEncRightsExpr</td>
                 <td class="bgdcolIptc">rights/@typeLink=&#34;ivqu:extRights&#34; or @typeLabel=&#34;Rights and Licensing Terms&#34;/dc:rights</td>
-                <td class="bgdcolNoniptc">pbcoreRightsSummary OR use pbcoreRightsSummary/rightsEmbedded with specific XML from another standard</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -814,7 +815,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">plus:CopyrightOwner</td>
                 <td class="bgdcolIptc">copyrightOwners</td>
                 <td class="bgdcolIptc">rights/rightsHolder/@typeLink=&#34;ivqu:copyrightOwner&#34; or @typeLabel=&#34;Copyright Owner&#34; -&gt; see ebucore entity structure for person or organisation</td>
-                <td class="bgdcolNoniptc">pbcorePublisher / publisherRole=Rights Owner @source=IPTC OR pbcoreRightsSummary/rightsEmbedded with specific XML from another standard</td>
+                <td class="bgdcolNoniptc">http://schema.org/copyrightHolder</td>
             </tr>
             
             <tr>
@@ -825,7 +826,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">supplier
 </td>
                 <td class="bgdcolIptc">contributor/role/@typeLink=&#34;ivqu:supplier&#34; or @typeLabel=&#34;Supplier&#34;</td>
-                <td class="bgdcolNoniptc">pbcoreRightsSummary OR use pbcoreRightsSummary/rightsEmbedded with specific XML from another standard</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -835,7 +836,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:SupplyChainSource</td>
                 <td class="bgdcolIptc">supplyChainSources</td>
                 <td class="bgdcolIptc">contributor/role=&#34;ivqu:supplychainSource&#34;</td>
-                <td class="bgdcolNoniptc">pbcorePublisher / publisherRole=distributor</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -845,7 +846,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:audioBitRate</td>
                 <td class="bgdcolIptc">audioBitRate</td>
                 <td class="bgdcolIptc">format/audioFormat/bitRate</td>
-                <td class="bgdcolNoniptc">essenceTrackDataRate</td>
+                <td class="bgdcolNoniptc">See File Bitrate</td>
             </tr>
             
             <tr>
@@ -866,7 +867,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:audioBitsPerSample</td>
                 <td class="bgdcolIptc">audioBitsPerSample</td>
                 <td class="bgdcolIptc">format/audioFormat/sampleSize</td>
-                <td class="bgdcolNoniptc">essenceTrackBitDepth</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -877,7 +878,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">audioChannelLayout
 </td>
                 <td class="bgdcolIptc">format/audioFormat/audioTrackConfiguration</td>
-                <td class="bgdcolNoniptc">instantiationChannelConfiguration</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -897,7 +898,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:audioCompressor</td>
                 <td class="bgdcolIptc">audioCoding</td>
                 <td class="bgdcolIptc">format/audioFormat/encoding</td>
-                <td class="bgdcolNoniptc">essenceTrackEncoding</td>
+                <td class="bgdcolNoniptc">http://schema.org/encodingFormat</td>
             </tr>
             
             <tr>
@@ -907,7 +908,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:audioSampleRate</td>
                 <td class="bgdcolIptc">audioSampleRate</td>
                 <td class="bgdcolIptc">format/audioFormat/samplingRate</td>
-                <td class="bgdcolNoniptc">essenceTrackSamplingRate</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -917,7 +918,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:videoDisplayAspectRatio</td>
                 <td class="bgdcolIptc">videoDisplayAspectRatio</td>
                 <td class="bgdcolIptc">aspectRatio/@typeLink=&#34;ivqu:displayAspectRatio&#34; or @typeLabel=&#34;&#34;Display Aspect Ratio&#34; / factorNumerator and factorDenominator for e.g. 16/9 or 16:9...</td>
-                <td class="bgdcolNoniptc">essenceTrackAspectRatio / @annotation=Display Aspect Ratio</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -948,7 +949,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:marker[xmpDM:type= &#34;ivqu:editorialUseStart&#34;] /xmpDM:startTime</td>
                 <td class="bgdcolIptc">editorialDurationStarts</td>
                 <td class="bgdcolIptc">format/start/@typeLink=&#34;ivqu:editorialDurationStart&#34; or @typeLabel=&#34;Editorial Duration Start&#34;</td>
-                <td class="bgdcolNoniptc">instantiationTimeStart</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -958,7 +959,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:fileDataRate</td>
                 <td class="bgdcolIptc">fileBitrate</td>
                 <td class="bgdcolIptc">format/overallBitRate</td>
-                <td class="bgdcolNoniptc">instantiationDataRate</td>
+                <td class="bgdcolNoniptc">http://schema.org/bitrate</td>
             </tr>
             
             <tr>
@@ -968,7 +969,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:duration</td>
                 <td class="bgdcolIptc">fileDuration</td>
                 <td class="bgdcolIptc">format/duration</td>
-                <td class="bgdcolNoniptc">instantiationDuration</td>
+                <td class="bgdcolNoniptc">http://pending.schema.org/duration</td>
             </tr>
             
             <tr>
@@ -978,7 +979,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:ContainerFormat</td>
                 <td class="bgdcolIptc">fileFormat</td>
                 <td class="bgdcolIptc">format/containerformat/containerEncoding (@typeLabel, @typeLabel for taxonomies or free text) and more using the containerFormat structure for more granularity</td>
-                <td class="bgdcolNoniptc">instantiationStandard</td>
+                <td class="bgdcolNoniptc">http://schema.org/fileFormat</td>
             </tr>
             
             <tr>
@@ -989,8 +990,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">frameSize
 </td>
                 <td class="bgdcolIptc">format/videoFormat/width and height</td>
-                <td class="bgdcolNoniptc">instantiationDimensions
-essenceTrackFrameSize</td>
+                <td class="bgdcolNoniptc">http://schema.org/videoFrameSize</td>
             </tr>
             
             <tr>
@@ -1000,7 +1000,7 @@ essenceTrackFrameSize</td>
                 <td class="bgdcolIptc">dc:format</td>
                 <td class="bgdcolIptc">mediaType</td>
                 <td class="bgdcolIptc">format/mimeType</td>
-                <td class="bgdcolNoniptc">instantiationDigital</td>
+                <td class="bgdcolNoniptc">http://schema.org/contentType</td>
             </tr>
             
             <tr>
@@ -1020,7 +1020,7 @@ essenceTrackFrameSize</td>
                 <td class="bgdcolIptc">xmpDM:videoPixelAspectRatio</td>
                 <td class="bgdcolIptc">signalAspectRatio</td>
                 <td class="bgdcolIptc">aspectRatio/@typeLink=&#34;ivqu:signalAspectRatio&#34; or @typeLabel=&#34;Signal Aspect Ratio&#34;</td>
-                <td class="bgdcolNoniptc">essenceTrackAspectRatio / @annotation=Signal Aspect Ratio</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -1030,7 +1030,7 @@ essenceTrackFrameSize</td>
                 <td class="bgdcolIptc">xmpDM:videoFieldOrder</td>
                 <td class="bgdcolIptc">signalFormat</td>
                 <td class="bgdcolIptc">format/videoFormat/technicalAttributeString/@typeLink=&#34;ivqu:signalFormat&#34; or @typeLabel=&#34;Signal Format&#34;</td>
-                <td class="bgdcolNoniptc">instantiationStandard</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -1040,7 +1040,7 @@ essenceTrackFrameSize</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:StreamReady</td>
                 <td class="bgdcolIptc">streamReady</td>
                 <td class="bgdcolIptc">format/technicalAttributeString + @typeLink=&#34;ivqu:streamReady&#34; or @typeLabel=&#34;Stream ready&#34;</td>
-                <td class="bgdcolNoniptc">instantiationGenerations=Stream-ready @source=IPTC</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -1050,7 +1050,7 @@ essenceTrackFrameSize</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:videoBitRate</td>
                 <td class="bgdcolIptc">videoBitrate</td>
                 <td class="bgdcolIptc">format/videoFormat/bitRate</td>
-                <td class="bgdcolNoniptc">essenceTrackDataRate</td>
+                <td class="bgdcolNoniptc">See File Bitrate</td>
             </tr>
             
             <tr>
@@ -1070,7 +1070,7 @@ essenceTrackFrameSize</td>
                 <td class="bgdcolIptc">xmpDM:videoCompressor</td>
                 <td class="bgdcolIptc">videoCoding</td>
                 <td class="bgdcolIptc">format/videoFormat/encoding</td>
-                <td class="bgdcolNoniptc">essenceTrackEncoding</td>
+                <td class="bgdcolNoniptc">http://schema.org/encodingFormat</td>
             </tr>
             
             <tr>
@@ -1080,7 +1080,7 @@ essenceTrackFrameSize</td>
                 <td class="bgdcolIptc">xmpDM:videoFrameRate</td>
                 <td class="bgdcolIptc">videoFrameRate</td>
                 <td class="bgdcolIptc">format/videoFormat/frameRate</td>
-                <td class="bgdcolNoniptc">essenceTrackFrameRate</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -1100,7 +1100,7 @@ essenceTrackFrameSize</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:videoStreamsCount</td>
                 <td class="bgdcolIptc">videoStreamsCount</td>
                 <td class="bgdcolIptc">format/videoFormat/technicalAttributeInteger [@typeLink=&#34;ivqu:videoStreamCount&#34; or@typeLabel=&#34;Video Stream Count&#34;] if same format for all video channel, other number of videoFormats provide in the current metadata file</td>
-                <td class="bgdcolNoniptc">instantiationTracks</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -1111,7 +1111,7 @@ essenceTrackFrameSize</td>
                 <td class="bgdcolIptc">NA
 </td>
                 <td class="bgdcolIptc">use part + description or other metadata for timed markers of different custom types</td>
-                <td class="bgdcolNoniptc">pbcoreInstatiation / @startTime @endTime OR pbcorePart / @startTime @endTime OR instantiationPart / @startTime @endTime </td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr style="background-color: #009999;">

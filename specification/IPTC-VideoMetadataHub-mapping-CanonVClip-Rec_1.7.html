@@ -108,7 +108,7 @@
                 <td class="bgdcolIptc">photoshop:DateCreated</td>
                 <td class="bgdcolIptc">dateCreated</td>
                 <td class="bgdcolIptc">date/created</td>
-                <td class="bgdcolNoniptc">ClipMetadata/Access/CreationDate</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -119,7 +119,7 @@
                 <td class="bgdcolIptc">dateModified
 </td>
                 <td class="bgdcolIptc">date/modified</td>
-                <td class="bgdcolNoniptc">ClipMetadata/Access/LastUpdateDate</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -250,7 +250,7 @@ OR alternative/@typeLink=&#34;ivqu:episode&#34; or for both @typeLabel=&#34;Epis
                 <td class="bgdcolIptc">Iptc4xmpExt:RecDevice</td>
                 <td class="bgdcolIptc">recordingDevice</td>
                 <td class="bgdcolIptc">format/technicalAttributeString/@typeLink=&#34;ivqu:recordingDevice&#34; or @typeLabel=&#34;Recording Device&#34;</td>
-                <td class="bgdcolNoniptc">ClipMetadata/Device (see also Property Structure Device below)</td>
+                <td class="bgdcolNoniptc">VideoClip/Device (see also Property Structure Device below)</td>
             </tr>
             
             <tr>
@@ -342,7 +342,7 @@ OR  alternative/@ typeLink=&#34;ivqu:series&#34; or for both typeLabel=&#34;Seri
                 <td class="bgdcolIptc">dc:identifier</td>
                 <td class="bgdcolIptc">identifier</td>
                 <td class="bgdcolIptc">identifier + typeLink=&#34;ivqu:mediaId&#34;/dc:identifier or typeLabel=&#34;Media Id&#34; and identifier structure to identify the source entity and more.</td>
-                <td class="bgdcolNoniptc">GlobalClipID</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -425,7 +425,7 @@ source entity and more.</td>
                 <td class="bgdcolIptc">dc:description</td>
                 <td class="bgdcolIptc">description</td>
                 <td class="bgdcolIptc">description/dc:description plus typeLink or/and typeLabel for defining a type of description as appropriate</td>
-                <td class="bgdcolNoniptc">ClipMetadata/MemoList/Memo/Text</td>
+                <td class="bgdcolNoniptc">VideoClip/Description</td>
             </tr>
             
             <tr>
@@ -516,7 +516,7 @@ Iptc4xmpExt:OrganisationInImageCode</td>
                 <td class="bgdcolIptc">Iptc4xmpExt:LocationCreated</td>
                 <td class="bgdcolIptc">locationsCreated</td>
                 <td class="bgdcolIptc">coverage/spatial/location/@typeLink=&#34;ivqu:locationShot&#34; or @typeLabel=&#34;Location Shot&#34;/name or use ebucore location structure for more granularity</td>
-                <td class="bgdcolNoniptc">ClipMetadata/Shoot/Location/...</td>
+                <td class="bgdcolNoniptc">VideoClip/Location (see also Property Structure Location below)</td>
             </tr>
             
             <tr>
@@ -621,7 +621,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">dc:title</td>
                 <td class="bgdcolIptc">title</td>
                 <td class="bgdcolIptc">title/dc:title</td>
-                <td class="bgdcolNoniptc">ClipMetadata/UserClipName</td>
+                <td class="bgdcolNoniptc">VideoClip/Title</td>
             </tr>
             
             <tr>
@@ -693,7 +693,7 @@ OR description + typeLink=&#34;ivqu:productShown&#34;/dc:description</td>
                 <td class="bgdcolIptc">creators</td>
                 <td class="bgdcolIptc">creator/role for creators
 OR contributor/role for creators and ebucore entity structure for more granularity</td>
-                <td class="bgdcolNoniptc">ClipMetadata/Access/Creator</td>
+                <td class="bgdcolNoniptc">VideoClip/Creator</td>
             </tr>
             
             <tr>
@@ -845,7 +845,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:audioBitRate</td>
                 <td class="bgdcolIptc">audioBitRate</td>
                 <td class="bgdcolIptc">format/audioFormat/bitRate</td>
-                <td class="bgdcolNoniptc">EssenceList/Audio/BitPerSample</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -897,7 +897,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:audioCompressor</td>
                 <td class="bgdcolIptc">audioCoding</td>
                 <td class="bgdcolIptc">format/audioFormat/encoding</td>
-                <td class="bgdcolNoniptc">(always uncompressed)</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -907,7 +907,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:audioSampleRate</td>
                 <td class="bgdcolIptc">audioSampleRate</td>
                 <td class="bgdcolIptc">format/audioFormat/samplingRate</td>
-                <td class="bgdcolNoniptc">EssenceList/Audio/SamplingRate</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -917,7 +917,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:videoDisplayAspectRatio</td>
                 <td class="bgdcolIptc">videoDisplayAspectRatio</td>
                 <td class="bgdcolIptc">aspectRatio/@typeLink=&#34;ivqu:displayAspectRatio&#34; or @typeLabel=&#34;&#34;Display Aspect Ratio&#34; / factorNumerator and factorDenominator for e.g. 16/9 or 16:9...</td>
-                <td class="bgdcolNoniptc">EssenceList/Video/AspectRatio</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -938,7 +938,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:marker[xmpDM:type= &#34;ivqu:editorialUseEnd&#34;] /xmpDM:startTime</td>
                 <td class="bgdcolIptc">editorialDurationEnds</td>
                 <td class="bgdcolIptc">format/end/@typeLink=&#34;ivqu:editorialDurationEnd&#34; or @typeLabel=&#34;Editorial Duration End&#34;</td>
-                <td class="bgdcolNoniptc">EssenceList/Video/EndTimecode</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -948,7 +948,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:marker[xmpDM:type= &#34;ivqu:editorialUseStart&#34;] /xmpDM:startTime</td>
                 <td class="bgdcolIptc">editorialDurationStarts</td>
                 <td class="bgdcolIptc">format/start/@typeLink=&#34;ivqu:editorialDurationStart&#34; or @typeLabel=&#34;Editorial Duration Start&#34;</td>
-                <td class="bgdcolNoniptc">EssenceList/Video/StartTimecode</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -968,7 +968,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:duration</td>
                 <td class="bgdcolIptc">fileDuration</td>
                 <td class="bgdcolIptc">format/duration</td>
-                <td class="bgdcolNoniptc">Duration</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -989,7 +989,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">frameSize
 </td>
                 <td class="bgdcolIptc">format/videoFormat/width and height</td>
-                <td class="bgdcolNoniptc">see Property Structure Frame Size</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -1069,7 +1069,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:videoCompressor</td>
                 <td class="bgdcolIptc">videoCoding</td>
                 <td class="bgdcolIptc">format/videoFormat/encoding</td>
-                <td class="bgdcolNoniptc">EssenceList/Video/Codec</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -1079,7 +1079,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">xmpDM:videoFrameRate</td>
                 <td class="bgdcolIptc">videoFrameRate</td>
                 <td class="bgdcolIptc">format/videoFormat/frameRate</td>
-                <td class="bgdcolNoniptc">EssenceList/Video/FrameRate</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -1282,7 +1282,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:SerialNumber</td>
                 <td class="bgdcolIptc">serialNumber</td>
                 <td class="bgdcolIptc"></td>
-                <td class="bgdcolNoniptc">SerialNo.</td>
+                <td class="bgdcolNoniptc">SerialNo</td>
             </tr>
             
             <tr>
@@ -1292,7 +1292,7 @@ OR contributor/role for creators and ebucore entity structure for more granulari
                 <td class="bgdcolIptc">Iptc4xmpExt:AttLensDescription</td>
                 <td class="bgdcolIptc">attLensDescription</td>
                 <td class="bgdcolIptc"></td>
-                <td class="bgdcolNoniptc"></td>
+                <td class="bgdcolNoniptc">Lens</td>
             </tr>
             
             <tr>
@@ -1474,8 +1474,7 @@ OR dc:alternative + type or similar use with alternative/dc:alternative  - also 
                 <td class="bgdcolIptc">stDim:w</td>
                 <td class="bgdcolIptc">widthPixels</td>
                 <td class="bgdcolIptc">format/width</td>
-                <td class="bgdcolNoniptc">EssenceList/Video/ActivePixel
-</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
@@ -1485,7 +1484,7 @@ OR dc:alternative + type or similar use with alternative/dc:alternative  - also 
                 <td class="bgdcolIptc">stDim:h</td>
                 <td class="bgdcolIptc">heightPixels</td>
                 <td class="bgdcolIptc">format/height or format/lines</td>
-                <td class="bgdcolNoniptc">EssenceList/Video/ActiveLine</td>
+                <td class="bgdcolNoniptc"></td>
             </tr>
             
             <tr>
