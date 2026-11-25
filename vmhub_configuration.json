@@ -11,7 +11,7 @@
       "google_sheet_tabs": {
         "properties": "PropertiesRec 1.7!A3:W",
         "structures": "PropertiesRec 1.7!A109:W236",
-        "mappings": "MappingsRec 1.7!A6:V",
+        "mappings": "MappingsRec 1.7!A4:V",
         "examples": "'Use Case Examples'!A3:AB99",
         "errata": "PropErrata!A3:E"
       },
@@ -40,7 +40,7 @@
         "first_structure_row": 107,
         "last_structure_row": 239,
         "mappings_first_property_row": 2,
-        "mappings_last_property_row": 215
+        "mappings_last_property_row": 217
       },
       "features": {
         "has_core_sort_column": true,

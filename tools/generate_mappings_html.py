@@ -140,9 +140,12 @@ def generate_mappings_html(version=None, output_dir=None):
             'property_group': row[0] if len(row) > 0 else ' ',
             'property_name': row[1] if len(row) > 1 else ' ',
             'definition': row[2] if len(row) > 2 else ' ',
-            'ebucore': row[4] if len(row) > 4 else ' ',
-            'xmp': row[5] if len(row) > 5 else ' ',
-            'pvmd_json': row[6] if len(row) > 6 else ' ',
+            # Sheet columns E, F, G are XMP, PVMD JSON, EBUcore (same order
+            # as find_more_urls below); the template displays them as
+            # EBUcore, XMP, PVMD JSON.
+            'xmp': row[4] if len(row) > 4 else ' ',
+            'pvmd_json': row[5] if len(row) > 5 else ' ',
+            'ebucore': row[6] if len(row) > 6 else ' ',
             'mapping_values': mapping_values,
             'is_structure_header': is_structure_header,
             'is_structure': is_structure
