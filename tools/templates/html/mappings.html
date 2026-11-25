@@ -57,9 +57,9 @@
                 <td class="hdrcol1"> </td>
                 <td class="hdrcol2"> </td>
                 <td class="hdrcol3"> </td>
+                <td class="hdrcolIptc">{% if find_more_urls.ebucore %}<a href="{{ find_more_urls.ebucore }}" target="_blank">Find more about it at ...</a>{% endif %}</td>
                 <td class="hdrcolIptc">{% if find_more_urls.xmp %}<a href="{{ find_more_urls.xmp }}" target="_blank">Find more about it at ...</a>{% endif %}</td>
                 <td class="hdrcolIptc">{% if find_more_urls.pvmd_json %}<a href="{{ find_more_urls.pvmd_json }}" target="_blank">Find more about it at ...</a>{% endif %}</td>
-                <td class="hdrcolIptc">{% if find_more_urls.ebucore %}<a href="{{ find_more_urls.ebucore }}" target="_blank">Find more about it at ...</a>{% endif %}</td>
                 {% for mapping in mappings %}
                 <td class="hdrcolNoniptc">{% if mapping.find_more_url %}<a href="{{ mapping.find_more_url }}" target="_blank">Find more about it at ...</a>{% endif %}</td>
                 {% endfor %}
